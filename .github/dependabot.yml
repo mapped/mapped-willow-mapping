@@ -1,0 +1,24 @@
+# Please see the documentation for all configuration options:
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+# Each csproj must be individually defined
+# https://github.com/dependabot/dependabot-core/issues/2178
+
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/Ontology.Mappings/src"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-name: DTDLParser
+  - package-ecosystem: "nuget"
+    directory: "/Ontology.Mappings/src"
+    schedule:
+      interval: "daily"
+    allow:
+      - dependency-name: Mapped.Ontologies.Core.Dtdl
+      - dependency-name: RealEstateCore.Ontology.DTDLv2
+      - dependency-name: WillowInc.Ontology.DTDLv3
+      - dependency-name: DTDLParser
+
