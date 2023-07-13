@@ -1,4 +1,4 @@
-name: SmartPlaces.Facilities Build
+name: Mapped.Ontologies Build
 
 on:
   workflow_call:
