@@ -20,5 +20,5 @@ foreach($solution in $(Get-Solutions)) {
     pop-location
 }
 
-Write-Output "Restored Packages: "
-$(get-childitem -Path $root/Ontology.Mappings/packages/ -Directory).FullName
+# Write-Output "Restored Packages: "
+# $(get-childitem -Path $root/Ontology.Mappings/packages/ -Directory).FullName
