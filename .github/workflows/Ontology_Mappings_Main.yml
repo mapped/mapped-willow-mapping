@@ -1,0 +1,21 @@
+name: Trigger Package Generation
+
+on:
+  push:
+    branches: [
+      "main",
+    ]
+    paths: [
+      '.github/**',
+      'Ontology.Mappings/**',
+    ]
+
+env: 
+  DOTNET_VERSION: '6.x' 
+
+jobs:
+  build:
+    uses: 'mapped/mapped-willow-mapping/.github/workflows/Ontology_Mappings.yml@main'
+    with:
+      build-type: 'Main Official'
+    secrets: inherit

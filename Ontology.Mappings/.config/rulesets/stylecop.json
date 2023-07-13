@@ -1,0 +1,30 @@
+{
+    "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+    "settings": {
+        "documentationRules": {
+            "companyName": "Mapped",
+            "copyrightText": "Copyright (c) Mapped. All rights reserved.",
+            "headerDecoration": "-----------------------------------------------------------------------"
+        },
+        "orderingRules": {
+            "usingDirectivesPlacement": "insideNamespace"
+        },
+        "namingRules": {
+            "allowedHungarianPrefixes": [
+                "cv",
+                "db",
+                "dl",
+                "id",
+                "in",
+                "io",
+                "is",
+                "ms",
+                "my",
+                "on",
+                "r",
+                "to",
+                "sb"
+            ]
+        }
+    }
+}

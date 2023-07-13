@@ -1,0 +1,5 @@
+---
+- rule:
+    paths:
+      - ".github/**"
+      - "Ontology.Mappings/**"

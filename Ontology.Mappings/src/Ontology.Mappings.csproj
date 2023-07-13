@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+		<Version>$(VersionPrefix)</Version>
+		<Authors>Mapped</Authors>
+		<Description>Support for converting from one DTDL-based Ontology to a different DTDL Based Ontology</Description>
+		<AssemblyVersion>0.1.0</AssemblyVersion>
+		<PackageVersion>0.1.0-preview</PackageVersion>
+		<RepositoryUrl></RepositoryUrl>
+		<PackageProjectUrl></PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<RequireLicenseAcceptance>true</RequireLicenseAcceptance>
+		<Copyright>© Mapped. All rights reserved.</Copyright>
+		<PackageReadmeFile>README.md</PackageReadmeFile>	
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<EmbeddedResource Include="Mappings\**\*.json" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageReference Include="DTDLParser" Version="1.0.52" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.2" />
+		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+</Project>

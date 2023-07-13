@@ -1,0 +1,18 @@
+name: Pull Request Build
+
+on:
+  pull_request:
+    branches: [
+      "main",
+    ]
+    paths: [
+      '.github/**',
+      'Ontology.Mappings/**',
+    ]
+
+env: 
+  DOTNET_VERSION: '6.x' 
+
+jobs:
+  build:
+    uses: 'mapped/mapped-willow-mapping/.github/workflows/Ontology_Mappings.yml@main'
