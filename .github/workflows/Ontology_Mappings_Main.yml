@@ -15,7 +15,7 @@ env:
 
 jobs:
   build:
-    uses: 'WillowInc/opendigitaltwins-tools/.github/workflows/SmartPlaces_Facilities_Willow.yml@main'
+    uses: 'mapped/mapped-willow-mapping/.github/workflows/Ontology_Mappings.yml@main'
     with:
       build-type: 'Main Official'
     secrets: inherit

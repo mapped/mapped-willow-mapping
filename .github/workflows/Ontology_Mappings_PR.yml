@@ -15,4 +15,4 @@ env:
 
 jobs:
   build:
-    uses: 'WillowInc/opendigitaltwins-tools/.github/workflows/Ontology_Mappings.yml@main'
+    uses: 'mapped/mapped-willow-mapping/.github/workflows/Ontology_Mappings.yml@main'

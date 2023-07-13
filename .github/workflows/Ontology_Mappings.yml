@@ -25,7 +25,7 @@ jobs:
 
     - name: Build
       shell: pwsh
-      run: "& ./.github/workflows/scripts/build.ps1"
+      run: "& ./.github/workflows/scripts/buildandpack.ps1"
 
     - name: Test
       shell: pwsh
