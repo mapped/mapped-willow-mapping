@@ -180,11 +180,11 @@ In some cases, a property of the input model contains an object where one of the
   ],
   "ObjectTransformations" : [
     {
-      inputProperty: unit
-      inputPropertyName: id
-      outputDtmiFilter: *. 
-      outputProperty: flatunit
-      priority: 1
+      "inputProperty": "unit",
+      "inputPropertyName": "id",
+      "outputDtmiFilter": "*.",
+      "outputProperty": "flatunit",
+      "priority": 1
     }  
   ]
 }

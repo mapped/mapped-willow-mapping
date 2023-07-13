@@ -9,7 +9,7 @@ foreach($solution in $(Get-Solutions)) {
     push-location $(Split-Path $solution -Parent)
         Show-SDKs
 
-        dotnet test  $solution --no-restore --no-build -c Release /bl:"$solution.test.binlog" "/flp1:errorsOnly;logfile=$solution.Errors.log" --collect:'XPlat Code Coverage'
+        dotnet test $solution --no-restore -c Release /bl:"$solution.test.binlog" "/flp1:errorsOnly;logfile=$solution.Errors.log" --collect:'XPlat Code Coverage'
 
         if (! $?) {
             $rawError = $(Get-Content -Raw "$solution.Errors.log")
