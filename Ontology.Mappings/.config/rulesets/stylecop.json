@@ -2,8 +2,8 @@
     "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
     "settings": {
         "documentationRules": {
-            "companyName": "Microsoft",
-            "copyrightText": "Copyright (c) Microsoft Corporation.  All rights reserved.",
+            "companyName": "Mapped",
+            "copyrightText": "Copyright (c) Mapped. All rights reserved.",
             "headerDecoration": "-----------------------------------------------------------------------"
         },
         "orderingRules": {
