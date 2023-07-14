@@ -348,3 +348,13 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# The local_resources directory is used for storing scripts and data files 
+# that are necessary for local development and testing but should not be 
+# tracked. This may include scripts that generate mapping files, temporary files,
+# or other resources that are only relevant to the individual developer's 
+# environment and not the entire project team.
+/local_resources/
+
+poetry.lock
+pyproject.toml
