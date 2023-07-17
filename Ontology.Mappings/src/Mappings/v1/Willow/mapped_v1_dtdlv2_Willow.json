@@ -251,6 +251,11 @@
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Energy_Star_Metric;1",
+      "OutputDtmi": "dtmi:com:willowinc:Energy_Star_Metric;1",
+      "IsIgnored": true
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Entry;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
@@ -702,6 +707,16 @@
       "OutputDtmi": "dtmi:com:willowinc:ValvePositionSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core::Waste_Amount_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:Waste_Amount_Sensor",
+      "IsIgnored": true
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Waste_Meter;1",
+      "OutputDtmi": "dtmi:com:willowinc:Waste_Meter;1",
+      "IsIgnored": true
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Weather_Condition_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
     },
@@ -943,6 +958,10 @@
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Breaker_Panel;1",
       "OutputDtmi": "dtmi:com:willowinc:BreakerPanel;1",
       "IsIgnored": true
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Building;1",
+      "OutputDtmi": "dtmi:com:willowinc:Building;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Broadcast_Room;1",
@@ -3573,6 +3592,10 @@
       "IsIgnored": true
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Portfolio;",
+      "OutputDtmi": "dtmi:com:willowinc:Portfolio;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Power_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
     },
@@ -4576,6 +4599,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Meter;1",
+      "OutputDtmi": "dtmi:com:willowinc:WaterMeter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Differential_Pressure_Setpoint;1",
