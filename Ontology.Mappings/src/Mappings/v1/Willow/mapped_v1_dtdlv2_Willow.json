@@ -708,7 +708,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core::Waste_Amount_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:Waste_Amount_Sensor",
+      "OutputDtmi": "dtmi:com:willowinc:Waste_Amount_Sensor;1",
       "IsIgnored": true
     },
     {
