@@ -27,11 +27,6 @@
     ],
     "InterfaceRemaps": [
         {
-            "InputDtmi": "InputDtmi",
-            "OutputDtmi": "OutputDtmi",
-            "IsIgnored": true
-        },
-        {
             "InputDtmi": "dtmi:mapped:core:Absolute_Humidity_Sensor;1",
             "OutputDtmi": "dtmi:com:willowinc:AbsoluteHumiditySensor;1"
         },
