@@ -1935,7 +1935,8 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Energy_Usage_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:EnergySensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:EnergySensor;1",
+      "IsIgnored": true
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Energy_Zone;1",
@@ -4665,7 +4666,8 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Usage_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1",
+      "IsIgnored": true
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Valve;1",
