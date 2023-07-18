@@ -2,20 +2,19 @@
   "Header": {
     "InputOntologies": [
       {
+        "DtdlVersion": "v2",
         "Name": "willow",
-        "Version": "1.0",
-        "DtdlVersion": "v2"
+        "Version": "1.0"
       }
     ],
     "OutputOntologies": [
       {
+        "DtdlVersion": "v2",
         "Name": "mapped",
-        "Version": "1.0",
-        "DtdlVersion": "v2"
+        "Version": "1.0"
       }
     ]
   },
-  "NamespaceRemaps": [],
   "InterfaceRemaps": [
     {
       "InputDtmi": "dtmi:com:willowinc:ACElectricalSystem;1",
@@ -3906,6 +3905,7 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Setpoint;1"
     }
   ],
+  "NamespaceRemaps": [],
   "RelationshipRemaps": [
     {
       "InputRelationship": "isPartOf",
