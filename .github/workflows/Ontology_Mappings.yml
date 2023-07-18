@@ -7,6 +7,9 @@ on:
         required: false
         type: string
 
+env:
+  BASE_VERSION: "0.1.0"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,6 +22,14 @@ jobs:
       with:
         dotnet-version: 6.0.x
 
+    - name: Establish Versioning, Tags, and Labels
+      id: vtl
+      uses: mapped/action-vtl@latest
+      with:
+        baseVersion: ${{ env.BASE_VERSION }}
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+
     - name: Restore dependencies
       shell: pwsh
       run: "& ./.github/workflows/scripts/restore.ps1"
@@ -30,3 +41,34 @@ jobs:
     - name: Test
       shell: pwsh
       run: "& ./.github/workflows/scripts/test.ps1"
+
+    #TODO: Those are copied from https://github.com/mapped/pb/blob/main/.github/workflows/CI.yml#L89. Feel free to edit it.
+    - name: C# - Restoring NuGet Packages
+        run: dotnet restore
+        working-directory: ./packages/csharp/Mapped.PB
+
+      - name: C# - Building .NET Standard Library
+        run: |
+          dotnet build --configuration $DOTNET_BUILD_CONFIG -p:AssemblyVersion=$VERTUPLE -p:FileVersion=$VERTUPLE -p:RepositoryUrl=https://github.com/${{ github.repository }} -p:RepositoryType=git -p:RepositoryBranch=${{ github.ref }} -p:RepositoryCommit=${{ github.sha }}
+        working-directory: ./packages/csharp/Mapped.PB
+        env:
+          VERTUPLE: ${{ steps.vtl.outputs.ver_semVerFourTupleNumeric }}
+
+      - name: C# - Packing .NET Standard NuGet Package
+        run: dotnet pack --configuration $DOTNET_BUILD_CONFIG --no-build --include-source --include-symbols --version-suffix ${{ steps.vtl.outputs.ver_buildNumber }} -p:Version=$VERTUPLE -p:RepositoryUrl=https://github.com/${{ github.repository }} -p:RepositoryType=git -p:RepositoryBranch=${{ github.ref }} -p:RepositoryCommit=${{ github.sha }}
+        working-directory: ./packages/csharp/Mapped.PB
+        env:
+          VERTUPLE: ${{ steps.vtl.outputs.ver_semVerFourTupleNumeric }}
+
+      - name: C# - Publish Package (GPR)
+        run: dotnet nuget push **/*.nupkg --skip-duplicate
+        working-directory: ./packages/csharp/Mapped.PB
+        env:
+          # see https://github.community/t/github-package-registry-not-compatible-with-dotnet-nuget-client/14392/11
+          # and https://github.com/NuGet/Home/issues/2627
+          # and https://github.com/actions/setup-dotnet/issues/101
+          DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER: 0
+
+      - name: C# - Publish Package (NuGet)
+        run: dotnet nuget push **/*.nupkg --skip-duplicate --source https://api.nuget.org/v3/index.json --api-key ${{secrets.NUGET_ONTOLOGY_PUBLISH }}
+        working-directory: ./packages/csharp/Mapped.PB
