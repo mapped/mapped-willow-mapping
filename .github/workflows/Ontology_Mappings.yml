@@ -7,12 +7,23 @@ on:
         required: false
         type: string
 
+env:
+  BASE_VERSION: "0.1.0"
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
 
     - uses: actions/checkout@v3
+
+
+    - name: Establish Versioning, Tags, and Labels
+      id: vtl
+      uses: mapped/action-vtl@latest
+      with:
+        baseVersion: ${{ env.BASE_VERSION }}
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
@@ -25,7 +36,9 @@ jobs:
 
     - name: Build
       shell: pwsh
-      run: "& ./.github/workflows/scripts/buildandpack.ps1"
+      run: "& ./.github/workflows/scripts/buildandpack.ps1 -nugetSecret '${{ secrets.NUGET_ONTOLOGY_PUBLISH }}' -VERTUPLE $VERTUPLE -githubRepo ${{ github.repository }} -githubBranch ${{ github.ref }} -githubCommit ${{ github.sha }} -buildNumber ${{ steps.vtl.outputs.ver_buildNumber }}"  
+      env:
+        VERTUPLE: ${{ steps.vtl.outputs.ver_semVerFourTupleNumeric }}
 
     - name: Test
       shell: pwsh
