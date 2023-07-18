@@ -16,3 +16,5 @@ env:
 jobs:
   build:
     uses: 'mapped/mapped-willow-mapping/.github/workflows/Ontology_Mappings.yml@main'
+    with: 
+      publish-package: false

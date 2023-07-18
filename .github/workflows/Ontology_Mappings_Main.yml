@@ -18,4 +18,5 @@ jobs:
     uses: 'mapped/mapped-willow-mapping/.github/workflows/Ontology_Mappings.yml@main'
     with:
       build-type: 'Main Official'
+      publish-package: true
     secrets: inherit

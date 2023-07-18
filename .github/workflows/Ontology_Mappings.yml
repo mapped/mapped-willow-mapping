@@ -6,6 +6,10 @@ on:
       build-type:
         required: false
         type: string
+      publish-package:
+        required: false
+        type: boolean
+        default: false
 
 env:
   BASE_VERSION: "0.1.0"
@@ -36,7 +40,7 @@ jobs:
 
     - name: Build
       shell: pwsh
-      run: "& ./.github/workflows/scripts/buildandpack.ps1 -nugetSecret '${{ secrets.NUGET_ONTOLOGY_PUBLISH }}' -VERTUPLE $VERTUPLE -githubRepo ${{ github.repository }} -githubBranch ${{ github.ref }} -githubCommit ${{ github.sha }} -buildNumber ${{ steps.vtl.outputs.ver_buildNumber }}"  
+      run: "& ./.github/workflows/scripts/buildandpack.ps1 -publishPackage $publishPackage -nugetSecret '${{ secrets.NUGET_ONTOLOGY_PUBLISH }}' -VERTUPLE $VERTUPLE -githubRepo ${{ github.repository }} -githubBranch ${{ github.ref }} -githubCommit ${{ github.sha }} -buildNumber ${{ steps.vtl.outputs.ver_buildNumber }}"  
       env:
         VERTUPLE: ${{ steps.vtl.outputs.ver_semVerFourTupleNumeric }}
 
