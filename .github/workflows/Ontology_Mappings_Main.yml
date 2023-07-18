@@ -15,7 +15,7 @@ env:
 
 jobs:
   build:
-    uses: './.github/workflows/Ontology_Mappings.yml@main'
+    uses: './.github/workflows/Ontology_Mappings.yml'
     with:
       build-type: 'Main Official'
       publish-package: true
