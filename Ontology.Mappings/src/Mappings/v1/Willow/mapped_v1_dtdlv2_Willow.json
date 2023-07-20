@@ -452,6 +452,10 @@
       "OutputDtmi": "dtmi:com:willowinc:OccupancySensorEquipment;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Occupancy_Zone;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupancyZone;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Occupied_Cooling_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1"
     },
