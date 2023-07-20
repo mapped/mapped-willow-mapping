@@ -6,6 +6,13 @@ on:
       build-type:
         required: false
         type: string
+      publish-package:
+        required: false
+        type: string
+        default: 'False'
+
+env:
+  BASE_VERSION: "0.1.0"
 
 jobs:
   build:
@@ -13,6 +20,17 @@ jobs:
     steps:
 
     - uses: actions/checkout@v3
+
+
+    - name: Establish Versioning, Tags, and Labels
+      id: vtl
+      uses: mapped/action-vtl@latest
+      with:
+        baseVersion: ${{ env.BASE_VERSION }}
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Test VTL
+      run: echo ${{ steps.vtl.outputs.ver_semVerFourTupleNumeric }}
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
@@ -25,7 +43,7 @@ jobs:
 
     - name: Build
       shell: pwsh
-      run: "& ./.github/workflows/scripts/buildandpack.ps1"
+      run: "& ./.github/workflows/scripts/buildandpack.ps1 -publishPackage ${{ inputs.publish-package }} -nugetSecret '${{ secrets.GITHUB_TOKEN }}' -VERTUPLE ${{ steps.vtl.outputs.ver_semVerFourTupleNumeric }} -githubRepo ${{ github.repository }} -githubBranch ${{ github.ref }} -githubCommit ${{ github.sha }} -buildNumber ${{ steps.vtl.outputs.ver_buildNumber }}"
 
     - name: Test
       shell: pwsh

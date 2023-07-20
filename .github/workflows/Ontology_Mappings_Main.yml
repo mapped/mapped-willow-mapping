@@ -15,7 +15,8 @@ env:
 
 jobs:
   build:
-    uses: 'mapped/mapped-willow-mapping/.github/workflows/Ontology_Mappings.yml@main'
+    uses: './.github/workflows/Ontology_Mappings.yml'
     with:
       build-type: 'Main Official'
+      publish-package: 'True'
     secrets: inherit
