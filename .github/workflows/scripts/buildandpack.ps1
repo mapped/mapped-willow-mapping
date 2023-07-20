@@ -34,7 +34,7 @@ foreach($solution in $(Get-Solutions)) {
         Show-SDKs
 
 
-        dotnet pack $solution --include-source --include-symbols --version-suffix $buildNumber --no-restore -c Release /bl:"$solution.build.binlog" "/flp1:errorsOnly;logfile=$solution.Errors.log" -p:Version=$VERTUPLE -p:AssemblyVersion=$VERTUPLE -p:FileVersion=$VERTUPLE -p:RepositoryUrl=https://github.com/$githubRepo -p:RepositoryType=git -p:RepositoryBranch=$githubBranch -p:RepositoryCommit=$githubCommit
+        dotnet pack $solution --include-source --include-symbols --version-suffix $buildNumber --no-restore -c Release /bl:"$solution.build.binlog" "/flp1:errorsOnly;logfile=$solution.Errors.log" -p:Version $VERTUPLE -p:AssemblyVersion $VERTUPLE -p:FileVersion $VERTUPLE -p:RepositoryUrl "https://github.com/$githubRepo" -p:RepositoryType git -p:RepositoryBranch $githubBranch -p:RepositoryCommit $githubCommit
         if (! $?) {
             $rawError = $(Get-Content -Raw "$solution.Errors.log")
             Write-Error "Failed to build $solution. Error: $rawError"
