@@ -42,7 +42,7 @@ foreach($solution in $(Get-Solutions)) {
             throw
         }
 
-        if ($publishPackage == 'True') {
+        if ($publishPackage -eq 'True') {
             Write-Output "Pushing Package to GitHub Package Repository using dotnet command line." 
             dotnet nuget push **/*.nupkg --skip-duplicate 
 
