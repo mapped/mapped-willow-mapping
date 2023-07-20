@@ -29,6 +29,9 @@ jobs:
         baseVersion: ${{ env.BASE_VERSION }}
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Test VTL
+        run: echo ${{ steps.vtl.outputs.ver_semVerFourTupleNumeric }}
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
