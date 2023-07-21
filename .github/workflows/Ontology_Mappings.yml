@@ -17,8 +17,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
+    permissions: write-all
     steps:
 
     - uses: actions/checkout@v3
