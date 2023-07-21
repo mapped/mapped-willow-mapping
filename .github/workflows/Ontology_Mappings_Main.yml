@@ -7,7 +7,7 @@ on:
     ]
     paths: [
       '.github/**',
-      'Ontology.Mappings/**',
+      'Ontologies.Mappings/**',
     ]
 
 env: 

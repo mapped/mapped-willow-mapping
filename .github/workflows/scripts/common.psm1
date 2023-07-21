@@ -13,7 +13,7 @@ function Get-Solutions {
 
 function Show-SDKs {
     Write-Output "Global.json contents:"
-    Get-Content $root/Ontology.Mappings/global.json
+    Get-Content $root/Ontologies.Mappings/global.json
     Write-Output "Installed SDK versions:"
     dotnet --list-sdks
     Write-Output "Active SDK Version:"
