@@ -2,7 +2,7 @@
 // Copyright (c) Mapped. All rights reserved.
 // </copyright>
 
-namespace Mapped.Ontology.Mappings.OntologyMapper
+namespace Mapped.Ontologies.Mappings.OntologyMapper
 {
     /// <summary>
     /// Defines the methods to be implemented by an OntologyMappingManager.

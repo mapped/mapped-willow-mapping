@@ -42,6 +42,6 @@
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\src\Ontology.Mappings.csproj" />
+	  <ProjectReference Include="..\src\Ontologies.Mappings.csproj" />
 	</ItemGroup>
 </Project>

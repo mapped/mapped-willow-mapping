@@ -21,4 +21,4 @@ foreach($solution in $(Get-Solutions)) {
 }
 
 # Write-Output "Restored Packages: "
-# $(get-childitem -Path $root/Ontology.Mappings/packages/ -Directory).FullName
+# $(get-childitem -Path $root/Ontologies.Mappings/packages/ -Directory).FullName

@@ -2,7 +2,7 @@
 // Copyright (c) Mapped. All rights reserved.
 // </copyright>
 
-namespace Mapped.Ontology.Mappings.OntologyMapper
+namespace Mapped.Ontologies.Mappings.OntologyMapper
 {
     /// <summary>
     /// Interface defining methods required to load a set of ontology mappings.

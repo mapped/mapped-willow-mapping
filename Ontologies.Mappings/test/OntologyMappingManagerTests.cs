@@ -1,4 +1,4 @@
-namespace Mapped.Ontology.Mappings.OntologyMapper.Test
+namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
 {
     using System.Reflection;
     using DTDLParser;

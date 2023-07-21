@@ -7,13 +7,15 @@ function Get-Root {
 }
 
 function Get-Solutions {
-    $list = @(Get-ChildItem $root -File -Recurse | Where-Object {($_.FullName -like "*.sln")})
+    $list = @(Get-ChildItem $root -File -Recurse -Include *.sln | Foreach-Object { $_.FullName } )
     return $list
 }
 
 function Show-SDKs {
+    Write-Output "-------------- +SDK INFO ---------------"
+
     Write-Output "Global.json contents:"
-    Get-Content $root/Ontology.Mappings/global.json
+    Get-Content $root/Ontologies.Mappings/global.json
     Write-Output "Installed SDK versions:"
     dotnet --list-sdks
     Write-Output "Active SDK Version:"
@@ -22,4 +24,6 @@ function Show-SDKs {
     dotnet msbuild -version
     Write-Output "Active Powershell Version:"
     Write-Output $PSVersionTable
+
+    Write-Output "-------------- -SDK INFO ---------------"
 }

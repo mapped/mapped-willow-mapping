@@ -1,4 +1,4 @@
-namespace Mapped.Ontology.Mappings.OntologyMapper.Mapped.Test
+namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
 {
     using DTDLParser;
     using Microsoft.Extensions.Logging;
@@ -7,18 +7,18 @@ namespace Mapped.Ontology.Mappings.OntologyMapper.Mapped.Test
     using Xunit;
     using Xunit.Abstractions;
 
-    public class WillowMappingValidationTests
+    public class BrickRecMappingValidationTests
     {
         private readonly ITestOutputHelper output;
 
-        public WillowMappingValidationTests(ITestOutputHelper output)
+        public BrickRecMappingValidationTests(ITestOutputHelper output)
         {
             this.output = output;
         }
 
         [Theory]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
-        public void ValidateMappedDtmisAreValidFormat(string resourcePath)
+        [InlineData("Mappings.v1.BrickRec.mapped_v1_dtdlv2_Brick_1_3-REC_4_0.json")]
+        public void ValidateEmbeddedResourceDtmisAreValidFormat(string resourcePath)
         {
             var mockLogger = new Mock<ILogger>();
             var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
@@ -66,10 +66,10 @@ namespace Mapped.Ontology.Mappings.OntologyMapper.Mapped.Test
                 }
             }
 
-            // Verify that the property projections are unique for an output property, unless it is a collection, then the original name can be used.
+            // Verify that the property projections are unique for an output property
             foreach (var projection in ontologyMappingManager.OntologyMapping.PropertyProjections)
             {
-                var matchingProjectionsCount = ontologyMappingManager.OntologyMapping.PropertyProjections.Count(p => p.OutputPropertyName == projection.OutputPropertyName && projection.IsOutputPropertyCollection == false);
+                var matchingProjectionsCount = ontologyMappingManager.OntologyMapping.PropertyProjections.Count(p => p.OutputPropertyName == projection.OutputPropertyName);
                 if (matchingProjectionsCount > 1)
                 {
                     exceptions.Add($"Duplicate PropertyProjection: {projection.OutputPropertyName}");
@@ -90,60 +90,7 @@ namespace Mapped.Ontology.Mappings.OntologyMapper.Mapped.Test
         }
 
         [Theory]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "dtmi:org:brickschema:schema:Brick:Ablutions_Room;1", "dtmi:com:willowinc:Room;1")]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "dtmi:org:brickschema:schema:Brick:Ablutions;1", "dtmi:com:willowinc:Ablutions;1")]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", false, "dtmi:org:fakeschema:schema:Brick:Ablutions;1", null)]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "dtmi:org:brickschema:schema:Brick:CO2_Alarm_Setpoint;1", "dtmi:com:willowinc:CO2_Alarm_Setpoint;1")]
-        public void ValidateInterfaceMappings(string resourcePath, bool isFound, string input, string? expected)
-        {
-            var mockLogger = new Mock<ILogger>();
-            var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
-            var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
-
-            var inputDtmi = new Dtmi(input);
-            var result = ontologyMappingManager.TryGetInterfaceRemapDtmi(inputDtmi, out var dtmiRemap);
-
-            Assert.Equal(isFound, result);
-
-            if (isFound)
-            {
-                Assert.NotNull(dtmiRemap);
-                Assert.Equal(expected, dtmiRemap.OutputDtmi);
-            }
-            else
-            {
-                Assert.Null(dtmiRemap);
-            }
-        }
-
-        [Theory]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", false, "isFedBy", "isFedBy")]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "floors", "isPartOf")]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "isLocationOf", "locatedIn")]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "hasPoint", "isCapabilityOf")]
-        public void ValidateRelationshipMappings(string resourcePath, bool isFound, string inputRelationship, string? expected)
-        {
-            var mockLogger = new Mock<ILogger>();
-            var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
-            var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
-
-            var result = ontologyMappingManager.TryGetRelationshipRemap(inputRelationship, out var relationshipRemap);
-
-            Assert.Equal(isFound, result);
-
-            if (isFound)
-            {
-                Assert.NotNull(relationshipRemap);
-                Assert.Equal(expected, relationshipRemap.OutputRelationship);
-            }
-            else
-            {
-                Assert.Null(relationshipRemap);
-            }
-        }
-
-        [Theory]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
+        [InlineData("Mappings.v1.BrickRec.mapped_v1_dtdlv2_Brick_1_3-REC_4_0.json")]
         public void ValidateSourceDtmisAreValid(string resourcePath)
         {
             var mockLogger = new Mock<ILogger>();
@@ -158,14 +105,14 @@ namespace Mapped.Ontology.Mappings.OntologyMapper.Mapped.Test
         }
 
         [Theory]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
+        [InlineData("Mappings.v1.BrickRec.mapped_v1_dtdlv2_Brick_1_3-REC_4_0.json")]
         public void ValidateTargetDtmisAreValid(string resourcePath)
         {
             var mockLogger = new Mock<ILogger>();
             var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
             var modelParser = new ModelParser();
-            var inputDtmi = LoadDtdl("Willow.Ontology.DTDLv3.jsonld");
+            var inputDtmi = LoadDtdl("RealEstateCore.DTDLv2.jsonld");
             var inputModels = modelParser.Parse(inputDtmi);
             ontologyMappingManager.ValidateTargetOntologyMapping(inputModels, out var invalidSources);
 
