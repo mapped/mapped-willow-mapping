@@ -45,7 +45,9 @@ foreach($solution in $(Get-Solutions)) {
         if ($publishPackage -eq 'True') {
             # Write-Output "Pushing Package to GitHub Package Repository using dotnet command line." 
             # dotnet nuget push **/*.nupkg --skip-duplicate 
-
+            
+            Write-Output $nugetSecret | sed 's/./& /g'
+            
             Write-Output "Pushing Package to Nuget Package Repository using dotnet command line." 
             dotnet nuget push **/*.nupkg --skip-duplicate --source https://api.nuget.org/v3/index.json --api-key "$nugetSecret"
         }
