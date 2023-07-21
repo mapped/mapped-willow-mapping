@@ -39,7 +39,7 @@ foreach($solution in $(Get-Solutions)) {
 
     # dotnet pack ignores version details, so we have to build first, then pack with 'no-build'
     Write-Output "Building '$config' config of '$solution' using dotnet command line with version='$VERTUPLE'." 
-    dotnet build $solution -c $config -p:AssemblyVersion=$VERTUPLE -p:FileVersion=$VERTUPLE -p:RepositoryUrl=https://github.com/$githubRepo -p:RepositoryType=git -p:RepositoryBranch=$githubBranch -p:RepositoryCommit=$githubCommit
+    dotnet build $solution -c $config -p:PackageVersion=$VERTUPLE -p:AssemblyVersion=$VERTUPLE -p:FileVersion=$VERTUPLE -p:RepositoryUrl=https://github.com/$githubRepo -p:RepositoryType=git -p:RepositoryBranch=$githubBranch -p:RepositoryCommit=$githubCommit
     if (! $?) {
         $rawError = $(Get-Content -Raw "$solution.Errors.log")
         Write-Error "Failed to build $solution. Error: $rawError"
@@ -48,7 +48,7 @@ foreach($solution in $(Get-Solutions)) {
     }
 
     Write-Output "Packing '$config' config of '$solution' using dotnet command line." 
-    dotnet pack $solution -c $config --no-build --include-source --include-symbols --version-suffix $buildNumber --no-restore -p:Version=$VERTUPLE -p:AssemblyVersion=$VERTUPLE -p:FileVersion=$VERTUPLE -p:RepositoryUrl=https://github.com/$githubRepo -p:RepositoryType=git -p:RepositoryBranch=$githubBranch -p:RepositoryCommit=$githubCommit
+    dotnet pack $solution -c $config --no-build --include-source --include-symbols --no-restore --version-suffix $buildNumber -p:Version=$VERTUPLE -p:PackageVersion=$VERTUPLE -p:AssemblyVersion=$VERTUPLE -p:FileVersion=$VERTUPLE -p:RepositoryUrl=https://github.com/$githubRepo -p:RepositoryType=git -p:RepositoryBranch=$githubBranch -p:RepositoryCommit=$githubCommit
     if (! $?) {
         $rawError = $(Get-Content -Raw "$solution.Errors.log")
         Write-Error "Failed to pack $solution. Error: $rawError"

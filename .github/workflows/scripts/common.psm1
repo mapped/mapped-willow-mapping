@@ -7,7 +7,7 @@ function Get-Root {
 }
 
 function Get-Solutions {
-    $list = @(Get-ChildItem $root -File -Recurse | Where-Object {($_.FullName -like "*.sln")})
+    $list = @(Get-ChildItem $root -File -Recurse -Include *.sln | Foreach-Object { $_.FullName } )
     return $list
 }
 

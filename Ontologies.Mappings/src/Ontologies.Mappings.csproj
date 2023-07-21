@@ -5,13 +5,9 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
-		<Version>$(VersionPrefix)</Version>
+		<Version>0.0.1-dev</Version>
 		<Authors>Mapped</Authors>
 		<Description>Support for converting from one DTDL-based Ontology to a different DTDL Based Ontology</Description>
-		<AssemblyVersion>0.1.0</AssemblyVersion>
-		<PackageVersion>0.1.0-preview</PackageVersion>
-		<RepositoryUrl></RepositoryUrl>
-		<PackageProjectUrl></PackageProjectUrl>
 		<PackageLicenseFile>LICENSE</PackageLicenseFile>
     	<PackageIcon>icon.jpg</PackageIcon>
 		<Copyright>© Mapped. All rights reserved.</Copyright>
