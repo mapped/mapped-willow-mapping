@@ -4759,11 +4759,6 @@
       "InputRelationship": "serves",
       "OutputRelationship": "servedBy",
       "ReverseRelationshipDirection": true
-    },
-    {
-      "InputRelationship": "serves",
-      "OutputRelationship": "serves",
-      "ReverseRelationshipDirection": false
     }
   ],
   "ValueTranslations": [
