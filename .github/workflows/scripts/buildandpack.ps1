@@ -47,7 +47,7 @@ foreach($solution in $(Get-Solutions)) {
             # dotnet nuget push **/*.nupkg --skip-duplicate 
 
             Write-Output "Pushing Package to Nuget Package Repository using dotnet command line." 
-            dotnet nuget push **/*.nupkg --skip-duplicate --source https://api.nuget.org/v3/index.json --api-key $nugetSecret
+            dotnet nuget push **/*.nupkg --skip-duplicate --source https://api.nuget.org/v3/index.json --api-key "$nugetSecret"
         }
 
         pop-location
