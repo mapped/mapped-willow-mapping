@@ -2,7 +2,7 @@
 // Copyright (c) Mapped. All rights reserved.
 // </copyright>
 
-namespace Mapped.Ontology.Mappings.OntologyMapper
+namespace Mapped.Ontologies.Mappings.OntologyMapper
 {
     /// <summary>
     /// Indicates what type of match has occurred if any.

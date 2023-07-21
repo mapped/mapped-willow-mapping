@@ -2,4 +2,4 @@
 - rule:
     paths:
       - ".github/**"
-      - "Ontology.Mappings/**"
+      - "Ontologies.Mappings/**"

@@ -6,13 +6,29 @@ on:
       build-type:
         required: false
         type: string
+      publish-package:
+        required: false
+        type: string
+        default: 'False'
+
+env:
+  BASE_VERSION: "0.1.0"
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
 
     - uses: actions/checkout@v3
+
+
+    - name: Establish Versioning, Tags, and Labels
+      id: vtl
+      uses: mapped/action-vtl@latest
+      with:
+        baseVersion: ${{ env.BASE_VERSION }}
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
@@ -23,10 +39,11 @@ jobs:
       shell: pwsh
       run: "& ./.github/workflows/scripts/restore.ps1"
 
-    - name: Build
-      shell: pwsh
-      run: "& ./.github/workflows/scripts/buildandpack.ps1"
-
     - name: Test
       shell: pwsh
       run: "& ./.github/workflows/scripts/test.ps1"
+
+    - name: Build
+      shell: pwsh
+      run: "& ./.github/workflows/scripts/buildandpack.ps1 -config Release -publishPackage ${{ inputs.publish-package }} -nugetSecret '${{ secrets.NUGET_MAPPINGS_WILLOW_PUSH }}' -VERTUPLE ${{ steps.vtl.outputs.ver_semVerFourTupleNumeric }} -githubRepo ${{ github.repository }} -githubBranch ${{ github.ref }} -githubCommit ${{ github.sha }} -buildNumber ${{ steps.vtl.outputs.ver_buildNumber }}"
+

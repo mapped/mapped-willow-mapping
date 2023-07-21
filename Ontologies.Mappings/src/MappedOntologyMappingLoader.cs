@@ -2,7 +2,7 @@
 // Copyright (c) Mapped. All rights reserved.
 // </copyright>
 
-namespace Mapped.Ontology.Mappings.OntologyMapper.Mapped
+namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped
 {
     using System.Reflection;
     using System.Text.Json;
