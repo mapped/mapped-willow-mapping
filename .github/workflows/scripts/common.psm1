@@ -12,6 +12,8 @@ function Get-Solutions {
 }
 
 function Show-SDKs {
+    Write-Output "-------------- +SDK INFO ---------------"
+
     Write-Output "Global.json contents:"
     Get-Content $root/Ontologies.Mappings/global.json
     Write-Output "Installed SDK versions:"
@@ -22,4 +24,6 @@ function Show-SDKs {
     dotnet msbuild -version
     Write-Output "Active Powershell Version:"
     Write-Output $PSVersionTable
+
+    Write-Output "-------------- -SDK INFO ---------------"
 }
