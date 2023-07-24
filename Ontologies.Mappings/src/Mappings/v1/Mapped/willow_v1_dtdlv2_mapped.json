@@ -357,6 +357,126 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Chilled_Water_GHG_Emissions_Factor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Direct_Fuels_GHG_Emissions_Factor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Direct_GHG_Emissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Direct_GHG_Emissions_Intensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Energy_Star_Score;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Energy_Use;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Energy_Use_Intensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:GHG_Emissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:GHG_Emissions_Factor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:GHG_Emissions_Intensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Hot_Water_GHG_Emissions_Factor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Indirect_GHG_Emissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Indirect_GHG_Emissions_Intensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Median_Total_GHG_Emissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Median_Total_GHG_Emissions_Intensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:National_Median_Total_GHG_Emissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:National_Median_Total_GHG_Emissions_Factor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Regional_GHG_Emissions_Factor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Regional_Median_Total_GHG_Emissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Regional_Median_Total_GHG_Emissions_Factor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Regional_Median_Total_GHG_Emissions_Intensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Site_Energy_Use;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Site_Energy_Use_Intensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Source_Energy_Use;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Source_Energy_Use_Intensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Steam_GHG_Emissions_Factor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Total_GHG_Emissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Total_GHG_Emissions_Intensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Canadian_Regional_Median_Total_GHG_Emissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Capability;1",
+      "OutputDtmi": "dtmi:mapped:core:Canadian_Regional_Median_Total_GHG_Emissions_Intensity;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:CeilingFan;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Ceiling_Fan;1"
     },

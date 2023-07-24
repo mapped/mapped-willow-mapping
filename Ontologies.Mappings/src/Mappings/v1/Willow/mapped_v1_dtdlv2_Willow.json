@@ -115,6 +115,10 @@
       "OutputDtmi": "dtmi:com:willowinc:ChilledWaterFlowSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Chilled_Water_GHG_Emissions_Factor;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Chilled_Water_Pump_Differential_Pressure_Deadband_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:ChilledWaterDeltaPressureDeadbandSetpoint;1"
     },
@@ -177,6 +181,18 @@
     {
       "InputDtmi": "dtmi:mapped:core:Differential_Supply_Return_Water_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Direct_Fuels_GHG_Emissions_Factor;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Direct_GHG_Emissions;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Direct_GHG_Emissions_Intensity;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Discharge_Air_Temperature_Reset_Setpoint;1",
@@ -251,6 +267,18 @@
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Energy_Star_Score;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Energy_Use;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Energy_Use_Intensity;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Entry;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
@@ -291,6 +319,18 @@
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:GHG_Emissions;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:GHG_Emissions_Factor;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:GHG_Emissions_Intensity;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Grease_Trap_Level_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:LevelSensor;1"
     },
@@ -321,6 +361,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Hot_Water_Discharge_Temperature_Load_Shed_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Hot_Water_GHG_Emissions_Factor;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Hot_Water_Return_Flow_Sensor;1",
@@ -363,6 +407,14 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Indirect_GHG_Emissions;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Indirect_GHG_Emissions_Intensity;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Library;1",
       "IsIgnored": true,
       "OutputDtmi": "dtmi:com:willowinc:Library;1"
@@ -390,6 +442,14 @@
     {
       "InputDtmi": "dtmi:mapped:core:Max_Power_Limit;1",
       "OutputDtmi": "dtmi:com:willowinc:MaxLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Median_Total_GHG_Emissions;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Median_Total_GHG_Emissions_Intensity;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Medium_Temperature_Hot_Water_Discharge_Temperature_High_Reset_Setpoint;1",
@@ -442,6 +502,14 @@
     {
       "InputDtmi": "dtmi:mapped:core:Mute_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:National_Median_Total_GHG_Emissions;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:National_Median_Total_GHG_Emissions_Factor;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Natural_Gas_Seismic_Valve;1",
@@ -510,6 +578,22 @@
     {
       "InputDtmi": "dtmi:mapped:core:Real_Energy_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:EnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Regional_GHG_Emissions_Factor;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Regional_Median_Total_GHG_Emissions;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Regional_Median_Total_GHG_Emissions_Factor;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Regional_Median_Total_GHG_Emissions_Intensity;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Refrigerant_Saturation_Temperature_Sensor;1",
@@ -581,6 +665,14 @@
       "OutputDtmi": "dtmi:com:willowinc:Setpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Site_Energy_Use;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Site_Energy_Use_Intensity;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Snow_Accumulation_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
     },
@@ -591,6 +683,18 @@
     {
       "InputDtmi": "dtmi:mapped:core:Sound_Volume_Level_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Source_Energy_Use;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Source_Energy_Use_Intensity;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Steam_GHG_Emissions_Factor;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Supply_Air_Duct_Static_Pressure_Sensor;1",
@@ -684,6 +788,14 @@
     {
       "InputDtmi": "dtmi:mapped:core:Time_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Total_GHG_Emissions;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Total_GHG_Emissions_Intensity;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Unoccupied_Cooling_Air_Temperature_Setpoint;1",
@@ -1067,6 +1179,14 @@
       "InputDtmi": "dtmi:mapped:core:Calendar_Event_Invitation;1",
       "IsIgnored": true,
       "OutputDtmi": "dtmi:com:willowinc:CalendarEventInvitation;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Canadian_Regional_Median_Total_GHG_Emissions;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Canadian_Regional_Median_Total_GHG_Emissions_Intensity;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Camera;1",
@@ -1796,6 +1916,10 @@
       "InputDtmi": "dtmi:mapped:core:Email;1",
       "IsIgnored": true,
       "OutputDtmi": "dtmi:com:willowinc:Email;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Electricity_GHG_Emissions_Factor;1",
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Email_Identity;1",
