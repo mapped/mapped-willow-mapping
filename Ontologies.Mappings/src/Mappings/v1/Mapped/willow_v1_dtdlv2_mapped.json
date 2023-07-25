@@ -1833,6 +1833,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupancy_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:OccupancyZone;1",
+      "OutputDtmi": "dtmi:mapped:core:Occupancy_Zone;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:InletAirDamperPositionActuator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Command;1"
     },

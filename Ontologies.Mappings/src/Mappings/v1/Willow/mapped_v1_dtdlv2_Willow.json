@@ -452,6 +452,10 @@
       "OutputDtmi": "dtmi:com:willowinc:OccupancySensorEquipment;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Occupancy_Zone;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupancyZone;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Occupied_Cooling_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1"
     },
@@ -2015,6 +2019,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Exhaust_Air_Stack_Flow_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:ExhaustAirFlowSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Exhaust_Air_Static_Pressure_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:ExhaustAirStaticPressureSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Exhaust_Air_Static_Pressure_Proportional_Band_Parameter;1",
@@ -4749,6 +4757,11 @@
     {
       "InputRelationship": "hasPoint",
       "OutputRelationship": "isCapabilityOf",
+      "ReverseRelationshipDirection": true
+    },
+    {
+      "InputRelationship": "serves",
+      "OutputRelationship": "servedBy",
       "ReverseRelationshipDirection": true
     }
   ],
