@@ -1833,7 +1833,7 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupancy_Sensor;1"
     },
     {
-      "IntputDtmi": "dtmi:com:willowinc:OccupancyZone;1",
+      "InputDtmi": "dtmi:com:willowinc:OccupancyZone;1",
       "OutputDtmi": "dtmi:mapped:core:Occupancy_Zone;1"
     },
     {
