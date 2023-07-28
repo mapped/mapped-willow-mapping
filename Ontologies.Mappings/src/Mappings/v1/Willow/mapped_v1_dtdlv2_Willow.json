@@ -2671,7 +2671,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Loading_Dock;1",
-      "OutputDtmi": "dtmi:com:willowinc:LoadingDockEquipment;1"
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Lobby;1",
