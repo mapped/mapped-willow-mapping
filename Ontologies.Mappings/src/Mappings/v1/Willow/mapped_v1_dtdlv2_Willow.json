@@ -143,6 +143,10 @@
       "OutputDtmi": "dtmi:com:willowinc:ChilledWaterTemperatureSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:org:w3id:rec:Company;1",
+      "OutputDtmi": "dtmi:com:willowinc:Company;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Compressor_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
