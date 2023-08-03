@@ -525,6 +525,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Company;1",
+      "OutputDtmi": "dtmi:org:w3id:rec:Organization;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:Compressor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Compressor;1"
     },
