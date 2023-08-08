@@ -940,10 +940,6 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Return_Air_Static_Pressure_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:ReturnAirStaticPressureSensor;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Return_Air_Velocity_Pressure_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:ReturnAirVelocityPressureSensor;1"
     },
@@ -5547,10 +5543,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Event;1",
       "OutputDtmi": "dtmi:com:willowinc:Event;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Return_Air_Velocity_Pressure_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:ReturnAirVelocityPressureSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Chilled_Water_Flow_Sensor;1",
