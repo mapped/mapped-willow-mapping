@@ -4764,8 +4764,13 @@
       "ReverseRelationshipDirection": true
     },
     {
+      "InputRelationship": "servedBy",
+      "OutputRelationship": "serves",
+      "ReverseRelationshipDirection": true
+    },
+    {
       "InputRelationship": "serves",
-      "OutputRelationship": "servedBy",
+      "OutputRelationship": "isServedBy",
       "ReverseRelationshipDirection": true
     }
   ]
