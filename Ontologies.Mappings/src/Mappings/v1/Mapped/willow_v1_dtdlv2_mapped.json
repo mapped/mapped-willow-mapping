@@ -3929,6 +3929,11 @@
       "InputRelationship": "locatedIn",
       "OutputRelationship": "hasLocation",
       "ReverseRelationshipDirection": false
+    },
+    {
+      "InputRelationship": "servedBy",
+      "OutputRelationship": "serves",
+      "ReverseRelationshipDirection": true
     }
   ]
 }
