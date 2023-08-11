@@ -84,7 +84,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Air_Quality_Sensing_Device;1",
-      "OutputDtmi": "dtmi:com:willowinc:Device;1"
+      "OutputDtmi": "dtmi:com:willowinc:IAQSensorEquipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Alarm_Setpoint;1",
@@ -216,11 +216,11 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Close_Command;1",
-      "OutputDtmi": "dtmi:com:willowinc:ValveCloseActuator;1"
+      "OutputDtmi": "dtmi:com:willowinc:CloseActuator;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Close_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:PhaseBExportReactiveElectricalEnergySensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:CloseState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cloud_Layer_1_Height_Code_Sensor;1",
@@ -244,7 +244,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Condenser_Water_Differential_Pressure_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:LeavingCondenserWaterPressureSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:CondenserWaterDeltaPressureSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Condenser_Water_Flow_Command;1",
@@ -264,15 +264,15 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Connected_Access_Point_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:OperationalState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Connected_Devices_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Controller;1",
-      "OutputDtmi": "dtmi:com:willowinc:MotorController;1"
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cooling_Air_Temperature_Setpoint_Offset;1",
@@ -1062,7 +1062,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Standby_Air_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:Setpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Standby_Cooling_Air_Temperature_Setpoint;1",
