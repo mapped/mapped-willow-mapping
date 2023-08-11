@@ -525,10 +525,6 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:Company;1",
-      "OutputDtmi": "dtmi:org:w3id:rec:Company;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:Compressor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Compressor;1"
     },
@@ -3243,6 +3239,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:SolarAzimuthAngleSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Azimuth_Angle_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:SolarIrradianceSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Radiance_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SolarZenithAngleSensor;1",
