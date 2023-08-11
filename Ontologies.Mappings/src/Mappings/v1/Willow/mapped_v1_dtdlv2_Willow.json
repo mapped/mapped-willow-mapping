@@ -4004,6 +4004,10 @@
       "OutputDtmi": "dtmi:com:willowinc:UnitHeater;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Space;1",
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Speaker;1",
       "IsIgnored": true,
       "OutputDtmi": "dtmi:com:willowinc:Speaker;1"
