@@ -3990,6 +3990,10 @@
       "OutputDtmi": "dtmi:com:willowinc:SolarIrradianceSensor;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Radiance_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:SolarIrradianceSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Thermal_Collector;1",
       "IsIgnored": true,
       "OutputDtmi": "dtmi:com:willowinc:SolarThermalCollector;1"
