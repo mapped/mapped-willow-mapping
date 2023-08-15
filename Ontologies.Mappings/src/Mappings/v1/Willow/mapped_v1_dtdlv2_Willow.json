@@ -3672,7 +3672,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pump;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACPump;1"
+      "OutputDtmi": "dtmi:com:willowinc:Pump;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pump_Command;1",
@@ -3986,7 +3986,7 @@
       "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Radiance_Sensor;1",
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Irradiance_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:SolarIrradianceSensor;1"
     },
     {
