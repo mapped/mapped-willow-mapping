@@ -3182,7 +3182,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Room;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Space;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Room;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RunActuator;1",
