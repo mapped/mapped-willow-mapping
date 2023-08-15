@@ -312,7 +312,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Device;1",
-      "OutputDtmi": "dtmi:com:willowinc:SensorEquipment;1"
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Differential_Air_Flow_Setpoint;1",
@@ -396,11 +396,11 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Domestic_Hot_Water_Supply_Temperature_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:EnteringHotWaterTemperatureSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterTemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Domestic_Hot_Water_Supply_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:EnteringHotWaterTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Door;1",
@@ -552,7 +552,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Heating_Thermal_Energy_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CoilLeavingWaterTemperatureSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:ThermalEnergySensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:High_Humidity_Alarm_Setpoint;1",
@@ -580,7 +580,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:High_Temperature_Hot_Water_Supply_Temperature_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:EnteringHotWaterTemperatureSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterTemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:High_Voltage_Alarm;1",
@@ -600,23 +600,23 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Hot_Water_Return_Flow_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterFlowSensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Hot_Water_Return_Temperature_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterTemperatureSensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Hot_Water_Supply_Flow_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:EnteringHotWaterFlowSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Hot_Water_Return_Temperature_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:EnteringHotWaterTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Hot_Water_Supply_Flow_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterFlowSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Hot_Water_Supply_Flow_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:EnteringHotWaterFlowSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterFlowSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Hot_Water_Supply_Temperature_High_Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:EnteringHotWaterTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Hot_Water_Supply_Temperature_Load_Shed_Status;1",
@@ -624,15 +624,15 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Hot_Water_Supply_Temperature_Low_Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:EnteringHotWaterTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Hot_Water_Supply_Temperature_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:EnteringHotWaterTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Hot_Water_Supply_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:EnteringHotWaterTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Humidity_Alarm_Setpoint;1",
@@ -747,8 +747,8 @@
       "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Medium_Temperature_Hot_Water_Supply_Temperature_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:EnteringHotWaterTemperatureSensor;1"
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Medium_Temperature_Hot_Water_Temperature_Sensor",
+      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterTemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Meta;1",
@@ -964,10 +964,6 @@
       "OutputDtmi": "dtmi:com:willowinc:CondenserWaterTemperatureSensor;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Return_Condenser_Water_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:CondenserWaterTemperatureSetpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Return_Evaporator_Water_Flow_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterFlowSensor;1"
     },
@@ -1113,16 +1109,16 @@
       "OutputDtmi": "dtmi:com:willowinc:CondenserWaterTemperatureSensor;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Supply_Condenser_Water_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:CondenserWaterTemperatureSetpoint;1"
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Condenser_Water_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:LeavingCondenserWaterTemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Supply_Evaporator_Water_Flow_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterFlowSensor;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Supply_Hot_Water_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:EnteringHotWaterTemperatureSetpoint;1"
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Hot_Water_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Supply_Water_Differential_Pressure_Deadband_Setpoint;1",
@@ -1274,7 +1270,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Acceleration_Time_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:TimeSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:AccelerationSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Access_Control_Equipment;1",
@@ -1514,11 +1510,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Building_Air_Static_Pressure_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirStaticPressureSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:BuildingAirStaticPressureSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Building_Air_Static_Pressure_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirStaticPressureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:BuildingAirStaticPressureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Building_Chilled_Water_Meter;1",
@@ -2158,7 +2154,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Disable_Hot_Water_System_Outside_Air_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:BypassHotWaterTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:DisableSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Disable_Status;1",
@@ -2302,7 +2298,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Domestic_Hot_Water_System_Enable_Command;1",
-      "OutputDtmi": "dtmi:com:willowinc:WaterPumpRunActuator;1"
+      "OutputDtmi": "dtmi:com:willowinc:EnableActuator;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Domestic_Hot_Water_Temperature_Setpoint;1",
@@ -2549,6 +2545,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Zone;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Medium_Temperature_Hot_Water_Temperature_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:EnteringHotWaterTemperatureSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Water_Flow_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterFlowSensor;1"
     },
@@ -2694,7 +2694,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:TransferFan;1"
+      "OutputDtmi": "dtmi:com:willowinc:Fan;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1",
@@ -2710,7 +2710,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:FanRunState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_VFD;1",
@@ -3130,7 +3130,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:TertiaryLoopEnteringHotWaterTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:HotWaterTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Usage_Sensor;1",
@@ -3174,7 +3174,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Humidity_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:UnderfloorAirHumiditySetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:HumiditySetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Humidity_Tolerance_Parameter;1",
@@ -3282,7 +3282,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leak_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LeakSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Flow_Sensor;1",
@@ -4178,11 +4178,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:PM1_Level_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:PM010AirQualitySensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:PM001AirQualitySensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:PM1_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:PM010AirQualitySensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:PM001AirQualitySensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:PM25_Level_Sensor;1",
@@ -4334,7 +4334,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pressure_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:PressureSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pressure_Setpoint;1",
@@ -4358,7 +4358,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pump;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACPump;1"
+      "OutputDtmi": "dtmi:com:willowinc:Pump;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pump_Command;1",
@@ -4374,7 +4374,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pump_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:PumpRunState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pump_VFD;1",
@@ -4718,7 +4718,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Command;1",
-      "OutputDtmi": "dtmi:com:willowinc:FanSpeedActuator;1"
+      "OutputDtmi": "dtmi:com:willowinc:Actuator;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Mode_Status;1",
@@ -5541,10 +5541,6 @@
       "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Event;1",
-      "OutputDtmi": "dtmi:com:willowinc:Event;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Chilled_Water_Flow_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:LeavingChilledWaterFlowSensor;1"
     },
@@ -5598,7 +5594,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Hot_Water_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:TertiaryLoopLeavingHotWaterTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Unoccupied_Air_Temperature_Cooling_Setpoint;1",
