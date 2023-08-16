@@ -278,7 +278,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:BypassChilledWaterFlowSetpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Bypass_Water_Flow_Setpoint;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Flow_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:BypassChilledWaterTemperatureSensor;1",
