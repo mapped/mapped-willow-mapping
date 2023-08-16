@@ -726,7 +726,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CondenserWaterTemperatureSetpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Temperature_Setpoint;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Temperature_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CondenserWaterValvePositionActuator;1",
