@@ -747,7 +747,7 @@
       "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Medium_Temperature_Hot_Water_Temperature_Sensor",
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Medium_Temperature_Hot_Water_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterTemperatureSensor;1"
     },
     {
@@ -1110,15 +1110,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Condenser_Water_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:LeavingCondenserWaterTemperatureSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LeavingCondenserWaterTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Supply_Evaporator_Water_Flow_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterFlowSensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Hot_Water_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Supply_Water_Differential_Pressure_Deadband_Setpoint;1",
@@ -5565,16 +5561,12 @@
       "OutputDtmi": "dtmi:com:willowinc:Level;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Occupied_Air_Temperature_Heating_Setpoint;1",
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Air_Temperature_Heating_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:PM2.5_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:PM025AirQualitySensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Condenser_Water_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:SecondaryLoopLeavingCondenserWaterTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Static_Pressure_Sensor;1",
@@ -5595,14 +5587,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Hot_Water_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:LeavingHotWaterTemperatureSetpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Unoccupied_Air_Temperature_Cooling_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedCoolingSetpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Unoccupied_Air_Temperature_Heating_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingZoneAirTemperatureSetpoint;1"
     }
   ],
   "NamespaceRemaps": [
