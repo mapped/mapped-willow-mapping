@@ -3226,7 +3226,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SecondaryLoopChilledWaterFlowSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:Chilled_Water_Flow_Sensor;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Flow_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SecondaryLoopCondenserWaterDeltaPressureSetpoint;1",
