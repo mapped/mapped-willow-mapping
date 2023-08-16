@@ -130,7 +130,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AirHandlingUnit;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:AHU;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Handling_Unit;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AirHumiditySensor;1",
@@ -358,7 +358,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:COAirQualitySensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:CO_Sensor;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:CO_Level_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:COSensor;1",
@@ -530,7 +530,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CoilEnteringWaterTemperatureSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:Heat_Exchanger_Return_Water_Temperature_Sensor;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Water_Temperature_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CoilLeavingWaterTemperatureSensor;1",
@@ -1258,7 +1258,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Equipment;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Device;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EthernetSwitch;1",
@@ -2126,7 +2126,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:LoadingDockEquipment;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Device;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:LockoutState;1",
