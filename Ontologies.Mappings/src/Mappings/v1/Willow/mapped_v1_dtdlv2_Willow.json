@@ -841,7 +841,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Place;1",
-      "OutputDtmi": "dtmi:com:willowinc:Structure;1"
+      "OutputDtmi": "dtmi:com:willowinc:Space;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Postal_Address_Identity;1",

@@ -3342,7 +3342,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Space;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Space;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Place;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SpecificEnthalpySensor;1",
