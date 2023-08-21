@@ -4026,8 +4026,8 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Photovoltaic_Array;1",
-      "OutputDtmi": "dtmi:com:willowinc:PVArray;1",
-      "IsIgnored": true
+      "IsIgnored": true,
+      "OutputDtmi": "dtmi:com:willowinc:PVArray;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Photovoltaic_Current_Output_Sensor;1",
@@ -4203,8 +4203,8 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Radiant_Ceiling_Panel;1",
-      "OutputDtmi": "dtmi:com:willowinc:RCPanel;1",
-      "IsIgnored": true
+      "IsIgnored": true,
+      "OutputDtmi": "dtmi:com:willowinc:RCPanel;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Rooftop_Unit;1",
@@ -4832,8 +4832,8 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Thermally_Activated_Building_System_Panel;1",
-      "OutputDtmi": "dtmi:com:willowinc:ThermallyActivatedBuildingSystemPanel;1",
-      "IsIgnored": true
+      "IsIgnored": true,
+      "OutputDtmi": "dtmi:com:willowinc:ThermallyActivatedBuildingSystemPanel;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Thermostat;1",
