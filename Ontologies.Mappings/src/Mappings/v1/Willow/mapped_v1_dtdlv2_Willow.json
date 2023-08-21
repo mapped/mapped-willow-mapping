@@ -115,7 +115,7 @@
       "OutputDtmi": "dtmi:com:willowinc:ChilledWaterFlowSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Chilled_Water_Pump_Differential_Pressure_Deadband_Setpoint;1",
+      "InputDtmi": "dtmi:mapped:core:Chilled_Water_Differential_Pressure_Deadband_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:ChilledWaterDeltaPressureDeadbandSetpoint;1"
     },
     {
@@ -159,11 +159,11 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Condenser_Water_Supply_Temperature_Sensor;1",
+      "InputDtmi": "dtmi:mapped:core:Entering_Condenser_Water_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:EnteringCondenserWaterTemperatureSensor;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Condenser_Water_Supply_Temperature_Setpoint;1",
+      "InputDtmi": "dtmi:mapped:core:Entering_Condenser_Water_Temperature_SetpointShape;1",
       "OutputDtmi": "dtmi:com:willowinc:EnteringCondenserWaterTemperatureSetpoint;1"
     },
     {
@@ -3539,10 +3539,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Particulate_Matter_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Peak_Power_Demand_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:PowerSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Person_Profile;1",

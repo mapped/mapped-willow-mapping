@@ -153,6 +153,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
             var inputDtmi = LoadDtdl("mapped_dtdl.json");
             var inputModels = modelParser.Parse(inputDtmi);
             ontologyMappingManager.ValidateSourceOntologyMapping(inputModels, out var invalidSources);
+            Console.WriteLine(invalidSources.Count());
 
             Assert.Empty(invalidSources);
         }
