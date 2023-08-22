@@ -2689,6 +2689,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Battery_Voltage_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:PhotovoltaicPanel;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:PVT_Panel;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:PlumbingBalancingValve;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
     },
@@ -3327,6 +3331,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:SolarAzimuthAngleSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Azimuth_Angle_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:SolarInverter;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Inverter;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SolarIrradianceSensor;1",
