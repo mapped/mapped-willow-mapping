@@ -1386,7 +1386,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FanPoweredBoxReheat;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Variable_Air_Volume_Box;1"
+      "OutputDtmi": "dtmi:mapped:core:Fan_Powered_Terminal_Unit;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FanRunActuator;1",

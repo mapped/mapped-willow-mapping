@@ -1064,7 +1064,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Enthalpy_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:ZoneAirEnthalpySensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:AirEnthalpySensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Flow_Alarm;1",
@@ -1140,7 +1140,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Alarm_Delay_Parameter;1",
@@ -1616,7 +1616,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Tower;1",
-      "OutputDtmi": "dtmi:com:willowinc:IndirectEvaporativeCoolingTower;1"
+      "OutputDtmi": "dtmi:com:willowinc:CoolingTower;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Tower_Fan;1",
@@ -1764,7 +1764,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Deadband_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirDeltaPressureDeadbandSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:dtmi:com:willowinc:DeadbandSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Integral_Time_Parameter;1",
@@ -2464,7 +2464,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Gas_System;1",
-      "OutputDtmi": "dtmi:com:willowinc:PropaneSystem;1"
+      "OutputDtmi": "dtmi:com:willowinc:GasSystem;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Gas_Valve;1",
@@ -2860,7 +2860,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Lighting_Equipment;1",
-      "OutputDtmi": "dtmi:com:willowinc:SafetyLighting;1"
+      "OutputDtmi": "dtmi:com:willowinc:LightingEquipment;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Lighting_System;1",
@@ -4253,7 +4253,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Switch;1",
-      "OutputDtmi": "dtmi:com:willowinc:EthernetSwitch;1"
+      "OutputDtmi": "dtmi:com:willowinc:ElectricalSwitch;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Switch_Room;1",
