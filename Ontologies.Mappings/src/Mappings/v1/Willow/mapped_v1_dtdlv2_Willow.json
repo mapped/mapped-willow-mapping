@@ -1764,7 +1764,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Deadband_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:dtmi:com:willowinc:DeadbandSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:DeadbandSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Integral_Time_Parameter;1",
