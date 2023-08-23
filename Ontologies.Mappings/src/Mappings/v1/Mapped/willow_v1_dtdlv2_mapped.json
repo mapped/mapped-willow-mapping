@@ -1134,7 +1134,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EmergencyEyeWashShower;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Safety_Shower;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Equipment"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EmergencyEyeWashStation;1",
@@ -1150,7 +1150,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EmergencyShower;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Safety_Shower;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EnableActuator;1",
@@ -4011,82 +4011,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:ZoneCO2Setpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Setpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Electrical_Power_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:PowerSensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Fresh_Air_Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Isolation_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Operating_Room;1",
-      "OutputDtmi": "dtmi:com:willowinc:Room;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Person_Profile;1",
-      "OutputDtmi": "dtmi:com:willowinc:Person;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Waste_Meter;1",
-      "OutputDtmi": "dtmi:com:willowinc:MeterEquipment;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Wireless_Access_Point;1",
-      "OutputDtmi": "dtmi:com:willowinc:WirelessAccessPoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Access_Reader;1",
-      "OutputDtmi": "dtmi:com:willowinc:AccessReader;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Elevator_Shaft;1",
-      "OutputDtmi": "dtmi:com:willowinc:Space;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Heating_Ventilation_Air_Conditioning_System;1",
-      "OutputDtmi": "dtmi:com:willowinc:System;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Intercom_Equipment;1",
-      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:PV_Generation_System;1",
-      "OutputDtmi": "dtmi:com:willowinc:System;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Rain_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:On_Timer_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:TimeSensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Shading_System;1",
-      "OutputDtmi": "dtmi:com:willowinc:System;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Thermal_Collector;1",
-      "OutputDtmi": "dtmi:com:willowinc:ThermalMeter;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Ventilation_Air_System;1",
-      "OutputDtmi": "dtmi:com:willowinc:System;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:w3id:rec:Company;1",
-      "OutputDtmi": "dtmi:com:willowinc:Company;1"
     }
   ],
   "NamespaceRemaps": [],
