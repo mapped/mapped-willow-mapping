@@ -3334,7 +3334,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SolarIrradianceSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Radiance_Sensor;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Irradiance_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SolarZenithAngleSensor;1",
@@ -4011,6 +4011,166 @@
     {
       "InputDtmi": "dtmi:com:willowinc:ZoneCO2Setpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Tunnel;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Tunnel;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Furniture;1",
+      "OutputDtmi": "dtmi:mapped:core:Furniture;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DisableSetpoint;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:CurrentSetpoint;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:TerminalUnit;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Terminal_Unit;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:BilledNetActiveElectricalEnergy;1",
+      "OutputDtmi": "dtmi:mapped:core:Electric_Energy_Usage_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:System;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:System;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:PresenceSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:PIR_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:EnableSetpoint;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:UnoccupiedActuator;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Command;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Tank;1",
+      "OutputDtmi": "dtmi:mapped:core:Tank;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DistributionAsset;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Distribution_Frame;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:AirCOSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:CO_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:WirelessAccessPoint;1",
+      "OutputDtmi": "dtmi:mapped:core:Wireless_Access_Point;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Person;1",
+      "OutputDtmi": "dtmi:mapped:core:Person;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:VoltageSetpoint;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Luminaire;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Luminaire;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:ICTEquipment;1",
+      "OutputDtmi": "dtmi:mapped:core:ICT_Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:HeatingDischargeAirFlowSetpoint;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Heating_Supply_Air_Flow_Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:StatusSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Sensor"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:AirCO2Sensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Switchgear;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Switchgear;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:IAQSensorEquipment;1",
+      "OutputDtmi": "dtmi:mapped:core:Air_Quality_Sensing_Device;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:GreaseTrap;1",
+      "OutputDtmi": "dtmi:mapped:core:Grease_Trap;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:OperationalState;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:On_Status"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:CapacitySensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Capacity_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DwellTimeSetpoint;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Time_Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Asset;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:PositionActuator;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Position_Command;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Address;1",
+      "OutputDtmi": "dtmi:mapped:core:Address;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:LevelSensor;1",
+      "OutputDtmi": "dtmi:mapped:core:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:CO2Sensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:CountSensor;1",
+      "OutputDtmi": "dtmi:mapped:core:Count;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:VideoSurveillanceNVR;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Network_Video_Recorder;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:AirCO2Setpoint;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:CloseState;1",
+      "OutputDtmi": "dtmi:mapped:core:Close_Status;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FanCoilUnitReheat;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Coil_Unit;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:QuantitySensor;1",
+      "OutputDtmi": "dtmi:mapped:core:Count;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:AreaSensor;1",
+      "OutputDtmi": "dtmi:mapped:core:Area_Status;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Organization;1",
+      "OutputDtmi": "dtmi:org:w3id:rec:Organization;1"
     }
   ],
   "NamespaceRemaps": [],
