@@ -2412,7 +2412,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Formaldehyde_Level_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:LevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:CH2OAirQualitySensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Freeze_Status;1",
@@ -4931,7 +4931,7 @@
       "OutputDtmi": "dtmi:com:willowinc:PlumbingEquipment;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Irradiance_Sensor;1",
+      "InputDtmi": "dtmi:mapped:core:Solar_Irradiance_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:SolarIrradianceSensor;1"
     },
     {

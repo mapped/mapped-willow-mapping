@@ -3334,7 +3334,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SolarIrradianceSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Irradiance_Sensor;1"
+      "OutputDtmi": "dtmi:mapped:core:Solar_Irradiance_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SolarZenithAngleSensor;1",
