@@ -1134,7 +1134,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EmergencyEyeWashShower;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Equipment"
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EmergencyEyeWashStation;1",
