@@ -1150,7 +1150,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EmergencyShower;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Equipment;1"
+      "OutputDtmi": "dtmi:mapped:core:Plumbing_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EnableActuator;1",
@@ -3210,7 +3210,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SafetyEquipment;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Safety_System;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Safety_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SafetyLighting;1",
@@ -4074,7 +4074,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:VoltageSetpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Luminaire;1",
@@ -4090,7 +4090,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:StatusSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Sensor"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AirCO2Sensor;1",
@@ -4110,7 +4110,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:OperationalState;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:On_Status"
+      "OutputDtmi": "dtmi:org:brickschema:schema:On_Status;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CapacitySensor;1",
@@ -4134,7 +4134,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:LevelSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:Sensor;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CO2Sensor;1",

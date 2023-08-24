@@ -952,7 +952,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Time_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:TimeSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:UV_Lighting_Command;1",
@@ -1764,7 +1764,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Deadband_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:DeadbandSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:AirDeltaPressureDeadbandSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Integral_Time_Parameter;1",
@@ -3488,7 +3488,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Air_CO2_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirCO2Sensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:OutsideAirQualityCO2Sensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Air_CO_Sensor;1",
@@ -3880,7 +3880,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Air_CO2_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirCO2Sensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:ReturnAirQualityCO2Sensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Air_CO2_Setpoint;1",
@@ -4559,10 +4559,6 @@
       "OutputDtmi": "dtmi:com:willowinc:VoltageImbalanceSensor;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Voltage_Ratio_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:VoltageSetpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Voltage_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:VoltageSensor;1"
     },
@@ -4869,6 +4865,78 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Ventilation_Air_System;1",
       "OutputDtmi": "dtmi:com:willowinc:System;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Compressor_Dryer;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirCompressorDryer;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Plumbing_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingValve;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Compressor;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirCompressor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fan_Powered_Terminal_Unit;1",
+      "OutputDtmi": "dtmi:com:willowinc:FanPoweredBox;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fire_Damper;1",
+      "OutputDtmi": "dtmi:com:willowinc:FireDamper;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Switchboard;1",
+      "OutputDtmi": "dtmi:com:willowinc:Switchboard;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Uninterruptible_Power_Supply;1",
+      "OutputDtmi": "dtmi:com:willowinc:UPS;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Plumbing_System;1",
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingSystem;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Plumbing_Pump;1",
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingPump;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:HVAC_Pump;1",
+      "OutputDtmi": "dtmi:com:willowinc:HVACPump;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Electric_Unit_Heater;1",
+      "OutputDtmi": "dtmi:com:willowinc:ElectricUnitHeater;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Generator;1",
+      "OutputDtmi": "dtmi:com:willowinc:Generator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Automatic_Transfer_Switch;1",
+      "OutputDtmi": "dtmi:com:willowinc:AutomaticTransferSwitch;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Tank;1",
+      "OutputDtmi": "dtmi:com:willowinc:Tank;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Rain_Level_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:RainfallRateSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Plumbing_Equipment;1",
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Irradiance_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:SolarIrradianceSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Electric_Baseboard_Radiator;1",
+      "OutputDtmi": "dtmi:com:willowinc:ElectricBaseboardHeater;1"
     },
     {
       "InputDtmi": "dtmi:org:w3id:rec:Company;1",
