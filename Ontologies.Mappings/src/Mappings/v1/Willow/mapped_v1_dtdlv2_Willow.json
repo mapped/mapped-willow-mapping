@@ -4063,10 +4063,6 @@
       "OutputDtmi": "dtmi:com:willowinc:SolarAzimuthAngleSensor;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Radiance_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:SolarIrradianceSensor;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Zenith_Angle_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:SolarZenithAngleSensor;1"
     },
