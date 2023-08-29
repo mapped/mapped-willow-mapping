@@ -4104,7 +4104,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:RunLevelSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Sports_Service_Room;1",

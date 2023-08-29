@@ -4171,6 +4171,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:Organization;1",
       "OutputDtmi": "dtmi:org:w3id:rec:Organization;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:RunLevelSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Status;1"
     }
   ],
   "NamespaceRemaps": [],
