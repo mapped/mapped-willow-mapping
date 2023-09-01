@@ -3193,10 +3193,6 @@
       "OutputDtmi": "dtmi:mapped:core:Run_Command;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:RunLevelActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Command;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:RunState;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Run_Status;1"
     },
@@ -4169,14 +4165,6 @@
       "OutputDtmi": "dtmi:org:w3id:rec:Organization;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:RunLevelSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Status;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:FireAlarmEquipment;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Alarm;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:SolarInverter;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Inverter;1"
     },
@@ -4199,14 +4187,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:RunSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Run_Status;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:RunLevelSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:TBD"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ValveOpenActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve_Open_Command;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ValveOpenSensor;1",

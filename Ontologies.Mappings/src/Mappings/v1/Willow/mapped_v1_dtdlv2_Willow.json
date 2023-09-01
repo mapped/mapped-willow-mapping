@@ -2368,7 +2368,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:FireAlarmEquipment;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Control_Panel;1",
@@ -3629,10 +3629,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Photovoltaic_Current_Output_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:CurrentSensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:PV_Panel;1",
-      "OutputDtmi": "dtmi:com:willowinc:PhotovoltaicPanel;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Parameter;1",
@@ -4941,6 +4937,14 @@
     {
       "InputDtmi": "dtmi:org:w3id:rec:Company;1",
       "OutputDtmi": "dtmi:com:willowinc:Company;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:PV_Panel;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhotovoltaicPanel;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:SolarInverter",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Inverter"
     }
   ],
   "NamespaceRemaps": [
