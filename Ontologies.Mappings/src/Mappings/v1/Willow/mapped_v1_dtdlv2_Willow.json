@@ -4941,6 +4941,30 @@
     {
       "InputDtmi": "dtmi:org:w3id:rec:Company;1",
       "OutputDtmi": "dtmi:com:willowinc:Company;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Domestic_Cold_Water_System;1",
+      "OutputDtmi": "dtmi:com:willowinc:DomesticColdWaterSystem;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Airport;1",
+      "OutputDtmi": "dtmi:com:willowinc:airport:Airport;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Airport_Terminal;1",
+      "OutputDtmi": "dtmi:com:willowinc:airport:AirportTerminal;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Pressure_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:WaterPressureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Airfield_Lighting_Equipment;1",
+      "OutputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Chiller_Plant;1",
+      "OutputDtmi": "dtmi:com:willowinc:ChilledWaterPlant;1"
     }
   ],
   "NamespaceRemaps": [
