@@ -4947,20 +4947,8 @@
       "OutputDtmi": "dtmi:com:willowinc:DomesticColdWaterSystem;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Airport;1",
-      "OutputDtmi": "dtmi:com:willowinc:airport:Airport;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Airport_Terminal;1",
-      "OutputDtmi": "dtmi:com:willowinc:airport:AirportTerminal;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Water_Pressure_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterPressureSensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Airfield_Lighting_Equipment;1",
-      "OutputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Chiller_Plant;1",
