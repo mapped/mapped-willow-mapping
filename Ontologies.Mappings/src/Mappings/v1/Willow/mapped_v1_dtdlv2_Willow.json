@@ -2692,7 +2692,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Usage_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:WaterVolumeSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Valve;1",
@@ -4640,7 +4640,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Usage_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:WaterVolumeSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Valve;1",

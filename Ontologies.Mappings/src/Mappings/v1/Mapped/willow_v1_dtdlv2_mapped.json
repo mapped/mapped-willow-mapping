@@ -4174,7 +4174,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WaterVolumeSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Volume_Usage_Sensor;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Usage_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RunLevelSensor;1",
