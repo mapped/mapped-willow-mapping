@@ -23,6 +23,12 @@
 	</ItemGroup>
 	
 	<ItemGroup>
+	  <None Remove="Mappings\v1\Willow\Brick_to_WillowInc.json" />
+	  <None Remove="Mappings\v1\Willow\Mapped.Core_to_WillowInc.json" />
+	  <None Remove="Mappings\v1\Willow\Rec_to_WillowInc.json" />
+	</ItemGroup>
+	
+	<ItemGroup>
 		<PackageReference Include="DTDLParser" Version="1.0.52" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.2" />
 		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">

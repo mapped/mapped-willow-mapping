@@ -1,0 +1,214 @@
+namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
+{
+    using DTDLParser;
+    using Microsoft.Extensions.Logging;
+    using Moq;
+    using System.Reflection;
+    using Xunit;
+    using Xunit.Abstractions;
+
+    public class MultipleFileMappingValidationTests
+    {
+        private readonly ITestOutputHelper output;
+
+        public MultipleFileMappingValidationTests(ITestOutputHelper output)
+        {
+            this.output = output;
+        }
+
+        [Theory]
+        [InlineData("Mappings.v1.Willow.Brick_to_WillowInc.json")]
+        [InlineData("Mappings.v1.Willow.Mapped.Core_to_WillowInc.json")]
+        [InlineData("Mappings.v1.Willow.Rec_to_WillowInc.json")]
+        [InlineData("Mappings.v1.Willow.Rec_to_WillowInc.json", "Mappings.v1.Willow.Mapped.Core_to_WillowInc.json", "Mappings.v1.Willow.Brick_to_WillowInc.json")]
+        public void ValidateMappedDtmisAreValidFormat(params string[] resourcePaths)
+        {
+            var mockLogger = new Mock<ILogger>();
+            var resourceLoader = new MultifileOntologyMappingLoader(mockLogger.Object, new List<string>(resourcePaths));
+            var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
+
+            var exceptions = new List<string>();
+            foreach (var mapping in ontologyMappingManager.OntologyMapping.InterfaceRemaps)
+            {
+                try
+                {
+                    var inputDtmi = new Dtmi(mapping.InputDtmi);
+                }
+                catch (ParsingException)
+                {
+                    exceptions.Add($"Invalid input DTMI: {mapping.InputDtmi}");
+                    // Console.WriteLine($"Invalid input DTMI: {mapping.InputDtmi}");
+                }
+
+                try
+                {
+                    var outputDtmi = new Dtmi(mapping.OutputDtmi);
+                }
+                catch (ParsingException)
+                {
+                    exceptions.Add($"Invalid output DTMI: {mapping.OutputDtmi}");
+                    // Console.WriteLine($"Invalid output DTMI: {mapping.OutputDtmi}");
+                }
+            }
+
+            // Verify that the Interface Remaps are unique for an input interface
+            foreach (var interfaceRemap in ontologyMappingManager.OntologyMapping.InterfaceRemaps)
+            {
+                var matchingRemapsCount = ontologyMappingManager.OntologyMapping.InterfaceRemaps.Count(p => p.InputDtmi == interfaceRemap.InputDtmi);
+                if (matchingRemapsCount > 1)
+                {
+                    exceptions.Add($"Duplicate InterfaceRemap: {interfaceRemap.InputDtmi}");
+                    // Console.WriteLine($"Duplicate InterfaceRemap: {interfaceRemap.InputDtmi}");
+                }
+            }
+
+            // Verify that the Interface Remaps are unique for an input interface
+            foreach (var relationshipRemap in ontologyMappingManager.OntologyMapping.RelationshipRemaps)
+            {
+                var matchingRemapsCount = ontologyMappingManager.OntologyMapping.RelationshipRemaps.Count(p => p.InputRelationship == relationshipRemap.InputRelationship);
+                if (matchingRemapsCount > 1)
+                {
+                    exceptions.Add($"Duplicate RelationshipRemap: {relationshipRemap.InputRelationship}");
+                }
+            }
+
+            // Verify that the property projections are unique for an output property, unless it is a collection, then the original name can be used.
+            foreach (var projection in ontologyMappingManager.OntologyMapping.PropertyProjections)
+            {
+                var matchingProjectionsCount = ontologyMappingManager.OntologyMapping.PropertyProjections.Count(p => p.OutputPropertyName == projection.OutputPropertyName && projection.IsOutputPropertyCollection == false);
+                if (matchingProjectionsCount > 1)
+                {
+                    exceptions.Add($"Duplicate PropertyProjection: {projection.OutputPropertyName}");
+                }
+            }
+
+            // Verify that the fill properties are unique for an output property
+            foreach (var fillProperty in ontologyMappingManager.OntologyMapping.FillProperties)
+            {
+                var matchingFillPropertyCount = ontologyMappingManager.OntologyMapping.FillProperties.Count(p => p.OutputPropertyName == fillProperty.OutputPropertyName);
+                if (matchingFillPropertyCount > 1)
+                {
+                    exceptions.Add($"Duplicate FillProperty: {fillProperty.OutputPropertyName}");
+                }
+            }
+
+            Assert.Empty(exceptions);
+        }
+
+        [Theory]
+        [InlineData(true, "dtmi:org:brickschema:schema:Brick:Ablutions_Room;1", "dtmi:com:willowinc:Room;1", "Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
+        [InlineData(true, "dtmi:org:brickschema:schema:Brick:Ablutions;1", "dtmi:com:willowinc:Ablutions;1", "Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
+        [InlineData(false, "dtmi:org:fakeschema:schema:Brick:Ablutions;1", null, "Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
+        [InlineData(true, "dtmi:org:brickschema:schema:Brick:CO2_Alarm_Setpoint;1", "dtmi:com:willowinc:CO2_Alarm_Setpoint;1", "Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
+        public void ValidateInterfaceMappings(bool isFound, string input, string? expected, params string[] resourcePaths)
+        {
+            var mockLogger = new Mock<ILogger>();
+            var resourceLoader = new MultifileOntologyMappingLoader(mockLogger.Object, new List<string>(resourcePaths));
+            var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
+
+            var inputDtmi = new Dtmi(input);
+            var result = ontologyMappingManager.TryGetInterfaceRemapDtmi(inputDtmi, out var dtmiRemap);
+
+            Assert.Equal(isFound, result);
+
+            if (isFound)
+            {
+                Assert.NotNull(dtmiRemap);
+                Assert.Equal(expected, dtmiRemap.OutputDtmi);
+            }
+            else
+            {
+                Assert.Null(dtmiRemap);
+            }
+        }
+
+        [Theory]
+        [InlineData(false, "isFedBy", "isFedBy", "Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
+        [InlineData(true, "floors", "isPartOf", "Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
+        [InlineData(true, "isLocationOf", "locatedIn", "Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
+        [InlineData(true, "hasPoint", "isCapabilityOf", "Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
+        public void ValidateRelationshipMappings(bool isFound, string inputRelationship, string? expected, params string[] resourcePaths)
+        {
+            var mockLogger = new Mock<ILogger>();
+            var resourceLoader = new MultifileOntologyMappingLoader(mockLogger.Object, new List<string>(resourcePaths));
+            var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
+
+            var result = ontologyMappingManager.TryGetRelationshipRemap(inputRelationship, out var relationshipRemap);
+
+            Assert.Equal(isFound, result);
+
+            if (isFound)
+            {
+                Assert.NotNull(relationshipRemap);
+                Assert.Equal(expected, relationshipRemap.OutputRelationship);
+            }
+            else
+            {
+                Assert.Null(relationshipRemap);
+            }
+        }
+
+        [Theory]
+        [InlineData("Mappings.v1.Mapped.willow_v1_dtdlv2_mapped.json")]
+        public void ValidateSourceDtmisAreValid(params string[] resourcePaths)
+        {
+            var mockLogger = new Mock<ILogger>();
+            var resourceLoader = new MultifileOntologyMappingLoader(mockLogger.Object, new List<string>(resourcePaths));
+            var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
+            var modelParser = new ModelParser();
+            var inputDtmi = LoadDtdl("Willow.Ontology.DTDLv3.jsonld");
+            var inputModels = modelParser.Parse(inputDtmi);
+            ontologyMappingManager.ValidateSourceOntologyMapping(inputModels, out var invalidSources);
+            Console.WriteLine(invalidSources.Count());
+
+            // foreach (var invalidSource in invalidSources)
+            // {
+            //     Console.WriteLine(invalidSource);
+            // }
+            // Assert.Empty(invalidSources);
+        }
+
+        [Theory]
+        [InlineData("Mappings.v1.Mapped.willow_v1_dtdlv2_mapped.json")]
+        public void ValidateTargetDtmisAreValid(params string[] resourcePaths)
+        {
+            var mockLogger = new Mock<ILogger>();
+            var resourceLoader = new MultifileOntologyMappingLoader(mockLogger.Object, new List<string>(resourcePaths));
+            var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
+            var modelParser = new ModelParser();
+            var inputDtmi = LoadDtdl("mapped_dtdl.json");
+            var inputModels = modelParser.Parse(inputDtmi);
+            ontologyMappingManager.ValidateTargetOntologyMapping(inputModels, out var invalidSources);
+            // foreach (var invalidSource in invalidSources)
+            // {
+            //     Console.WriteLine(invalidSource);
+            // }
+            // Assert.Empty(invalidSources);
+        }
+
+        private IEnumerable<string> LoadDtdl(string dtdlFile)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            var resourceName = assembly.GetManifestResourceNames().Single(str => str.EndsWith(dtdlFile));
+            List<string> dtdls = new List<string>();
+
+            using (Stream? stream = assembly.GetManifestResourceStream(resourceName))
+            {
+                if (stream != null)
+                {
+                    using (StreamReader reader = new StreamReader(stream))
+                    {
+                        string result = reader.ReadToEnd();
+                        dtdls.Add(result);
+                    }
+                }
+                else
+                {
+                    throw new FileNotFoundException(resourceName);
+                }
+            }
+
+            return dtdls;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+{
+  "FillProperties": [
+    {
+      "InputPropertyNames": [
+        "name",
+        "description"
+      ],
+      "OutputDtmiFilter": ".*",
+      "OutputPropertyName": "name"
+    }
+  ],
+  "Header": {
+    "InputOntologies": [
+      {
+        "DtdlVersion": "v2",
+        "Name": "rec",
+        "Version": "1.0"
+      }
+    ],
+    "OutputOntologies": [
+      {
+        "DtdlVersion": "v3",
+        "Name": "willow",
+        "Version": "1.0"
+      }
+    ]
+  },
+  "InterfaceRemaps": [
+    {
+      "InputDtmi": "dtmi:org:w3id:rec:Lease;1",
+      "OutputDtmi": "dtmi:com:willowinc:Lease;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:w3id:rec:Organization;1",
+      "OutputDtmi": "dtmi:com:willowinc:Organization;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:w3id:rec:Company;1",
+      "OutputDtmi": "dtmi:com:willowinc:Company;1"
+    }
+  ],
+  "NamespaceRemaps": [
+  ],
+  "ObjectTransformations": [
+  ],
+  "PropertyProjections": [
+  ],
+  "RelationshipRemaps": [
+  ]
+}
