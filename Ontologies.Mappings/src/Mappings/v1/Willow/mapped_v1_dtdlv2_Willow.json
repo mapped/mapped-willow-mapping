@@ -4945,6 +4945,18 @@
     {
       "InputDtmi": "dtmi:mapped:core:Solar_Inverter;1",
       "OutputDtmi": "dtmi:com:willowinc:SolarInverter;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Domestic_Cold_Water_System;1",
+      "OutputDtmi": "dtmi:com:willowinc:DomesticColdWaterSystem;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Water_Pressure_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:WaterPressureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Chiller_Plant;1",
+      "OutputDtmi": "dtmi:com:willowinc:ChilledWaterPlant;1"
     }
   ],
   "NamespaceRemaps": [

@@ -4335,6 +4335,18 @@
     {
       "InputDtmi": "dtmi:com:willowinc:SprinklerTank;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Sprinkler_Storage_Tank;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DomesticColdWaterSystem;1",
+      "OutputDtmi": "dtmi:mapped:core:Domestic_Cold_Water_System;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:WaterPressureSensor;1",
+      "OutputDtmi": "dtmi:mapped:core:Water_Pressure_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:ChilledWaterPlant;1",
+      "OutputDtmi": "dtmi:mapped:core:Chiller_Plant;1"
     }
   ],
   "NamespaceRemaps": [],
