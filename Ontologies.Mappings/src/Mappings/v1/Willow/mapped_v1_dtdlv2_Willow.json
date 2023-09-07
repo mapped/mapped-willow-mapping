@@ -4943,8 +4943,8 @@
       "OutputDtmi": "dtmi:com:willowinc:PhotovoltaicPanel;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:SolarInverter",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Inverter"
+      "InputDtmi": "dtmi:mapped:core:Solar_Inverter;1",
+      "OutputDtmi": "dtmi:com:willowinc:SolarInverter;1"
     }
   ],
   "NamespaceRemaps": [
