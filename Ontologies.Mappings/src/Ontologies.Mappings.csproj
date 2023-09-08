@@ -25,6 +25,7 @@
 	<ItemGroup>
 	  <None Remove="Mappings\v1\Willow\Brick_to_WillowInc.json" />
 	  <None Remove="Mappings\v1\Willow\Mapped.Core_to_WillowInc.json" />
+	  <None Remove="Mappings\v1\Willow\Mapped_to_WillowInc_Generic.json" />
 	  <None Remove="Mappings\v1\Willow\Rec_to_WillowInc.json" />
 	</ItemGroup>
 	

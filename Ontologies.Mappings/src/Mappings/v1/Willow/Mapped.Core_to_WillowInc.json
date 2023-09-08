@@ -1110,31 +1110,8 @@
     }
   ],
   "ObjectTransformations": [
-    {
-      "InputProperty": "unit",
-      "InputPropertyName": "id",
-      "OutputDtmiFilter": ".*",
-      "OutputPropertyName": "unit",
-      "Priority": 1
-    }
   ],
   "PropertyProjections": [
-    {
-      "InputPropertyNames": [
-        "mappingKey"
-      ],
-      "IsOutputPropertyCollection": true,
-      "OutputDtmiFilter": ".*",
-      "OutputPropertyName": "externalIds"
-    },
-    {
-      "InputPropertyNames": [
-        "id"
-      ],
-      "IsOutputPropertyCollection": false,
-      "OutputDtmiFilter": ".*",
-      "OutputPropertyName": "externalID"
-    }
   ],
   "RelationshipRemaps": [
   ]

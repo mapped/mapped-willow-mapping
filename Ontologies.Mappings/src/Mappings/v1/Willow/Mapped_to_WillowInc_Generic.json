@@ -1,0 +1,86 @@
+{
+  "FillProperties": [
+    {
+      "InputPropertyNames": [
+        "name",
+        "description"
+      ],
+      "OutputDtmiFilter": ".*",
+      "OutputPropertyName": "name"
+    }
+  ],
+  "Header": {
+    "InputOntologies": [
+      {
+        "DtdlVersion": "v2",
+        "Name": "Mapped",
+        "Version": "1.0"
+      }
+    ],
+    "OutputOntologies": [
+      {
+        "DtdlVersion": "v3",
+        "Name": "willow",
+        "Version": "1.0"
+      }
+    ]
+  },
+  "InterfaceRemaps": [
+  ],
+  "NamespaceRemaps": [
+  ],
+  "ObjectTransformations": [
+    {
+      "InputProperty": "unit",
+      "InputPropertyName": "id",
+      "OutputDtmiFilter": ".*",
+      "OutputPropertyName": "unit",
+      "Priority": 1
+    }
+  ],
+  "PropertyProjections": [
+    {
+      "InputPropertyNames": [
+        "mappingKey"
+      ],
+      "IsOutputPropertyCollection": true,
+      "OutputDtmiFilter": ".*",
+      "OutputPropertyName": "externalIds"
+    },
+    {
+      "InputPropertyNames": [
+        "id"
+      ],
+      "IsOutputPropertyCollection": false,
+      "OutputDtmiFilter": ".*",
+      "OutputPropertyName": "externalID"
+    }
+  ],
+  "RelationshipRemaps": [
+    {
+      "InputRelationship": "floors",
+      "OutputRelationship": "isPartOf",
+      "ReverseRelationshipDirection": true
+    },
+    {
+      "InputRelationship": "hasPart",
+      "OutputRelationship": "isPartOf",
+      "ReverseRelationshipDirection": true
+    },
+    {
+      "InputRelationship": "isLocationOf",
+      "OutputRelationship": "locatedIn",
+      "ReverseRelationshipDirection": true
+    },
+    {
+      "InputRelationship": "hasPoint",
+      "OutputRelationship": "isCapabilityOf",
+      "ReverseRelationshipDirection": true
+    },
+    {
+      "InputRelationship": "serves",
+      "OutputRelationship": "servedBy",
+      "ReverseRelationshipDirection": true
+    }
+  ]
+}

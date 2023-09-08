@@ -20,7 +20,8 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
         [InlineData("Mappings.v1.Willow.Brick_to_WillowInc.json")]
         [InlineData("Mappings.v1.Willow.Mapped.Core_to_WillowInc.json")]
         [InlineData("Mappings.v1.Willow.Rec_to_WillowInc.json")]
-        [InlineData("Mappings.v1.Willow.Rec_to_WillowInc.json", "Mappings.v1.Willow.Mapped.Core_to_WillowInc.json", "Mappings.v1.Willow.Brick_to_WillowInc.json")]
+        [InlineData("Mappings.v1.Willow.Mapped_to_WillowInc_Generic.json")]
+        [InlineData("Mappings.v1.Willow.Rec_to_WillowInc.json", "Mappings.v1.Willow.Mapped.Core_to_WillowInc.json", "Mappings.v1.Willow.Brick_to_WillowInc.json", "Mappings.v1.Willow.Mapped_to_WillowInc_Generic.json")]
         public void ValidateMappedDtmisAreValidFormat(params string[] resourcePaths)
         {
             var mockLogger = new Mock<ILogger>();
