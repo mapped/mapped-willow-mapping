@@ -5097,7 +5097,7 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:PV_Array;1",
       "OutputDtmi": "dtmi:com:willowinc:PhotovoltaicArray;1"
-    },
+    }
   ],
   "NamespaceRemaps": [
     {
