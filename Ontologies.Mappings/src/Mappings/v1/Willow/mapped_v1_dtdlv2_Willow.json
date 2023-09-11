@@ -1487,10 +1487,6 @@
       "OutputDtmi": "dtmi:com:willowinc:Actuator;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Common_Space;1",
-      "OutputDtmi": "dtmi:com:willowinc:Room;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Communication_Loss_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
     },
@@ -2321,10 +2317,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:FanActuator;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_On_Off_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:OnOffState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Speed_Command;1",
@@ -3767,10 +3759,6 @@
       "OutputDtmi": "dtmi:com:willowinc:PumpActuator;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pump_On_Off_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:OnOffState;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pump_Room;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
@@ -4073,10 +4061,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Space_Heater;1",
       "OutputDtmi": "dtmi:com:willowinc:UnitHeater;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Command;1",
-      "OutputDtmi": "dtmi:com:willowinc:Actuator;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Mode_Status;1",
@@ -4969,6 +4953,146 @@
     {
       "InputDtmi": "dtmi:mapped:core:Airfield_Lighting_Equipment;1",
       "OutputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Solar_Inverter;1",
+      "OutputDtmi": "dtmi:com:willowinc:SolarInverter;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Apparent_Electric_Energy_Sensor;1",
+        "OutputDtmi": "dtmi:com:willowinc:ApparentElectricalEnergySensor;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Level_Status;1",
+        "OutputDtmi": "dtmi:com:willowinc:RunLevelSensor;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Valve_Open_Command;1",
+        "OutputDtmi": "dtmi:com:willowinc:ValveOpenActuator;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Valve_Open_Status;1",
+        "OutputDtmi": "dtmi:com:willowinc:ValveOpenSensor;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Storage_Tank;1",
+        "OutputDtmi": "dtmi:com:willowinc:PlumbingStorageTank;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Grease_Interceptor;1",
+        "OutputDtmi": "dtmi:com:willowinc:GreaseInterceptor;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:IT_Rack;1",
+        "OutputDtmi": "dtmi:com:willowinc:ITRack;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:HVAC_Storage_Tank;1",
+        "OutputDtmi": "dtmi:com:willowinc:HVACTank;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Common_Space;1",
+        "OutputDtmi": "dtmi:com:willowinc:BuildingCommonArea;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:w3id:rec:Premises;1",
+        "OutputDtmi": "dtmi:com:willowinc:TenantUnit;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Utilization_Status;1",
+        "OutputDtmi": "dtmi:com:willowinc:LoadLevelSensor;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Heating_Zone_Air_Temperature_Setpoint;1",
+        "OutputDtmi": "dtmi:com:willowinc:StandbyHeatingSetpoint;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Command;1",
+        "OutputDtmi": "dtmi:com:willowinc:RunLevelSetpoint;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_On_Off_Status;1",
+        "OutputDtmi": "dtmi:com:willowinc:FanRunSensor;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Billed_Electrical_Energy_Use;1",
+        "OutputDtmi": "dtmi:com:willowinc:BilledActiveElectricalEnergy;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Billed_Electrical_Energy_Cost;1",
+        "OutputDtmi": "dtmi:com:willowinc:BilledElectricalCost;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Utility_Account;1",
+        "OutputDtmi": "dtmi:com:willowinc:UtilityAccount;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Variable_Heating_Command;1",
+        "OutputDtmi": "dtmi:com:willowinc:HeatingLevelActuator;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Variable_Cooling_Command;1",
+        "OutputDtmi": "dtmi:com:willowinc:CoolingLevelActuator;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Fan_Speed_Status",
+        "OutputDtmi": "dtmi:com:willowinc:DischargeFanRunLevelState;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pump_On_Off_Status;1",
+        "OutputDtmi": "dtmi:com:willowinc:PumpRunSensor;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Thermal_Efficiency;1",
+        "OutputDtmi": "dtmi:com:willowinc:KWPerTon;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Apparent_Electric_Power_Sensor;1",
+        "OutputDtmi": "dtmi:com:willowinc:ApparentElectricalPowerSensor;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Volume_Usage_Sensor;1",
+        "OutputDtmi": "dtmi:com:willowinc:VolumeSensor;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_Diffuser;1",
+        "OutputDtmi": "dtmi:com:willowinc:SupplyAirDiffuser;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Smoke_Detector;1",
+        "OutputDtmi": "dtmi:com:willowinc:SmokeDetector;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Air_Diffuser;1",
+        "OutputDtmi": "dtmi:com:willowinc:ReturnAirDiffuser;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Audio_Visual_Equipment;1",
+        "OutputDtmi": "dtmi:com:willowinc:AudioVisualEquipment;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Grille;1",
+        "OutputDtmi": "dtmi:com:willowinc:AirGrille;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Electrical_Receptacle;1",
+        "OutputDtmi": "dtmi:com:willowinc:ElectricalReceptacle;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Level_Command;1",
+        "OutputDtmi": "dtmi:com:willowinc:OnLevelSetpoint;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Open_Close_Status;1",
+        "OutputDtmi": "dtmi:com:willowinc:DamperOpenSensor;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Modulating_Status;1",
+        "OutputDtmi": "dtmi:com:willowinc:OnLevelState;1"
+    },
+    {
+        "InputDtmi": "dtmi:org:brickschema:schema:Brick:Sprinkler_Storage_Tank;1",
+        "OutputDtmi": "dtmi:com:willowinc:SprinklerTank;1"
     }
   ],
   "NamespaceRemaps": [
