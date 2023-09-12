@@ -4951,10 +4951,6 @@
       "OutputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Solar_Inverter;1",
-      "OutputDtmi": "dtmi:com:willowinc:SolarInverter;1"
-    },
-    {
         "InputDtmi": "dtmi:mapped:core:Apparent_Electric_Energy_Sensor;1",
         "OutputDtmi": "dtmi:com:willowinc:ApparentElectricalEnergySensor;1"
     },
