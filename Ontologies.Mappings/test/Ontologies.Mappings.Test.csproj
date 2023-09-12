@@ -21,7 +21,7 @@
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 		<PackageReference Include="Divergic.Logging.Xunit" Version="4.2.0" />
-		<PackageReference Include="Mapped.Ontologies.Core.Dtdl" Version="1.16.42" />
+		<PackageReference Include="Mapped.Ontologies.Core.Dtdl" Version="1.16.43" />
 		<PackageReference Include="RealEstateCore.Ontology.DTDLv2" Version="4.0.0.19" />
 		<PackageReference Include="Microsoft.ApplicationInsights" Version="2.21.0" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.2" />
