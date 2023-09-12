@@ -5007,11 +5007,11 @@
         "OutputDtmi": "dtmi:com:willowinc:UtilityAccount;1"
     },
     {
-        "InputDtmi": "dtmi:mapped:core:Variable_Heating_Command;1",
+        "InputDtmi": "dtmi:mapped:core:Heating_Level_Command;1",
         "OutputDtmi": "dtmi:com:willowinc:HeatingLevelActuator;1"
     },
     {
-        "InputDtmi": "dtmi:mapped:core:Variable_Cooling_Command;1",
+        "InputDtmi": "dtmi:mapped:core:Cooling_Level_Command;1",
         "OutputDtmi": "dtmi:com:willowinc:CoolingLevelActuator;1"
     },
     {
