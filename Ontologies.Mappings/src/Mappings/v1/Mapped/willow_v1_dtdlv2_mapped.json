@@ -4165,6 +4165,10 @@
       "OutputDtmi": "dtmi:org:w3id:rec:Organization;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:SolarInverter;1",
+      "OutputDtmi": "dtmi:mapped:core:Solar_Inverter;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:ApparentElectricalEnergySensor;1",
       "OutputDtmi": "dtmi:mapped:core:Apparent_Electric_Energy_Sensor;1"
     },
