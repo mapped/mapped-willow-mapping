@@ -4254,11 +4254,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DischargeFanRunLevelState;1",
-      "OutputDtmi": "dtmi:mapped:core:Supply_Fan_Speed_Status"
+      "OutputDtmi": "dtmi:mapped:core:Supply_Fan_Speed_Status;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PumpRunSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:Pump_On_Off_Status;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Pump_On_Off_Status;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:KWPerTon;1",
@@ -4278,7 +4278,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ApparentElectricalPowerSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:Apparent_Electric_Power_Sensor;1"
+      "OutputDtmi": "dtmi:mapped:core:Apparent_Power_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:VolumeSensor;1",
@@ -4290,7 +4290,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SmokeDetector;1",
-      "OutputDtmi": "dtmi:mapped:core:Smoke_Detector;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Smoke_Detector;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ReturnAirDiffuser;1",
