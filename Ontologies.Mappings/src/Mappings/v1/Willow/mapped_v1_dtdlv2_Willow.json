@@ -5067,10 +5067,6 @@
         "OutputDtmi": "dtmi:com:willowinc:DamperOpenSensor;1"
     },
     {
-        "InputDtmi": "dtmi:mapped:core:Level_Status;1",
-        "OutputDtmi": "dtmi:com:willowinc:OnLevelState;1"
-    },
-    {
         "InputDtmi": "dtmi:mapped:core:Fire_Sprinkler_Water_Storage_Tank;1",
         "OutputDtmi": "dtmi:com:willowinc:SprinklerTank;1"
     },
