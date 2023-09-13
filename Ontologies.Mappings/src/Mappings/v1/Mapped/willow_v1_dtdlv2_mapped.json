@@ -2690,7 +2690,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PhotovoltaicPanel;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Photovoltaic_Panel;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:PV_Panel;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingBalancingValve;1",

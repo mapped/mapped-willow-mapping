@@ -4923,7 +4923,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Company;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Photovoltaic_Panel;1",
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:PV_Panel;1",
       "OutputDtmi": "dtmi:com:willowinc:PhotovoltaicPanel;1"
     },
     {
