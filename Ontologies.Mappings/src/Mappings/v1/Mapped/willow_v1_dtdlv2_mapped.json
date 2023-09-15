@@ -4359,6 +4359,18 @@
     {
       "InputDtmi": "dtmi:com:willowinc:VolumeSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:airport:Airport;1",
+      "OutputDtmi": "dtmi:mapped:core:Airport;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:airport:AirportTerminal;1",
+      "OutputDtmi": "dtmi:mapped:core:Building;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1",
+      "OutputDtmi": "dtmi:mapped:core:Airfield_Lighting_Equipment;1"
     }
   ],
   "NamespaceRemaps": [],
