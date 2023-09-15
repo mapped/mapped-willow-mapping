@@ -153,7 +153,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
             var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
             var modelParser = new ModelParser();
-            var inputDtmi = LoadDtdl("Willow.Ontology.DTDLv3.jsonld");
+            var inputDtmi = MappedMappingValidationTestTools.LoadDtdls( new[] { "Willow.Ontology.DTDLv3.jsonld", "Willow.Ontology.Airport.DTDLv3.jsonld"});
             var inputModels = modelParser.Parse(inputDtmi);
             ontologyMappingManager.ValidateSourceOntologyMapping(inputModels, out var invalidSources);
             Console.WriteLine(invalidSources.Count());
@@ -182,6 +182,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
             // }
             // Assert.Empty(invalidSources);
         }
+
 
         private IEnumerable<string> LoadDtdl(string dtdlFile)
         {
