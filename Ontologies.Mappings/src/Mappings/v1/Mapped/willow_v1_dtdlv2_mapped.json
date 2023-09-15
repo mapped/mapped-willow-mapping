@@ -2710,7 +2710,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingExpansionTank;1",
-      "OutputDtmi": "dtmi:mapped:core:Expansion_Tank;1"
+      "OutputDtmi": "dtmi:mapped:core:Tank;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingFixture;1",
