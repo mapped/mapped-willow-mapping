@@ -2710,7 +2710,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingExpansionTank;1",
-      "OutputDtmi": "dtmi:mapped:core:Expansion_Tank;1"
+      "OutputDtmi": "dtmi:mapped:core:Tank;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingFixture;1",
@@ -4362,11 +4362,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AirCurtain;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Air_Curtain;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ArchitecturalBuildingComponent;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Entity;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AreaSetpoint;1",
@@ -4378,7 +4378,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AverageCurrentMagnitudeSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Average_Current_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:BatteryCabinet;1",
@@ -4390,11 +4390,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CompressorEnteringRefrigerantTemperatureSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Suction_Line_Refrigerant_Temperature_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CompressorLeavingPressureLoadLevelState;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Compressor_Discharge_Refrigerant_Pressure_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CompressorRunSensor;1",
@@ -4402,15 +4402,15 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ConveyanceEquipment;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Conveyor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CookingEquipment;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Cooking_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Dishwasher;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Dishwasher;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DuctSilencer;1",
@@ -4422,11 +4422,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Escalator;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Escalator;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Facade;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Entity;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FanRunLevelSensor;1",
@@ -4450,15 +4450,15 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:LoadLevelState;1",
-      "OutputDtmi": "dtmi:mapped:core:Level_Staus;1"
+      "OutputDtmi": "dtmi:mapped:core:Level_Status;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:MinOutsideAirDamperPositionSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Air_Damper_Position_Sensor;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Min_Outside_Air_Damper_Position_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:OnLevelSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:Level_Staus;1"
+      "OutputDtmi": "dtmi:mapped:core:Level_Status;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:OpenSensor;1",
@@ -4466,11 +4466,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Oven;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Oven;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationEquipment;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Refrigeration_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:StopSensor;1",
@@ -4478,11 +4478,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:StructuralColumn;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Entity;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Structure;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Entity;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SubBuilding;1",
@@ -4490,7 +4490,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:VehicleBollard;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Entity;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:VelocitySensor;1",
@@ -4498,19 +4498,19 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingPumpGroup;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Pump_Collection;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CurrentTHDSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Current_Total_Harmonic_Distortion_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:VoltageTHDSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Voltage_Total_Harmonic_Distortion_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WaterStorageBasin;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Water_Storage_Basin;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DataNetworkEquipment;1",
@@ -4518,11 +4518,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DoorHardware;1",
-      "OutputDtmi": "dtmi:mapped:core:Door;1"
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:StartsCountSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:TBD;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Cycle_Count_Status;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:VehicleAccessControlEquipment;1",
@@ -4530,7 +4530,59 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ArchitecturalAsset;1",
+      "OutputDtmi": "dtmi:mapped:core:Entity;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:AngularVelocitySensor;1",
+      "OutputDtmi": "dtmi:mapped:core:Angular_Velocity_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FireAlarmHornStrobe;1",
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FireAlarmHornStrobe;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FireAlarmPullStation;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FireAlarmSpeakerStrobe;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FireAlarmStrobe;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FireExtinguisher;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FireHydrant;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FireSprinklerHead;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FireSuppressionEquipment;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Warranty;1",
+      "OutputDtmi": "dtmi:mapped:core:Entity;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:VehicleEquipment;1",
+      "OutputDtmi": "dtmi:mapped:core:Automotive_Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:RequestToExitDevice;1",
+      "OutputDtmi": "dtmi:mapped:core:Automatic_Door_Lock;1"
     }
   ],
   "NamespaceRemaps": [],
