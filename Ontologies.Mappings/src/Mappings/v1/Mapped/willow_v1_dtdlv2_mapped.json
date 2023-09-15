@@ -4430,11 +4430,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FanRunLevelSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:mapped:core:Fan_Speed_Status;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FanRunLevelSetpoint;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Speed_Command;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ICTHardware;1",
@@ -4454,7 +4454,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:MinOutsideAirDamperPositionSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:Level_Command;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Air_Damper_Position_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:OnLevelSensor;1",
@@ -4494,7 +4494,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:VelocitySensor;1",
-      "OutputDtmi": "dtmi:mapped:core:TBD;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingPumpGroup;1",
@@ -4515,6 +4515,18 @@
     {
       "InputDtmi": "dtmi:com:willowinc:DataNetworkEquipment;1",
       "OutputDtmi": "dtmi:mapped:core:ICT_Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DoorHardware;1",
+      "OutputDtmi": "dtmi:mapped:core:Door;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:StartsCountSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:TBD;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:VehicleAccessControlEquipment;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Access_Control_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ArchitecturalAsset;1",
