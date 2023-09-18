@@ -4579,6 +4579,18 @@
     {
       "InputDtmi": "dtmi:com:willowinc:RequestToExitDevice;1",
       "OutputDtmi": "dtmi:mapped:core:Automatic_Door_Lock;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:airport:Airport;1",
+      "OutputDtmi": "dtmi:mapped:core:Airport;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:airport:AirportTerminal;1",
+      "OutputDtmi": "dtmi:mapped:core:Building;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1",
+      "OutputDtmi": "dtmi:mapped:core:Airfield_Lighting_Equipment;1"
     }
   ],
   "NamespaceRemaps": [],
