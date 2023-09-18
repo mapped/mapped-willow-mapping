@@ -158,7 +158,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
             Assert.Empty(invalidSources);
         }
 
-        [Theory(Skip = "Temporarily disabled until we can load airport and base ontologies together for Willow")]
+        [Theory]
         [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
         public void ValidateTargetDtmisAreValid(string resourcePath)
         {
@@ -166,7 +166,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
             var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
             var modelParser = new ModelParser();
-            var inputDtmi = LoadDtdl(new[] { "Willow.Ontology.DTDLv3.jsonld" });
+            var inputDtmi = LoadDtdl(new[] { "Willow.Ontology.Airport.DTDLv3.jsonld" });
 
             var inputModels = modelParser.Parse(inputDtmi);
             ontologyMappingManager.ValidateTargetOntologyMapping(inputModels, out var invalidSources);
