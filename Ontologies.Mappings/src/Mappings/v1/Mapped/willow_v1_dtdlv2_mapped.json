@@ -4586,7 +4586,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:airport:AirportTerminal;1",
-      "OutputDtmi": "dtmi:mapped:core:Building;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Building;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1",
