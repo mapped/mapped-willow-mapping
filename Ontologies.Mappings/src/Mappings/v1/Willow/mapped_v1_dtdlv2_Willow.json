@@ -5065,6 +5065,14 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Photovoltaic_Array;1",
       "OutputDtmi": "dtmi:com:willowinc:PhotovoltaicArray;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Airport;1",
+      "OutputDtmi": "dtmi:com:willowinc:airport:Airport;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Airfield_Lighting_Equipment;1",
+      "OutputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1"
     }
   ],
   "NamespaceRemaps": [
