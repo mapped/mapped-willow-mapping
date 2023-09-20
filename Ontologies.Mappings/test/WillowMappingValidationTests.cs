@@ -166,7 +166,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
             var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
             var modelParser = new ModelParser();
-            var inputDtmi = LoadDtdl(new[] { "Willow.Ontology.DTDLv3.jsonld" });
+            var inputDtmi = LoadDtdl(new[] { "Willow.Ontology.Airport.DTDLv3.jsonld" });
 
             var inputModels = modelParser.Parse(inputDtmi);
             ontologyMappingManager.ValidateTargetOntologyMapping(inputModels, out var invalidSources);
