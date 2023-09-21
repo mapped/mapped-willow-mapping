@@ -53,6 +53,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
                 if (matchingRemapsCount > 1)
                 {
                     exceptions.Add($"Duplicate InterfaceRemap: {interfaceRemap.InputDtmi}");
+                    Console.WriteLine($"Duplicate InterfaceRemap: {interfaceRemap.InputDtmi}");
                 }
             }
 

@@ -34,7 +34,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
                 catch (ParsingException)
                 {
                     exceptions.Add($"Invalid input DTMI: {mapping.InputDtmi}");
-                    // Console.WriteLine($"Invalid input DTMI: {mapping.InputDtmi}");
+                    Console.WriteLine($"Invalid input DTMI: {mapping.InputDtmi}");
                 }
 
                 try
@@ -44,7 +44,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
                 catch (ParsingException)
                 {
                     exceptions.Add($"Invalid output DTMI: {mapping.OutputDtmi}");
-                    // Console.WriteLine($"Invalid output DTMI: {mapping.OutputDtmi}");
+                    Console.WriteLine($"Invalid output DTMI: {mapping.OutputDtmi}");
                 }
             }
 
@@ -55,7 +55,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
                 if (matchingRemapsCount > 1)
                 {
                     exceptions.Add($"Duplicate InterfaceRemap: {interfaceRemap.InputDtmi}");
-                    // Console.WriteLine($"Duplicate InterfaceRemap: {interfaceRemap.InputDtmi}");
+                    Console.WriteLine($"Duplicate InterfaceRemap: {interfaceRemap.InputDtmi}");
                 }
             }
 
@@ -158,10 +158,10 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
             ontologyMappingManager.ValidateSourceOntologyMapping(inputModels, out var invalidSources);
             Console.WriteLine(invalidSources.Count());
 
-            // foreach (var invalidSource in invalidSources)
-            // {
-            //     Console.WriteLine(invalidSource);
-            // }
+            foreach (var invalidSource in invalidSources)
+            {
+                Console.WriteLine(invalidSource);
+            }
             // Assert.Empty(invalidSources);
         }
 
@@ -176,11 +176,11 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
             var inputDtmi = LoadDtdl("mapped_dtdl.json");
             var inputModels = modelParser.Parse(inputDtmi);
             ontologyMappingManager.ValidateTargetOntologyMapping(inputModels, out var invalidSources);
-            // foreach (var invalidSource in invalidSources)
-            // {
-            //     Console.WriteLine(invalidSource);
-            // }
-            // Assert.Empty(invalidSources);
+            foreach (var invalidSource in invalidSources)
+            {
+                Console.WriteLine(invalidSource);
+            }
+            Assert.Empty(invalidSources);
         }
 
         private IEnumerable<string> LoadDtdl(string dtdlFile)
