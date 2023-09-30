@@ -1,0 +1,44 @@
+
+on:
+  schedule:
+    - cron: '0 22 * * *'
+
+jobs:
+  get-nuget-info:
+    runs-on: ubuntu-latest
+    outputs:
+      mapped: ${{ steps.get-mapped-info.outputs.data}}
+      willow: ${{ steps.get-willow-info.outputs.data }}
+    steps:
+      - name: Fetch latest info from Mapped.Ontologies.Core.Dtdl NuGet
+        id: get-mapped-info
+        run: |
+          DATA=$(curl -s 'https://api-v2v3search-0.nuget.org/query?q=Mapped.Ontologies.Core.Dtdl&prerelease=false')
+          echo "data=$DATA" >> $GITHUB_OUTPUT
+
+      - name: Fetch latest info from WillowInc.Ontology.DTDLv3 NuGet
+        id: get-willow-info
+        run: |
+          DATA=$(curl -s 'https://api-v2v3search-0.nuget.org/query?q=WillowInc.Ontology.DTDLv3&prerelease=false')
+          echo "data=$DATA" >> $GITHUB_OUTPUT
+
+  get-nuget-versions:
+    needs: get-nuget-info
+    runs-on: ubuntu-latest
+    outputs:
+      mapped: ${{ steps.get-mapped-version.outputs.version}}
+      willow: ${{ steps.get-willow-version.outputs.version}}
+    steps:
+      - name: Extract version from Mapped.Ontologies.Core.Dtdl nuget info
+        id: get-mapped-version
+        run: |
+          VERSION=${{ fromJSON(needs.get-nuget-info.outputs.mapped).data[0].version }}
+          echo "version=$MAPPED_VERSION" >> $GITHUB_OUTPUT
+
+      - name: Extract version from WillowInc.Ontology.DTDLv3 nuget info 
+        id: get-willow-version
+        run: |
+          VERSION=${{ fromJSON(needs.get-nuget-info.outputs.willow).data[0].version }}
+          echo "version=$WILLOW_VERSION" >> $GITHUB_OUTPUT
+
+          
