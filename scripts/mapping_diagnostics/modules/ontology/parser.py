@@ -14,7 +14,7 @@ class DTDLParser:
         self.relationships = set()
 
     def extract_namespace(self, dtmi):
-            match = re.match(r'^dtmi:(.*):[^:]+;\d+$', dtmi)
+            match = re.match(r'(^dtmi:.*:)[^:]+;\d+$', dtmi)
             if match:
                 namespace = match.group(1)
             else:
