@@ -1,7 +1,5 @@
 import re
-import json
 from typing import Union, Dict, List
-from pdb import set_trace
 
 
 class DTDLParser:
@@ -30,5 +28,3 @@ class DTDLParser:
                     for content in item['contents']:
                         if content['@type'] == 'Relationship':
                             self.relationships.add(content['name'])
-
-
