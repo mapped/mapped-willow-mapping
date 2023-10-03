@@ -40,4 +40,5 @@ def main():
     with open('gaps.json', 'w') as file:
         json.dump(gaps, file, indent=2)
 
-main()
+if __name__ == '__main__':
+  main()
