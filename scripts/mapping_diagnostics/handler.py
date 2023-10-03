@@ -1,5 +1,5 @@
-from scripts.mapping_diagnostics.modules.ontology import nuget
-from scripts.mapping_diagnostics.modules.ontology import parser
+from scripts.mapping_diagnostics.ontology import loader
+from scripts.mapping_diagnostics.ontology import parser
 
 class DTDLHandler:
     def __init__(self, package_id, content_filename=None):
@@ -8,8 +8,8 @@ class DTDLHandler:
         self.dtdl_parser = None
 
     def process(self):
-        processor = nuget.Processor(self.package_id)
-        dtdl_json = processor.process(self.content_filename)
+        nuget_loader = loader.NugetLoader(self.package_id)
+        dtdl_json = nuget_loader.load(self.content_filename)
         self.dtdl_parser = parser.DTDLParser(dtdl_json)
         self.dtdl_parser.parse()
     

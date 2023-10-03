@@ -1,6 +1,6 @@
 import json
 from handler import DTDLHandler
-from scripts.mapping_diagnostics.modules.mappings.mappings import Mappings 
+from scripts.mapping_diagnostics.mappings.mappings import Mappings 
 
 
 def main():
@@ -41,4 +41,4 @@ def main():
         json.dump(gaps, file, indent=2)
 
 if __name__ == '__main__':
-  main()
+    main()
