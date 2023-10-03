@@ -3,7 +3,7 @@ import json
 import zipfile
 import requests
 
-class Processor:
+class NugetLoader:
     BASE_DIR = 'scripts/mapping_diagnostics/data'
     
     def __init__(self, package_name):
@@ -50,7 +50,7 @@ class Processor:
     
         return data
 
-    def process(self, content_filename, version=None, cleanup=True):
+    def load(self, content_filename, version=None, cleanup=True):
         try:
             if version == None:
                 version = self._get_latest_version()
