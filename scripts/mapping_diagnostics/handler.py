@@ -1,5 +1,5 @@
-from scripts.mapping_diagnostics.ontology import loader
-from scripts.mapping_diagnostics.ontology import parser
+from ontology import loader
+from ontology import parser
 
 class DTDLHandler:
     def __init__(self, package_id, content_filename=None):
