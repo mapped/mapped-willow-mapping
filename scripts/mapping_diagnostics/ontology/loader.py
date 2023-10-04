@@ -1,13 +1,13 @@
 import os
-import json
-import zipfile
 import requests
+import zipfile
+import json
+import tempfile
 
 class NugetLoader:
-    BASE_DIR = 'scripts/mapping_diagnostics/data'
-    
     def __init__(self, package_name):
         self.package_name = package_name
+        self.temp_dir = tempfile.TemporaryDirectory()
 
     def _get_latest_version(self):
         nuget_api_url = f"https://api.nuget.org/v3/registration5-semver1/{self.package_name}/index.json"
@@ -20,14 +20,14 @@ class NugetLoader:
         nuget_url = f"https://www.nuget.org/api/v2/package/{self.package_name}/{version}"
         response = requests.get(nuget_url, stream=True)
         response.raise_for_status()
-        file_path = os.path.join(self.BASE_DIR, f"{self.package_name}.{version}.nupkg")
+        file_path = os.path.join(self.temp_dir.name, f"{self.package_name}.{version}.nupkg")
         with open(file_path, 'wb') as file:
             for chunk in response.iter_content(chunk_size=8192):
                 file.write(chunk)
         return file_path
 
     def _extract_package(self, file_path):
-        extract_folder = os.path.join(self.BASE_DIR, os.path.basename(file_path).replace('.nupkg', ''))
+        extract_folder = os.path.join(self.temp_dir.name, os.path.basename(file_path).replace('.nupkg', ''))
         os.makedirs(extract_folder, exist_ok=True)
         with zipfile.ZipFile(file_path, 'r') as zip_ref:
             zip_ref.extractall(extract_folder)
@@ -59,9 +59,5 @@ class NugetLoader:
             content = self._read_content(nuget_dir, content_filename)
         finally:
             if cleanup:
-                for root, dirs, files in os.walk(self.BASE_DIR, topdown=False):
-                    for file in files:
-                        os.remove(os.path.join(root, file))
-                    for dir in dirs:
-                        os.rmdir(os.path.join(root, dir))
+                self.temp_dir.cleanup()
         return content
