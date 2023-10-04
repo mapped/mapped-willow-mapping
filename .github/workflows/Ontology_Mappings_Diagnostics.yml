@@ -23,10 +23,6 @@ jobs:
     - name: Install dependencies with Poetry
       run: |
         poetry install
-    
-    - name: List directory contents
-      run: ls -la /home/runner/work/mapped-willow-mapping/mapped-willow-mapping/mapped_willow_mapping
-
       
     - name: Run the script
       run: python scripts/mapping_diagnostics/main.py
