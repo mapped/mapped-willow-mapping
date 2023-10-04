@@ -1,6 +1,6 @@
 import json
 from handler import DTDLHandler
-from scripts.mapping_diagnostics.mappings.mappings import Mappings 
+from mappings.mappings import Mappings 
 
 
 def main():
