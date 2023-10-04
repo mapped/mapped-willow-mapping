@@ -25,7 +25,7 @@ jobs:
         key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
 
     - name: Run Mapping Diagnostics
-      run: python scripts/mapping_diagnostics/main.py
+      run: poetry run python scripts/mapping_diagnostics/main.py
 
     - name: Upload gaps.json as artifact
       uses: actions/upload-artifact@v2
