@@ -17,8 +17,8 @@ jobs:
         path: ~/.cache/pypoetry/virtualenvs
         key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
     - run: poetry --version
-    - run: poetry install
-    - run: poetry shell 
+    - run: poetry install --no-interaction --no-root
+      if: steps.cache-deps.outputs.cache-hit != 'true'
     - run: python scripts/mapping_diagnostics/main.py
     - name: Upload gaps.json as artifact
       uses: actions/upload-artifact@v2
