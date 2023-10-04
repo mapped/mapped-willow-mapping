@@ -1,4 +1,4 @@
-name: Run Mapping Diagnostics Script and Upload Artifact
+name: Run Diagnostics
 
 on: push
 
@@ -15,12 +15,15 @@ jobs:
       with:
         python-version: 3.11
 
-    - name: Install dependencies
+    - name: Install and Configure Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+    - name: Install dependencies with Poetry
       run: |
         poetry install
-        poetry shell
       
-
     - name: Run the script
       run: python scripts/mapping_diagnostics/main.py
 
