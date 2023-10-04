@@ -1,0 +1,31 @@
+name: Mapping Diagnostics
+
+on: push
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Setup Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+
+    - name: Initialize Poetry Environment
+      uses: Gr1N/setup-poetry@v8
+
+    - name: Install Dependencies with Poetry
+      run: poetry install
+
+    - name: Execute Diagnostic Script
+      run: poetry run python scripts/mapping_diagnostics/main.py
+
+    - name: Save Diagnostic Output as Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: diagnostics-output
+        path: scripts/mapping_diagnostics/output/

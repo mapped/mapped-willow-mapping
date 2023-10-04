@@ -355,6 +355,4 @@ MigrationBackup/
 # or other resources that are only relevant to the individual developer's 
 # environment and not the entire project team.
 /local_resources/
-
-poetry.lock
-pyproject.toml
+/scripts/mapping_diagnostics/output
