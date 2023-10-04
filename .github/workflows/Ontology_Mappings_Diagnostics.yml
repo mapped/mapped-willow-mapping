@@ -11,14 +11,18 @@ jobs:
     - uses: actions/setup-python@v4
       with:
         python-version: "3.11"
-    - uses: Gr1N/setup-poetry@v8
-    - uses: actions/cache@v2
-      with:
-        path: ~/.cache/pypoetry/virtualenvs
-        key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
-    - run: poetry --version
-    - run: poetry install
-    - run: python scripts/mapping_diagnostics/main.py
+
+    - name: Set up poetry
+      uses: abatilo/actions-poetry@v2.1.5
+
+    - name: install poetry
+      run: |
+        keyring --disable
+        poetry install
+
+    - name: Run Mapping Diagnostics
+      run: python scripts/mapping_diagnostics/main.py
+
     - name: Upload gaps.json as artifact
       uses: actions/upload-artifact@v2
       with:
