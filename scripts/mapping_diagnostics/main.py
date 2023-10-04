@@ -1,4 +1,5 @@
 import json
+import os
 from handler import DTDLHandler
 from mappings.mappings import Mappings 
 
@@ -37,7 +38,10 @@ def main():
         }
     }
 
-    with open('gaps.json', 'w') as file:
+    output_directory = 'scripts/mapping_diagnostics/output'
+    os.makedirs(output_directory, exist_ok=True)
+
+    with open(os.path.join(output_directory, 'gaps.json'), 'w') as file:
         json.dump(gaps, file, indent=2)
 
 if __name__ == '__main__':
