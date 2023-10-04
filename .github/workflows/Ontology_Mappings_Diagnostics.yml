@@ -1,4 +1,4 @@
-name: Run Diagnostics
+name: Mapping Diagnostics
 
 on: push
 
