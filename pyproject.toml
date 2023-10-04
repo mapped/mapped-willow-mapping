@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Connor Cantrell <connor@mapped.com>"]
 readme = "README.md"
-packages = [{include = "mapped_willow_mapping"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
