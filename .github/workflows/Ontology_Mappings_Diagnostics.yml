@@ -17,7 +17,6 @@ jobs:
 
     - name: install poetry
       run: |
-        keyring --disable
         poetry install
 
     - name: Run Mapping Diagnostics
