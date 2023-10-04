@@ -1,0 +1,31 @@
+name: Run Mapping Diagnostics Script and Upload Artifact
+
+on: push
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python version
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      run: |
+        poetry install
+        poetry shell
+      
+
+    - name: Run the script
+      run: python scripts/mapping_diagnostics/main.py
+
+    - name: Upload gaps.json as artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: gaps-artifact 
+        path: gaps.json
