@@ -7,28 +7,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: pwd
-    - uses: actions/checkout@v3
-    - uses: actions/setup-python@v4
+    - name: Display Current Directory
+      run: pwd
+
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Setup Python 3.11
+      uses: actions/setup-python@v4
       with:
         python-version: "3.11"
 
-    - name: Set up poetry
+    - name: Initialize Poetry Environment
       uses: Gr1N/setup-poetry@v8
 
-    - name: install poetry
-      run: |
-        poetry install
+    - name: Install Dependencies with Poetry
+      run: poetry install
 
-    - uses: actions/cache@v2
-      with:
-        path: ~/.cache/pypoetry/virtualenvs
-        key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
-
-    - name: Run Mapping Diagnostics
+    - name: Execute Diagnostic Script
       run: poetry run python scripts/mapping_diagnostics/main.py
 
-    - name: Upload gaps.json as artifact
+    - name: Save Diagnostic Output as Artifact
       uses: actions/upload-artifact@v2
       with:
         name: gaps-artifact 
