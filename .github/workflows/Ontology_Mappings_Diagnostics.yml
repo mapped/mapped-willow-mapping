@@ -7,26 +7,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out repository
-      uses: actions/checkout@v2
-
-    - name: Set up Python version
-      uses: actions/setup-python@v2
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
       with:
-        python-version: 3.11
-
-    - name: Install and Configure Poetry
-      run: |
-        curl -sSL https://install.python-poetry.org | python3 -
-        echo "$HOME/.local/bin" >> $GITHUB_PATH
-
-    - name: Install dependencies with Poetry
-      run: |
-        poetry install
-    
-    - name: Run the script
-      run: python scripts/mapping_diagnostics/main.py
-
+        python-version: "3.11"
+    - uses: Gr1N/setup-poetry@v8
+    - uses: actions/cache@v2
+      with:
+        path: ~/.cache/pypoetry/virtualenvs
+        key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
+    - run: poetry --version
+    - run: poetry install
+    - run: python scripts/mapping_diagnostics/main.py
     - name: Upload gaps.json as artifact
       uses: actions/upload-artifact@v2
       with:
