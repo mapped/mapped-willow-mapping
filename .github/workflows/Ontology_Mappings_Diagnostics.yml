@@ -24,10 +24,6 @@ jobs:
       run: |
         poetry install
     
-    - name: List Directories
-      run: |
-        ls -a
-      
     - name: Run the script
       run: python scripts/mapping_diagnostics/main.py
 
