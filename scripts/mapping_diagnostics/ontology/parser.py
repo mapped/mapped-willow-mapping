@@ -21,7 +21,7 @@ class DTDLParser:
 
     def parse(self):
         for item in self.content:
-            if item['@type'] == 'Interface':
+            if item['@type'] == 'Interface' and not item['deprecated']:
                 self.extract_namespace(item['@id'])
                 self.interfaces.add(item['@id'])
                 if 'contents' in item:
