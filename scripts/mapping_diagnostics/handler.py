@@ -5,12 +5,13 @@ class DTDLHandler:
     def __init__(self, package_id, content_filename=None):
         self.package_id = package_id 
         self.content_filename = content_filename
+        self.content = None
         self.dtdl_parser = None
 
     def process(self):
         nuget_loader = loader.NugetLoader(self.package_id)
-        dtdl_json = nuget_loader.load(self.content_filename)
-        self.dtdl_parser = parser.DTDLParser(dtdl_json)
+        self.content = nuget_loader.load(self.content_filename)
+        self.dtdl_parser = parser.DTDLParser(self.content)
         self.dtdl_parser.parse()
     
     @property
