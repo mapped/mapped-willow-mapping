@@ -65,7 +65,7 @@ class Mapper:
 
             for key, inner_dict in results.items():
                 if key not in self.results:
-                    self.results[key] = defaultdict(float)
+                    self.results[key] = defaultdict(int)
 
                 for inner_key, inner_value in inner_dict.items():
                     self.results[key][inner_key] += inner_value * weight
@@ -74,13 +74,14 @@ class Mapper:
         pass
 
 
-class ProximityMapper():
+class ProximityMapper:
     def __init__(self, graph: nx.DiGraph):
         self.graph = graph
+        self.suggested_mappings = defaultdict(lambda: defaultdict(int))
 
-    def execute(self):
+    def identify_unmapped_nodes(self):
         # Identify unmapped nodes
-        unmapped = []
+        unmapped_nodes = []
         for node in self.graph.nodes():
             has_maps_to = False
             for _, _, edge_data in self.graph.out_edges(node, data=True):
@@ -88,38 +89,93 @@ class ProximityMapper():
                     has_maps_to = True
                     break
             if not has_maps_to:
-                unmapped.append(node)
+                unmapped_nodes.append(node)
+        return unmapped_nodes
 
-        suggested_mappings = defaultdict(lambda: defaultdict(int))
-        for node in unmapped:
-            # Get node's parent mappings
+    def identify_outward_edge_mappings(self, nodes):
+        """
+        Identify potential mappings for nodes by examining outward edges within the ontology.
+
+        For each node in the list:
+        1. Ascend to the node's immediate parent.
+        2. Traverse through the mapping to reach the corresponding node within the ontology.
+        3. Descend to collect children of that node.
+        4. Accumulate these children and their parent node as potential mappings for the originating node.
+
+        Parameters:
+        - nodes: Nodes to determine potential mappings within the ontology.
+        """
+        for node in nodes:
             for parent, _, edge_data in self.graph.in_edges(node, data=True):
                 if edge_data.get("relationship") == "extends":
-                    for _, mapping, edge_data in self.graph.out_edges(
-                        parent, data=True
-                    ):
+                    for mapping, _, edge_data in self.graph.in_edges(parent, data=True):
                         if edge_data.get("relationship") == "mapsTo":
-                            suggested_mappings[node][mapping] += 1
+                            self.suggested_mappings[node][mapping] += 1
 
                             # Get children of mappings
                             for _, child, edge_data in self.graph.out_edges(
                                 mapping, data=True
                             ):
                                 if edge_data.get("relationship") == "extends":
-                                    suggested_mappings[node][child] += 1
+                                    self.suggested_mappings[node][child] += 1
 
-        weighted_mappings = self.calculate_weighted_mappings(suggested_mappings)
+    def identify_inward_edge_mappings(self, nodes):
+        """
+        Identify potential mappings for nodes by examining inward edges from external ontology references.
+
+        For each provided node:
+        1. Traverse upwards to the node's immediate parent.
+        2. Check if any nodes in the other ontology have mappings pointing to this parent.
+        3. For nodes with such mappings, traverse downwards to retrieve their children.
+        4. Return the externally referenced node and its children as potential mappings for the original node.
+
+        Parameters:
+        - nodes (List[Node]): A list of nodes for which to identify potential mappings based on external references.
+
+        Returns:
+        - Dictionary with original node as the key and potential mappings as the values.
+        """
+        for node in nodes:
+            for parent, _, edge_data in self.graph.in_edges(node, data=True):
+                if edge_data.get("relationship") == "extends":
+                    for _, mapping, edge_data in self.graph.out_edges(
+                        parent, data=True
+                    ):
+                        if edge_data.get("relationship") == "mapsTo":
+                            self.suggested_mappings[node][mapping] += 1
+
+                            # Get children of mappings
+                            for _, child, edge_data in self.graph.out_edges(
+                                mapping, data=True
+                            ):
+                                if edge_data.get("relationship") == "extends":
+                                    self.suggested_mappings[node][child] += 1
+
+    def execute(self):
+        nodes = self.identify_unmapped_nodes()
+        self.identify_outward_edge_mappings(nodes)
+        self.identify_inward_edge_mappings(nodes)
+        weighted_mappings = self.calculate_weighted_mappings()
+        print(
+            f"Suggesting mappings for {len(self.suggested_mappings)} entities with {len(nodes) - len(self.suggested_mappings)} remanaining unmapped entities."
+        )
         return weighted_mappings
 
-    def calculate_weighted_mappings(self, possible_mappings):
-        weighted_mappings = defaultdict(lambda: defaultdict(float))
-        for node, mappings in possible_mappings.items():
-            total_visits = sum(mappings.values())
-            for mapping, visits in mappings.items():
-                weighted_mappings[node][mapping] = (
-                    visits / total_visits if total_visits > 0 else 0
-                )
-        return weighted_mappings
+    def calculate_weighted_mappings(self):
+        for node in self.suggested_mappings:
+            # Sort the mappings for each node by weight in descending order
+            self.suggested_mappings[node] = dict(sorted(self.suggested_mappings[node].items(), 
+                                                key=lambda item: item[1], 
+                                                reverse=True))
+            # Convert defaultdict to regular dictionary for serialization
+            normal_dict = {k: dict(v) for k, v in self.suggested_mappings.items()}
+
+        # TODO: Remove
+        import json
+        with open("possible_mappings.json", "w") as f:
+            json.dump(normal_dict, f, indent=4)
+
+        return self.suggested_mappings 
 
 
 # class StringSimilarityMapper(MappingStrategy):
