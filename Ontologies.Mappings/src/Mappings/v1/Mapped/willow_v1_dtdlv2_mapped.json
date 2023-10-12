@@ -3314,7 +3314,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Shower;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Shower;1"
+      "OutputDtmi": "dtmi:mapped:core:Plumbing_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SmokeDamper;1",
