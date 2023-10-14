@@ -283,15 +283,15 @@
       "OutputDtmi": "dtmi:com:willowinc:WaterTemperatureSensor;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Discharge_Air_Flow_Sensor;1",
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Flow_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirFlowSensor;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Discharge_Air_Humidity_Sensor;1",
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Humidity_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirHumiditySensor;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Discharge_Air_Static_Pressure_Sensor;1",
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Static_Pressure_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirStaticPressureSensor;1"
     },
     {
@@ -303,7 +303,7 @@
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirTemperatureSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Discharge_Air_Temperature_Sensor;1",
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirTemperatureSensor;1"
     },
     {
@@ -311,7 +311,7 @@
       "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Discharge_Air_Temperature_Setpoint;1",
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirTemperatureSetpoint;1"
     },
     {
