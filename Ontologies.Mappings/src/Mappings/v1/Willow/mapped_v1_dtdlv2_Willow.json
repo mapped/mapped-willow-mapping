@@ -5181,6 +5181,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Airfield_Lighting_Equipment;1",
       "OutputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:w3id:rec:Desk;1",
+      "OutputDtmi": "dtmi:com:willowinc:Workstation;1"
     }
   ],
   "NamespaceRemaps": [
