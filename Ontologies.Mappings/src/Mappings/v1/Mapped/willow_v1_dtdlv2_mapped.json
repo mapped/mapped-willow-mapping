@@ -4595,10 +4595,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:Agent;1",
       "OutputDtmi": "dtmi:org:w3id:rec:Agent;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:Company;1",
-      "OutputDtmi": "dtmi:org:w3id:rec:Company;1"
     }
   ],
   "NamespaceRemaps": [],
