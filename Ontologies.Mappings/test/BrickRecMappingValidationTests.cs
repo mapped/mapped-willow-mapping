@@ -97,7 +97,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
             var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
             var modelParser = new ModelParser();
-            var inputDtmi = LoadDtdl("mapped_dtdl.json");
+            var inputDtmi = LoadDtdl(new[] { "mapped_dtdl.json" });
             var inputModels = modelParser.Parse(inputDtmi);
             ontologyMappingManager.ValidateSourceOntologyMapping(inputModels, out var invalidSources);
 
@@ -112,32 +112,38 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
             var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
             var modelParser = new ModelParser();
-            var inputDtmi = LoadDtdl("RealEstateCore.DTDLv2.jsonld");
+            var inputDtmi = LoadDtdl(new[] { "RealEstateCore.DTDLv2.jsonld" });
             var inputModels = modelParser.Parse(inputDtmi);
             ontologyMappingManager.ValidateTargetOntologyMapping(inputModels, out var invalidSources);
 
             Assert.Empty(invalidSources);
         }
 
-        private IEnumerable<string> LoadDtdl(string dtdlFile)
+
+        private IEnumerable<string> LoadDtdl(string[] dtdlFiles)
         {
             var assembly = Assembly.GetExecutingAssembly();
-            var resourceName = assembly.GetManifestResourceNames().Single(str => str.EndsWith(dtdlFile));
+
             List<string> dtdls = new List<string>();
 
-            using (Stream? stream = assembly.GetManifestResourceStream(resourceName))
+            foreach (var file in dtdlFiles)
             {
-                if (stream != null)
+                var resourceName = assembly.GetManifestResourceNames().Single(str => str.EndsWith(file));
+
+                using (Stream? stream = assembly.GetManifestResourceStream(resourceName))
                 {
-                    using (StreamReader reader = new StreamReader(stream))
+                    if (stream != null)
                     {
-                        string result = reader.ReadToEnd();
-                        dtdls.Add(result);
+                        using (StreamReader reader = new StreamReader(stream))
+                        {
+                            string result = reader.ReadToEnd();
+                            dtdls.Add(result);
+                        }
                     }
-                }
-                else
-                {
-                    throw new FileNotFoundException(resourceName);
+                    else
+                    {
+                        throw new FileNotFoundException(resourceName);
+                    }
                 }
             }
 
