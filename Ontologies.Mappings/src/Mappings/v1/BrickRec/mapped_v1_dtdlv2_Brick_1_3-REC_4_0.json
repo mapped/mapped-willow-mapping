@@ -1,85 +1,78 @@
 {
+  "FillProperties": [
+    {
+      "InputPropertyNames": [
+        "name",
+        "description"
+      ],
+      "OutputDtmiFilter": ".*",
+      "OutputPropertyName": "name"
+    }
+  ],
   "Header": {
     "InputOntologies": [
       {
+        "DtdlVersion": "v2",
         "Name": "mapped",
-        "Version": "1.0",
-        "DtdlVersion": "v2"
+        "Version": "1.0"
       }
     ],
     "OutputOntologies": [
       {
+        "DtdlVersion": "v2",
         "Name": "brick",
-        "Version": "1.3",
-        "DtdlVersion": "v2"
+        "Version": "1.3"
       },
       {
+        "DtdlVersion": "v2",
         "Name": "rec",
-        "Version": "4.0",
-        "DtdlVersion": "v2"
+        "Version": "4.0"
       }
     ]
   },
-  "NamespaceRemaps": [
-    {
-      "InputNamespace": "dtmi:org:brickschema:schema:Brick:",
-      "OutputNamespace": "dtmi:org:brickschema:schema:Brick:"
-    }
-  ],
   "InterfaceRemaps": [
     {
       "InputDtmi": "dtmi:mapped:core:Air_Flow_Alarm_Setpoint;1",
-      // Temporary until further decision with Brick
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Air_Flow_Direction_Status;1",
-      // Mapped to Base - Review needed
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Status;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Air_Flow_Status;1",
-      // Mapped to Base - Review needed
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Status;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:BACnet_Device;1",
-      // Mapped to Base - Review needed
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Equipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Battery_Status;1",
-      // Mapped to Base - Review needed
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Status;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:CO2_Alarm_Setpoint;1",
-      // Mapped to Base - Review needed
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Compressor_Status;1",
-      // Mapped to Base - Review needed
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Status;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cooling_Air_Temperature_Setpoint_Offset;1",
-      // Temporary until further decision with Brick
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Parameter;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Count;1",
-      // Temporary until further decision with Brick
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Status;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Discharge_Air_Temperature_Reset_Setpoint;1",
-      // Temporary until further decision with Brick
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Reset_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Display_Status;1",
-      // Mapped to Base - Review needed
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Status;1"
     },
     {
@@ -92,37 +85,30 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Fan_Request;1",
-      // Temporary until further decision with Brick
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Status;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Max_Air_Temperature_Setpoint_Limit;1",
-      // Temporary until further decision with Brick
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Limit;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Max_Cooling_Air_Temperature_Setpoint_Limit;1",
-      // Temporary until further decision with Brick
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Limit;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Max_Heating_Air_Temperature_Setpoint_Limit;1",
-      // Temporary until further decision with Brick
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Limit;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Min_Air_Temperature_Setpoint_Limit;1",
-      // Temporary until further decision with Brick
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Min_Limit;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Min_Cooling_Air_Temperature_Setpoint_Limit;1",
-      // Temporary until further decision with Brick
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Min_Limit;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Min_Heating_Air_Temperature_Setpoint_Limit;1",
-      // Temporary until further decision with Brick
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Min_Limit;1"
     },
     {
@@ -131,50 +117,34 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Offset;1",
-      // Temporary until further decision with Brick
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Parameter;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Reset_Status;1",
-      // Mapped to Base - Review needed
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Status;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Return_Condenser_Water_Temperature_Sensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Condenser_Water_Temperature_Sensor;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Setpoint_Offset;1",
-      // Temporary until further decision with Brick
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Parameter;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Supply_Condenser_Water_Temperature_Sensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Condenser_Water_Temperature_Sensor;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Temperature_Alarm_Count;1",
-      // Temporary until further decision with Brick
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Status;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Temperature_Alarm_Setpoint;1",
-      // Mapped to Base - Review needed
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Temperature_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Test_Point;1",
-      // Mapped to Base - Review needed
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Thing;1",
-      // Mapped to Base - Review needed
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Equipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Time_Status;1",
-      // Mapped to Base - Review needed
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Status;1"
     },
     {
@@ -187,7 +157,6 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Valve_Position_Setpoint;1",
-      // Mapped to Base - Review needed
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint;1"
     },
     {
@@ -288,12 +257,10 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Employee_Entrance_Lobby;1",
-      // Manual Remap - Not Verified
       "OutputDtmi": "dtmi:org:w3id:rec:Entrance;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Enclosed_Office;1",
-      // Manual Remap - Not Verified
       "OutputDtmi": "dtmi:org:w3id:rec:Office;1"
     },
     {
@@ -382,9 +349,8 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Media_Hot_Desk;1",
-      // Invalid Output DTMI - Review Needed
-      "OutputDtmi": "dtmi:org:w3id:rec:Media_Hot_Desk;1",
-      "IsIgnored": true
+      "IsIgnored": true,
+      "OutputDtmi": "dtmi:org:w3id:rec:Media_Hot_Desk;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Media_Production_Room;1",
@@ -551,6 +517,22 @@
       "OutputDtmi": "dtmi:org:w3id:rec:Zone;1"
     }
   ],
+  "NamespaceRemaps": [
+    {
+      "InputNamespace": "dtmi:org:brickschema:schema:Brick:",
+      "OutputNamespace": "dtmi:org:brickschema:schema:Brick:"
+    }
+  ],
+  "PropertyProjections": [
+    {
+      "InputPropertyNames": [
+        "mappingKey"
+      ],
+      "IsOutputPropertyCollection": true,
+      "OutputDtmiFilter": ".*",
+      "OutputPropertyName": "externalIds"
+    }
+  ],
   "RelationshipRemaps": [
     {
       "InputRelationship": "floors",
@@ -559,21 +541,6 @@
     {
       "InputRelationship": "hasPart",
       "OutputRelationship": "isLocationOf"
-    }
-  ],
-  "PropertyProjections": [
-    {
-      "OutputDtmiFilter": ".*",
-      "OutputPropertyName": "externalIds",
-      "InputPropertyNames": [ "mappingKey" ],
-      "IsOutputPropertyCollection": true
-    }
-  ],
-  "FillProperties": [
-    {
-      "OutputDtmiFilter": ".*",
-      "OutputPropertyName": "name",
-      "InputPropertyNames": [ "name", "description" ]
     }
   ]
 }

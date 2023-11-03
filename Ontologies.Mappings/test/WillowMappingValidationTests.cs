@@ -152,11 +152,23 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
             var modelParser = new ModelParser();
             var inputDtmi = LoadDtdl(new[] { "mapped_dtdl.json" });
-            var inputModels = modelParser.Parse(inputDtmi);
-            ontologyMappingManager.ValidateSourceOntologyMapping(inputModels, out var invalidSources);
-            Console.WriteLine(invalidSources.Count());
 
-            Assert.Empty(invalidSources);
+            try
+            {
+                var inputModels = modelParser.Parse(inputDtmi);
+                ontologyMappingManager.ValidateSourceOntologyMapping(inputModels, out var invalidSources);
+                Console.WriteLine(invalidSources.Count());
+
+                Assert.Empty(invalidSources);
+            }
+            catch (ParsingException e)
+            {
+                foreach (var error in e.Errors)
+                {
+                    output.WriteLine(error.Message);
+                }
+                throw;
+            }
         }
 
         [Theory]

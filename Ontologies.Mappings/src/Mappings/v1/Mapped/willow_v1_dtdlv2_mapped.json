@@ -3769,10 +3769,6 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Heating_Temperature_Setpoint;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingZoneAirTemperatureSetpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Air_Temperature_Heating_Setpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:UnoccupiedState;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Mode_Status;1"
     },
@@ -4591,6 +4587,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1",
       "OutputDtmi": "dtmi:mapped:core:Airfield_Lighting_Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Agent;1",
+      "OutputDtmi": "dtmi:org:w3id:rec:Agent;1"
     }
   ],
   "NamespaceRemaps": [],
