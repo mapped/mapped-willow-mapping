@@ -5003,6 +5003,18 @@
       "OutputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:LeavingWaterTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Water_Temperature_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:EnteringWaterTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Elevator;1",
+      "OutputDtmi": "dtmi:com:willowinc:ElevatorMachine;1"
+    },
+    {
       "InputDtmi": "dtmi:org:w3id:rec:Agent;1",
       "OutputDtmi": "dtmi:com:willowinc:Agent;1"
     }
