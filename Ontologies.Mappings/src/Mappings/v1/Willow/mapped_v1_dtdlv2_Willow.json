@@ -2031,10 +2031,6 @@
       "OutputDtmi": "dtmi:com:willowinc:WaterFlowSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Water_Temperature_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:WaterTemperatureSensor;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Water_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterTemperatureSetpoint;1"
     },
@@ -2681,10 +2677,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Flow_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterFlowSetpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:WaterTemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Setpoint;1",
