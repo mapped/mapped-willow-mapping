@@ -12,6 +12,7 @@ pandas = "^2.0.3"
 pyyaml = "^6.0"
 pytest = "^7.4.0"
 requests = "^2.31.0"
+ontology-mapper = {version = "^0.2.2", source = "fury"}
 
 
 [[tool.poetry.source]]
@@ -22,3 +23,9 @@ priority = "explicit"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+[[tool.poetry.source]]
+url = "https://pypi.fury.io/mapped/"
+name = "fury"
+priority = "explicit"
