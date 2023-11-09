@@ -1,0 +1,25 @@
+name: Ontology Mapper 
+
+on: push
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Setup Python 3.8
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.8"
+
+    - name: Initialize Poetry Environment
+      uses: Gr1N/setup-poetry@v8
+
+    - name: Install Dependencies with Poetry
+      run: poetry install
+
+    - name: Execute Diagnostic Script
+      run: poetry run python scripts/generate_mappings.py
