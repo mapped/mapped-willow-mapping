@@ -155,6 +155,24 @@ files = [
 ]
 
 [[package]]
+name = "networkx"
+version = "3.2.1"
+description = "Python package for creating and manipulating graphs and networks"
+optional = false
+python-versions = ">=3.9"
+files = [
+    {file = "networkx-3.2.1-py3-none-any.whl", hash = "sha256:f18c69adc97877c42332c170849c96cefa91881c99a7cb3e95b7c659ebdc1ec2"},
+    {file = "networkx-3.2.1.tar.gz", hash = "sha256:9f1bb5cf3409bf324e0a722c20bdb4c20ee39bf1c30ce8ae499c8502b0b5e0c6"},
+]
+
+[package.extras]
+default = ["matplotlib (>=3.5)", "numpy (>=1.22)", "pandas (>=1.4)", "scipy (>=1.9,!=1.11.0,!=1.11.1)"]
+developer = ["changelist (==0.4)", "mypy (>=1.1)", "pre-commit (>=3.2)", "rtoml"]
+doc = ["nb2plots (>=0.7)", "nbconvert (<7.9)", "numpydoc (>=1.6)", "pillow (>=9.4)", "pydata-sphinx-theme (>=0.14)", "sphinx (>=7)", "sphinx-gallery (>=0.14)", "texext (>=0.6.7)"]
+extra = ["lxml (>=4.6)", "pydot (>=1.4.2)", "pygraphviz (>=1.11)", "sympy (>=1.10)"]
+test = ["pytest (>=7.2)", "pytest-cov (>=4.0)"]
+
+[[package]]
 name = "numpy"
 version = "1.25.1"
 description = "Fundamental package for array computing in Python"
@@ -187,6 +205,26 @@ files = [
     {file = "numpy-1.25.1-pp39-pypy39_pp73-win_amd64.whl", hash = "sha256:012097b5b0d00a11070e8f2e261128c44157a8689f7dedcf35576e525893f4fe"},
     {file = "numpy-1.25.1.tar.gz", hash = "sha256:9a3a9f3a61480cc086117b426a8bd86869c213fc4072e606f01c4e4b66eb92bf"},
 ]
+
+[[package]]
+name = "ontology-mapper"
+version = "0.2.2"
+description = ""
+optional = false
+python-versions = ">=3.8,<4.0"
+files = [
+    {file = "ontology-mapper-0.2.2.tar.gz", hash = "sha256:a1ccd7b2457c55f20f4d93a9f5c64f24582a535eec5ba001e4bb80612b3b361a"},
+    {file = "ontology_mapper-0.2.2-py3-none-any.whl", hash = "sha256:4d19bc87899bc659857ba0e3f72b5fe66e31db56a4f77ad903e1411d5329a0ea"},
+]
+
+[package.dependencies]
+networkx = ">=3.1,<4.0"
+requests = ">=2.31.0,<3.0.0"
+
+[package.source]
+type = "legacy"
+url = "https://pypi.fury.io/mapped"
+reference = "fury"
 
 [[package]]
 name = "openpyxl"
@@ -448,4 +486,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "8ea9f61fd533849eb52e38c20fe5da2596676e54483849734cd2f9d2db924150"
+content-hash = "556c37a7d5e1c7d2d865922ea40b7351e9ec202ce13d37f8e06f194f32fa2366"
