@@ -6,7 +6,7 @@ authors = ["Connor Cantrell <connor@mapped.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.8"
 openpyxl = "^3.1.2"
 pandas = "^2.0.3"
 pyyaml = "^6.0"
@@ -23,9 +23,3 @@ priority = "explicit"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-
-[[tool.poetry.source]]
-url = "https://pypi.fury.io/mapped/"
-name = "fury"
-priority = "explicit"
