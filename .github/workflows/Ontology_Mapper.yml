@@ -19,7 +19,10 @@ jobs:
       uses: Gr1N/setup-poetry@v8
 
     - name: Install Dependencies with Poetry
-      run: poetry install
+      run: |
+        keyring --disable
+        poetry config http-basic.fury ${{ secrets.FURY_READ_TOKEN  }} NOPASS
+        poetry install --no-dev
 
     - name: Execute Diagnostic Script
       run: poetry run python scripts/generate_mappings.py
