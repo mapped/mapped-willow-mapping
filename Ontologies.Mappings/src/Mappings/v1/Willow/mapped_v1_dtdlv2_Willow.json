@@ -5023,10 +5023,6 @@
       "OutputDtmi": "dtmi:com:willowinc:CoolingAirVolumeFlowSetpointHighLimit;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Run_Time_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:TimeSpanSensor;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:RVAV;1",
       "OutputDtmi": "dtmi:com:willowinc:VAVBox;1"
     }

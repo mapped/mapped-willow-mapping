@@ -4605,10 +4605,6 @@
       "OutputDtmi": "dtmi:org:w3id:rec:Agent;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:DischargeAirFlowSetpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Flow_Setpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:HeatingAirVolumeFlowSetpointHighLimit;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Heating_Discharge_Air_Flow_Setpoint_Limit;1"
     },
