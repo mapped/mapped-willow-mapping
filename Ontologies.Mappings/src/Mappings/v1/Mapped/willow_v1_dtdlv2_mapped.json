@@ -4603,6 +4603,26 @@
     {
       "InputDtmi": "dtmi:com:willowinc:Agent;1",
       "OutputDtmi": "dtmi:org:w3id:rec:Agent;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Flow_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirFlowSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Heating_Discharge_Air_Flow_Setpoint_Limit;1",
+      "OutputDtmi": "dtmi:com:willowinc:MaxLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Cooling_Discharge_Air_Flow_Setpoint_Limit;1",
+      "OutputDtmi": "dtmi:com:willowinc:MaxLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Run_Time_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:TimeSpanSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:RVAV;1",
+      "OutputDtmi": "dtmi:com:willowinc:VAVBox;1"
     }
   ],
   "NamespaceRemaps": [],

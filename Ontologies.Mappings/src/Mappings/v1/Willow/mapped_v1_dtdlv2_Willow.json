@@ -5005,6 +5005,10 @@
     {
       "InputDtmi": "dtmi:org:w3id:rec:Agent;1",
       "OutputDtmi": "dtmi:com:willowinc:Agent;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:TimeSpanSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Run_Time_Sensor;1"
     }
   ],
   "NamespaceRemaps": [
