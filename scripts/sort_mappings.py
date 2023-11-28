@@ -16,5 +16,5 @@ def sort_json_file(file_path):
         print(e)
         sys.exit(e)
 
-sort_json_file('Ontologies.Mappings/src/Mappings/v1/Mapped/mapped_v1_dtdlv2_Willow.json')
-sort_json_file('Ontologies.Mappings/src/Mappings/v1/Willow/willow_v1_dtdlv2_mapped.json')
+sort_json_file('Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json')
+sort_json_file('Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json')
