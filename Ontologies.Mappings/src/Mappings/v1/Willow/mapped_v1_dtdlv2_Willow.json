@@ -4691,7 +4691,7 @@
       "OutputDtmi": "dtmi:com:willowinc:AirCompressor;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Fan_Powered_Terminal_Unit;1",
+      "InputDtmi": "dtmi:mapped:core:Fan_Powered_VAV;1",
       "OutputDtmi": "dtmi:com:willowinc:FanPoweredBox;1"
     },
     {
