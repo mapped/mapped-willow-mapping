@@ -33,3 +33,6 @@ jobs:
 
     - name: Generate Mappings
       run: poetry run python scripts/generate_mappings.py
+    
+    - name: Sort Mappings
+      run: poetry run python scripts/sort_mappings.py
