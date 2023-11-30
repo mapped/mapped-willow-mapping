@@ -22,7 +22,7 @@ jobs:
       run: |
         poetry source add fury --secondary https://pypi.fury.io/mapped/
         poetry config http-basic.fury ${{ secrets.FURY_READ_TOKEN_PUBLIC }} NOPASS
-        poetry install --no-dev
+        poetry install --only main
 
     - name: Execute Diagnostic Script
       run: poetry run python scripts/generate_mappings.py
