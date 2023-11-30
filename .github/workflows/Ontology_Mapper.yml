@@ -20,8 +20,8 @@ jobs:
 
     - name: Install Dependencies with Poetry
       run: |
-        poetry source add --priority=primary PyPI
-        poetry source add --priority=supplemental fury https://pypi.fury.io/mapped/
+        poetry source add --priority=0 PyPI
+        poetry source add --priority=1 fury https://pypi.fury.io/mapped/
         poetry config http-basic.fury ${{ secrets.FURY_READ_TOKEN_PUBLIC }} NOPASS
         poetry lock --no-update
         poetry install --only main
