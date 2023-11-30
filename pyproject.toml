@@ -18,7 +18,7 @@ ontology-mapper = {version = "^0.2.2", source = "fury"}
 [[tool.poetry.source]]
 name = "fury"
 url = "https://pypi.fury.io/mapped/"
-priority = 1
+priority = "supplemental"
 
 [build-system]
 requires = ["poetry-core"]
