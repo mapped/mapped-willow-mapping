@@ -2,6 +2,9 @@ name: Ontology Mapper
 
 on: push
 
+env:
+  POETRY_VERSION: '1.6.1'
+
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -15,8 +18,10 @@ jobs:
       with:
         python-version: "3.9"
 
-    - name: Initialize Poetry Environment
-      uses: Gr1N/setup-poetry@v8
+    - name: Set up poetry
+      uses: abatilo/actions-poetry@v2.1.5
+      with:
+        poetry-version: "${{ env.POETRY_VERSION}}"
 
     - name: Install Dependencies with Poetry
       run: |
