@@ -26,5 +26,5 @@ jobs:
         poetry lock --no-update
         poetry install --only main
 
-    - name: Execute Diagnostic Script
+    - name: Generate Mappings
       run: poetry run python scripts/generate_mappings.py
