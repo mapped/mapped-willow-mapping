@@ -7,6 +7,12 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+<<<<<<< HEAD
+=======
+openpyxl = "^3.1.2"
+pandas = "^2.0.3"
+requests = "^2.31.0"
+>>>>>>> 54cd3d2a3ba3f8299c2ed05f9d331050a6b7bf43
 ontology-mapper = {version = "^0.2.2", source = "fury"}
 
 
