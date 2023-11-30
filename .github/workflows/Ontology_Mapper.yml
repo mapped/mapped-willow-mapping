@@ -20,7 +20,7 @@ jobs:
 
     - name: Install Dependencies with Poetry
       run: |
-        poetry source add fury --secondary https://pypi.fury.io/mapped/
+        poetry source add fury https://pypi.fury.io/mapped/
         poetry config http-basic.fury ${{ secrets.FURY_READ_TOKEN_PUBLIC }} NOPASS
         poetry lock
         poetry install --only main
