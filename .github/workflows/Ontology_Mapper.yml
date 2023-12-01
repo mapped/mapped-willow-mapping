@@ -51,3 +51,21 @@ jobs:
       with:
         name: willow-mappings
         path: Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json
+
+    - name: Upload Willow Incoming Edges Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: willow-incoming-edges
+        path: scripts/output/willow_incoming_edges.json
+
+    - name: Upload Mapped Incoming Edges Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: mapped-incoming-edges
+        path: scripts/output/mapped_incoming_edges.json
+
+    - name: Upload Unmapped Nodes Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: unmapped-nodes
+        path: scripts/output/unmapped.json
