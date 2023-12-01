@@ -35,10 +35,10 @@ jobs:
       run: poetry run python scripts/generate_mappings.py
     
     - name: Sort Mapped Mappings
-      run: poetry run python scripts/sort_mappings.py --filepath Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json
+      run: poetry run python scripts/sort_mappings.py Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json
 
     - name: Sort Willow Mappings
-      run: poetry run python scripts/sort_mappings.py --filepath Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json
+      run: poetry run python scripts/sort_mappings.py Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json
 
     - name: Upload Mapped Mappings Artifact
       uses: actions/upload-artifact@v2
