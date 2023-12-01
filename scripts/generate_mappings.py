@@ -9,22 +9,24 @@ with NugetPackage('mapped.ontologies.core.dtdl') as package:
 
 with open('data/mapped_v1_dtdlv2_Willow.json') as file:
     mapped_mappings = json.load(file)
-    mapped_manual_mappings = []
-    for mapping in mapped_mappings['InterfaceRemaps']:
-        if mapping.get('IsInferred', False) == False:
-            mapping['IsInferred'] = False
-            mapped_manual_mappings.append(mapping)
+
+mapped_manual_mappings = []
+for mapping in mapped_mappings['InterfaceRemaps']:
+    if mapping.get('IsInferred', False) == False:
+        mapping['IsInferred'] = False
+        mapped_manual_mappings.append(mapping)
 
 with NugetPackage('willowinc.ontology.dtdlv3') as package:
     willow_ontology = package.get_content()
 
 with open('data/willow_v1_dtdlv2_mapped.json') as file:
     willow_mappings = json.load(file)
-    willow_manual_mappings = []
-    for mapping in willow_mappings['InterfaceRemaps']:
-        if mapping.get('IsInferred', False) == False:
-            mapping['IsInferred'] = False
-            willow_manual_mappings.append(mapping)
+
+willow_manual_mappings = []
+for mapping in willow_mappings['InterfaceRemaps']:
+    if mapping.get('IsInferred', False) == False:
+        mapping['IsInferred'] = False
+        willow_manual_mappings.append(mapping)
 
 engine = MappingEngine(
     mapped_ontology,
