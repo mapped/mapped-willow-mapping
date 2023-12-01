@@ -5,7 +5,7 @@ from ontology_mapper.engine import MappingEngine
 with NugetPackage('mapped.ontologies.core.dtdl') as package:
     mapped_ontology = package.get_content('1.23.8')
 
-with open('Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json') as file:
+with open('data/mapped_v1_dtdlv2_Willow.json') as file:
     mapped_mappings = json.load(file)
     mapped_manual_mappings = []
     for mapping in mapped_mappings['InterfaceRemaps']:
@@ -16,7 +16,7 @@ with open('Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.js
 with NugetPackage('willowinc.ontology.dtdlv3') as package:
     willow_ontology = package.get_content()
 
-with open('Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json') as file:
+with open('data/willow_v1_dtdlv2_mapped.json') as file:
     willow_mappings = json.load(file)
     willow_manual_mappings = []
     for mapping in willow_mappings['InterfaceRemaps']:
