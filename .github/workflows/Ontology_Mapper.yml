@@ -34,5 +34,8 @@ jobs:
     - name: Generate Mappings
       run: poetry run python scripts/generate_mappings.py
     
-    - name: Sort Mappings
-      run: poetry run python scripts/sort_mappings.py
+    - name: Sort Mapped Mappings
+      run: poetry run python scripts/sort_mappings.py --in data/mapped_v1_dtdlv2_Willow.json --out Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json
+
+    - name: Sort Mapped Mappings
+      run: poetry run python scripts/sort_mappings.py --in data/willow_v1_dtdlv2_mapped.json --out Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json
