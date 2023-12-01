@@ -1,20 +1,30 @@
 import json
 import sys
+import argparse
 
-def sort_json_file(file_path):
+def sort_json_file(input_file_path, output_file_path):
     try:
-        with open(file_path, 'r') as file:
+        with open(input_file_path, 'r') as file:
             data = json.load(file)
 
         if 'InterfaceRemaps' in data and isinstance(data['InterfaceRemaps'], list):
             data['InterfaceRemaps'].sort(key=lambda x: x.get('InputDtmi', ''))
 
-            with open(file_path, 'w') as file:
-                json.dump(data, file, indent=2)
+        with open(output_file_path, 'w') as file:
+            json.dump(data, file, indent=2)
 
     except Exception as e:
         print(e)
-        sys.exit(e)
+        sys.exit(1)
 
-sort_json_file('Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json')
-sort_json_file('Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json')
+def main():
+    parser = argparse.ArgumentParser(description='Sort JSON file script.')
+    parser.add_argument('input_file', help='Path to the input JSON file')
+    parser.add_argument('output_file', help='Path to the output JSON file')
+
+    args = parser.parse_args()
+
+    sort_json_file(args.input_file, args.output_file)
+
+if __name__ == "__main__":
+    main()
