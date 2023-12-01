@@ -1,4 +1,5 @@
 import json
+import os
 from collections import defaultdict
 from ontology_mapper.loader import NugetPackage
 from ontology_mapper.engine import MappingEngine
@@ -66,6 +67,9 @@ for target_node in mapped_incoming:
 
 willow_incoming = sorted(willow_incoming.items(), key=lambda x: x[1]['count'], reverse=True)
 mapped_incoming = sorted(mapped_incoming.items(), key=lambda x: x[1]['count'], reverse=True)
+
+if not os.path.exists('scripts/output'):
+    os.makedirs('scripts/output')
 
 with open('scripts/output/willow_incoming_edges.json', 'w') as f:
     json.dump(willow_incoming, f, indent=2)
