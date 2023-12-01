@@ -44,10 +44,10 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: mapped-mappings
-        path: Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json
+        path: Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json
 
     - name: Upload Willow Mappings Artifact
       uses: actions/upload-artifact@v2
       with:
         name: willow-mappings
-        path: Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json
+        path: Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json
