@@ -1,6 +1,10 @@
 name: Pull Request Build
 
 on:
+  workflow_run:
+    workflows: ["Ontology Mapper"]
+    types: 
+      - completed
   pull_request:
     branches: [
       "main",

@@ -1,6 +1,10 @@
 name: Mapped.Ontologies Build
 
 on:
+  workflow_run:
+    workflows: ["Ontology Mapper"]
+    types: 
+      - completed
   workflow_call:
     inputs:
       build-type:
