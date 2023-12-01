@@ -9,6 +9,9 @@ readme = "README.md"
 python = "^3.9"
 ontology-mapper = {version = "^0.2.2", source = "fury"}
 
+[[tool.poetry.source]]
+name = "pypi"
+priority = "primary"
 
 [[tool.poetry.source]]
 name = "fury"
