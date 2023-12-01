@@ -339,8 +339,16 @@
       "OutputDtmi": "dtmi:com:willowinc:AirFlowSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Differential_Air_Flow_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirFlowSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Differential_Pressure_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Differential_Pressure_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:DeltaPressureSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Discharge_Air_Temperature_High_Setpoint;1",
@@ -1891,6 +1899,14 @@
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Entering_Leaving_Water_Temperature_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:DeltaWaterTemperatureSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Bypass_Valve;1",
       "OutputDtmi": "dtmi:com:willowinc:Valve;1"
     },
@@ -1927,6 +1943,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Parameter;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:Setpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Speed_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:SpeedSensor;1"
     },
@@ -1936,7 +1956,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:DeltaSteamTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:TemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Direct_Expansion_Cooling_Coil;1",
