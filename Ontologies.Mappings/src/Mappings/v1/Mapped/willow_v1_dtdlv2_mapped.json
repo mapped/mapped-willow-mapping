@@ -1382,11 +1382,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FanPoweredBox;1",
-      "OutputDtmi": "dtmi:mapped:core:Fan_Powered_Terminal_Unit;1"
+      "OutputDtmi": "dtmi:mapped:core:Fan_Powered_VAV;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FanPoweredBoxReheat;1",
-      "OutputDtmi": "dtmi:mapped:core:Fan_Powered_Terminal_Unit;1"
+      "OutputDtmi": "dtmi:mapped:core:Fan_Powered_VAV;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FanRunActuator;1",
@@ -4589,8 +4589,32 @@
       "OutputDtmi": "dtmi:mapped:core:Airfield_Lighting_Equipment;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:LeavingWaterTemperatureSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:EnteringWaterTemperatureSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Water_Temperature_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:ElevatorMachine;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Elevator;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:Agent;1",
       "OutputDtmi": "dtmi:org:w3id:rec:Agent;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:HeatingAirVolumeFlowSetpointHighLimit;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Heating_Discharge_Air_Flow_Setpoint_Limit;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:CoolingAirVolumeFlowSetpointHighLimit;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Cooling_Discharge_Air_Flow_Setpoint_Limit;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:TimeSpanSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Run_Time_Sensor;1"
     }
   ],
   "NamespaceRemaps": [],

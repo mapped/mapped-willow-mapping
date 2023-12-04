@@ -1080,7 +1080,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Booster_Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:Fan;1"
+      "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Box_Mode_Command;1",
@@ -1476,7 +1476,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Tower_Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:Fan;1"
+      "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Valve;1",
@@ -2031,10 +2031,6 @@
       "OutputDtmi": "dtmi:com:willowinc:WaterFlowSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Water_Temperature_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:WaterTemperatureSensor;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Water_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterTemperatureSetpoint;1"
     },
@@ -2164,7 +2160,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:Fan;1"
+      "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1",
@@ -2681,10 +2677,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Flow_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterFlowSetpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:WaterTemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Setpoint;1",
@@ -3692,7 +3684,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Relief_Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:Fan;1"
+      "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Remotely_On_Off_Status;1",
@@ -3956,7 +3948,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Standby_Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:Fan;1"
+      "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Standby_Glycool_Unit_On_Off_Status;1",
@@ -4699,7 +4691,7 @@
       "OutputDtmi": "dtmi:com:willowinc:AirCompressor;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Fan_Powered_Terminal_Unit;1",
+      "InputDtmi": "dtmi:mapped:core:Fan_Powered_VAV;1",
       "OutputDtmi": "dtmi:com:willowinc:FanPoweredBox;1"
     },
     {
@@ -5003,8 +4995,36 @@
       "OutputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:LeavingWaterTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Water_Temperature_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:EnteringWaterTemperatureSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:org:w3id:rec:Agent;1",
       "OutputDtmi": "dtmi:com:willowinc:Agent;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Run_Time_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:TimeSpanSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Flow_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:DischargeAirFlowSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Heating_Discharge_Air_Flow_Setpoint_Limit;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingAirVolumeFlowSetpointHighLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Cooling_Discharge_Air_Flow_Setpoint_Limit;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingAirVolumeFlowSetpointHighLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:RVAV;1",
+      "OutputDtmi": "dtmi:com:willowinc:VAVBox;1"
     }
   ],
   "NamespaceRemaps": [
