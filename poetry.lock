@@ -141,13 +141,12 @@ test = ["pytest (>=7.2)", "pytest-cov (>=4.0)"]
 
 [[package]]
 name = "ontology-mapper"
-version = "0.3.5"
+version = "0.3.6"
 description = ""
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "ontology-mapper-0.3.5.tar.gz", hash = "sha256:f7852c722f5b57fa427530901c63b54776154487a2ae54d27da7cfe42ea03160"},
-    {file = "ontology_mapper-0.3.5-py3-none-any.whl", hash = "sha256:0aa45a8e3a256c6b43de2977aefa8073deb3b52e9265dc250947dca335da00a2"},
+    {file = "ontology_mapper-0.3.6-py3-none-any.whl", hash = "sha256:3a6b61831278d347187015152f7b65a5192921a1d530d2c4771b939713bdca86"},
 ]
 
 [package.dependencies]
@@ -183,7 +182,6 @@ use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 [[package]]
 name = "urllib3"
 version = "2.1.0"
-
 description = "HTTP library with thread-safe connection pooling, file post, and more."
 optional = false
 python-versions = ">=3.8"
@@ -200,4 +198,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "d6401fc3e82f77eef06beb5cb917989975a0ecd9b5ff2548593b70b74156f362"
+content-hash = "99614647bf43e0f40d4fbcec6dac5ebaea17914d4ddc24a2ef89ee3745a678cd"
