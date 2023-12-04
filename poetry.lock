@@ -141,13 +141,13 @@ test = ["pytest (>=7.2)", "pytest-cov (>=4.0)"]
 
 [[package]]
 name = "ontology-mapper"
-version = "0.3.4"
+version = "0.3.5"
 description = ""
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "ontology-mapper-0.3.4.tar.gz", hash = "sha256:f1611f14dec539573caac91633f06ed2d77512a358bf3d8e4930a760e4506a0b"},
-    {file = "ontology_mapper-0.3.4-py3-none-any.whl", hash = "sha256:51b3b4ed3db0b5877f27634e4015ee6d1b32b856315eabae6d5a801c94b3ca5d"},
+    {file = "ontology-mapper-0.3.5.tar.gz", hash = "sha256:f7852c722f5b57fa427530901c63b54776154487a2ae54d27da7cfe42ea03160"},
+    {file = "ontology_mapper-0.3.5-py3-none-any.whl", hash = "sha256:0aa45a8e3a256c6b43de2977aefa8073deb3b52e9265dc250947dca335da00a2"},
 ]
 
 [package.dependencies]
@@ -199,4 +199,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "b3bf4d9d9e001ea30d3999ea0f049ef868725a9763c1d51a82de4836192b8b2e"
+content-hash = "d6401fc3e82f77eef06beb5cb917989975a0ecd9b5ff2548593b70b74156f362"
