@@ -13,10 +13,12 @@ on:
 
 env:
   BASE_VERSION: "0.1.0"
+  POETRY_VERSION: '1.6.1'
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    needs: ontology-mapper
     permissions: write-all
     steps:
 
@@ -47,4 +49,64 @@ jobs:
       shell: pwsh
       run: "& ./.github/workflows/scripts/buildandpack.ps1 -config Release -publishPackage ${{ inputs.publish-package }} -nugetSecret '${{ secrets.NUGET_MAPPINGS_WILLOW_PUSH }}' -VERTUPLE ${{ steps.vtl.outputs.ver_semVerFourTupleNumeric }} -githubRepo ${{ github.repository }} -githubBranch ${{ github.ref }} -githubCommit ${{ github.sha }} -buildNumber ${{ steps.vtl.outputs.ver_buildNumber }}"
     
+  ontology-mapper:
+    runs-on: ubuntu-latest
 
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Setup Python 3.9
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.9"
+
+    - name: Set up poetry
+      uses: abatilo/actions-poetry@v2.1.5
+      with:
+        poetry-version: "${{ env.POETRY_VERSION}}"
+
+    - name: Install Dependencies with Poetry
+      run: |
+        poetry source add --priority=supplemental fury https://pypi.fury.io/mapped/
+        poetry config http-basic.fury ${{ secrets.FURY_READ_TOKEN_PUBLIC }} NOPASS
+        poetry install --only main
+
+    - name: Generate Mappings
+      run: poetry run python scripts/generate_mappings.py
+    
+    - name: Sort Mapped Mappings
+      run: poetry run python scripts/sort_mappings.py Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json
+
+    - name: Sort Willow Mappings
+      run: poetry run python scripts/sort_mappings.py Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json
+
+    - name: Upload Mapped Mappings Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: mapped-mappings
+        path: Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json
+
+    - name: Upload Willow Mappings Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: willow-mappings
+        path: Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json
+
+    - name: Upload Willow Incoming Edges Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: willow-incoming-edges
+        path: scripts/output/willow_incoming_edges.json
+
+    - name: Upload Mapped Incoming Edges Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: mapped-incoming-edges
+        path: scripts/output/mapped_incoming_edges.json
+
+    - name: Upload Unmapped Nodes Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: unmapped-nodes
+        path: scripts/output/unmapped.json

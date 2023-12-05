@@ -1,6 +1,10 @@
 name: Trigger Package Generation
 
 on:
+  workflow_run:
+    workflows: ["Ontology Mapper"]
+    types: 
+      - completed
   push:
     branches: [
       "main",

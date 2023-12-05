@@ -1,8 +1,21 @@
 repos:
+- repo: local
+  hooks:
+    - id: sort-manual-mapped-mappings
+      name: Sort Manual Mapped Mappings
+      entry: python scripts/sort_mappings.py data/mapped_v1_dtdlv2_Willow.json
+      language: system
+      pass_filenames: false
+    - id: sort-manual-willow-mappings
+      name: Sort Manual Willow Mappings
+      entry: python scripts/sort_mappings.py data/willow_v1_dtdlv2_mapped.json
+      language: system
+      pass_filenames: false
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v4.4.0
   hooks:
     - id: pretty-format-json
+      exclude: ^(data/mapped_v1_dtdlv2_Willow\.json|data/willow_v1_dtdlv2_mapped\.json)$
       args:
         - "--autofix"
         - "--indent=2"

@@ -6,13 +6,17 @@ authors = ["Connor Cantrell <connor@mapped.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
-openpyxl = "^3.1.2"
-pandas = "^2.0.3"
-pyyaml = "^6.0"
-pytest = "^7.4.0"
-requests = "^2.31.0"
+python = "^3.9"
+ontology-mapper = {version = "^0.3.6", source = "fury"}
 
+[[tool.poetry.source]]
+name = "pypi"
+priority = "primary"
+
+[[tool.poetry.source]]
+name = "fury"
+url = "https://pypi.fury.io/mapped/"
+priority = "supplemental"
 
 [build-system]
 requires = ["poetry-core"]
