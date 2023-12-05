@@ -66,6 +66,15 @@ def main():
     mapped_mappings['InterfaceRemaps'] = mapped_inferred_mappings
     willow_mappings['InterfaceRemaps'] = willow_inferred_mappings
 
+    willow_dir = 'Ontologies.Mappings/src/Mappings/v1/Willow'
+    mapped_dir = 'Ontologies.Mappings/src/Mappings/v1/Mapped'
+
+    if not os.path.exists(willow_dir):
+        os.makedirs(willow_dir)
+
+    if not os.path.exists(mapped_dir):
+        os.makedirs(mapped_dir)
+
     with open('Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json', 'w') as f:
         json.dump(mapped_mappings, f, indent=2)
 
