@@ -513,10 +513,6 @@
       "OutputDtmi": "dtmi:mapped:core:Chilled_Water_GHG_Emissions_Factor;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:ChilledWaterConsumptionGreenhouseGasEmissionsFactor;1",
-      "OutputDtmi": "dtmi:mapped:core:Chilled_Water_GHG_Emissions_Factor;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:ChilledWaterDeltaPressureDeadbandSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Differential_Pressure_Deadband_Setpoint;1"
     },
@@ -1081,14 +1077,6 @@
       "OutputDtmi": "dtmi:mapped:core:Direct_GHG_Emissions;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:DirectGreenhouseGasEmissions;1",
-      "OutputDtmi": "dtmi:mapped:core:Direct_GHG_Emissions;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:DirectGreenhouseGasEmissionsFactor;1",
-      "OutputDtmi": "dtmi:mapped:core:Direct_Fuels_GHG_Emissions_Factor;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:DirectGreenhouseGasEmissionsFactor;1",
       "OutputDtmi": "dtmi:mapped:core:Direct_Fuels_GHG_Emissions_Factor;1"
     },
@@ -1359,10 +1347,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricalWiringDevice;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Electrical_Equipment;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ElectricityConsumptionGreenhouseGasEmissionsFactor;1",
-      "OutputDtmi": "dtmi:mapped:core:Electricity_GHG_Emissions_Factor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricityConsumptionGreenhouseGasEmissionsFactor;1",
@@ -2097,10 +2081,6 @@
       "OutputDtmi": "dtmi:mapped:core:Hot_Water_GHG_Emissions_Factor;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:HotWaterConsumptionGreenhouseGasEmissionsFactor;1",
-      "OutputDtmi": "dtmi:mapped:core:Hot_Water_GHG_Emissions_Factor;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:HotWaterDeltaPressureDeadbandSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Differential_Pressure_Deadband_Setpoint;1"
     },
@@ -2263,18 +2243,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:IndirectGreenhouseGasEmissions;1",
       "OutputDtmi": "dtmi:mapped:core:Indirect_GHG_Emissions;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:IndirectGreenhouseGasEmissions;1",
-      "OutputDtmi": "dtmi:mapped:core:Indirect_GHG_Emissions;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:IndirectGreenhouseGasEmissionsFactor;1",
-      "OutputDtmi": "dtmi:mapped:core:GHG_Emissions_Factor;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:IndirectGreenhouseGasEmissionsIntensity;1",
-      "OutputDtmi": "dtmi:mapped:core:Indirect_GHG_Emissions_Intensity;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:IndirectGreenhouseGasEmissionsIntensity;1",
@@ -3977,10 +3945,6 @@
       "OutputDtmi": "dtmi:mapped:core:Steam_GHG_Emissions_Factor;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:SteamConsumptionGreenhouseGasEmissionsFactor;1",
-      "OutputDtmi": "dtmi:mapped:core:Steam_GHG_Emissions_Factor;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:SteamDeltaPressureSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Sensor;1"
     },
@@ -4247,14 +4211,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissions;1",
       "OutputDtmi": "dtmi:mapped:core:Total_GHG_Emissions;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissions;1",
-      "OutputDtmi": "dtmi:mapped:core:Total_GHG_Emissions;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1",
-      "OutputDtmi": "dtmi:mapped:core:Total_GHG_Emissions_Intensity;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1",
