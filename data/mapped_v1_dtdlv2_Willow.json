@@ -351,14 +351,6 @@
       "OutputDtmi": "dtmi:com:willowinc:AirFlowSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Differential_Air_Flow_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirFlowSetpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Differential_Pressure_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Differential_Pressure_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:DeltaPressureSensor;1"
     },
@@ -503,7 +495,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Event;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Fan_Powered_Terminal_Unit;1",
+      "InputDtmi": "dtmi:mapped:core:Fan_Powered_VAV;1",
       "OutputDtmi": "dtmi:com:willowinc:FanPoweredBox;1"
     },
     {
@@ -656,10 +648,6 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Indirect_GHG_Emissions_Intensity;1",
-      "OutputDtmi": "dtmi:com:willowinc:IndirectGreenhouseGasEmissionsIntensity;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Indirect_GHG_Emissions_Intensity_Per_Area;1",
       "OutputDtmi": "dtmi:com:willowinc:IndirectGreenhouseGasEmissionsIntensity;1"
     },
     {
@@ -2005,10 +1993,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Dewpoint_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:DewPointTemperatureSetpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Air_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Air_Temperature_Setpoint;1",
