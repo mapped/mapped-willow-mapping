@@ -463,7 +463,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Event;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Fan_Powered_Terminal_Unit;1",
+      "InputDtmi": "dtmi:mapped:core:Fan_Powered_VAV;1",
       "OutputDtmi": "dtmi:com:willowinc:FanPoweredBox;1"
     },
     {
@@ -935,7 +935,7 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Sprinker_System;1",
+      "InputDtmi": "dtmi:mapped:core:Sprinkler_System;1",
       "OutputDtmi": "dtmi:com:willowinc:SprinklerSystem;1"
     },
     {
