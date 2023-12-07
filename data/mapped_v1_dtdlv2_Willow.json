@@ -339,14 +339,6 @@
       "OutputDtmi": "dtmi:com:willowinc:AirFlowSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Differential_Air_Flow_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirFlowSetpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Differential_Pressure_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Differential_Pressure_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:DeltaPressureSensor;1"
     },
