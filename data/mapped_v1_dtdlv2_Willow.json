@@ -395,6 +395,10 @@
       "OutputDtmi": "dtmi:com:willowinc:AirStaticPressureSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Duct_Smoke_Detector;1",
+      "OutputDtmi": "dtmi:com:willowinc:DuctSmokeDetector;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Duct_Static_Pressure_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:StaticPressureSetpoint;1"
     },
@@ -939,6 +943,10 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Sprinker_System;1",
+      "OutputDtmi": "dtmi:com:willowinc:SprinklerSystem;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Standby_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
     },
@@ -1093,6 +1101,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Volume_Usage_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:VolumeSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Wall_Air_Conditioner;1",
+      "OutputDtmi": "dtmi:com:willowinc:WallAirConditioner;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Waste_Amount_Sensor;1",
