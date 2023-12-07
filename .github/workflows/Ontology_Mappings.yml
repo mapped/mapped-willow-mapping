@@ -22,8 +22,6 @@ jobs:
     permissions: write-all
     steps:
 
-    - uses: actions/checkout@v3
-
 
     - name: Establish Versioning, Tags, and Labels
       id: vtl
