@@ -339,14 +339,6 @@
       "OutputDtmi": "dtmi:com:willowinc:AirFlowSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Differential_Air_Flow_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirFlowSetpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Differential_Pressure_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Differential_Pressure_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:DeltaPressureSensor;1"
     },
@@ -393,6 +385,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Duct_Air_Static_Pressure_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:AirStaticPressureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Duct_Smoke_Detector;1",
+      "OutputDtmi": "dtmi:com:willowinc:DuctSmokeDetector;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Duct_Static_Pressure_Setpoint;1",
@@ -467,7 +463,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Event;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Fan_Powered_Terminal_Unit;1",
+      "InputDtmi": "dtmi:mapped:core:Fan_Powered_VAV;1",
       "OutputDtmi": "dtmi:com:willowinc:FanPoweredBox;1"
     },
     {
@@ -939,6 +935,10 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Sprinkler_System;1",
+      "OutputDtmi": "dtmi:com:willowinc:SprinklerSystem;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Standby_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
     },
@@ -1093,6 +1093,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Volume_Usage_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:VolumeSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Wall_Air_Conditioner;1",
+      "OutputDtmi": "dtmi:com:willowinc:WallAirConditioner;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Waste_Amount_Sensor;1",

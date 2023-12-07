@@ -1229,6 +1229,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:HVAC_Equipment;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:DuctSmokeDetector;1",
+      "OutputDtmi": "dtmi:mapped:core:Duct_Smoke_Detector;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:DurationSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Duration_Sensor;1"
     },
@@ -1606,11 +1610,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FanPoweredBox;1",
-      "OutputDtmi": "dtmi:mapped:core:Fan_Powered_Terminal_Unit;1"
+      "OutputDtmi": "dtmi:mapped:core:Fan_Powered_VAV;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FanPoweredBoxReheat;1",
-      "OutputDtmi": "dtmi:mapped:core:Fan_Powered_Terminal_Unit;1"
+      "OutputDtmi": "dtmi:mapped:core:Fan_Powered_VAV;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FanRunActuator;1",
@@ -3825,6 +3829,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:SprinklerSystem;1",
+      "OutputDtmi": "dtmi:mapped:core:Sprinkler_System;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:SprinklerTank;1",
       "OutputDtmi": "dtmi:mapped:core:Fire_Sprinkler_Water_Storage_Tank;1"
     },
@@ -4443,6 +4451,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:VolumeSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:WallAirConditioner;1",
+      "OutputDtmi": "dtmi:mapped:core:Wall_Air_Conditioner;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Warranty;1",
