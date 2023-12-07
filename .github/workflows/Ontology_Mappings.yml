@@ -18,38 +18,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    needs: ontology-mapper
     permissions: write-all
-    steps:
-
-
-    - name: Establish Versioning, Tags, and Labels
-      id: vtl
-      uses: mapped/action-vtl@latest
-      with:
-        baseVersion: ${{ env.BASE_VERSION }}
-        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v3
-      with:
-        dotnet-version: 6.0.x
-
-    - name: Restore dependencies
-      shell: pwsh
-      run: "& ./.github/workflows/scripts/restore.ps1"
-
-    - name: Test
-      shell: pwsh
-      run: "& ./.github/workflows/scripts/test.ps1"
-
-    - name: Build
-      shell: pwsh
-      run: "& ./.github/workflows/scripts/buildandpack.ps1 -config Release -publishPackage ${{ inputs.publish-package }} -nugetSecret '${{ secrets.NUGET_MAPPINGS_WILLOW_PUSH }}' -VERTUPLE ${{ steps.vtl.outputs.ver_semVerFourTupleNumeric }} -githubRepo ${{ github.repository }} -githubBranch ${{ github.ref }} -githubCommit ${{ github.sha }} -buildNumber ${{ steps.vtl.outputs.ver_buildNumber }}"
-    
-  ontology-mapper:
-    runs-on: ubuntu-latest
-
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v3
@@ -108,3 +77,28 @@ jobs:
       with:
         name: unmapped-nodes
         path: scripts/output/unmapped.json
+
+    - name: Establish Versioning, Tags, and Labels
+      id: vtl
+      uses: mapped/action-vtl@latest
+      with:
+        baseVersion: ${{ env.BASE_VERSION }}
+        gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 6.0.x
+
+    - name: Restore dependencies
+      shell: pwsh
+      run: "& ./.github/workflows/scripts/restore.ps1"
+
+    - name: Test
+      shell: pwsh
+      run: "& ./.github/workflows/scripts/test.ps1"
+
+    - name: Build
+      shell: pwsh
+      run: "& ./.github/workflows/scripts/buildandpack.ps1 -config Release -publishPackage ${{ inputs.publish-package }} -nugetSecret '${{ secrets.NUGET_MAPPINGS_WILLOW_PUSH }}' -VERTUPLE ${{ steps.vtl.outputs.ver_semVerFourTupleNumeric }} -githubRepo ${{ github.repository }} -githubBranch ${{ github.ref }} -githubCommit ${{ github.sha }} -buildNumber ${{ steps.vtl.outputs.ver_buildNumber }}"
+    
