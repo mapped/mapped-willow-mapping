@@ -1326,15 +1326,15 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricalPanelboard;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Breaker_Panel"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Breaker_Panel;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricalPanelboardMCB;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Breaker_Panel"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Breaker_Panel;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricalPanelboardMLO;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Breaker_Panel"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Breaker_Panel;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricalPowerSensor;1",
