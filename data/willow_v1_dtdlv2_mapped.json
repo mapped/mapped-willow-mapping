@@ -18,7 +18,7 @@
   "InterfaceRemaps": [
     {
       "InputDtmi": "dtmi:com:willowinc:ACElectricalSystem;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Electrical_System;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Alternating_Current_Electrical_System;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AbsoluteHumiditySensor;1",
@@ -862,7 +862,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CondensingUnit;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser;1"
+      "OutputDtmi": "dtmi:mapped:core:Condensing_Unit;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ConductivitySensor;1",
@@ -1210,7 +1210,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DomesticHotWaterCirculatingPump;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Pump;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Domestic_Hot_Water_Circulating_Pump;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DomesticHotWaterSystem;1",
@@ -1231,6 +1231,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:DoorHardware;1",
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DrinkingWaterFixture;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Drinking_Water_Fixture;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DryBulbTemperatureSensor;1",
@@ -1286,7 +1290,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricTankWaterHeater;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Heater;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Electric_Tank_Water_Heater;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricTanklessWaterHeater;1",
@@ -1322,15 +1326,15 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricalPanelboard;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Breaker_Panel"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricalPanelboardMCB;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Breaker_Panel"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricalPanelboardMLO;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Breaker_Panel"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricalPowerSensor;1",
@@ -1374,7 +1378,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EmergencyLight;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Lighting_Equipment;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Emergency_Light;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EmergencyLightingPowerInverter;1",
@@ -1605,6 +1609,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Speed_Command;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:ExitSign;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Exit_Sign;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:Facade;1",
       "OutputDtmi": "dtmi:mapped:core:Entity;1"
     },
@@ -1750,7 +1758,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireExtinguisher;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Extinguisher;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireHydrant;1",
@@ -1894,7 +1902,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACExhaustAirSystem;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Air_System;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Exhaust_Air_System;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACFan;1",
@@ -1929,12 +1937,16 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:HVACRefrigerantSystem;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Refrigeration_System;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:HVACReturnAirSystem;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Air_System;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACShutOffValve;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
+      "OutputDtmi": "dtmi:mapped:core:Isolation_Valve;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACSolenoidValve;1",
@@ -1942,7 +1954,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACSupplyAirSystem;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Air_System;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_System;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACSystem;1",
@@ -3129,6 +3141,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:PV_Panel;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:PlumbingBackflowPreventer;1",
+      "OutputDtmi": "dtmi:mapped:core:BackflowPreventer;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:PlumbingBalancingValve;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
     },
@@ -3146,7 +3162,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingExpansionTank;1",
-      "OutputDtmi": "dtmi:mapped:core:Tank;1"
+      "OutputDtmi": "dtmi:mapped:core:Expansion_Tank;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingFixture;1",
@@ -3158,7 +3174,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingPressureReducingValve;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Pressure_Reducing_Valve;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingPump;1",
@@ -3170,7 +3186,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingShutOffValve;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Isolation_Valve;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingSolenoidValve;1",
@@ -4362,7 +4378,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:VAVBoxReheat;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Variable_Air_Volume_Box;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:RVAV;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:VFDFrequencySensor;1",
