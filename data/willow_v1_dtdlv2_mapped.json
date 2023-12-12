@@ -18,7 +18,7 @@
   "InterfaceRemaps": [
     {
       "InputDtmi": "dtmi:com:willowinc:ACElectricalSystem;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Alternating_Current_Electrical_System;1"
+      "OutputDtmi": "dtmi:mapped:core:Alternating_Current_Electrical_System;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AbsoluteHumiditySensor;1",
@@ -1210,7 +1210,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DomesticHotWaterCirculatingPump;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Domestic_Hot_Water_Circulating_Pump;1"
+      "OutputDtmi": "dtmi:mapped:core:Domestic_Hot_Water_Circulating_Pump;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DomesticHotWaterSystem;1",
@@ -1234,7 +1234,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DrinkingWaterFixture;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Drinking_Water_Fixture;1"
+      "OutputDtmi": "dtmi:mapped:core:Drinking_Water_Fixture;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DryBulbTemperatureSensor;1",
@@ -1290,7 +1290,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricTankWaterHeater;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Electric_Tank_Water_Heater;1"
+      "OutputDtmi": "dtmi:mapped:core:Electric_Tank_Water_Heater;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricTanklessWaterHeater;1",
@@ -1378,7 +1378,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EmergencyLight;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Emergency_Light;1"
+      "OutputDtmi": "dtmi:mapped:core:Emergency_Light;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EmergencyLightingPowerInverter;1",
@@ -1610,7 +1610,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ExitSign;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Exit_Sign;1"
+      "OutputDtmi": "dtmi:mapped:core:Exit_Sign;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Facade;1",
@@ -1902,7 +1902,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACExhaustAirSystem;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Exhaust_Air_System;1"
+      "OutputDtmi": "dtmi:mapped:core:Exhaust_Air_System;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACFan;1",
@@ -1938,7 +1938,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACRefrigerantSystem;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Refrigeration_System;1"
+      "OutputDtmi": "dtmi:mapped:core:Refrigeration_System;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACReturnAirSystem;1",
@@ -1954,7 +1954,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACSupplyAirSystem;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_System;1"
+      "OutputDtmi": "dtmi:mapped:core:Supply_Air_System;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACSystem;1",
@@ -3174,7 +3174,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingPressureReducingValve;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Pressure_Reducing_Valve;1"
+      "OutputDtmi": "dtmi:mapped:core:Pressure_Reducing_Valve;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingPump;1",
