@@ -179,7 +179,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:BackflowPreventer;1",
+      "InputDtmi": "dtmi:mapped:core:Backflow_Preventer;1",
       "OutputDtmi": "dtmi:com:willowinc:PlumbingBackflowPreventer;1"
     },
     {
@@ -455,10 +455,6 @@
       "OutputDtmi": "dtmi:com:willowinc:BilledNetActiveElectricalEnergy;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Electric_Tank_Water_Heater;1",
-      "OutputDtmi": "dtmi:com:willowinc:ElectricTankWaterHeater;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Electric_Unit_Heater;1",
       "OutputDtmi": "dtmi:com:willowinc:ElectricUnitHeater;1"
     },
@@ -525,10 +521,6 @@
     {
       "InputDtmi": "dtmi:mapped:core:Exit_Sign;1",
       "OutputDtmi": "dtmi:com:willowinc:ExitSign;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Expansion_Tank;1",
-      "OutputDtmi": "dtmi:com:willowinc:PlumbingExpansionTank;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Fan_Powered_VAV;1",
@@ -693,10 +685,6 @@
     {
       "InputDtmi": "dtmi:mapped:core:Isolation_Damper;1",
       "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Isolation_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACShutOffValve;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Level_Command;1",
@@ -1151,6 +1139,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Tank;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Tank_Electric_Water_Heater;1",
+      "OutputDtmi": "dtmi:com:willowinc:ElectricTankWaterHeater;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Teleconference_Unit;1",
       "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
     },
@@ -1173,6 +1165,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Thermal_Energy_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:ThermalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Thermal_Expansion_Tank;1",
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingExpansionTank;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Thing;1",

@@ -1290,7 +1290,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricTankWaterHeater;1",
-      "OutputDtmi": "dtmi:mapped:core:Electric_Tank_Water_Heater;1"
+      "OutputDtmi": "dtmi:mapped:core:Tank_Electric_Water_Heater;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricTanklessWaterHeater;1",
@@ -1758,7 +1758,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireExtinguisher;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Extinguisher;1"
+      "OutputDtmi": "dtmi:mapped:core:Fire_Extinguisher;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireHydrant;1",
@@ -1946,7 +1946,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACShutOffValve;1",
-      "OutputDtmi": "dtmi:mapped:core:Isolation_Valve;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Isolation_Valve;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACSolenoidValve;1",
@@ -3142,7 +3142,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingBackflowPreventer;1",
-      "OutputDtmi": "dtmi:mapped:core:BackflowPreventer;1"
+      "OutputDtmi": "dtmi:mapped:core:Backflow_Preventer;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingBalancingValve;1",
@@ -3162,7 +3162,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingExpansionTank;1",
-      "OutputDtmi": "dtmi:mapped:core:Expansion_Tank;1"
+      "OutputDtmi": "dtmi:mapped:core:Thermal_Expansion_Tank;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingFixture;1",
