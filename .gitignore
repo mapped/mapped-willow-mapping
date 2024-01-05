@@ -360,3 +360,5 @@ MigrationBackup/
 # environment and not the entire project team.
 /local_resources/
 /scripts/output
+/Ontologies.Mappings/src/Mappings/v1/Mapped/
+/Ontologies.Mappings/src/Mappings/v1/Willow/
