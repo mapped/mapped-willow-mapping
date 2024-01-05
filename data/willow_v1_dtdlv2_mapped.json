@@ -309,6 +309,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:BarrierAsset;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:BasementLevel;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Basement;1"
     },
@@ -323,6 +327,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:BatterySystem;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Battery_Energy_Storage_System;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:BeverageEquipment;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:BilledActiveElectricalEnergy;1",
@@ -881,6 +889,10 @@
       "OutputDtmi": "dtmi:mapped:core:Controller;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:ConvenctionMicrowaveOven;1",
+      "OutputDtmi": "dtmi:mapped:core:Oven;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:ConveyanceEquipment;1",
       "OutputDtmi": "dtmi:mapped:core:Conveyor;1"
     },
@@ -1213,6 +1225,10 @@
       "OutputDtmi": "dtmi:mapped:core:Domestic_Hot_Water_Circulating_Pump;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:DomesticHotWaterCirculatingPump;1",
+      "OutputDtmi": "dtmi:mapped:core:Domestic_Hot_Water_Circulating_Pump;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:DomesticHotWaterSystem;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Domestic_Hot_Water_System;1"
     },
@@ -1233,6 +1249,10 @@
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Drain;1",
+      "OutputDtmi": "dtmi:mapped:core:Plumbing_Equipment;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:DrinkingWaterFixture;1",
       "OutputDtmi": "dtmi:mapped:core:Drinking_Water_Fixture;1"
     },
@@ -1243,6 +1263,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:DryCooler;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Dry_Cooler;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DuctHeater;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Space_Heater;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DuctSilencer;1",
@@ -1287,6 +1311,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricRadiantHeater;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Space_Heater;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:ElectricTankWaterHeater;1",
+      "OutputDtmi": "dtmi:mapped:core:Tank_Electric_Water_Heater;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricTankWaterHeater;1",
@@ -1681,6 +1709,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Speed_Command;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Faucet;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:FaultResetActuator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fault_Reset_Command;1"
     },
@@ -1805,8 +1837,20 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:Freezer;1",
+      "InputDtmi": "dtmi:com:willowinc:FoodDisplayEquipment;1",
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FoodPreparationEquipment;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FoodStorageEquipment;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Freezer;1",
+      "OutputDtmi": "dtmi:mapped:core:Refrigeration_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FrequencySensor;1",
@@ -2221,6 +2265,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Tower;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:HydronicAirSeparator;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:HydronicCirculatingPump;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Pump;1"
     },
@@ -2557,6 +2605,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Makeup_Air_Unit;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Manhole;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:MassFlowSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Flow_Sensor;1"
     },
@@ -2575,6 +2627,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:MeterEquipment;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Meter;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:MicrowaveOven;1",
+      "OutputDtmi": "dtmi:mapped:core:Oven;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:MinLimit;1",
@@ -3145,6 +3201,10 @@
       "OutputDtmi": "dtmi:mapped:core:Backflow_Preventer;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:PlumbingBackflowPreventer;1",
+      "OutputDtmi": "dtmi:mapped:core:Backflow_Preventer;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:PlumbingBalancingValve;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
     },
@@ -3171,6 +3231,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingGlobeValve;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:PlumbingPressureReducingValve;1",
+      "OutputDtmi": "dtmi:mapped:core:Pressure_Reducing_Valve;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingPressureReducingValve;1",
@@ -3209,8 +3273,20 @@
       "OutputDtmi": "dtmi:mapped:core:Plumbing_Valve;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:PlumbingWaterFiltration;1",
+      "OutputDtmi": "dtmi:mapped:core:Plumbing_Equipment;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:PlumbingWaterSystem;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Water_System;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:PlumbingWaterTreatment;1",
+      "OutputDtmi": "dtmi:mapped:core:Plumbing_Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:PointOfSaleRegister;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Portfolio;1",
@@ -3429,6 +3505,10 @@
       "OutputDtmi": "dtmi:mapped:core:Refrigeration_Equipment;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Refrigerator;1",
+      "OutputDtmi": "dtmi:mapped:core:Refrigeration_Equipment;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:Region;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Region;1"
     },
@@ -3603,6 +3683,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:ReturnAirFlowSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Flow_Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:ReturnAirGrille;1",
+      "OutputDtmi": "dtmi:mapped:core:Air_Grille;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ReturnAirHumiditySensor;1",
@@ -3819,6 +3903,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:Shower;1",
       "OutputDtmi": "dtmi:mapped:core:Plumbing_Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Sink;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SmokeDamper;1",
@@ -4039,6 +4127,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:SupplyAirDiffuser;1",
       "OutputDtmi": "dtmi:mapped:core:Supply_Air_Diffuser;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:SupplyAirGrille;1",
+      "OutputDtmi": "dtmi:mapped:core:Air_Grille;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SupplyFan;1",
