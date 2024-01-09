@@ -4049,6 +4049,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Face_Surface_Temperature_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:SwimmingPoolEquipment;1",
+      "OutputDtmi": "dtmi:mapped:core:Pool_Equipment;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:Switchboard;1",
       "OutputDtmi": "dtmi:mapped:core:Switchboard;1"
     },

@@ -423,6 +423,10 @@
       "OutputDtmi": "dtmi:com:willowinc:DrinkingWaterFixture;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Dry_Cooler;1",
+      "OutputDtmi": "dtmi:com:willowinc:HVACEquipment;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Duct_Air_Static_Pressure_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:AirStaticPressureSensor;1"
     },
@@ -869,6 +873,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Plumbing_Valve;1",
       "OutputDtmi": "dtmi:com:willowinc:PlumbingValve;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Pool_Equipment;1",
+      "OutputDtmi": "dtmi:com:willowinc:SwimmingPoolEquipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Precipitation_Accumulation_Sensor;1",
