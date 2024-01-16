@@ -2282,7 +2282,7 @@
     {
       "InputDtmi": "dtmi:com:willowinc:ComputerRoomAirHandlingUnit;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Handling_Unit;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Computer_Room_Air_Handler;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CondensatePump;1",
