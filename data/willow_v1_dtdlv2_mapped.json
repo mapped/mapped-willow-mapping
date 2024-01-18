@@ -145,6 +145,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Flow_Deadband_Setpoint;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:AirFlowPerPerson;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:AirFlowSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Flow_Sensor;1"
     },
@@ -650,7 +654,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CoefficientOfPerformance;1",
-      "OutputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance_Status;1"
+      "OutputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CoilEnteringWaterTemperatureSensor;1",
@@ -909,6 +913,14 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Cooling_Setpoint;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:CoolingDegreeDays;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:CoolingDegreeHours;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:CoolingDischargeAirFlowSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Supply_Air_Flow_Setpoint;1"
     },
@@ -1003,6 +1015,14 @@
     {
       "InputDtmi": "dtmi:com:willowinc:DefaultOverrideActuator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Override_Command;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DegreeHours;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DegreeTimeThreshold;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DeionizedWaterConductivitySensor;1",
@@ -2091,6 +2111,14 @@
     {
       "InputDtmi": "dtmi:com:willowinc:HeatingActuator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Heating_Command;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:HeatingDegreeDays;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:HeatingDegreeHours;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HeatingDischargeAirFlowSetpoint;1",
@@ -3905,6 +3933,10 @@
       "OutputDtmi": "dtmi:mapped:core:Plumbing_Equipment;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:ShowerPartition;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:Sink;1",
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
@@ -4711,6 +4743,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:WindSpeedSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Wind_Speed_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:WindowHardware;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WirelessAccessPoint;1",
