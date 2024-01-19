@@ -81,10 +81,6 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:AirCO2Sensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Sensor;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:AirCO2Setpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Setpoint;1"
     },
