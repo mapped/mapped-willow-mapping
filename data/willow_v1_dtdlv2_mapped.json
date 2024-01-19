@@ -110,11 +110,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AirCooledCondenser;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser;1"
+      "OutputDtmi": "dtmi:mapped:core:Condensing_Unit;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AirCooledRefrigerationCondenser;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Condensing_Unit;1"
+      "OutputDtmi": "dtmi:mapped:core:Condensing_Unit;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AirCurtain;1",
@@ -270,7 +270,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AreaSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:Sensor;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AreaSetpoint;1",
@@ -694,7 +694,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CompressorLeavingPressureLoadLevelState;1",
-      "OutputDtmi": "dtmi:mapped:core:Status;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Status;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CompressorLeavingRefrigerantStaticPressureSensor;1",
@@ -950,7 +950,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CountSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:Sensor;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CountSetpoint;1",
@@ -1234,7 +1234,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DistributionAsset;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Document;1",
@@ -2141,6 +2141,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Heating_Thermal_Power_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:HeatingLevelState;1",
+      "OutputDtmi": "dtmi:mapped:core:Level_Status;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:HeatingZoneAirTemperatureSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Zone_Air_Heating_Temperature_Setpoint;1"
     },
@@ -2330,7 +2334,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ICTSystem;1",
-      "OutputDtmi": "dtmi:mapped:core:System;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:System;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ITRack;1",
@@ -2922,7 +2926,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:OnLevelSetpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Setpoint;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:OnLevelState;1",
@@ -4274,7 +4278,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:TemperatureSetpointDeviation;1",
-      "OutputDtmi": "dtmi:mapped:core:Point;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:TenantUnit;1",
@@ -4382,7 +4386,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:TimeSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:Sensor;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:TimeSetpoint;1",
