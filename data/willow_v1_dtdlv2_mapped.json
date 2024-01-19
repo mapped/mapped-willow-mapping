@@ -113,6 +113,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:AirCooledRefrigerationCondenser;1",
+      "OutputDtmi": "dtmi:mapped:core:Condensing_Unit;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:AirCurtain;1",
       "OutputDtmi": "dtmi:mapped:core:Air_Curtain;1"
     },
@@ -673,6 +677,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Compressor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:CompressorCurrentSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Current_Sensor;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:CompressorElectricalPowerSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Power_Sensor;1"
     },
@@ -703,6 +711,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:CompressorRunActuator;1",
       "OutputDtmi": "dtmi:mapped:core:Run_Command;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:CompressorRunLevelActuator;1",
+      "OutputDtmi": "dtmi:mapped:core:Level_Command;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CompressorRunSensor;1",
@@ -1005,6 +1017,18 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Override_Command;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:DefrostHeaterCurrentSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Current_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DefrostRunActuator;1",
+      "OutputDtmi": "dtmi:mapped:core:Run_Command;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DefrostRunState;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Run_Status;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:DeionizedWaterConductivitySensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Deionised_Water_Conductivity_Sensor;1"
     },
@@ -1051,6 +1075,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:DeltaPressureSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DeltaRefrigerantTemperatureSetpoint;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Temperature_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DeltaSteamTemperatureSensor;1",
@@ -1661,6 +1689,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Coil_Unit;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:FanCurrentSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Current_Sensor;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:FanElectricalPowerSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Power_Sensor;1"
     },
@@ -2121,6 +2153,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Coil_Unit;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:HotFoodDisplayCase;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:HotWaterBypassPumpRunActuator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Pump_Command;1"
     },
@@ -2301,6 +2337,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Illuminance_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Image;1",
+      "OutputDtmi": "dtmi:mapped:core:Entity;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:IndirectEvaporativeCoolingTower;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Tower;1"
     },
@@ -2387,6 +2427,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:IntercomEntry;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Intercom_Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:InteriorAirTemperatureSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Temperature_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:IntrusionDetectionEquipment;1",
@@ -2581,6 +2625,18 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:LowTemperatureRefrigeratedFoodDisplayCase;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:LowTemperatureRefrigerationCompressor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Compressor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:LowTemperatureRefrigerationCompressorRack;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:Luminaire;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Luminaire;1"
     },
@@ -2623,6 +2679,18 @@
     {
       "InputDtmi": "dtmi:com:willowinc:MediumSpeedFanRunActuator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:MediumTemperatureRefrigeratedFoodDisplayCase;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:MediumTemperatureRefrigerationCompressor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Compressor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:MediumTemperatureRefrigerationCompressorRack;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:MeterEquipment;1",
@@ -3429,6 +3497,14 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Hot_Water_Temperature_Setpoint;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:ProductData;1",
+      "OutputDtmi": "dtmi:mapped:core:Entity;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Product_IOM_Manual;1",
+      "OutputDtmi": "dtmi:mapped:core:Entity;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:PropaneSystem;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Gas_System;1"
     },
@@ -3499,6 +3575,14 @@
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigerantTemperatureSensor;1",
       "OutputDtmi": "dtmi:mapped:core:Refrigerant_Temperature_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:RefrigerationCircuit;1",
+      "OutputDtmi": "dtmi:mapped:core:Refrigeration_System;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:RefrigerationCompressorGroup;1",
+      "OutputDtmi": "dtmi:mapped:core:Entity;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationEquipment;1",
@@ -3949,6 +4033,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Enthalpy_Setpoint;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Specification;1",
+      "OutputDtmi": "dtmi:mapped:core:Entity;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:SpeedSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Sensor;1"
     },
@@ -3987,6 +4075,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:SprinklerValve;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:StageCountSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupancy_Count_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:StairPressurizationFan;1",
@@ -4485,6 +4577,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Command;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:VFDRunLevelState;1",
+      "OutputDtmi": "dtmi:mapped:core:Level_Status;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:Valve;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
     },
@@ -4511,6 +4607,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:ValvePositionSetpoint;1",
       "OutputDtmi": "dtmi:mapped:core:Valve_Position_Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:ValvePositionState;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve_Status;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:VariableFrequencyDrive;1",
