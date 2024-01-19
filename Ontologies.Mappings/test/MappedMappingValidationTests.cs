@@ -160,9 +160,9 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
 
             foreach (var invalidSource in invalidSources)
             {
-                Console.WriteLine(invalidSource);
+                Console.WriteLine($"Invalid input DTMI: {invalidSource}");
             }
-            // Assert.Empty(invalidSources);
+            Assert.Empty(invalidSources);
         }
 
         [Theory]
@@ -182,7 +182,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
                 ontologyMappingManager.ValidateTargetOntologyMapping(inputModels, out var invalidSources);
                 foreach (var invalidSource in invalidSources)
                 {
-                    Console.WriteLine(invalidSource);
+                    Console.WriteLine($"Invalid Output: {invalidSource}");
                 }
                 Assert.Empty(invalidSources);
             }

@@ -157,7 +157,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
             {
                 var inputModels = modelParser.Parse(inputDtmi);
                 ontologyMappingManager.ValidateSourceOntologyMapping(inputModels, out var invalidSources);
-                Console.WriteLine(invalidSources.Count());
+                Console.WriteLine($"Invalid Sources: {invalidSources.Count()}");
 
                 Assert.Empty(invalidSources);
             }
