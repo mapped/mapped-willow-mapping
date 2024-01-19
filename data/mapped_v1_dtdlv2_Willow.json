@@ -32,7 +32,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Access_Activity_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:StateSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Access_Card_Reader;1",
@@ -140,7 +140,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Area_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:AreaSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Audio_Gain_Status;1",
@@ -196,7 +196,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Bio_Containment_Unit;1",
-      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Booster_Pump;1",
@@ -255,12 +255,12 @@
       "OutputDtmi": "dtmi:com:willowinc:CloseState;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance_Status;1",
+      "InputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance;1",
       "OutputDtmi": "dtmi:com:willowinc:CoefficientOfPerformance;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Compressor_Discharge_Refrigerant_Pressure_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CompressorLeavingPressureLoadLevelState;1"
+      "OutputDtmi": "dtmi:com:willowinc:CompressorLeavingRefrigerantStaticPressureSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Compressor_Status;1",
@@ -284,7 +284,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Connected_Devices_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Controller;1",
@@ -300,7 +300,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cooling_Air_Temperature_Setpoint_Offset;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:SetpointOffset;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cooling_Level_Command;1",
@@ -324,7 +324,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Count;1",
-      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Current_Alarm;1",
@@ -336,7 +336,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cycle_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:StartsCountSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Damper_Open_Close_Status;1",
@@ -360,7 +360,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Differential_Pressure_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:DeltaPressureSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Direct_Fuels_GHG_Emissions_Factor;1",
@@ -421,10 +421,6 @@
     {
       "InputDtmi": "dtmi:mapped:core:Drinking_Water_Fixture;1",
       "OutputDtmi": "dtmi:com:willowinc:DrinkingWaterFixture;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Dry_Cooler;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACEquipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Duct_Air_Static_Pressure_Sensor;1",
@@ -820,7 +816,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Offset;1",
-      "OutputDtmi": "dtmi:com:willowinc:Setpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:SetpointOffset;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Open_Close_Command;1",
@@ -1044,7 +1040,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Setpoint_Offset;1",
-      "OutputDtmi": "dtmi:com:willowinc:Setpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:SetpointOffset;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Snow_Accumulation_Sensor;1",
@@ -1156,7 +1152,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Temperature_Alarm_Count;1",
-      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Temperature_Alarm_Setpoint;1",
@@ -1184,7 +1180,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Time_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:TimeSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Total_GHG_Emissions;1",
@@ -1440,7 +1436,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Alarm_Delay_Parameter;1",
@@ -1496,7 +1492,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Battery_Energy_Storage_System;1",
-      "OutputDtmi": "dtmi:com:willowinc:BatterySystem;1"
+      "OutputDtmi": "dtmi:com:willowinc:System;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Battery_Room;1",
@@ -1788,7 +1784,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Common_Space;1",
-      "OutputDtmi": "dtmi:com:willowinc:BuildingCommonArea;1"
+      "OutputDtmi": "dtmi:com:willowinc:Space;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Communication_Loss_Alarm;1",
@@ -2196,7 +2192,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Distribution_Frame;1",
-      "OutputDtmi": "dtmi:com:willowinc:DistributionAsset;1"
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Domestic_Hot_Water_Circulating_Pump;1",
@@ -2221,6 +2217,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Drive_Ready_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Dry_Cooler;1",
+      "OutputDtmi": "dtmi:com:willowinc:DryCooler;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Dry_Cooler;1",
@@ -2388,7 +2388,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Energy_Storage_System;1",
-      "OutputDtmi": "dtmi:com:willowinc:ElectricalGenerationStorageEquipment;1"
+      "OutputDtmi": "dtmi:com:willowinc:System;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Energy_System;1",
@@ -3260,7 +3260,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Battery_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:ReplaceBatteryState;1"
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Freeze_Protect_Temperature_Parameter;1",
@@ -3400,7 +3400,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Load_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:Setpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:Parameter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Occupied_Cooling_Supply_Air_Flow_Setpoint_Limit;1",
@@ -4332,7 +4332,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Safety_Shower;1",
-      "OutputDtmi": "dtmi:com:willowinc:Room;1"
+      "OutputDtmi": "dtmi:com:willowinc:SafetyEquipment;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Safety_System;1",
@@ -4560,7 +4560,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_Dewpoint_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:DewPointTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:DewPointTemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_Differential_Pressure_Sensor;1",

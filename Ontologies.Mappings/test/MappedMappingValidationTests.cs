@@ -93,7 +93,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
         }
 
         [Theory]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "dtmi:org:brickschema:schema:Brick:Ablutions_Room;1", "dtmi:com:willowinc:Room;1")]
+        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "dtmi:org:brickschema:schema:Brick:Ablutions_Room;1", "dtmi:com:willowinc:Ablutions_Room;1")]
         [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "dtmi:org:brickschema:schema:Brick:Ablutions;1", "dtmi:com:willowinc:Ablutions;1")]
         [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", false, "dtmi:org:fakeschema:schema:Brick:Ablutions;1", null)]
         [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "dtmi:org:brickschema:schema:Brick:CO2_Alarm_Setpoint;1", "dtmi:com:willowinc:CO2_Alarm_Setpoint;1")]
@@ -160,9 +160,9 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
 
             foreach (var invalidSource in invalidSources)
             {
-                Console.WriteLine(invalidSource);
+                Console.WriteLine($"Invalid input DTMI: {invalidSource}");
             }
-            // Assert.Empty(invalidSources);
+            Assert.Empty(invalidSources);
         }
 
         [Theory]
@@ -182,7 +182,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
                 ontologyMappingManager.ValidateTargetOntologyMapping(inputModels, out var invalidSources);
                 foreach (var invalidSource in invalidSources)
                 {
-                    Console.WriteLine(invalidSource);
+                    Console.WriteLine($"Invalid Output: {invalidSource}");
                 }
                 Assert.Empty(invalidSources);
             }
