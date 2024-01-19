@@ -933,6 +933,10 @@
       "OutputDtmi": "dtmi:mapped:core:Cooling_Thermal_Power_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:CoolingLevelState;1",
+      "OutputDtmi": "dtmi:mapped:core:Level_Status;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:CoolingTower;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Tower;1"
     },

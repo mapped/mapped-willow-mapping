@@ -32,7 +32,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Access_Activity_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:Status;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Access_Card_Reader;1",
@@ -140,7 +140,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Area_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:Status;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Audio_Gain_Status;1",
@@ -256,7 +256,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:Status;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Compressor_Discharge_Refrigerant_Pressure_Sensor;1",
@@ -324,7 +324,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Count;1",
-      "OutputDtmi": "dtmi:com:willowinc:Status;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Current_Alarm;1",
@@ -336,7 +336,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cycle_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:Status;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Damper_Open_Close_Status;1",
@@ -360,7 +360,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Differential_Pressure_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:Status;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Direct_Fuels_GHG_Emissions_Factor;1",
@@ -421,10 +421,6 @@
     {
       "InputDtmi": "dtmi:mapped:core:Drinking_Water_Fixture;1",
       "OutputDtmi": "dtmi:com:willowinc:DrinkingWaterFixture;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Dry_Cooler;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACEquipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Duct_Air_Static_Pressure_Sensor;1",
@@ -1156,7 +1152,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Temperature_Alarm_Count;1",
-      "OutputDtmi": "dtmi:com:willowinc:Status;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Temperature_Alarm_Setpoint;1",
@@ -1184,7 +1180,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Time_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:Status;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Total_GHG_Emissions;1",
@@ -2221,6 +2217,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Drive_Ready_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Dry_Cooler;1",
+      "OutputDtmi": "dtmi:com:willowinc:DryCooler;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Dry_Cooler;1",
