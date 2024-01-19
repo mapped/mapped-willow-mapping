@@ -255,8 +255,8 @@
       "OutputDtmi": "dtmi:com:willowinc:CloseState;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "InputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoefficientOfPerformance;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Compressor_Discharge_Refrigerant_Pressure_Sensor;1",
