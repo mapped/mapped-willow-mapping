@@ -99,6 +99,7 @@ jobs:
       run: "& ./.github/workflows/scripts/test.ps1"
 
     - name: Build
+      if: github.ref == 'refs/heads/main'
       shell: pwsh
       run: "& ./.github/workflows/scripts/buildandpack.ps1 -config Release -publishPackage ${{ inputs.publish-package }} -nugetSecret '${{ secrets.NUGET_MAPPINGS_WILLOW_PUSH }}' -VERTUPLE ${{ steps.vtl.outputs.ver_semVerFourTupleNumeric }} -githubRepo ${{ github.repository }} -githubBranch ${{ github.ref }} -githubCommit ${{ github.sha }} -buildNumber ${{ steps.vtl.outputs.ver_buildNumber }}"
     
