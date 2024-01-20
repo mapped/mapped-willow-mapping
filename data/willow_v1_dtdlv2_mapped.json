@@ -725,10 +725,6 @@
       "OutputDtmi": "dtmi:mapped:core:Controller;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:ConvenctionMicrowaveOven;1",
-      "OutputDtmi": "dtmi:mapped:core:Oven;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:ConveyanceEquipment;1",
       "OutputDtmi": "dtmi:mapped:core:Conveyor;1"
     },
@@ -3813,10 +3809,6 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Off_Command;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:StopSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Off_Status;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:StructuralColumn;1",
       "OutputDtmi": "dtmi:mapped:core:Entity;1"
     },
@@ -3867,10 +3859,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:TVOCAirQualitySensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Quality_Sensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:TVOCSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:TVOC_Level_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Tank;1",
@@ -4209,16 +4197,8 @@
       "OutputDtmi": "dtmi:mapped:core:Valve_Open_Command;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:ValveOpenSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:Valve_Open_Status;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:ValvePositionActuator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve_Position_Command;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ValvePositionSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve_Position_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ValvePositionSetpoint;1",
@@ -4457,10 +4437,6 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Zone_Air_Humidity_Setpoint;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:ZoneAirQualityCO2Sensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Sensor;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:ZoneAirStaticPressureSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Static_Pressure_Sensor;1"
     },
@@ -4475,10 +4451,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:ZoneAirTemperatureSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Zone_Air_Temperature_Setpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ZoneCO2Setpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1",
