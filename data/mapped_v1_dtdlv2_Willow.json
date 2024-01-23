@@ -1436,7 +1436,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Alarm_Delay_Parameter;1",
@@ -3260,7 +3260,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Battery_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Freeze_Protect_Temperature_Parameter;1",
