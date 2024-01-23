@@ -1939,6 +1939,10 @@
       "OutputDtmi": "dtmi:com:willowinc:TemperatureSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cubicle;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
@@ -1969,6 +1973,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cycle_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cycle_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:StartsCountSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:DC_Bus_Voltage_Sensor;1",
@@ -4761,6 +4769,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Temperature_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Temperature_Alarm_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Temperature_Deadband_Setpoint;1",
