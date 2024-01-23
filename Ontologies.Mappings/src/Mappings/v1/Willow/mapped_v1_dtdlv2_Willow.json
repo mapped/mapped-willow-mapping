@@ -285,10 +285,10 @@
       "OutputDtmi": "dtmi:com:willowinc:FireHydrant;1"
     },
     {
-      "Confidence": 0.22,
+      "Confidence": 0.3,
       "InputDtmi": "dtmi:mapped:core:Forced_Open_Alarm;1",
       "IsInferred": true,
-      "OutputDtmi": "dtmi:com:willowinc:OpenActuatorCommandStatusMismatchAlarmState;1"
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "Confidence": 0.72,
@@ -321,16 +321,16 @@
       "OutputDtmi": "dtmi:com:willowinc:HeatingLevelState;1"
     },
     {
-      "Confidence": 0.22,
+      "Confidence": 0.3,
       "InputDtmi": "dtmi:mapped:core:Held_Open_Alarm;1",
       "IsInferred": true,
-      "OutputDtmi": "dtmi:com:willowinc:OpenActuatorCommandStatusMismatchAlarmState;1"
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
-      "Confidence": 0.2,
+      "Confidence": 0.42,
       "InputDtmi": "dtmi:mapped:core:High_Discharge_Air_Pressure_Alarm;1",
       "IsInferred": true,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:DischargeAirHighAirFlowAlarmState;1"
     },
     {
       "Confidence": 0.99,
@@ -369,10 +369,10 @@
       "OutputDtmi": "dtmi:com:willowinc:ElectricalWiringDevice;1"
     },
     {
-      "Confidence": 0.72,
+      "Confidence": 0.66,
       "InputDtmi": "dtmi:mapped:core:Outside_Air_Damper_Position_Sensor;1",
       "IsInferred": true,
-      "OutputDtmi": "dtmi:com:willowinc:DamperPositionSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:OutsideAirDamperPositionState;1"
     },
     {
       "Confidence": 0.4,
@@ -477,10 +477,10 @@
       "OutputDtmi": "dtmi:com:willowinc:PlumbingPressureReducingValve;1"
     },
     {
-      "Confidence": 0.9,
+      "Confidence": 0.4,
       "InputDtmi": "dtmi:mapped:core:Supply_Fan_Speed_Command;1",
       "IsInferred": true,
-      "OutputDtmi": "dtmi:com:willowinc:FanSpeedActuator;1"
+      "OutputDtmi": "dtmi:com:willowinc:FanRunLevelActuator;1"
     },
     {
       "Confidence": 0.99,
@@ -626,12 +626,12 @@
     {
       "InputDtmi": "dtmi:mapped:core:Air_Flow_Alarm_Setpoint;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:NormalFaultSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Alarm_Setpoint;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:NormalFaultSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Air_Flow_Direction_Status;1",
@@ -801,12 +801,12 @@
     {
       "InputDtmi": "dtmi:mapped:core:CO2_Alarm_Setpoint;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:NormalFaultSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:CO_Alarm_Setpoint;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:NormalFaultSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Calendar_Event;1",
@@ -981,7 +981,7 @@
     {
       "InputDtmi": "dtmi:mapped:core:Cooling_Thermal_Power_Sensor;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:CoolingLevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:CoolingLevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Correlated_Color_Temperature_Sensor;1",
@@ -996,7 +996,7 @@
     {
       "InputDtmi": "dtmi:mapped:core:Current_Alarm;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Current_Total_Harmonic_Distortion_Sensor;1",
@@ -1011,7 +1011,7 @@
     {
       "InputDtmi": "dtmi:mapped:core:Damper_Open_Close_Status;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:DamperOpenSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:DamperOpenState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Dehumidification_Status;1",
@@ -1111,7 +1111,7 @@
     {
       "InputDtmi": "dtmi:mapped:core:Drain_Pan_Alarm;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Drinking_Water_Fixture;1",
@@ -1256,12 +1256,12 @@
     {
       "InputDtmi": "dtmi:mapped:core:Fan_Speed_Status;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:FanRunLevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:FanRunLevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Filter_Alarm_Setpoint;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:NormalFaultSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Fire_Damper;1",
@@ -1336,12 +1336,12 @@
     {
       "InputDtmi": "dtmi:mapped:core:Grease_Trap_Level_Sensor;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:LevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:H2S_Level_Sensor;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:LevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:HVAC_Pump;1",
@@ -1371,12 +1371,12 @@
     {
       "InputDtmi": "dtmi:mapped:core:High_Humidity_Alarm_Setpoint;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:NormalFaultSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Humidity_Alarm_Setpoint;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:NormalFaultSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:High_Humidity_Setpoint;1",
@@ -1386,17 +1386,17 @@
     {
       "InputDtmi": "dtmi:mapped:core:High_Static_Pressure_Alarm;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:High_TVOC_Alarm_Setpoint;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:NormalFaultSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:High_Temperature_Alarm_Setpoint;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:NormalFaultSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Temperature_Alarm_Setpoint;1",
@@ -1406,7 +1406,7 @@
     {
       "InputDtmi": "dtmi:mapped:core:High_Voltage_Alarm;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Hot_Water_GHG_Emissions_Factor;1",
@@ -1451,7 +1451,7 @@
     {
       "InputDtmi": "dtmi:mapped:core:Level_Status;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:OnLevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:OnLevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Lighting_Command;1",
@@ -1476,7 +1476,7 @@
     {
       "InputDtmi": "dtmi:mapped:core:Low_Humidity_Alarm_Setpoint;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:NormalFaultSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Low_Humidity_Setpoint;1",
@@ -1486,12 +1486,12 @@
     {
       "InputDtmi": "dtmi:mapped:core:Low_Static_Air_Pressure_Alarm;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Low_Temperature_Alarm_Setpoint;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:NormalFaultSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Max_Air_Temperature_Setpoint_Limit;1",
@@ -1561,7 +1561,7 @@
     {
       "InputDtmi": "dtmi:mapped:core:Min_Outside_Air_Damper_Position_Sensor;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:MinOutsideAirDamperPositionSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:MinOutsideAirDamperPositionState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Mute_Status;1",
@@ -1846,7 +1846,7 @@
     {
       "InputDtmi": "dtmi:mapped:core:Sensor_Type_Status;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:StatusSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Snow_Accumulation_Sensor;1",
@@ -2046,7 +2046,7 @@
     {
       "InputDtmi": "dtmi:mapped:core:Utilization_Status;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:LoadLevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LoadLevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Valve_Open_Command;1",
@@ -2056,7 +2056,7 @@
     {
       "InputDtmi": "dtmi:mapped:core:Valve_Open_Status;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:com:willowinc:ValveOpenSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:ValveOpenState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Valve_Percentage_Command;1",

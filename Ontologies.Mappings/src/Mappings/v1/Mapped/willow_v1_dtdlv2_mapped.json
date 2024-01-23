@@ -15112,7 +15112,7 @@
     {
       "InputDtmi": "dtmi:com:willowinc:SecondaryLoopChilledWaterDeltaPressureSensor;1",
       "IsInferred": false,
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Differential_Temperature_Sensor"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Differential_Temperature_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SecondaryLoopChilledWaterFlowSensor;1",
