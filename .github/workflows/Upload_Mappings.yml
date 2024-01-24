@@ -19,6 +19,7 @@ jobs:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
     - name: Upload Mapped Mappings to Blob Storage
+      # if: github.ref == 'refs/heads/main'
       run: |
         az storage blob upload \
           --conatainer-name ${{ env.containerName }} \
@@ -28,6 +29,7 @@ jobs:
           --auth-mode login \
 
     - name: Upload Willow Mappings to Blob Storage
+      # if: github.ref == 'refs/heads/main'
       run: |
         az storage blob upload \
           --conatainer-name ${{ env.containerName }} \
