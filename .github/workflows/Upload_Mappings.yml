@@ -1,6 +1,10 @@
 name: Upload Mappings to Blob Storage
 
-on: push
+on:
+  push:
+    branches: [
+      "main",
+    ]
 
 jobs:
   upload-to-blob:
