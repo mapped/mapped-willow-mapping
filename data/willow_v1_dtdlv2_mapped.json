@@ -3614,7 +3614,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationCompressorGroup;1",
-      "OutputDtmi": "dtmi:mapped:core:Entity;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationEquipment;1",
