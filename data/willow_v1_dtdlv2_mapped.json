@@ -717,6 +717,10 @@
       "OutputDtmi": "dtmi:mapped:core:Run_Command;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:CompressorRunLevelActuator;1",
+      "OutputDtmi": "dtmi:mapped:core:Level_Command;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:CompressorRunSensor;1",
       "OutputDtmi": "dtmi:mapped:core:Compressor_Status;1"
     },
