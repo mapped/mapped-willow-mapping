@@ -283,8 +283,8 @@
       "OutputDtmi": "dtmi:com:willowinc:OperationalState;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Connected_Devices_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "InputDtmi": "dtmi:mapped:core:Connected_Devices_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Controller;1",
@@ -307,8 +307,8 @@
       "OutputDtmi": "dtmi:com:willowinc:CoolingLevelActuator;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Cooling_Request_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "InputDtmi": "dtmi:mapped:core:Cooling_Request_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cooling_Thermal_Energy_Sensor;1",
@@ -321,10 +321,6 @@
     {
       "InputDtmi": "dtmi:mapped:core:Correlated_Color_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Count;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Count_Sensor;1",
@@ -341,10 +337,6 @@
     {
       "InputDtmi": "dtmi:mapped:core:Cycle_Count_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:StartsCountSensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Cycle_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Damper_Open_Close_Status;1",
@@ -1167,7 +1159,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Temperature_Alarm_Count;1",
+      "InputDtmi": "dtmi:mapped:core:Temperature_Alarm_Count_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
