@@ -1046,7 +1046,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DefrostTerminationTemperatureSetpoint;1",
-      "OutputDtmi": "dtmi:mapped:core:Defrost_Cutoff_Temperature_Setpoint;1"
+      "OutputDtmi": "dtmi:mapped:core:Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DegreeHours;1",
@@ -3622,7 +3622,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigeratedFoodDisplayCase;1",
-      "OutputDtmi": "dtmi:mapped:core:Refrigerated_Display_Case;1"
+      "OutputDtmi": "dtmi:mapped:core:Device;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationCircuit;1",
