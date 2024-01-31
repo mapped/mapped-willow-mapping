@@ -613,7 +613,6 @@
       "OutputDtmi": "dtmi:mapped:core:Run_Command;1"
     },
     {
-
       "InputDtmi": "dtmi:com:willowinc:CompressorRunLevelActuator;1",
       "OutputDtmi": "dtmi:mapped:core:Level_Command;1"
     },
@@ -775,7 +774,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CountSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Count_Sensor;1"
+      "OutputDtmi": "dtmi:mapped:core:Count_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CountSetpoint;1",
@@ -851,7 +850,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DefrostTerminationTemperatureSetpoint;1",
-      "OutputDtmi": "dtmi:mapped:core:Setpoint;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DegreeHours;1",
@@ -3723,7 +3722,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:StageCountSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Count_Sensor;1"
+      "OutputDtmi": "dtmi:mapped:core:Count_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:StairPressurizationFan;1",
@@ -3763,7 +3762,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:StartsCountSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Cycle_Count_Sensor;1"
+      "OutputDtmi": "dtmi:mapped:core:Cycle_Count_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:State;1",

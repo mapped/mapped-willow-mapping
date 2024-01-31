@@ -327,12 +327,20 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Current_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:CurrentAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Current_Total_Harmonic_Distortion_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:CurrentTHDSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cycle_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:StartsCountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cycle_Count_Status;1",
@@ -1947,10 +1955,6 @@
       "OutputDtmi": "dtmi:com:willowinc:TemperatureSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Count_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cubicle;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
@@ -1981,10 +1985,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cycle_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:ShortCycleAlarmState;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cycle_Count_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:StartsCountSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:DC_Bus_Voltage_Sensor;1",
