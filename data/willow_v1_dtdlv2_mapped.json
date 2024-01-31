@@ -1045,6 +1045,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Run_Status;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:DefrostTerminationTemperatureSetpoint;1",
+      "OutputDtmi": "dtmi:mapped:core:Defrost_Cutoff_Temperature_Setpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:DegreeHours;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1"
     },
@@ -2829,6 +2833,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Mode_Command;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:ModeSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Sensor;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:ModeState;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Mode_Status;1"
     },
@@ -3613,12 +3621,20 @@
       "OutputDtmi": "dtmi:mapped:core:Refrigerant_Temperature_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:RefrigeratedFoodDisplayCase;1",
+      "OutputDtmi": "dtmi:mapped:core:Refrigerated_Display_Case;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationCircuit;1",
       "OutputDtmi": "dtmi:mapped:core:Refrigeration_System;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationCompressorGroup;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:RefrigerationCondenser;1",
+      "OutputDtmi": "dtmi:mapped:core:Condensing_Unit;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationEquipment;1",
@@ -3747,6 +3763,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:RenewableImportActiveElectricalEnergySensor;1",
       "OutputDtmi": "dtmi:mapped:core:Active_Energy_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:RenewableImportActiveElectricalPowerSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Electric_Power_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RenewableNetActiveElectricalEnergySensor;1",
