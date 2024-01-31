@@ -64,8 +64,8 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Parameter;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Count;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Status;1"
+      "InputDtmi": "dtmi:mapped:core:Count_Sensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Sensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Discharge_Air_Temperature_Reset_Setpoint;1",
