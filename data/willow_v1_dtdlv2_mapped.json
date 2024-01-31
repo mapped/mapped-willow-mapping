@@ -613,6 +613,15 @@
       "OutputDtmi": "dtmi:mapped:core:Run_Command;1"
     },
     {
+
+      "InputDtmi": "dtmi:com:willowinc:CompressorRunLevelActuator;1",
+      "OutputDtmi": "dtmi:mapped:core:Level_Command;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:CompressorRunSensor;1",
+      "OutputDtmi": "dtmi:mapped:core:Compressor_Status;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:CompressorRunState;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Run_Status;1"
     },
@@ -839,6 +848,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:DefrostRunState;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Run_Status;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DefrostTerminationTemperatureSetpoint;1",
+      "OutputDtmi": "dtmi:mapped:core:Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DegreeHours;1",
@@ -2469,6 +2482,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Mode_Command;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:ModeSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Sensor;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:ModeState;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Mode_Status;1"
     },
@@ -3217,12 +3234,20 @@
       "OutputDtmi": "dtmi:mapped:core:Refrigerant_Temperature_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:RefrigeratedFoodDisplayCase;1",
+      "OutputDtmi": "dtmi:mapped:core:Device;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationCircuit;1",
       "OutputDtmi": "dtmi:mapped:core:Refrigeration_System;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationCompressorGroup;1",
-      "OutputDtmi": "dtmi:mapped:core:Entity;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:RefrigerationCondenser;1",
+      "OutputDtmi": "dtmi:mapped:core:Condensing_Unit;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationEquipment;1",
@@ -3343,6 +3368,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:RenewableImportActiveElectricalEnergySensor;1",
       "OutputDtmi": "dtmi:mapped:core:Active_Energy_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:RenewableImportActiveElectricalPowerSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Electric_Power_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RenewableNetActiveElectricalEnergySensor;1",

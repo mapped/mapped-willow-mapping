@@ -343,6 +343,10 @@
       "OutputDtmi": "dtmi:com:willowinc:DamperOpenState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Defrost_Cutoff_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:DefrostTerminationTemperatureSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Dehumidification_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
@@ -949,6 +953,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Refrigerant_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:RefrigerantTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Refrigerated_Display_Case;1",
+      "OutputDtmi": "dtmi:com:willowinc:RefrigeratedFoodDisplayCase;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Refrigeration_Equipment;1",
