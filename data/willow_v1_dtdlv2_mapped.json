@@ -621,10 +621,6 @@
       "OutputDtmi": "dtmi:mapped:core:Level_Command;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:CompressorRunSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:Compressor_Status;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:CompressorRunState;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Run_Status;1"
     },
@@ -2487,10 +2483,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:ModeActuator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Mode_Command;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ModeSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ModeState;1",
