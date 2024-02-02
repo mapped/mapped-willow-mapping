@@ -1351,6 +1351,10 @@
       "OutputDtmi": "dtmi:com:willowinc:AirQualityAlarmState;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Cooled_Chiller;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirCooledChiller;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Differential_Pressure_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:AirDeltaPressureSensor;1"
     },
@@ -2627,6 +2631,10 @@
       "OutputDtmi": "dtmi:com:willowinc:AirFilter;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Filter_Alarm;1",
+      "OutputDtmi": "dtmi:com:willowinc:DirtyFilterAlarmState;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Filter_Differential_Pressure_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:FilterAirDeltaPressureSensor;1"
     },
@@ -2697,6 +2705,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Freeze_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Freezer;1",
+      "OutputDtmi": "dtmi:com:willowinc:Freezer;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Freezer;1",
@@ -4003,6 +4015,10 @@
       "OutputDtmi": "dtmi:com:willowinc:PassiveChilledBeam;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Phase_Loss_Alarm;1",
+      "OutputDtmi": "dtmi:com:willowinc:ElectricalPowerLossAlarmState;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Photovoltaic_Array;1",
       "OutputDtmi": "dtmi:com:willowinc:PhotovoltaicArray;1"
     },
@@ -4177,6 +4193,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Reception;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Refrigerator;1",
+      "OutputDtmi": "dtmi:com:willowinc:Refrigerator;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Region;1",
@@ -4373,6 +4393,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Server_Room;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Service_Required_Alarm;1",
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Service_Room;1",
@@ -5039,6 +5063,14 @@
       "OutputDtmi": "dtmi:com:willowinc:VoltageSensor;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Walk_In_Freezer;1",
+      "OutputDtmi": "dtmi:com:willowinc:WalkInFreezer;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Walk_In_Refrigerator;1",
+      "OutputDtmi": "dtmi:com:willowinc:WalkInCooler;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Wardrobe;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
@@ -5053,6 +5085,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterLeakAlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Cooled_Chiller;1",
+      "OutputDtmi": "dtmi:com:willowinc:WaterCooledChiller;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Differential_Pressure_Setpoint;1",
