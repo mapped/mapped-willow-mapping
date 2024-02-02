@@ -399,6 +399,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Dishwasher;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Display_Case_Refrigerator;1",
+      "OutputDtmi": "dtmi:com:willowinc:RefrigeratedFoodDisplayCase;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Display_Resolution_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
@@ -619,8 +623,8 @@
       "OutputDtmi": "dtmi:com:willowinc:HeatingLevelActuator;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Heating_Request_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "InputDtmi": "dtmi:mapped:core:Heating_Request_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Heating_Thermal_Energy_Sensor;1",
@@ -931,8 +935,8 @@
       "OutputDtmi": "dtmi:com:willowinc:PlumbingPressureReducingValve;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Pressure_Request_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "InputDtmi": "dtmi:mapped:core:Pressure_Request_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Pump_Collection;1",
@@ -953,10 +957,6 @@
     {
       "InputDtmi": "dtmi:mapped:core:Refrigerant_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:RefrigerantTemperatureSensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Refrigerated_Display_Case;1",
-      "OutputDtmi": "dtmi:com:willowinc:RefrigeratedFoodDisplayCase;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Refrigeration_Equipment;1",
@@ -983,8 +983,8 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Request_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "InputDtmi": "dtmi:mapped:core:Request_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Reset_Status;1",
