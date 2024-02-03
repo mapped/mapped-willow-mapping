@@ -1665,10 +1665,6 @@
       "OutputDtmi": "dtmi:mapped:core:Refrigeration_Equipment;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:Freezer;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Freezer;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:FrequencySensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Frequency_Sensor;1"
     },

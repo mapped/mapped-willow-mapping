@@ -2708,10 +2708,6 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Freezer;1",
-      "OutputDtmi": "dtmi:com:willowinc:Freezer;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Freezer;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
