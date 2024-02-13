@@ -3250,10 +3250,6 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Refrigerator;1",
-      "OutputDtmi": "dtmi:mapped:core:Refrigeration_Equipment;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:Refrigerator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Refrigerator;1"
     },
     {
@@ -4363,10 +4359,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:WaterCooledChiller;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Cooled_Chiller;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:WaterCooledChiller;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Chiller;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WaterCooledCondenser;1",
