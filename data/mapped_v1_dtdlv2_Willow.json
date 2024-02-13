@@ -1639,10 +1639,6 @@
       "OutputDtmi": "dtmi:com:willowinc:CO2AirQualitySensor;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CO2Sensor;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:CO2Setpoint;1"
     },
@@ -2005,10 +2001,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Damper;1",
       "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Command;1",
-      "OutputDtmi": "dtmi:com:willowinc:DamperActuator;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Command;1",
