@@ -98,7 +98,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AirCooledChiller;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Cooled_Chiller;1"
+      "OutputDtmi": "dtmi:mapped:core:Air_Cooled_Chiller;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AirCooledCondenser;1",

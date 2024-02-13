@@ -75,6 +75,10 @@
       "OutputDtmi": "dtmi:com:willowinc:AirCompressorDryer;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Air_Cooled_Chiller;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirCooledChiller;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Air_Curtain;1",
       "OutputDtmi": "dtmi:com:willowinc:AirCurtain;1"
     },
@@ -1349,10 +1353,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:AirQualityAlarmState;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Cooled_Chiller;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirCooledChiller;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Differential_Pressure_Sensor;1",
