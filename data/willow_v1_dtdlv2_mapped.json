@@ -3250,7 +3250,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Refrigerator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Refrigerator;1"
+      "OutputDtmi": "dtmi:mapped:core:Refrigerator;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Region;1",
@@ -4342,11 +4342,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WalkInCooler;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Walk_In_Refrigerator;1"
+      "OutputDtmi": "dtmi:mapped:core:Walk_In_Refrigerator;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WalkInFreezer;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Walk_In_Freezer;1"
+      "OutputDtmi": "dtmi:mapped:core:Walk_In_Freezer;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WallAirConditioner;1",
@@ -4358,7 +4358,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WaterCooledChiller;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Cooled_Chiller;1"
+      "OutputDtmi": "dtmi:mapped:core:Water_Cooled_Chiller;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WaterCooledCondenser;1",
