@@ -1,0 +1,43 @@
+name: Upload Mappings to Blob Storage
+
+on:
+  push:
+    branches: [
+      "main",
+    ]
+
+jobs:
+  upload-to-blob:
+    runs-on: ubuntu-latest
+    env:
+      containerName: 'public'
+      storageAccount: 'mappedontologies'
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Azure CLI
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Upload Mapped Mappings to Blob Storage
+      # if: github.ref == 'refs/heads/main'
+      run: |
+        az storage blob upload \
+          --container-name ${{ env.containerName }} \
+          --file Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json \
+          --name mappings/Mapped2Willow/latest \
+          --account-name ${{ env.storageAccount }} \
+          --connection-string "{{ secrets.ONTOLOGY_BLOB_STORE_CONN_STR }}"
+
+    - name: Upload Willow Mappings to Blob Storage
+      # if: github.ref == 'refs/heads/main'
+      run: |
+        az storage blob upload \
+          --container-name ${{ env.containerName }} \
+          --file Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json \
+          --name mappings/Willow2Mapped/latest \
+          --account-name ${{ env.storageAccount }} \
+          --connection-string "{{ secrets.ONTOLOGY_BLOB_STORE_CONN_STR }}"

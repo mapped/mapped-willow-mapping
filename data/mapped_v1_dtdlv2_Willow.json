@@ -75,12 +75,16 @@
       "OutputDtmi": "dtmi:com:willowinc:AirCompressorDryer;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Air_Cooled_Chiller;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirCooledChiller;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Air_Curtain;1",
       "OutputDtmi": "dtmi:com:willowinc:AirCurtain;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Air_Flow_Alarm_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:AirFlowAlarmSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Air_Flow_Direction_Status;1",
@@ -208,11 +212,11 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:CO2_Alarm_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:CO2AirQualityAlarmSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:CO_Alarm_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:COAirQualityAlarmSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Calendar_Event;1",
@@ -283,8 +287,8 @@
       "OutputDtmi": "dtmi:com:willowinc:OperationalState;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Connected_Devices_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "InputDtmi": "dtmi:mapped:core:Connected_Devices_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Controller;1",
@@ -307,8 +311,8 @@
       "OutputDtmi": "dtmi:com:willowinc:CoolingLevelActuator;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Cooling_Request_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "InputDtmi": "dtmi:mapped:core:Cooling_Request_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cooling_Thermal_Energy_Sensor;1",
@@ -316,31 +320,31 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cooling_Thermal_Power_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CoolingLevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:CoolingLevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Correlated_Color_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Count;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "InputDtmi": "dtmi:mapped:core:Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Current_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:CurrentAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Current_Total_Harmonic_Distortion_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:CurrentTHDSensor;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Cycle_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "InputDtmi": "dtmi:mapped:core:Cycle_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:StartsCountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Damper_Open_Close_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:DamperOpenSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:DamperOpenState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Defrost_Cutoff_Temperature_Setpoint;1",
@@ -399,6 +403,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Dishwasher;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Display_Case_Refrigerator;1",
+      "OutputDtmi": "dtmi:com:willowinc:RefrigeratedFoodDisplayCase;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Display_Resolution_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
@@ -420,7 +428,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Drain_Pan_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighWaterLevelAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Drinking_Water_Fixture;1",
@@ -532,11 +540,11 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Fan_Speed_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:FanRunLevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:FanRunLevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Filter_Alarm_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:DirtyFilterAlarmSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Fire_Damper;1",
@@ -600,11 +608,11 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Grease_Trap_Level_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:LevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:H2S_Level_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:LevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:HVAC_Pump;1",
@@ -619,8 +627,8 @@
       "OutputDtmi": "dtmi:com:willowinc:HeatingLevelActuator;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Heating_Request_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "InputDtmi": "dtmi:mapped:core:Heating_Request_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Heating_Thermal_Energy_Sensor;1",
@@ -628,7 +636,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:High_Humidity_Alarm_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighAirHumidityAlarmSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:High_Humidity_Setpoint;1",
@@ -636,19 +644,19 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:High_Static_Pressure_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighSupplyStaticPressureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:High_TVOC_Alarm_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:TVOCAirQualityAlarmSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:High_Temperature_Alarm_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighTemperatureAlarmSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:High_Voltage_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighVoltageAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Hot_Water_GHG_Emissions_Factor;1",
@@ -656,7 +664,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Humidity_Alarm_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:HumidityAlarmSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:ICT_Equipment;1",
@@ -696,7 +704,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Level_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:OnLevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:OnLevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Lighting_Command;1",
@@ -720,7 +728,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Low_Humidity_Alarm_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowAirHumidityAlarmSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Low_Humidity_Setpoint;1",
@@ -728,11 +736,11 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Low_Static_Air_Pressure_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowSuctionStaticPressureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Low_Temperature_Alarm_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowTemperatureAlarmSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Max_Air_Temperature_Setpoint_Limit;1",
@@ -780,7 +788,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Min_Outside_Air_Damper_Position_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:MinOutsideAirDamperPositionSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:MinOutsideAirDamperPositionState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Mute_Status;1",
@@ -931,8 +939,8 @@
       "OutputDtmi": "dtmi:com:willowinc:PlumbingPressureReducingValve;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Pressure_Request_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "InputDtmi": "dtmi:mapped:core:Pressure_Request_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Pump_Collection;1",
@@ -955,16 +963,16 @@
       "OutputDtmi": "dtmi:com:willowinc:RefrigerantTemperatureSensor;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Refrigerated_Display_Case;1",
-      "OutputDtmi": "dtmi:com:willowinc:RefrigeratedFoodDisplayCase;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Refrigeration_Equipment;1",
       "OutputDtmi": "dtmi:com:willowinc:RefrigerationEquipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Refrigeration_System;1",
       "OutputDtmi": "dtmi:com:willowinc:HVACRefrigerantSystem;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Refrigerator;1",
+      "OutputDtmi": "dtmi:com:willowinc:Refrigerator;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Regional_Median_Total_GHG_Emissions;1",
@@ -983,8 +991,8 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Request_Count_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "InputDtmi": "dtmi:mapped:core:Request_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Reset_Status;1",
@@ -1044,7 +1052,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Sensor_Type_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:StatusSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Setpoint_Offset;1",
@@ -1159,7 +1167,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Temperature_Alarm_Count;1",
+      "InputDtmi": "dtmi:mapped:core:Temperature_Alarm_Count_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
@@ -1228,7 +1236,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Utilization_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:LoadLevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LoadLevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Valve_Open_Command;1",
@@ -1236,7 +1244,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Valve_Open_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:ValveOpenSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:ValveOpenState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Valve_Percentage_Command;1",
@@ -1259,6 +1267,14 @@
       "OutputDtmi": "dtmi:com:willowinc:VolumeSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Walk_In_Freezer;1",
+      "OutputDtmi": "dtmi:com:willowinc:WalkInFreezer;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Walk_In_Refrigerator;1",
+      "OutputDtmi": "dtmi:com:willowinc:WalkInCooler;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Wall_Air_Conditioner;1",
       "OutputDtmi": "dtmi:com:willowinc:WallAirConditioner;1"
     },
@@ -1269,6 +1285,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Waste_Meter;1",
       "OutputDtmi": "dtmi:com:willowinc:MeterEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Water_Cooled_Chiller;1",
+      "OutputDtmi": "dtmi:com:willowinc:WaterCooledChiller;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Water_Differential_Pressure_Sensor;1",
@@ -1348,7 +1368,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:AirQualityAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Differential_Pressure_Sensor;1",
@@ -1368,7 +1388,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Flow_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:AirFlowAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Flow_Deadband_Setpoint;1",
@@ -1380,7 +1400,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Flow_Loss_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowAirFlowAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Flow_Sensor;1",
@@ -1416,7 +1436,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Temperature_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:TemperatureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Temperature_Integral_Time_Parameter;1",
@@ -1444,7 +1464,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Alarm_Delay_Parameter;1",
@@ -1608,7 +1628,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:CO2AirQualityAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Differential_Sensor;1",
@@ -1617,10 +1637,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Level_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:CO2AirQualitySensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CO2Sensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Setpoint;1",
@@ -1660,7 +1676,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Change_Filter_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:DirtyFilterAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Beam;1",
@@ -1776,11 +1792,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Collection_Basin_Water_Level_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighCoolingTowerBasinWaterLevelAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Collection_Basin_Water_Level_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:LevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LevelState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Collection_Basin_Water_Temperature_Sensor;1",
@@ -1796,7 +1812,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Communication_Loss_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:CommunicationLossAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Compressor;1",
@@ -1976,7 +1992,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cycle_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:ShortCycleAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:DC_Bus_Voltage_Sensor;1",
@@ -1987,16 +2003,12 @@
       "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Command;1",
-      "OutputDtmi": "dtmi:com:willowinc:DamperActuator;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:DamperPositionActuator;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:DamperPositionSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:DamperPositionState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Setpoint;1",
@@ -2024,11 +2036,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Deionised_Water_Level_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:LevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LevelState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Deionized_Water_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Delay_Parameter;1",
@@ -2320,11 +2332,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Emergency_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:EmergencyAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Emergency_Generator_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:EquipmentFailureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Emergency_Generator_Status;1",
@@ -2588,7 +2600,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Failure_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:FailureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan;1",
@@ -2604,7 +2616,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Speed_Command;1",
-      "OutputDtmi": "dtmi:com:willowinc:FanSpeedActuator;1"
+      "OutputDtmi": "dtmi:com:willowinc:FanRunLevelActuator;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Status;1",
@@ -2625,6 +2637,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Filter;1",
       "OutputDtmi": "dtmi:com:willowinc:AirFilter;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Filter_Alarm;1",
+      "OutputDtmi": "dtmi:com:willowinc:DirtyFilterAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Filter_Differential_Pressure_Sensor;1",
@@ -2860,19 +2876,19 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:High_Air_Flow_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighAirFlowAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:High_CO2_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:CO2AirQualityAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:High_Head_Pressure_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighCompressorLeavingRefrigerantStaticPressureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:High_Humidity_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighAirHumidityAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:High_Humidity_Alarm_Parameter;1",
@@ -2884,7 +2900,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:High_Return_Air_Temperature_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighReturnAirTemperatureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:High_Static_Pressure_Cutout_Setpoint_Limit;1",
@@ -2892,11 +2908,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:High_Supply_Air_Temperature_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighDischargeAirTemperatureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:High_Temperature_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighTemperatureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:High_Temperature_Alarm_Parameter;1",
@@ -2996,7 +3012,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Humidity_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HumidityAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Humidity_Deadband_Setpoint;1",
@@ -3208,7 +3224,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Liquid_Detection_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LeakAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Load_Current_Sensor;1",
@@ -3264,11 +3280,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Air_Flow_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowAirFlowAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Battery_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowVoltageAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Freeze_Protect_Temperature_Parameter;1",
@@ -3276,7 +3292,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Humidity_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowAirHumidityAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Humidity_Alarm_Parameter;1",
@@ -3296,23 +3312,23 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Return_Air_Temperature_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowReturnAirTemperatureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Suction_Pressure_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowSuctionStaticPressureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Supply_Air_Flow_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:DischargeAirLowAirFlowAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Supply_Air_Temperature_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowDischargeAirTemperatureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Temperature_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowTemperatureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Temperature_Alarm_Parameter;1",
@@ -3320,7 +3336,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Voltage_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowVoltageAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Lowest_Exhaust_Air_Static_Pressure_Sensor;1",
@@ -3332,7 +3348,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Luminance_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Luminance_Command;1",
@@ -3356,7 +3372,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Maintenance_Required_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:MaintenanceRequiredAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Makeup_Air_Unit;1",
@@ -3452,7 +3468,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Water_Level_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighWaterLevelAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Water_Temperature_Setpoint;1",
@@ -3500,7 +3516,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Methane_Level_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:LevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LevelState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Min_Air_Flow_Setpoint_Limit;1",
@@ -3580,7 +3596,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Min_Water_Level_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowWaterLevelAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Min_Water_Temperature_Setpoint;1",
@@ -3676,7 +3692,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:No_Water_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowWaterLevelAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Noncondensing_Natural_Gas_Boiler;1",
@@ -3912,7 +3928,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Overload_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:OverloadAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Overridden_Off_Status;1",
@@ -4003,6 +4019,10 @@
       "OutputDtmi": "dtmi:com:willowinc:PassiveChilledBeam;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Phase_Loss_Alarm;1",
+      "OutputDtmi": "dtmi:com:willowinc:ElectricalPowerLossAlarmState;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Photovoltaic_Array;1",
       "OutputDtmi": "dtmi:com:willowinc:PhotovoltaicArray;1"
     },
@@ -4040,7 +4060,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Power_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:ElectricalPowerAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Power_Factor_Sensor;1",
@@ -4048,7 +4068,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Power_Loss_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:ElectricalPowerLossAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Power_Sensor;1",
@@ -4088,7 +4108,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pressure_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:PressureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pressure_Sensor;1",
@@ -4276,7 +4296,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Air_Temperature_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighReturnAirTemperatureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Air_Temperature_High_Reset_Setpoint;1",
@@ -4368,11 +4388,15 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Sensor_Failure_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:SensorFailureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Server_Room;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Service_Required_Alarm;1",
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Service_Room;1",
@@ -4392,7 +4416,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Short_Cycle_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:ShortCycleAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Shower;1",
@@ -4404,11 +4428,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Smoke_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:SmokeAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Smoke_Detection_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:SmokeAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Smoke_Detector;1",
@@ -4624,7 +4648,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_Smoke_Detection_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:DischargeAirSmokeAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_Static_Pressure_Deadband_Setpoint;1",
@@ -4652,7 +4676,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighDischargeAirTemperatureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Cooling_Setpoint;1",
@@ -4768,7 +4792,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Temperature_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:TemperatureAlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Temperature_Alarm_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Temperature_Deadband_Setpoint;1",
@@ -4892,7 +4920,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unit_Failure_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:EquipmentFailureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Air_Temperature_Setpoint;1",
@@ -4968,7 +4996,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Valve_Position_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:ValvePositionActuatorCommandFeedbackMismatchAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Valve_Position_Command;1",
@@ -5024,7 +5052,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Voltage_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:VoltageAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Voltage_Imbalance_Sensor;1",
@@ -5048,7 +5076,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:WaterLeakAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Differential_Pressure_Setpoint;1",
@@ -5076,15 +5104,15 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Level_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighWaterLevelAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Level_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:LevelSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LevelState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Loss_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LowWaterLevelAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Meter;1",
@@ -5104,7 +5132,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Temperature_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HighWaterTemperatureAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Temperature_Sensor;1",
