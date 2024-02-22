@@ -187,6 +187,10 @@
       "OutputDtmi": "dtmi:com:willowinc:PlumbingBackflowPreventer;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Battery_Cabinet;1",
+      "OutputDtmi": "dtmi:com:willowinc:BatteryCabinet;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Battery_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
@@ -205,6 +209,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Booster_Pump;1",
       "OutputDtmi": "dtmi:com:willowinc:Pump;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Busway;1",
+      "OutputDtmi": "dtmi:com:willowinc:Busway;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Bypass_Damper;1",
@@ -231,6 +239,10 @@
       "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Carbon_Monoxide_Detector;1",
+      "OutputDtmi": "dtmi:com:willowinc:CarbonMonoxideDetector;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Ceiling_Height_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:HeightSensor;1"
     },
@@ -249,6 +261,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Chiller_Plant;1",
       "OutputDtmi": "dtmi:com:willowinc:ChilledWaterPlant;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Clean_Agent_Fire_Suppression_Unit;1",
+      "OutputDtmi": "dtmi:com:willowinc:CleanAgentCabinet;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Close_Command;1",
@@ -431,6 +447,10 @@
       "OutputDtmi": "dtmi:com:willowinc:HighWaterLevelAlarmState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Drinking_Fountain;1",
+      "OutputDtmi": "dtmi:com:willowinc:DrinkingFountain;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Drinking_Water_Fixture;1",
       "OutputDtmi": "dtmi:com:willowinc:DrinkingWaterFixture;1"
     },
@@ -543,6 +563,10 @@
       "OutputDtmi": "dtmi:com:willowinc:FanRunLevelState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Faucet;1",
+      "OutputDtmi": "dtmi:com:willowinc:Faucet;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Filter_Alarm_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:DirtyFilterAlarmSetpoint;1"
     },
@@ -557,6 +581,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Floor_Level;1",
       "OutputDtmi": "dtmi:com:willowinc:Level;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Flush_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:Flushometer;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Fuel_Moisture_Sensor;1",
@@ -743,6 +771,10 @@
       "OutputDtmi": "dtmi:com:willowinc:LowTemperatureAlarmSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Maintenance_Bypass_Switch;1",
+      "OutputDtmi": "dtmi:com:willowinc:MaintenanceBypassSwitch;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Max_Air_Temperature_Setpoint_Limit;1",
       "OutputDtmi": "dtmi:com:willowinc:MaxLimit;1"
     },
@@ -869,6 +901,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Plumbing_Equipment;1",
       "OutputDtmi": "dtmi:com:willowinc:PlumbingEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Plumbing_Fixture;1",
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingFixture;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Plumbing_Pump;1",
@@ -1199,6 +1235,10 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Toilet;1",
+      "OutputDtmi": "dtmi:com:willowinc:Toilet;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Total_GHG_Emissions;1",
       "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissions;1"
     },
@@ -1209,6 +1249,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Total_GHG_Emissions_Intensity_Per_Area;1",
       "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Transfer_Switch;1",
+      "OutputDtmi": "dtmi:com:willowinc:TransferSwitch;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:UV_Lighting_Command;1",
@@ -1229,6 +1273,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Unoccupied_Zone_Air_Heating_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:StandbyHeatingSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Urinal;1",
+      "OutputDtmi": "dtmi:com:willowinc:Urinal;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Utility_Account;1",
@@ -1309,6 +1357,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Water_Storage_Basin;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterStorageBasin;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Waterless_Urinal;1",
+      "OutputDtmi": "dtmi:com:willowinc:UrinalWaterless;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Weather_Condition_Sensor;1",

@@ -306,6 +306,10 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:BatteryCabinet;1",
+      "OutputDtmi": "dtmi:mapped:core:Battery_Cabinet;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:BatteryCabinet;1",
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
@@ -355,6 +359,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:BuildingWing;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Wing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Busway;1",
+      "OutputDtmi": "dtmi:mapped:core:Busway;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Busway;1",
@@ -449,6 +457,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:CarbonMonoxideDetector;1",
+      "OutputDtmi": "dtmi:mapped:core:Carbon_Monoxide_Detector;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:CeilingFan;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Ceiling_Fan;1"
     },
@@ -539,6 +551,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:ChillerGroup;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:CleanAgentCabinet;1",
+      "OutputDtmi": "dtmi:mapped:core:Clean_Agent_Fire_Suppression_Unit;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CloseActuator;1",
@@ -1093,6 +1109,10 @@
       "OutputDtmi": "dtmi:mapped:core:Plumbing_Equipment;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:DrinkingFountain;1",
+      "OutputDtmi": "dtmi:mapped:core:Drinking_Fountain;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:DrinkingWaterFixture;1",
       "OutputDtmi": "dtmi:mapped:core:Drinking_Water_Fixture;1"
     },
@@ -1526,6 +1546,10 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Faucet;1",
+      "OutputDtmi": "dtmi:mapped:core:Faucet;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Faucet;1",
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
@@ -1639,6 +1663,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:FlowSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Flow_Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Flushometer;1",
+      "OutputDtmi": "dtmi:mapped:core:Flush_Valve;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FlushometerValve;1",
@@ -2346,6 +2374,10 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:MaintenanceBypassSwitch;1",
+      "OutputDtmi": "dtmi:mapped:core:Maintenance_Bypass_Switch;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:MaintenanceBypassSwitch;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Switch;1"
     },
     {
@@ -2951,6 +2983,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingExpansionTank;1",
       "OutputDtmi": "dtmi:mapped:core:Thermal_Expansion_Tank;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:PlumbingFixture;1",
+      "OutputDtmi": "dtmi:mapped:core:Plumbing_Fixture;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingFixture;1",
@@ -4021,6 +4057,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Time_Setpoint;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Toilet;1",
+      "OutputDtmi": "dtmi:mapped:core:Toilet;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:TorqueSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Torque_Sensor;1"
     },
@@ -4091,6 +4131,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:TransferFan;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Transfer_Fan;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:TransferSwitch;1",
+      "OutputDtmi": "dtmi:mapped:core:Transfer_Switch;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:TransferSwitch;1",
@@ -4179,6 +4223,14 @@
     {
       "InputDtmi": "dtmi:com:willowinc:UnoccupiedState;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Mode_Status;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Urinal;1",
+      "OutputDtmi": "dtmi:mapped:core:Urinal;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:UrinalWaterless;1",
+      "OutputDtmi": "dtmi:mapped:core:Waterless_Urinal;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:UtilityAccount;1",
