@@ -2361,10 +2361,6 @@
       "OutputDtmi": "dtmi:mapped:core:Maintenance_Bypass_Switch;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:MaintenanceBypassSwitch;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Switch;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:MakeupAirUnit;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Makeup_Air_Unit;1"
     },
@@ -2945,10 +2941,6 @@
       "OutputDtmi": "dtmi:mapped:core:Backflow_Preventer;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:PlumbingBackflowPreventer;1",
-      "OutputDtmi": "dtmi:mapped:core:Backflow_Preventer;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:PlumbingBalancingValve;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
     },
@@ -2971,10 +2963,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingFixture;1",
       "OutputDtmi": "dtmi:mapped:core:Plumbing_Fixture;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:PlumbingFixture;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingGlobeValve;1",
@@ -3649,10 +3637,6 @@
       "OutputDtmi": "dtmi:mapped:core:Sink;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:Sink;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:SmokeDamper;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper;1"
     },
@@ -4123,10 +4107,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:TransferSwitch;1",
       "OutputDtmi": "dtmi:mapped:core:Transfer_Switch;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:TransferSwitch;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Switch;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Transformer;1",
