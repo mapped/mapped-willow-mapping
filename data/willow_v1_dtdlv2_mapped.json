@@ -1025,7 +1025,7 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:DischargeFanRunn_Speed_SgeFanRunState;1",
+      "InputDtmi": "dtmi:com:willowinc:DischargeFanRunState;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Speed_Sensor;1"
     },
     {
@@ -1541,10 +1541,6 @@
       "OutputDtmi": "dtmi:mapped:core:Faucet;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:Faucet;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:FaultResetActuator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fault_Reset_Command;1"
     },
@@ -1645,12 +1641,8 @@
       "OutputDtmi": "dtmi:mapped:core:Fire_Sprinkler;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:FireSprinklerHead;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:FireSuppressionEquipment;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Safety_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FlowSensor;1",
