@@ -305,8 +305,12 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Basement;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Bathtub;1",
+      "OutputDtmi": "dtmi:mapped:core:Bathtub;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:BatteryCabinet;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Battery_Cabinet;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:BatteryEquipment;1",
@@ -358,7 +362,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Busway;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Busway;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:BypassChilledWaterFlowSensor;1",
@@ -447,6 +451,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:Capability;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:CarbonMonoxideDetector;1",
+      "OutputDtmi": "dtmi:mapped:core:Carbon_Monoxide_Detector;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CeilingFan;1",
@@ -539,6 +547,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:ChillerGroup;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:CleanAgentCabinet;1",
+      "OutputDtmi": "dtmi:mapped:core:Clean_Agent_Fire_Suppression_Unit;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CloseActuator;1",
@@ -1013,10 +1025,6 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:DischargeFanRunLevelState;1",
-      "OutputDtmi": "dtmi:mapped:core:Supply_Fan_Speed_Status;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:DischargeFanRunState;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Status;1"
     },
@@ -1091,6 +1099,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:Drain;1",
       "OutputDtmi": "dtmi:mapped:core:Plumbing_Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DrinkingFountain;1",
+      "OutputDtmi": "dtmi:mapped:core:Drinking_Fountain;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DrinkingWaterFixture;1",
@@ -1526,7 +1538,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Faucet;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Faucet;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FaultResetActuator;1",
@@ -1626,11 +1638,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireSprinklerHead;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Fire_Sprinkler;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireSuppressionEquipment;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Safety_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FlowSensor;1",
@@ -1642,7 +1654,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FlushometerValve;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
+      "OutputDtmi": "dtmi:mapped:core:Flush_Valve;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FoodDisplayEquipment;1",
@@ -2346,7 +2358,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:MaintenanceBypassSwitch;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Switch;1"
+      "OutputDtmi": "dtmi:mapped:core:Maintenance_Bypass_Switch;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:MakeupAirUnit;1",
@@ -2929,10 +2941,6 @@
       "OutputDtmi": "dtmi:mapped:core:Backflow_Preventer;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:PlumbingBackflowPreventer;1",
-      "OutputDtmi": "dtmi:mapped:core:Backflow_Preventer;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:PlumbingBalancingValve;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
     },
@@ -2954,7 +2962,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingFixture;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Plumbing_Fixture;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingGlobeValve;1",
@@ -3626,7 +3634,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Sink;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Sink;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SmokeDamper;1",
@@ -4021,6 +4029,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Time_Setpoint;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Toilet;1",
+      "OutputDtmi": "dtmi:mapped:core:Toilet;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:TorqueSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Torque_Sensor;1"
     },
@@ -4094,7 +4106,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:TransferSwitch;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Switch;1"
+      "OutputDtmi": "dtmi:mapped:core:Transfer_Switch;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Transformer;1",
@@ -4179,6 +4191,14 @@
     {
       "InputDtmi": "dtmi:com:willowinc:UnoccupiedState;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Mode_Status;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Urinal;1",
+      "OutputDtmi": "dtmi:mapped:core:Urinal;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:UrinalWaterless;1",
+      "OutputDtmi": "dtmi:mapped:core:Waterless_Urinal;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:UtilityAccount;1",
@@ -4435,6 +4455,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:WindSpeedSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Wind_Speed_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Window;1",
+      "OutputDtmi": "dtmi:mapped:core:Window;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WindowHardware;1",
