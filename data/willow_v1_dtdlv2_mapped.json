@@ -1026,7 +1026,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DischargeFanRunState;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Speed_Sensor;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Status;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DischargeFanVFDFrequencySensor;1",
