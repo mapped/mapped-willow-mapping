@@ -592,7 +592,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Flush_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:Flushometer;1"
+      "OutputDtmi": "dtmi:com:willowinc:FlushometerValve;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Fuel_Moisture_Sensor;1",

@@ -1673,12 +1673,8 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Flow_Setpoint;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:Flushometer;1",
-      "OutputDtmi": "dtmi:mapped:core:Flush_Valve;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:FlushometerValve;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
+      "OutputDtmi": "dtmi:mapped:core:Flush_Valve;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FoodDisplayEquipment;1",
