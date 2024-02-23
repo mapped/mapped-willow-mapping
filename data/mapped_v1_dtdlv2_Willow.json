@@ -563,10 +563,6 @@
       "OutputDtmi": "dtmi:com:willowinc:FanPoweredBox;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Fan_Speed_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:FanRunLevelState;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Faucet;1",
       "OutputDtmi": "dtmi:com:willowinc:Faucet;1"
     },
@@ -1189,10 +1185,6 @@
     {
       "InputDtmi": "dtmi:mapped:core:Supply_Air_Temperature_Reset_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirTemperatureSetpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Supply_Fan_Speed_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:DischargeFanRunLevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Switchboard;1",
