@@ -305,6 +305,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Basement;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Bathtub;1",
+      "OutputDtmi": "dtmi:mapped:core:Bathtub;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:BatteryCabinet;1",
       "OutputDtmi": "dtmi:mapped:core:Battery_Cabinet;1"
     },
@@ -1647,6 +1651,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:FireSmokeDamper;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FireSprinklerHead;1",
+      "OutputDtmi": "dtmi:mapped:core:Fire_Sprinkler;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireSprinklerHead;1",
@@ -3662,6 +3670,10 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Sink;1",
+      "OutputDtmi": "dtmi:mapped:core:Sink;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Sink;1",
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
@@ -4487,6 +4499,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:WindSpeedSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Wind_Speed_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Window;1",
+      "OutputDtmi": "dtmi:mapped:core:Window;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WindowHardware;1",

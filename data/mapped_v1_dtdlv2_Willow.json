@@ -187,6 +187,10 @@
       "OutputDtmi": "dtmi:com:willowinc:PlumbingBackflowPreventer;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Bathtub;1",
+      "OutputDtmi": "dtmi:com:willowinc:Bathtub;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Battery_Cabinet;1",
       "OutputDtmi": "dtmi:com:willowinc:BatteryCabinet;1"
     },
@@ -573,6 +577,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Fire_Damper;1",
       "OutputDtmi": "dtmi:com:willowinc:FireDamper;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fire_Sprinkler;1",
+      "OutputDtmi": "dtmi:com:willowinc:FireSprinklerHead;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Fire_Sprinkler_Water_Storage_Tank;1",
@@ -1095,6 +1103,10 @@
       "OutputDtmi": "dtmi:com:willowinc:SetpointOffset;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Sink;1",
+      "OutputDtmi": "dtmi:com:willowinc:Sink;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Snow_Accumulation_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:QuantitySensor;1"
     },
@@ -1373,6 +1385,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Wind_Gust_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Window;1",
+      "OutputDtmi": "dtmi:com:willowinc:Window;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Window_Status;1",
