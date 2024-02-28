@@ -1578,7 +1578,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmFlowSwitch;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Switch;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Safety_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmHornStrobe;1",
