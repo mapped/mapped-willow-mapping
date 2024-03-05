@@ -1582,7 +1582,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmHornStrobe;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Safety_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmPressureSwitch;1",
@@ -1590,7 +1590,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmPullStation;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Safety_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmSpeaker;1",
@@ -1598,11 +1598,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmSpeakerStrobe;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Safety_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmStrobe;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Safety_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmSystem;1",
