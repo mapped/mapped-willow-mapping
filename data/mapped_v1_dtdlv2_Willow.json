@@ -1704,15 +1704,15 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:CO_Differential_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:COSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:COAirQualitySensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:CO_Level_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:COSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:COAirQualitySensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:CO_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:COSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:COAirQualitySensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cafeteria;1",
@@ -4316,7 +4316,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Air_CO_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirCOSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:COAirQualitySensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Air_Dewpoint_Sensor;1",
