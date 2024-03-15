@@ -1,0 +1,2488 @@
+{
+  "FillProperties": [
+    {
+      "InputPropertyNames": [
+        "name",
+        "description"
+      ],
+      "OutputDtmiFilter": ".*",
+      "OutputPropertyName": "name"
+    }
+  ],
+  "Header": {
+    "InputOntologies": [
+      {
+        "DtdlVersion": "v2",
+        "Name": "mapped",
+        "Version": "1.0"
+      }
+    ],
+    "OutputOntologies": [
+      {
+        "DtdlVersion": "v2",
+        "Name": "willow",
+        "Version": "1.0"
+      }
+    ]
+  },
+  "InterfaceRemaps": [
+    {
+      "InputDtmi": "dtmi:mapped:core:Absolute_Humidity_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AbsoluteHumiditySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Access_Activity_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "Confidence": 0.6,
+      "InputDtmi": "dtmi:mapped:core:Access_Card_Pin_Reader;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:AccessReader;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Access_Card_Reader;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AccessReader;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Access_Control_System;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AccessControlSystem;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Access_Control_Unit;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AccessControlEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Access_Control_Zone;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Zone;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Active_Energy_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TotalNetActiveElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Active_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Active_Zone_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Address;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Address;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Compressor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AirCompressor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Compressor_Dryer;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AirCompressorDryer;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Cooled_Chiller;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AirCooledChiller;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Curtain;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AirCurtain;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Flow_Alarm_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AirFlowAlarmSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Flow_Direction_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Flow_Rate_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Actuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Flow_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Grille;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AirGrille;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Quality_Sensing_Device;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:IAQSensorEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Airfield_Lighting_Equipment;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Airport;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:airport:Airport;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Alarm_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AlarmSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Alternating_Current_Electrical_System;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ACElectricalSystem;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Altitude_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Angular_Velocity_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AngularVelocitySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Ante_Room;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Apparent_Electric_Energy_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ApparentElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Apparent_Power_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ApparentElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Area_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "Confidence": 0.6,
+      "InputDtmi": "dtmi:mapped:core:Asset_Tag;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Asset;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Audio_Gain_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Audio_Visual_Equipment;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AudioVisualEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Automatic_Door_Lock;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:RequestToExitDevice;1"
+    },
+    {
+      "Confidence": 0.13,
+      "InputDtmi": "dtmi:mapped:core:Automatic_Tint_Window_Array;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:WindowAirConditioner;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Automatic_Transfer_Switch;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AutomaticTransferSwitch;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Automotive_Equipment;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:VehicleEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Auxiliary_Heat_Temperature_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Auxiliary_Heater_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Average_Current_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AverageCurrentMagnitudeSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:BACnet_Device;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Backflow_Preventer;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingBackflowPreventer;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Bathtub;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Bathtub;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Battery_Cabinet;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:BatteryCabinet;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Battery_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Billed_Electrical_Energy_Cost;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:BilledElectricalCost;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Billed_Electrical_Energy_Use;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:BilledActiveElectricalEnergy;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Bio_Containment_Unit;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
+      "Confidence": 0.8,
+      "InputDtmi": "dtmi:mapped:core:Biometric_Access_Reader;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:AccessReader;1"
+    },
+    {
+      "Confidence": 0.12,
+      "InputDtmi": "dtmi:mapped:core:Boom_Barrier;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Door;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Booster_Pump;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Pump;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Busway;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Busway;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Bypass_Damper;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:CO2_Alarm_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CO2AirQualityAlarmSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:CO_Alarm_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:COAirQualityAlarmSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Calendar_Event;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Event;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Canadian_Regional_Median_Total_GHG_Emissions;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Canadian_Regional_Median_Total_GHG_Emissions_Intensity;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Carbon_Monoxide_Detector;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CarbonMonoxideDetector;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Ceiling_Height_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HeightSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Chilled_Refrigerant_Supply_Temperature_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:RefrigerantTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Chilled_Water_GHG_Emissions_Factor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ChilledWaterConsumptionGreenhouseGasEmissionsFactor;1"
+    },
+    {
+      "Confidence": 0.48,
+      "InputDtmi": "dtmi:mapped:core:Chilled_Water_Storage_Tank;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingStorageTank;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Chilled_Water_Usage_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:QuantitySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Chiller_Plant;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ChilledWaterPlant;1"
+    },
+    {
+      "Confidence": 0.4,
+      "InputDtmi": "dtmi:mapped:core:Circulating_Pump;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:DomesticHotWaterCirculatingPump;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Clean_Agent_Fire_Suppression_Unit;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CleanAgentCabinet;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Close_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CloseActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Close_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CloseState;1"
+    },
+    {
+      "Confidence": 0.27,
+      "InputDtmi": "dtmi:mapped:core:Cloud_Layer_1_Height_Code_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:HeightSensor;1"
+    },
+    {
+      "Confidence": 0.27,
+      "InputDtmi": "dtmi:mapped:core:Cloud_Layer_2_Height_Code_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:HeightSensor;1"
+    },
+    {
+      "Confidence": 0.27,
+      "InputDtmi": "dtmi:mapped:core:Cloud_Layer_3_Height_Code_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:HeightSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CoefficientOfPerformance;1"
+    },
+    {
+      "Confidence": 0.3,
+      "InputDtmi": "dtmi:mapped:core:Communication_Signal_Strength_Status;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Compressor_Discharge_Refrigerant_Pressure_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CompressorLeavingRefrigerantStaticPressureSensor;1"
+    },
+    {
+      "Confidence": 0.8,
+      "InputDtmi": "dtmi:mapped:core:Compressor_Speed_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:SpeedSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Compressor_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Condenser_Water_Differential_Pressure_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CondenserWaterDeltaPressureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Condenser_Water_Flow_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CondenserWaterPumpRunActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Condenser_Water_Flow_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "Confidence": 0.99,
+      "InputDtmi": "dtmi:mapped:core:Condensing_Unit;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:CondensingUnit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Connected_Access_Point_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:OperationalState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Connected_Devices_Count_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+    },
+    {
+      "Confidence": 0.12,
+      "InputDtmi": "dtmi:mapped:core:Controllable_Lock;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Controller;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Controller;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Conveyor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ConveyanceEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooking_Equipment;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CookingEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Air_Temperature_Setpoint_Offset;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SetpointOffset;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Level_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CoolingLevelActuator;1"
+    },
+    {
+      "Confidence": 0.9,
+      "InputDtmi": "dtmi:mapped:core:Cooling_On_Off_Command;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:OnOffActuator;1"
+    },
+    {
+      "Confidence": 0.19,
+      "InputDtmi": "dtmi:mapped:core:Cooling_Request;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:CoolingLevelState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Request_Count_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Thermal_Energy_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ThermalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Thermal_Power_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CoolingLevelState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Correlated_Color_Temperature_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "Confidence": 0.4,
+      "InputDtmi": "dtmi:mapped:core:Cost;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:CostSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Count_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Current_Alarm;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CurrentAlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Current_Total_Harmonic_Distortion_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CurrentTHDSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cycle_Count_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:StartsCountSensor;1"
+    },
+    {
+      "Confidence": 0.99,
+      "InputDtmi": "dtmi:mapped:core:Damper_Close_Command;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:DamperCloseActuator;1"
+    },
+    {
+      "Confidence": 0.99,
+      "InputDtmi": "dtmi:mapped:core:Damper_Open_Close_Command;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:DamperOpenCloseActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Damper_Open_Close_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DamperOpenState;1"
+    },
+    {
+      "Confidence": 0.99,
+      "InputDtmi": "dtmi:mapped:core:Damper_Open_Command;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:DamperOpenActuator;1"
+    },
+    {
+      "Confidence": 0.8,
+      "InputDtmi": "dtmi:mapped:core:Damper_Position_Status;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:DamperPositionState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Defrost_Cutoff_Temperature_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DefrostTerminationTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Dehumidification_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Dehumidify_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Actuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Device;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Differential_Air_Flow_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AirFlowSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Differential_Pressure_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "Confidence": 0.6,
+      "InputDtmi": "dtmi:mapped:core:Direct_Current_Electrical_System;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:ElectricalSystem;1"
+    },
+    {
+      "Confidence": 0.25,
+      "InputDtmi": "dtmi:mapped:core:Direct_Expansion_Unit;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:CondensingUnit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Direct_Fuels_GHG_Emissions_Factor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DirectGreenhouseGasEmissionsFactor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Direct_GHG_Emissions;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DirectGreenhouseGasEmissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Direct_GHG_Emissions_Intensity;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DirectGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Direct_GHG_Emissions_Intensity_Per_Area;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DirectGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Discharge_Air_Temperature_High_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DischargeAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Discharge_Air_Temperature_Low_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DischargeAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Discharge_Air_Temperature_Reset_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Dishwasher;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Dishwasher;1"
+    },
+    {
+      "Confidence": 0.29,
+      "InputDtmi": "dtmi:mapped:core:Display;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:FoodDisplayEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Display_Case_Refrigerator;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:RefrigeratedFoodDisplayCase;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Display_Resolution_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Display_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Domestic_Cold_Water_System;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DomesticColdWaterSystem;1"
+    },
+    {
+      "Confidence": 0.8,
+      "InputDtmi": "dtmi:mapped:core:Domestic_Hot_Water_Circulating_Pump;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:DomesticHotWaterCirculatingPump;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Domestic_Hot_Water_Differential_Temperature_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DeltaHotWaterTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Door;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Door;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Drain_Pan_Alarm;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HighWaterLevelAlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Drinking_Fountain;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DrinkingFountain;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Drinking_Water_Fixture;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DrinkingWaterFixture;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Duct_Air_Static_Pressure_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AirStaticPressureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Duct_Smoke_Detector;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DuctSmokeDetector;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Duct_Static_Pressure_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:StaticPressureSetpoint;1"
+    },
+    {
+      "Confidence": 0.25,
+      "InputDtmi": "dtmi:mapped:core:ERU;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:CondensingUnit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Economizer_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Effective_Cooling_Air_Temperature_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:EffectiveCoolingZoneAirTemperatureSetpoint;1"
+    },
+    {
+      "Confidence": 1.0,
+      "InputDtmi": "dtmi:mapped:core:Effective_Cooling_Zone_Air_Temperature_Setpoint;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:EffectiveZoneAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Effective_Heating_Air_Temperature_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
+    },
+    {
+      "Confidence": 1.0,
+      "InputDtmi": "dtmi:mapped:core:Effective_Heating_Zone_Air_Temperature_Setpoint;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:EffectiveZoneAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Effective_Occupied_Mode_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Electric_Energy_Usage_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:BilledNetActiveElectricalEnergy;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Electric_Unit_Heater;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ElectricUnitHeater;1"
+    },
+    {
+      "Confidence": 0.8,
+      "InputDtmi": "dtmi:mapped:core:Electric_Water_Heater;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:WaterHeater;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Electrical_Receptacle;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ElectricalReceptacle;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Electricity_GHG_Emissions_Factor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ElectricityConsumptionGreenhouseGasEmissionsFactor;1"
+    },
+    {
+      "Confidence": 0.4,
+      "InputDtmi": "dtmi:mapped:core:Elevator_Alarm;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
+    },
+    {
+      "Confidence": 0.29,
+      "InputDtmi": "dtmi:mapped:core:Elevator_Call_Panel;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Elevator;1"
+    },
+    {
+      "Confidence": 0.6,
+      "InputDtmi": "dtmi:mapped:core:Elevator_Equipment;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
+    },
+    {
+      "Confidence": 0.4,
+      "InputDtmi": "dtmi:mapped:core:Elevator_Pressurization_Fan;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Fan;1"
+    },
+    {
+      "Confidence": 0.6,
+      "InputDtmi": "dtmi:mapped:core:Elevator_System;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:System;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Emergency_Light;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:EmergencyLight;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Emergency_Recovery_Unit;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Energy_Density_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DensitySensor;1"
+    },
+    {
+      "Confidence": 0.22,
+      "InputDtmi": "dtmi:mapped:core:Energy_Recovery_Unit;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:CondensingUnit;1"
+    },
+    {
+      "Confidence": 0.18,
+      "InputDtmi": "dtmi:mapped:core:Energy_Recovery_Ventilation_Unit;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:CondensingUnit;1"
+    },
+    {
+      "Confidence": 0.12,
+      "InputDtmi": "dtmi:mapped:core:Energy_Star_Metrics;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Energy_Star_Score;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:EnergyStarScore;1"
+    },
+    {
+      "Confidence": 0.27,
+      "InputDtmi": "dtmi:mapped:core:Energy_Use;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:EnergySensor;1"
+    },
+    {
+      "Confidence": 0.2,
+      "InputDtmi": "dtmi:mapped:core:Energy_Use_Intensity;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:EnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Entry;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Entry_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Environment_Index_Satisfied_Time_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "Confidence": 0.8,
+      "InputDtmi": "dtmi:mapped:core:Equipment_Temperature_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Escalator;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Escalator;1"
+    },
+    {
+      "Confidence": 0.88,
+      "InputDtmi": "dtmi:mapped:core:Ethernet_Switch;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:EthernetSwitch;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Evaporator_Water_Flow_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:WaterFlowSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Evaporator_Water_Flow_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:WaterFlowSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Evapotranspiration_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Event;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Event;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Exhaust_Air_System;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HVACExhaustAirSystem;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Exit_Sign;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ExitSign;1"
+    },
+    {
+      "Confidence": 0.12,
+      "InputDtmi": "dtmi:mapped:core:FTR;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:TerminalUnit;1"
+    },
+    {
+      "Confidence": 0.4,
+      "InputDtmi": "dtmi:mapped:core:Fan_Filter_Unit;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:FanCoilUnit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fan_Powered_VAV;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:FanPoweredBox;1"
+    },
+    {
+      "Confidence": 0.17,
+      "InputDtmi": "dtmi:mapped:core:Fan_Request;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:FanRunState;1"
+    },
+    {
+      "Confidence": 0.6,
+      "InputDtmi": "dtmi:mapped:core:Fan_Speed_Mode_Status;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
+    },
+    {
+      "Confidence": 0.8,
+      "InputDtmi": "dtmi:mapped:core:Fan_Speed_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:SpeedSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Faucet;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Faucet;1"
+    },
+    {
+      "Confidence": 0.4,
+      "InputDtmi": "dtmi:mapped:core:Filter_Alarm;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Filter_Alarm_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DirtyFilterAlarmSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fire_Damper;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:FireDamper;1"
+    },
+    {
+      "Confidence": 0.12,
+      "InputDtmi": "dtmi:mapped:core:Fire_Extinguisher;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:SafetyEquipment;1"
+    },
+    {
+      "Confidence": 0.88,
+      "InputDtmi": "dtmi:mapped:core:Fire_Hydrant;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:FireHydrant;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fire_Sprinkler;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:FireSprinklerHead;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fire_Sprinkler_Water_Storage_Tank;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SprinklerTank;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Floor_Level;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Level;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Flush_Valve;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:FlushometerValve;1"
+    },
+    {
+      "Confidence": 0.3,
+      "InputDtmi": "dtmi:mapped:core:Forced_Open_Alarm;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fuel_Moisture_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:QuantitySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fuel_Temperature_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Furniture;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Furniture;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:GHG_Emissions;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:GreenhouseGasEmissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:GHG_Emissions_Factor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:GreenhouseGasEmissionsFactor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:GHG_Emissions_Intensity;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:GreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:GHG_Emissions_Intensity_Per_Area;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:GreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:GHG_Emissions_Intensity_Per_Energy;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:GreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "Confidence": 0.72,
+      "InputDtmi": "dtmi:mapped:core:Gas_Pressure_Reducing_Valve;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingPressureReducingValve;1"
+    },
+    {
+      "Confidence": 0.8,
+      "InputDtmi": "dtmi:mapped:core:Gas_Water_Heater;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:WaterHeater;1"
+    },
+    {
+      "Confidence": 0.12,
+      "InputDtmi": "dtmi:mapped:core:Gate;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Door;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Generator;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Generator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Geo_Location_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Grease_Interceptor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:GreaseInterceptor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Grease_Trap;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:GreaseTrap;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Grease_Trap_Level_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:LevelState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:H2S_Level_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:LevelState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:HVAC_Pump;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HVACPump;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heat_Exchanger_Return_Water_Temperature_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CoilEnteringWaterTemperatureSensor;1"
+    },
+    {
+      "Confidence": 0.48,
+      "InputDtmi": "dtmi:mapped:core:Heating_Air_Temperature_Setpoint_Offset;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:SetpointOffset;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heating_Level_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HeatingLevelActuator;1"
+    },
+    {
+      "Confidence": 0.9,
+      "InputDtmi": "dtmi:mapped:core:Heating_On_Off_Command;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:OnOffActuator;1"
+    },
+    {
+      "Confidence": 0.19,
+      "InputDtmi": "dtmi:mapped:core:Heating_Request;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:HeatingLevelState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heating_Request_Count_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heating_Thermal_Energy_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ThermalEnergySensor;1"
+    },
+    {
+      "Confidence": 0.3,
+      "InputDtmi": "dtmi:mapped:core:Held_Open_Alarm;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
+    },
+    {
+      "Confidence": 0.4,
+      "InputDtmi": "dtmi:mapped:core:High_Discharge_Air_Pressure_Alarm;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:PressureAlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:High_Humidity_Alarm_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HighAirHumidityAlarmSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:High_Humidity_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HumiditySetpoint;1"
+    },
+    {
+      "Confidence": 0.99,
+      "InputDtmi": "dtmi:mapped:core:High_Limit;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:HighLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:High_Static_Pressure_Alarm;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HighSupplyStaticPressureAlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:High_TVOC_Alarm_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TVOCAirQualityAlarmSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:High_Temperature_Alarm_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HighTemperatureAlarmSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:High_Voltage_Alarm;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HighVoltageAlarmState;1"
+    },
+    {
+      "Confidence": 0.64,
+      "InputDtmi": "dtmi:mapped:core:Hot_Water_Circulating_Pump;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:DomesticHotWaterCirculatingPump;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Hot_Water_GHG_Emissions_Factor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HotWaterConsumptionGreenhouseGasEmissionsFactor;1"
+    },
+    {
+      "Confidence": 0.48,
+      "InputDtmi": "dtmi:mapped:core:Hot_Water_Storage_Tank;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingStorageTank;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Humidity_Alarm_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HumidityAlarmSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:ICT_Equipment;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ICTEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:IT_Rack;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ITRack;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Ice_Tank_Entering_Water_Temperature_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Ignition_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Indirect_GHG_Emissions;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:IndirectGreenhouseGasEmissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Indirect_GHG_Emissions_Intensity;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:IndirectGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Indirect_GHG_Emissions_Intensity_Per_Area;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:IndirectGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Isolation_Damper;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Level_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:LevelActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Level_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:OnLevelState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Lighting_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Actuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Lighting_Controller;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:LightingController;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Lighting_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "Confidence": 0.33,
+      "InputDtmi": "dtmi:mapped:core:Liquid_Line_Refrigerant_Pressure_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:RefrigerantTemperatureSensor;1"
+    },
+    {
+      "Confidence": 0.72,
+      "InputDtmi": "dtmi:mapped:core:Liquid_Line_Refrigerant_Temperature_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:RefrigerantTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Location_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Lock_Unlock_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:OnOffActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Low_Humidity_Alarm_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:LowAirHumidityAlarmSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Low_Humidity_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HumiditySetpoint;1"
+    },
+    {
+      "Confidence": 0.99,
+      "InputDtmi": "dtmi:mapped:core:Low_Limit;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:LowLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Low_Static_Air_Pressure_Alarm;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:LowSuctionStaticPressureAlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Low_Temperature_Alarm_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:LowTemperatureAlarmSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Maintenance_Bypass_Switch;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:MaintenanceBypassSwitch;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Max_Air_Temperature_Setpoint_Limit;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:MaxLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Max_Cooling_Air_Temperature_Setpoint_Limit;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:MaxLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Max_Cooling_Discharge_Air_Temperature_Setpoint_Limit;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:MaxLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Max_Heating_Air_Temperature_Setpoint_Limit;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:MaxLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Max_Power_Limit;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:MaxLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Median_Total_GHG_Emissions;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Median_Total_GHG_Emissions_Intensity;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "Confidence": 0.12,
+      "InputDtmi": "dtmi:mapped:core:Microphone;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Min_Air_Temperature_Setpoint_Limit;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:MinLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Min_Cooling_Air_Temperature_Setpoint_Limit;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:MinLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Min_Cooling_Supply_Air_Temperature_Setpoint_Limit;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:MinLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Min_Heating_Air_Temperature_Setpoint_Limit;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:MinLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Min_Outside_Air_Damper_Position_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:MinOutsideAirDamperPositionState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Mute_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:NO_Level_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:National_Median_Total_GHG_Emissions;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Natural_Gas_Seismic_Valve;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HVACShutOffValve;1"
+    },
+    {
+      "Confidence": 0.22,
+      "InputDtmi": "dtmi:mapped:core:Network_Interface;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:DataNetworkEquipment;1"
+    },
+    {
+      "Confidence": 0.2,
+      "InputDtmi": "dtmi:mapped:core:Networked_Device;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:ElectricalWiringDevice;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:O2_Level_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:O2AirQualitySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Occupancy_Sensing_Device;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:OccupancySensorEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Occupancy_Zone;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:OccupancyZone;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Occupied_Cooling_Air_Temperature_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Occupied_Heating_Air_Temperature_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingSetpoint;1"
+    },
+    {
+      "Confidence": 1.0,
+      "InputDtmi": "dtmi:mapped:core:Occupied_Zone_Air_Heating_Temperature_Setpoint;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:HeatingZoneAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Offset;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SetpointOffset;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Open_Close_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:OpenCloseActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Open_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:OpenActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Open_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:OpenPositionState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Operating_Room;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
+      "Confidence": 0.66,
+      "InputDtmi": "dtmi:mapped:core:Outside_Air_Damper_Position_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:OutsideAirDamperPositionState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Outside_Air_Temperature_Reset_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Oven;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Oven;1"
+    },
+    {
+      "Confidence": 0.4,
+      "InputDtmi": "dtmi:mapped:core:Peak_Demand_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "Confidence": 0.74,
+      "InputDtmi": "dtmi:mapped:core:People_Count_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:PeopleCountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Person;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Person;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Person_Profile;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Person;1"
+    },
+    {
+      "Confidence": 0.4,
+      "InputDtmi": "dtmi:mapped:core:Phase_Loss_Alarm;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:CommunicationLossAlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Place;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Space;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Plumbing_Equipment;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Plumbing_Fixture;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingFixture;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Plumbing_Pump;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingPump;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Plumbing_System;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingSystem;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Plumbing_Valve;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingValve;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Pool_Equipment;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SwimmingPoolEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Precipitation_Accumulation_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PrecipitationAccumulationSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Precipitation_Accumulation_Since_Midnight_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PrecipitationAccumulationSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Precipitation_Fifteen_Minutes_Accumulation_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PrecipitationAccumulationSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Precipitation_One_Hour_Accumulation_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PrecipitationAccumulationSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Precipitation_One_Minute_Accumulation_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PrecipitationAccumulationSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Precipitation_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PrecipitationRateSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Precipitation_Ten_Minutes_Accumulation_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PrecipitationAccumulationSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Precipitation_Thirty_Minutes_Accumulation_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PrecipitationAccumulationSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Precipitation_Three_Hours_Accumulation_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PrecipitationAccumulationSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Precipitation_Twentyfour_Hours_Accumulation_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PrecipitationAccumulationSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Pressure_High_Reset_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PressureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Pressure_Low_Reset_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PressureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Pressure_Reducing_Valve;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingPressureReducingValve;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Pressure_Request_Count_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+    },
+    {
+      "Confidence": 0.6,
+      "InputDtmi": "dtmi:mapped:core:Pressurization_Fan;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Fan;1"
+    },
+    {
+      "Confidence": 0.12,
+      "InputDtmi": "dtmi:mapped:core:Projection_Screen;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Pump_Collection;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingPumpGroup;1"
+    },
+    {
+      "Confidence": 0.6,
+      "InputDtmi": "dtmi:mapped:core:Pump_Speed_Mode_Status;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
+    },
+    {
+      "Confidence": 0.8,
+      "InputDtmi": "dtmi:mapped:core:Pump_Speed_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:SpeedSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Rain_Level_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:RainfallRateSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Real_Energy_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:EnergySensor;1"
+    },
+    {
+      "Confidence": 0.4,
+      "InputDtmi": "dtmi:mapped:core:Refrigerant_Level_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "Confidence": 0.5,
+      "InputDtmi": "dtmi:mapped:core:Refrigerant_Pressure_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:RefrigerantTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Refrigerant_Saturation_Temperature_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Refrigerant_Temperature_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:RefrigerantTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Refrigeration_Equipment;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:RefrigerationEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Refrigeration_System;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HVACRefrigerantSystem;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Refrigerator;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Refrigerator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Regional_Median_Total_GHG_Emissions;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Regional_Median_Total_GHG_Emissions_Intensity;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "Confidence": 0.6,
+      "InputDtmi": "dtmi:mapped:core:Reheat_Command;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Actuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Relative_Humidity_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:RelativeHumiditySetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Relay_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "Confidence": 0.12,
+      "InputDtmi": "dtmi:mapped:core:Request;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Request_Count_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Reset_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Return_Air_Diffuser;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ReturnAirDiffuser;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Return_Air_Static_Pressure_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ReturnAirStaticPressureSensor;1"
+    },
+    {
+      "Confidence": 0.66,
+      "InputDtmi": "dtmi:mapped:core:Return_Air_System;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:HVACReturnAirSystem;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Return_Air_Temperature_Reset_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Return_Air_Velocity_Pressure_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ReturnAirVelocityPressureSensor;1"
+    },
+    {
+      "Confidence": 0.7,
+      "InputDtmi": "dtmi:mapped:core:Return_CO2_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:ReturnAirCO2Sensor;1"
+    },
+    {
+      "Confidence": 0.66,
+      "InputDtmi": "dtmi:mapped:core:Return_Water_Temperature_Deadband_Setpoint;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:ChilledWaterTemperatureDeadbandSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Road_Subsurface_Temperature_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
+    },
+    {
+      "Confidence": 0.2,
+      "InputDtmi": "dtmi:mapped:core:Room_Pressure_Monitor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:ComputerMonitor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Run_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:RunActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:SO2_Level_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SO2AirQualitySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Schedule_Mode_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Scheduled_Occupied_Mode_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Screen_Orientation_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Sea_Level_Air_Pressure_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AirPressureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Security_System;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SecuritySystem;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Sensor_Equipment;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SensorEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Sensor_Type_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "Confidence": 0.4,
+      "InputDtmi": "dtmi:mapped:core:Service_Required_Alarm;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:MaintenanceRequiredAlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Setpoint_Offset;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SetpointOffset;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Sink;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Sink;1"
+    },
+    {
+      "Confidence": 0.2,
+      "InputDtmi": "dtmi:mapped:core:Site_Energy_Use;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:EnergySensor;1"
+    },
+    {
+      "Confidence": 0.16,
+      "InputDtmi": "dtmi:mapped:core:Site_Energy_Use_Intensity;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:EnergySensor;1"
+    },
+    {
+      "Confidence": 0.99,
+      "InputDtmi": "dtmi:mapped:core:Smoke_Damper;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:SmokeDamper;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Snow_Accumulation_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:QuantitySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Solar_Inverter;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SolarInverter;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Solar_Irradiance_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SolarIrradianceSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Sound_Pressure_Level_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SoundPressureLevelSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Sound_Volume_Level_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "Confidence": 0.2,
+      "InputDtmi": "dtmi:mapped:core:Source_Energy_Use;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:EnergySensor;1"
+    },
+    {
+      "Confidence": 0.16,
+      "InputDtmi": "dtmi:mapped:core:Source_Energy_Use_Intensity;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:EnergySensor;1"
+    },
+    {
+      "Confidence": 0.25,
+      "InputDtmi": "dtmi:mapped:core:Speaker;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:FireAlarmSpeaker;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Sprinkler_System;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SprinklerSystem;1"
+    },
+    {
+      "Confidence": 0.12,
+      "InputDtmi": "dtmi:mapped:core:Stage_Riser;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Furniture;1"
+    },
+    {
+      "Confidence": 0.4,
+      "InputDtmi": "dtmi:mapped:core:Stairwell_Pressurization_Fan;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Fan;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Standby_Air_Temperature_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Standby_Cooling_Air_Temperature_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:StandbyCoolingZoneAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Standby_Heating_Air_Temperature_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:StandbyHeatingZoneAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Steam_Flow_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:FlowSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Steam_GHG_Emissions_Factor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SteamConsumptionGreenhouseGasEmissionsFactor;1"
+    },
+    {
+      "Confidence": 0.72,
+      "InputDtmi": "dtmi:mapped:core:Steam_Pressure_Reducing_Valve;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingPressureReducingValve;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Steam_Pressure_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SteamPressureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Steam_Pressure_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SteamPressureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Storage_Tank;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingStorageTank;1"
+    },
+    {
+      "Confidence": 0.6,
+      "InputDtmi": "dtmi:mapped:core:Subcooling_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "Confidence": 0.33,
+      "InputDtmi": "dtmi:mapped:core:Suction_Line_Refrigerant_Pressure_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:RefrigerantTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Suction_Line_Refrigerant_Temperature_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:CompressorEnteringRefrigerantTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Suction_Pressure_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PressureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Superheat_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Supply_Air_Diffuser;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:SupplyAirDiffuser;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Supply_Air_Duct_Static_Pressure_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:AirStaticPressureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Supply_Air_System;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:HVACSupplyAirSystem;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Supply_Air_Temperature_Reset_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:DischargeAirTemperatureSetpoint;1"
+    },
+    {
+      "Confidence": 0.4,
+      "InputDtmi": "dtmi:mapped:core:Supply_Fan_Speed_Command;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:FanRunLevelActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Switchboard;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Switchboard;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Symbolic_Location_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Tank;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Tank;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Tank_Electric_Water_Heater;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ElectricTankWaterHeater;1"
+    },
+    {
+      "Confidence": 0.99,
+      "InputDtmi": "dtmi:mapped:core:Tank_Water_Heater;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:TankWaterHeater;1"
+    },
+    {
+      "Confidence": 0.99,
+      "InputDtmi": "dtmi:mapped:core:Tankless_Water_Heater;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:TanklessWaterHeater;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Teleconference_Unit;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Temperature_Alarm_Count_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Temperature_Alarm_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TemperatureSetpoint;1"
+    },
+    {
+      "Confidence": 0.8,
+      "InputDtmi": "dtmi:mapped:core:Temperature_Setpoint_Offset;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:SetpointOffset;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Test_Point;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Thermal_Efficiency;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:KWPerTon;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Thermal_Energy_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ThermalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Thermal_Expansion_Tank;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingExpansionTank;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Thing;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Asset;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Time_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Toilet;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Toilet;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Total_GHG_Emissions;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissions;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Total_GHG_Emissions_Intensity;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Total_GHG_Emissions_Intensity_Per_Area;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "Confidence": 0.32,
+      "InputDtmi": "dtmi:mapped:core:Total_Harmonic_Distortion_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:TotalPressureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Transfer_Switch;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:TransferSwitch;1"
+    },
+    {
+      "Confidence": 0.12,
+      "InputDtmi": "dtmi:mapped:core:Turnstile;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Door;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:UV_Lighting_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Actuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Uninterruptible_Power_Supply;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:UPS;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Unoccupied_Cooling_Air_Temperature_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedCoolingSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Unoccupied_Heating_Air_Temperature_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Unoccupied_Zone_Air_Heating_Temperature_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:StandbyHeatingSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Urinal;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Urinal;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Utility_Account;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:UtilityAccount;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Utilization_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:LoadLevelState;1"
+    },
+    {
+      "Confidence": 0.74,
+      "InputDtmi": "dtmi:mapped:core:Valve_Close_Command;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:ValveCloseActuator;1"
+    },
+    {
+      "Confidence": 0.8,
+      "InputDtmi": "dtmi:mapped:core:Valve_Open_Close_Command;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:ValveOpenCloseActuator;1"
+    },
+    {
+      "Confidence": 0.9,
+      "InputDtmi": "dtmi:mapped:core:Valve_Open_Close_Status;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:OpenCloseState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Valve_Open_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ValveOpenActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Valve_Open_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ValveOpenState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Valve_Percentage_Command;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Actuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Valve_Position_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:ValvePositionSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Visibility_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:VisibilitySensor;1"
+    },
+    {
+      "Confidence": 0.12,
+      "InputDtmi": "dtmi:mapped:core:Visitor_Log;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:Capability;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Voltage_Total_Harmonic_Distortion_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:VoltageTHDSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Volume_Usage_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:VolumeSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Walk_In_Freezer;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:WalkInFreezer;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Walk_In_Refrigerator;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:WalkInCooler;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Wall_Air_Conditioner;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:WallAirConditioner;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Waste_Amount_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:QuantitySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Waste_Meter;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:MeterEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Water_Cooled_Chiller;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:WaterCooledChiller;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Water_Differential_Pressure_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:WaterDeltaPressureSensor;1"
+    },
+    {
+      "Confidence": 0.44,
+      "InputDtmi": "dtmi:mapped:core:Water_Leak_Event_Status;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:WaterLeakAlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Water_Pressure_High_Reset_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Water_Pressure_Low_Reset_Setpoint;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Setpoint;1"
+    },
+    {
+      "Confidence": 0.72,
+      "InputDtmi": "dtmi:mapped:core:Water_Pressure_Reducing_Valve;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingPressureReducingValve;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Water_Pressure_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:WaterPressureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Water_Storage_Basin;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:WaterStorageBasin;1"
+    },
+    {
+      "Confidence": 0.6,
+      "InputDtmi": "dtmi:mapped:core:Water_Storage_Tank;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingStorageTank;1"
+    },
+    {
+      "Confidence": 0.5,
+      "InputDtmi": "dtmi:mapped:core:Water_Usage_High_Limit;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:HighLimit;1"
+    },
+    {
+      "Confidence": 0.5,
+      "InputDtmi": "dtmi:mapped:core:Water_Usage_Low_Limit;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:LowLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Waterless_Urinal;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:UrinalWaterless;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Weather_Condition_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Wheel_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Wind_Gust_Sensor;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Window;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:Window;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Window_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Wireless_Access_Point;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:WirelessAccessPoint;1"
+    },
+    {
+      "Confidence": 0.8,
+      "InputDtmi": "dtmi:mapped:core:Wireless_Access_Reader;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:AccessReader;1"
+    },
+    {
+      "Confidence": 0.7,
+      "InputDtmi": "dtmi:mapped:core:Zone_CO2_Sensor;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:ZoneAirCO2Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Zone_Conditioning_Mode_Status;1",
+      "IsInferred": false,
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "Confidence": 0.4,
+      "InputDtmi": "dtmi:mapped:core:Zone_Damper;1",
+      "IsInferred": true,
+      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+    }
+  ],
+  "NamespaceRemaps": [
+    {
+      "InputNamespace": "dtmi:org:brickschema:schema:Brick:",
+      "OutputNamespace": "dtmi:com:willowinc:"
+    },
+    {
+      "InputNamespace": "dtmi:mapped:core:",
+      "OutputNamespace": "dtmi:com:willowinc:"
+    }
+  ],
+  "ObjectTransformations": [
+    {
+      "InputProperty": "unit",
+      "InputPropertyName": "id",
+      "OutputDtmiFilter": ".*",
+      "OutputPropertyName": "unit",
+      "Priority": 1
+    }
+  ],
+  "PropertyProjections": [
+    {
+      "InputPropertyNames": [
+        "mappingKey"
+      ],
+      "IsOutputPropertyCollection": true,
+      "OutputDtmiFilter": ".*",
+      "OutputPropertyName": "externalIds"
+    },
+    {
+      "InputPropertyNames": [
+        "id"
+      ],
+      "IsOutputPropertyCollection": false,
+      "OutputDtmiFilter": ".*",
+      "OutputPropertyName": "externalID"
+    }
+  ],
+  "RelationshipRemaps": [
+    {
+      "InputRelationship": "floors",
+      "OutputRelationship": "isPartOf",
+      "ReverseRelationshipDirection": true
+    },
+    {
+      "InputRelationship": "hasPart",
+      "OutputRelationship": "isPartOf",
+      "ReverseRelationshipDirection": true
+    },
+    {
+      "InputRelationship": "isLocationOf",
+      "OutputRelationship": "locatedIn",
+      "ReverseRelationshipDirection": true
+    },
+    {
+      "InputRelationship": "hasPoint",
+      "OutputRelationship": "isCapabilityOf",
+      "ReverseRelationshipDirection": true
+    },
+    {
+      "InputRelationship": "serves",
+      "OutputRelationship": "servedBy",
+      "ReverseRelationshipDirection": true
+    }
+  ]
+}
