@@ -4,6 +4,7 @@ import pprint
 from ontology_mapper.loader import NugetPackage
 from ontology_mapper.engine import MappingEngine
 import xml.etree.ElementTree as ET
+from pdb import set_trace
 
 
 def get_nuget_package(name: str, version: str):
@@ -42,7 +43,7 @@ def main():
         "dtmi:org:brickschema:schema:Brick:Status;1": ["dtmi:com:willowinc:State;1", "dtmi:com:willowinc:Sensor;1"],
         "dtmi:org:brickschema:schema:Brick:Sensor;1": ["dtmi:com:willowinc:Sensor;1", "dtmi:com:willowinc:State;1"],
         "dtmi:org:brickschema:schema:Brick:Setpoint;1": ["dtmi:com:willowinc:Setpoint;1"],
-        "dtmi:org:brickschema:schema:Brick:Space;1": ["dtmi:com:willowinc:Space;1"],
+        "dtmi:org:brickschema:schema:Brick:Location;1": ["dtmi:com:willowinc:Space;1"],
         "dtmi:org:brickschema:schema:Brick:Parameter;1": ["dtmi:com:willowinc:Parameter;1"],
         "dtmi:mapped:core:Thing;1": ["dtmi:com:willowinc:Asset;1"],
 
@@ -53,7 +54,7 @@ def main():
         "dtmi:com:willowinc:Sensor;1": ["dtmi:org:brickschema:schema:Brick:Sensor;1", "dtmi:org:brickschema:schema:Brick:Status;1"],
         "dtmi:com:willowinc:State;1": ["dtmi:org:brickschema:schema:Brick:Status;1", "dtmi:org:brickschema:schema:Brick:Sensor;1", "dtmi:org:brickschema:schema:Brick:Alarm;1"],
         "dtmi:com:willowinc:Setpoint;1": ["dtmi:org:brickschema:schema:Brick:Setpoint;1"],
-        "dtmi:com:willowinc:Space;1": ["dtmi:org:brickschema:schema:Brick:Space;1"],
+        "dtmi:com:willowinc:Space;1": ["dtmi:org:brickschema:schema:Brick:Location;1"],
         "dtmi:com:willowinc:Parameter;1": ["dtmi:org:brickschema:schema:Brick:Parameter;1"],
         "dtmi:com:willowinc:Asset;1": ["dtmi:mapped:core:Thing;1"],
 
@@ -85,7 +86,6 @@ def main():
     _, inferable_nodes, uninferable_nodes = engine.classify_nodes() 
     engine.find_optimal_mappings(inferable_nodes)
     mapped_combined_mappings, willow_combined_mappings = engine.aggregate_mappings() 
-    mapped_incoming_edges, willow_incoming_edges = engine.inspect()
     valid, invalid_inferred_mappings = engine.validate()
     for key, value in invalid_inferred_mappings.items():
         message = value['message']
@@ -109,12 +109,6 @@ def main():
 
     with open('scripts/output/missing.json', 'w') as f:
         json.dump(uninferable_nodes, f, indent=2)
-
-    with open('scripts/output/willow_incoming_edges.json', 'w') as f:
-        json.dump(willow_incoming_edges, f, indent=2)
-
-    with open('scripts/output/mapped_incoming_edges.json', 'w') as f:
-        json.dump(mapped_incoming_edges, f, indent=2)
 
     mapped_mappings['InterfaceRemaps'] = mapped_combined_mappings
     willow_mappings['InterfaceRemaps'] = willow_combined_mappings
