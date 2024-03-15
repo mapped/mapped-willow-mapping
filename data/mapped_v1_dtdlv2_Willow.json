@@ -1724,7 +1724,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Capacity_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CapacitySensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Ceiling_Fan;1",
