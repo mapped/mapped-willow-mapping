@@ -1948,7 +1948,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Contact_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:ContactSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:ContactState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Control_Room;1",
