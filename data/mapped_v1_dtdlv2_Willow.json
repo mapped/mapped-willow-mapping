@@ -1700,7 +1700,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:CO2_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:CO2Setpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:CO2AirQualitySetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:CO_Differential_Sensor;1",
@@ -4312,7 +4312,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Air_CO2_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirCO2Setpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:ReturnAirCO2Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Air_CO_Sensor;1",
