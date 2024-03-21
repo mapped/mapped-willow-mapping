@@ -103,3 +103,23 @@ jobs:
       shell: pwsh
       run: "& ./.github/workflows/scripts/buildandpack.ps1 -config Release -publishPackage ${{ inputs.publish-package }} -nugetSecret '${{ secrets.NUGET_MAPPINGS_WILLOW_PUSH }}' -VERTUPLE ${{ steps.vtl.outputs.ver_semVerFourTupleNumeric }} -githubRepo ${{ github.repository }} -githubBranch ${{ github.ref }} -githubCommit ${{ github.sha }} -buildNumber ${{ steps.vtl.outputs.ver_buildNumber }}"
     
+
+    - name: Upload blobs
+      if: ${{ inputs.publish-package}} == true
+      run: |
+        az storage blob upload \
+          --container-name ${{ env.containerName }} \
+          --file Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json \
+          --name mappings/Mapped2Willow/latest \
+          --account-name ${{ env.storageAccount }} \
+          --overwrite \
+          --connection-string "${{ secrets.ONTOLOGY_BLOB_STORE_CONN_STR }}"
+
+        az storage blob upload \
+          --container-name ${{ env.containerName }} \
+          --file Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json \
+          --name mappings/Willow2Mapped/latest \
+          --account-name ${{ env.storageAccount }} \
+          --overwrite \
+          --connection-string "${{ secrets.ONTOLOGY_BLOB_STORE_CONN_STR }}"
+
