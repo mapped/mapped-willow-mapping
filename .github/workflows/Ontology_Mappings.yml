@@ -14,6 +14,8 @@ on:
 env:
   BASE_VERSION: "0.1.0"
   POETRY_VERSION: '1.6.1'
+  containerName: 'public'
+  storageAccount: 'mappedontologies'
 
 jobs:
   build:
