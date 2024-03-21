@@ -17,11 +17,6 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v3
 
-    - name: Set up Azure CLI
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
-
     - name: Upload Mapped Mappings to Blob Storage
       # if: github.ref == 'refs/heads/main'
       run: |
