@@ -25,7 +25,7 @@ jobs:
           --file Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json \
           --name mappings/Mapped2Willow/latest \
           --account-name ${{ env.storageAccount }} \
-          --connection-string "{{ secrets.ONTOLOGY_BLOB_STORE_CONN_STR }}"
+          --connection-string "${{ secrets.ONTOLOGY_BLOB_STORE_CONN_STR }}"
 
     - name: Upload Willow Mappings to Blob Storage
       # if: github.ref == 'refs/heads/main'
@@ -35,4 +35,4 @@ jobs:
           --file Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json \
           --name mappings/Willow2Mapped/latest \
           --account-name ${{ env.storageAccount }} \
-          --connection-string "{{ secrets.ONTOLOGY_BLOB_STORE_CONN_STR }}"
+          --connection-string "${{ secrets.ONTOLOGY_BLOB_STORE_CONN_STR }}"
