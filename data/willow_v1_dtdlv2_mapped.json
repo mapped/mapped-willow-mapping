@@ -257,6 +257,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:AsBuiltDrawing;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:Asset;1",
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
@@ -311,6 +315,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:BatteryCabinet;1",
       "OutputDtmi": "dtmi:mapped:core:Battery_Cabinet;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:BatteryCharger;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:BatteryEquipment;1",
@@ -929,6 +937,10 @@
       "OutputDtmi": "dtmi:mapped:core:Energy_Density_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:DesignDrawing;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:DewPointTemperatureSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Dewpoint_Sensor;1"
     },
@@ -1385,6 +1397,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Switch;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:EthernetSwitchPort;1",
+      "OutputDtmi": "dtmi:mapped:core:Ethernet_Switch;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:EvaporativeCoolingTower;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Tower;1"
     },
@@ -1569,6 +1585,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Differential_Pressure_Setpoint;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:FireAlarmBell;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Alarm;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmControlPanel;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Control_Panel;1"
     },
@@ -1583,6 +1603,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmHornStrobe;1",
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FireAlarmNotificationAppliance;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Alarm;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmPressureSwitch;1",
@@ -1645,6 +1669,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Safety_Equipment;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:FloorDrain;1",
+      "OutputDtmi": "dtmi:mapped:core:Plumbing_Equipment;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:FlowSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Flow_Sensor;1"
     },
@@ -1679,6 +1707,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:FrequencySetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Frequency_Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:FuelOilSystem;1",
+      "OutputDtmi": "dtmi:mapped:core:Plumbing_System;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Furniture;1",
@@ -1837,8 +1869,16 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:HVAC_Valve;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:HVACWaterFiltration;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:HVAC_Equipment;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:HVACWaterSystem;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Water_System;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:HVACWaterTreatment;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:HVAC_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACZone;1",
@@ -1939,6 +1979,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:HorizontalFanCoilUnit;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Coil_Unit;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:HoseBibb;1",
+      "OutputDtmi": "dtmi:mapped:core:Faucet;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HotFoodDisplayCase;1",
@@ -2265,6 +2309,10 @@
       "OutputDtmi": "dtmi:mapped:core:Level_Command;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:LightPole;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:LightingController;1",
       "OutputDtmi": "dtmi:mapped:core:Lighting_Controller;1"
     },
@@ -2395,6 +2443,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:MediumTemperatureRefrigerationCompressorRack;1",
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:MediumVoltageSwitchgear;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Switchgear;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:MeterEquipment;1",
@@ -3045,6 +3097,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Power_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:PreActionCabinet;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:PrecipitationAccumulationSensor;1",
       "OutputDtmi": "dtmi:mapped:core:Precipitation_Accumulation_Sensor;1"
     },
@@ -3485,6 +3541,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Filter_Differential_Pressure_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:RoofDrain;1",
+      "OutputDtmi": "dtmi:mapped:core:Plumbing_Equipment;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:RoofLevel;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Rooftop;1"
     },
@@ -3687,6 +3747,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:SpeedSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:SprinklerBackflowPreventer;1",
+      "OutputDtmi": "dtmi:mapped:core:Backflow_Preventer;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SprinklerBalancingValve;1",
@@ -4423,6 +4487,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:WaterPumpVFDRunLevelActuator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Command;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:WaterSoftener;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WaterStorageBasin;1",
