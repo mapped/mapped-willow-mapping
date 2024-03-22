@@ -27,6 +27,10 @@
   },
   "InterfaceRemaps": [
     {
+      "InputDtmi": "dtmi:mapped:core::Unoccupied_Heating_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Absolute_Humidity_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:AbsoluteHumiditySensor;1"
     },
@@ -141,10 +145,6 @@
     {
       "InputDtmi": "dtmi:mapped:core:Ante_Room;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Apparent_Electric_Energy_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:ApparentElectricalEnergySensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Apparent_Energy_Sensor;1",
@@ -989,6 +989,14 @@
     {
       "InputDtmi": "dtmi:mapped:core:Occupied_Cooling_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Occupied_Cooling_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Occupied_Heating_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Occupied_Heating_Air_Temperature_Setpoint;1",
@@ -3975,20 +3983,12 @@
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureDeadbandSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Cooling_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Heating_Supply_Air_Flow_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirFlowSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Heating_Temperature_Deadband_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureDeadbandSetpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Heating_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Humidity_Setpoint;1",
@@ -5179,16 +5179,8 @@
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirFlowSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Cooling_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedCoolingSetpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Heating_Supply_Air_Flow_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirFlowSetpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Heating_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Humidity_Setpoint;1",
