@@ -20,7 +20,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper
         /// <param name="mappingLoader">Loader that can provide a set of ontology mappings for this manager to operate over.</param>
         public OntologyMappingManager(IOntologyMappingLoader mappingLoader)
         {
-            OntologyMapping = mappingLoader.LoadOntologyMapping();
+            OntologyMapping = mappingLoader.LoadOntologyMappingAsync().Result;
         }
 
         /// <summary>
