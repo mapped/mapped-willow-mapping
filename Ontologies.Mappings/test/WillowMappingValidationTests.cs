@@ -17,11 +17,11 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
         }
 
         [Theory]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
+        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json")]
         public void ValidateMappedDtmisAreValidFormat(string resourcePath)
         {
             var mockLogger = new Mock<ILogger>();
-            var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
+            var resourceLoader = new MappedHttpOntologyMappingLoader(mockLogger.Object, resourcePath);
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
 
             var exceptions = new List<string>();
@@ -91,14 +91,14 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
         }
 
         [Theory]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "dtmi:org:brickschema:schema:Brick:Ablutions_Room;1", "dtmi:com:willowinc:Room;1")]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "dtmi:org:brickschema:schema:Brick:Ablutions;1", "dtmi:com:willowinc:Ablutions;1")]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", false, "dtmi:org:fakeschema:schema:Brick:Ablutions;1", null)]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "dtmi:org:brickschema:schema:Brick:CO2_Alarm_Setpoint;1", "dtmi:com:willowinc:CO2_Alarm_Setpoint;1")]
+        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", true, "dtmi:org:brickschema:schema:Brick:Ablutions_Room;1", "dtmi:com:willowinc:Room;1")]
+        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", true, "dtmi:org:brickschema:schema:Brick:Ablutions;1", "dtmi:com:willowinc:Ablutions;1")]
+        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", false, "dtmi:org:fakeschema:schema:Brick:Ablutions;1", null)]
+        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", true, "dtmi:org:brickschema:schema:Brick:CO2_Alarm_Setpoint;1", "dtmi:com:willowinc:CO2_Alarm_Setpoint;1")]
         public void ValidateInterfaceMappings(string resourcePath, bool isFound, string input, string? expected)
         {
             var mockLogger = new Mock<ILogger>();
-            var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
+            var resourceLoader = new MappedHttpOntologyMappingLoader(mockLogger.Object, resourcePath);
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
 
             var inputDtmi = new Dtmi(input);
@@ -118,14 +118,14 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
         }
 
         [Theory]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", false, "isFedBy", "isFedBy")]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "floors", "isPartOf")]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "isLocationOf", "locatedIn")]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json", true, "hasPoint", "isCapabilityOf")]
+        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", false, "isFedBy", "isFedBy")]
+        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", true, "floors", "isPartOf")]
+        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", true, "isLocationOf", "locatedIn")]
+        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", true, "hasPoint", "isCapabilityOf")]
         public void ValidateRelationshipMappings(string resourcePath, bool isFound, string inputRelationship, string? expected)
         {
             var mockLogger = new Mock<ILogger>();
-            var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
+            var resourceLoader = new MappedHttpOntologyMappingLoader(mockLogger.Object, resourcePath);
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
 
             var result = ontologyMappingManager.TryGetRelationshipRemap(inputRelationship, out var relationshipRemap);
@@ -144,11 +144,11 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
         }
 
         [Theory]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
+        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json")]
         public void ValidateSourceDtmisAreValid(string resourcePath)
         {
             var mockLogger = new Mock<ILogger>();
-            var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
+            var resourceLoader = new MappedHttpOntologyMappingLoader(mockLogger.Object, resourcePath);
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
             var modelParser = new ModelParser();
             var inputDtmi = LoadDtdl(new[] { "mapped_dtdl.json" });
@@ -172,11 +172,11 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
         }
 
         [Theory]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
+        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json")]
         public void ValidateTargetDtmisAreValid(string resourcePath)
         {
             var mockLogger = new Mock<ILogger>();
-            var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
+            var resourceLoader = new MappedHttpOntologyMappingLoader(mockLogger.Object, resourcePath);
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
             var modelParser = new ModelParser();
             var inputDtmi = LoadDtdl(new[] { "Willow.Ontology.Airport.DTDLv3.jsonld" });
@@ -188,11 +188,11 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
         }
 
         [Theory]
-        [InlineData("Mappings.v1.Willow.mapped_v1_dtdlv2_Willow.json")]
+        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json")]
         public void ValidateTargetDtmisForAirportAreValid(string resourcePath)
         {
             var mockLogger = new Mock<ILogger>();
-            var resourceLoader = new MappedOntologyMappingLoader(mockLogger.Object, resourcePath);
+            var resourceLoader = new MappedHttpOntologyMappingLoader(mockLogger.Object, resourcePath);
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
             var modelParser = new ModelParser();
             var inputDtmi = LoadDtdl(new[] { "Willow.Ontology.Airport.DTDLv3.jsonld" });

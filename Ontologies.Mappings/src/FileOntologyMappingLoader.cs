@@ -5,6 +5,7 @@
 namespace Mapped.Ontologies.Mappings.OntologyMapper
 {
     using System.Text.Json;
+    using System.Threading.Tasks;
     using Microsoft.Extensions.Logging;
 
     /// <summary>
@@ -36,7 +37,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper
         /// Loads a set of ontology mappings.
         /// </summary>
         /// <returns>An OntologyMapping object holding a set of defined mappings (class mappings, relationship mappings, etc).</returns>
-        public OntologyMapping LoadOntologyMapping()
+        public Task<OntologyMapping> LoadOntologyMappingAsync()
         {
             logger.LogInformation("Loading Ontology Mapping file: {fileName}", filePath);
 
@@ -62,7 +63,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper
                 throw new MappingFileException($"Mappings file '{filePath}' is empty.", filePath);
             }
 
-            return mappings;
+            return Task.FromResult(mappings);
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetInterfaceRemapDtmi_ReturnsTrue_When_Found()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -40,7 +40,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetInterfaceRemapDtmi_ReturnsFalse_When_IsIgnoredTrue()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -56,7 +56,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetInterfaceRemapDtmi_ReturnsTrue_When_NamespaceRemapFound()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -73,7 +73,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetInterfaceRemapDtmi_ReturnsFalse_When_NotFound()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -89,7 +89,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetRelationshipRemapDtmi_ReturnsTrue_When_Found()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -107,7 +107,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetRelationshipRemapDtmi_ReturnsFalse_When_NotFound()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -123,7 +123,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetPropertyProjection_ReturnsTrue_WhenFound()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -143,7 +143,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetPropertyProjection_ReturnsTrue_WhenRegexMatchFound()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -163,7 +163,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetPropertyProjection_ReturnsTrue_WhenRegexMatchFoundSecondPriority()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -183,7 +183,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetPropertyProjection_ReturnsFalse_WhenRegexMatchNotFound()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -200,7 +200,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetPropertyProjection_ReturnsTrue_WhenFoundMultiple()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMappingWithMultipleProjections);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMappingWithMultipleProjections);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -222,7 +222,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetPropertyProjection_ReturnsFalse_When_NotFound()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -239,7 +239,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetFillProperty_ReturnsTrue_When_Found()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -259,7 +259,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetFillProperty_ReturnsTrue_When_FoundByRegex()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -279,7 +279,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetFillProperty_ReturnsTrue_When_FoundByRegexSecondPriority()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -299,7 +299,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetFillProperty_ReturnsFalse_When_NotFoundByRegex()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -316,7 +316,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetFillProperty_ReturnsFalse_When_NotFound()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -334,7 +334,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         {
             var targetObjectModel = GetTargetObjectModel();
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetSpaceOnlyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).ReturnsAsync(GetSpaceOnlyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -349,7 +349,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         {
             var targetObjectModel = GetTargetObjectModel();
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetBuildingOnlyMapping);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).ReturnsAsync(GetBuildingOnlyMapping);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -364,7 +364,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetObjectTransformation_ReturnsPropertyMatch_WhenFound()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMappingWithMultipleProjections);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMappingWithMultipleProjections);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -386,7 +386,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetObjectTransformation_ReturnsPropertyMatchOnly_WhenPropertyFoundForDifferentType()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMappingWithMultipleProjections);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMappingWithMultipleProjections);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -403,7 +403,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
         public void TryGetObjectTransformation_ReturnsNoPropertyMatch_WhenPropertyNotFoundAtAll()
         {
             var mockOntologyLoader = new Mock<IOntologyMappingLoader>();
-            mockOntologyLoader.Setup(m => m.LoadOntologyMapping()).Returns(GetOntologyMappingWithMultipleProjections);
+            mockOntologyLoader.Setup(m => m.LoadOntologyMappingAsync()).Returns(GetOntologyMappingWithMultipleProjections);
 
             var ontologyMappingManager = new OntologyMappingManager(mockOntologyLoader.Object);
 
@@ -416,7 +416,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
             Assert.Null(objectTransformation);
         }
 
-        private OntologyMapping GetOntologyMapping()
+        private Task<OntologyMapping> GetOntologyMapping()
         {
             var ontologyMapping = new OntologyMapping();
 
@@ -440,10 +440,10 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
 
             ontologyMapping.RelationshipRemaps.Add(new RelationshipRemap { InputRelationship = "isA", OutputRelationship = "wasA" });
 
-            return ontologyMapping;
+            return Task.FromResult(ontologyMapping);
         }
 
-        private OntologyMapping GetOntologyMappingWithMultipleProjections()
+        private Task<OntologyMapping> GetOntologyMappingWithMultipleProjections()
         {
             var ontologyMapping = new OntologyMapping();
 
@@ -463,7 +463,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Test
             ontologyMapping.ObjectTransformations.Add(new ObjectTransformation { InputProperty = "Unit", InputPropertyName = "Id", OutputPropertyName = "Unit", Priority = 1, OutputDtmiFilter = ".*" });
             ontologyMapping.ObjectTransformations.Add(new ObjectTransformation { InputProperty = "UnitCheck", InputPropertyName = "Id", OutputPropertyName = "UnitCheck", Priority = 1, OutputDtmiFilter = ".*check.*" });
 
-            return ontologyMapping;
+            return Task.FromResult(ontologyMapping);
         }
 
         private OntologyMapping GetSpaceOnlyMapping()
