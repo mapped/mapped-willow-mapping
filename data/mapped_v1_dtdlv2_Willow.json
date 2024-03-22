@@ -27,10 +27,6 @@
   },
   "InterfaceRemaps": [
     {
-      "InputDtmi": "dtmi:mapped:core::Unoccupied_Heating_Air_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingSetpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Absolute_Humidity_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:AbsoluteHumiditySensor;1"
     },
@@ -1453,6 +1449,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Unoccupied_Cooling_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:UnoccupiedCoolingSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Unoccupied_Heating_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Unoccupied_Heating_Air_Temperature_Setpoint;1",
