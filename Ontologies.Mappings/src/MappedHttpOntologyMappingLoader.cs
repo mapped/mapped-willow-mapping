@@ -33,12 +33,6 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped
         }
 
         /// <inheritdoc/>
-        public OntologyMapping LoadOntologyMapping()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <inheritdoc/>
         public async Task<OntologyMapping> LoadOntologyMappingAsync()
         {
             logger.LogInformation("Loading Ontology Mapping file: {ResourceUrl}", resourceUrl);
