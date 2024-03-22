@@ -200,7 +200,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:BACnet_Vendor_Id;1",
-      "OutputDtmi": ""
+      "OutputDtmi": "dtmi:com:willowinc:Parameter;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Backflow_Preventer;1",
@@ -929,10 +929,6 @@
     {
       "InputDtmi": "dtmi:mapped:core:Median_Total_GHG_Emissions_Intensity;1",
       "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Meta;1",
-      "OutputDtmi": ""
     },
     {
       "InputDtmi": "dtmi:mapped:core:Min_Air_Temperature_Setpoint_Limit;1",
