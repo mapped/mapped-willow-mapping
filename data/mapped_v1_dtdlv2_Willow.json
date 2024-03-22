@@ -995,6 +995,10 @@
       "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Occupied_Cooling_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Occupied_Heating_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingSetpoint;1"
     },
