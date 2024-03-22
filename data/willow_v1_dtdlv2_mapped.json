@@ -257,6 +257,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:AsBuiltDrawing;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:Asset;1",
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
@@ -931,6 +935,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:DensitySensor;1",
       "OutputDtmi": "dtmi:mapped:core:Energy_Density_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:DesignDrawing;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DewPointTemperatureSensor;1",
