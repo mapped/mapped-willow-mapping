@@ -4329,6 +4329,10 @@
       "OutputDtmi": "dtmi:mapped:core:Automotive_Equipment;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:VehicleGateBarrier;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:VelocityPressureSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Velocity_Pressure_Sensor;1"
     },
