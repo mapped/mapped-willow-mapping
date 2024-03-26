@@ -25,8 +25,8 @@ def get_package_version(package_name):
 def main():
     mapped_version = get_package_version('Mapped.Ontologies.Core.Dtdl')
     mapped_ontology = get_nuget_package('Mapped.Ontologies.Core.Dtdl', mapped_version)
-    willow_version = get_package_version('WillowInc.Ontology.DTDLv3')
-    willow_ontology = get_nuget_package('WillowInc.Ontology.DTDLv3', willow_version)
+    willow_version = get_package_version('WillowInc.Ontology.Airport.DTDLv3')
+    willow_ontology = get_nuget_package('WillowInc.Ontology.Airport.DTDLv3', willow_version)
 
     with open('data/mapped_v1_dtdlv2_Willow.json') as file:
         mapped_mappings = json.load(file)
@@ -74,9 +74,6 @@ def main():
     )
 
     engine.initialize_graph()
-    engine.graph.add_node('dtmi:com:willowinc:airport:AirfieldLightingEquipment;1', ontology='willow')
-    engine.graph.add_node('dtmi:com:willowinc:airport:Airport;1', ontology='willow')
-    engine.graph.add_node('dtmi:com:willowinc:airport:AirportTerminal;1', ontology='willow')
     valid, invalid_mappings = engine.validate()
     if not valid:
         formatted_mappings = pprint.pformat(invalid_mappings, indent=2)
