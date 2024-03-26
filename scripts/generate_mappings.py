@@ -122,7 +122,6 @@ def main():
     engine_airport.find_optimal_mappings(inferable_nodes)
     _, willow_combined_mappings_airport = engine_airport.aggregate_mappings() 
     valid, invalid_inferred_mappings = engine_airport.validate()
-    set_trace()
     for key, value in invalid_inferred_mappings.items():
         message = value['message']
         target = value['target']
@@ -140,7 +139,6 @@ def main():
         if mapping['InputDtmi'] not in seen:
             willow_combined_mappings.append(mapping)
             seen.add(mapping['InputDtmi'])
-    set_trace()
 
     if not os.path.exists('scripts/output'):
         os.makedirs('scripts/output')
