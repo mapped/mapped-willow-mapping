@@ -25,8 +25,10 @@ def get_package_version(package_name):
 def main():
     mapped_version = get_package_version('Mapped.Ontologies.Core.Dtdl')
     mapped_ontology = get_nuget_package('Mapped.Ontologies.Core.Dtdl', mapped_version)
-    willow_version = get_package_version('WillowInc.Ontology.Airport.DTDLv3')
-    willow_ontology = get_nuget_package('WillowInc.Ontology.Airport.DTDLv3', willow_version)
+    willow_airport_version = get_package_version('WillowInc.Ontology.Airport.DTDLv3')
+    willow_airport_ontology = get_nuget_package('WillowInc.Ontology.Airport.DTDLv3', willow_airport_version)
+    willow_building_version = get_package_version('WillowInc.Ontology.DTDLv3')
+    willow_building_ontology = get_nuget_package('WillowInc.Ontology.DTDLv3', willow_building_version)
 
     with open('data/mapped_v1_dtdlv2_Willow.json') as file:
         mapped_mappings = json.load(file)
@@ -65,25 +67,25 @@ def main():
         "dtmi:com:willowinc:BilledElectricalCost;1": ["dtmi:mapped:core:Billed_Electrical_Energy_Cost;1"],
     }
 
-    engine = MappingEngine(
+    engine_building = MappingEngine(
         mapped_ontology,
         mapped_mappings,
-        willow_ontology,
+        willow_building_ontology,
         willow_mappings,
         root_mappings=root_mappings
     )
 
-    engine.initialize_graph()
-    valid, invalid_mappings = engine.validate()
+    engine_building.initialize_graph()
+    valid, invalid_mappings = engine_building.validate()
     if not valid:
         formatted_mappings = pprint.pformat(invalid_mappings, indent=2)
         error_message = f"Invalid manual mappings found:\n{formatted_mappings}"
         raise Exception(error_message)
     
-    _, inferable_nodes, uninferable_nodes = engine.classify_nodes() 
-    engine.find_optimal_mappings(inferable_nodes)
-    mapped_combined_mappings, willow_combined_mappings = engine.aggregate_mappings() 
-    valid, invalid_inferred_mappings = engine.validate()
+    _, inferable_nodes, uninferable_nodes = engine_building.classify_nodes() 
+    engine_building.find_optimal_mappings(inferable_nodes)
+    mapped_combined_mappings, willow_combined_mappings_building = engine_building.aggregate_mappings() 
+    valid, invalid_inferred_mappings = engine_building.validate()
     for key, value in invalid_inferred_mappings.items():
         message = value['message']
         target = value['target']
@@ -100,6 +102,43 @@ def main():
             "\n\t".join(f"\t- {parent}" for parent in target_parents) +
             f"\n"
         )
+    
+    engine_airport = MappingEngine(
+        mapped_ontology,
+        mapped_mappings,
+        willow_airport_ontology,
+        willow_mappings,
+        root_mappings=root_mappings
+    )
+
+    engine_airport.initialize_graph()
+    valid, invalid_mappings = engine_airport.validate()
+    if not valid:
+        formatted_mappings = pprint.pformat(invalid_mappings, indent=2)
+        error_message = f"Invalid manual mappings found:\n{formatted_mappings}"
+        raise Exception(error_message)
+    
+    _, inferable_nodes, uninferable_nodes = engine_airport.classify_nodes() 
+    engine_airport.find_optimal_mappings(inferable_nodes)
+    _, willow_combined_mappings_airport = engine_airport.aggregate_mappings() 
+    valid, invalid_inferred_mappings = engine_airport.validate()
+    for key, value in invalid_inferred_mappings.items():
+        message = value['message']
+        target = value['target']
+        source_parents = value['parents']['source']
+        target_parents = value['parents']['target']
+
+    
+    seen = set()
+    willow_combined_mappings = []
+    for mapping in willow_combined_mappings_building:
+        if mapping['InputDtmi'] not in seen:
+            willow_combined_mappings.append(mapping)
+            seen.add(mapping['InputDtmi'])
+    for mapping in willow_combined_mappings_airport:
+        if mapping['InputDtmi'] not in seen:
+            willow_combined_mappings.append(mapping)
+            seen.add(mapping['InputDtmi'])
 
     if not os.path.exists('scripts/output'):
         os.makedirs('scripts/output')
