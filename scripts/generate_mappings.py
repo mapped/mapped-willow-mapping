@@ -3,6 +3,7 @@ import os
 import pprint
 from ontology_mapper.loader import NugetPackage
 from ontology_mapper.engine import MappingEngine
+from typing import Dict
 import xml.etree.ElementTree as ET
 from pdb import set_trace
 
@@ -21,6 +22,14 @@ def get_package_version(package_name):
             return package_ref.attrib.get('Version')
 
     return None
+
+def get_dtdl_interfaces(ontology_content: Dict):
+    interfaces = set()
+    for item in ontology_content:
+        if item['@type'] == 'Interface':
+            interfaces.add(item['@id'])
+    return interfaces
+
 
 def main():
     mapped_version = get_package_version('Mapped.Ontologies.Core.Dtdl')
@@ -129,16 +138,21 @@ def main():
         target_parents = value['parents']['target']
 
     
-    seen = set()
+    willow_seen = set()
     willow_combined_mappings = []
     for mapping in willow_combined_mappings_building:
-        if mapping['InputDtmi'] not in seen:
+        if mapping['InputDtmi'] not in willow_seen:
             willow_combined_mappings.append(mapping)
-            seen.add(mapping['InputDtmi'])
+            willow_seen.add(mapping['InputDtmi'])
     for mapping in willow_combined_mappings_airport:
-        if mapping['InputDtmi'] not in seen:
+        if mapping['InputDtmi'] not in willow_seen:
             willow_combined_mappings.append(mapping)
-            seen.add(mapping['InputDtmi'])
+            willow_seen.add(mapping['InputDtmi'])
+
+    mapped_seen = set()
+    for mapping in mapped_combined_mappings:
+        if mapping['InputDtmi'] not in mapped_seen:
+            mapped_seen.add(mapping['InputDtmi'])
 
     if not os.path.exists('scripts/output'):
         os.makedirs('scripts/output')
@@ -148,6 +162,11 @@ def main():
 
     mapped_mappings['InterfaceRemaps'] = mapped_combined_mappings
     willow_mappings['InterfaceRemaps'] = willow_combined_mappings
+    
+    mapped_interfaces = get_dtdl_interfaces(mapped_ontology)
+    mapped_missing_mappings = mapped_interfaces - mapped_seen
+    willow_interfaces = get_dtdl_interfaces(willow_building_ontology) | get_dtdl_interfaces(willow_airport_ontology)
+    willow_missing_mappings = willow_interfaces - willow_seen 
 
     willow_dir = 'Ontologies.Mappings/src/Mappings/v1/Willow'
     mapped_dir = 'Ontologies.Mappings/src/Mappings/v1/Mapped'
@@ -163,6 +182,12 @@ def main():
 
     with open(f'{mapped_dir}/willow_v1_dtdlv2_mapped.json', 'w') as f:
         json.dump(willow_mappings, f, indent=2)
+    
+    with open(f'scripts/output/mapped_missing_mappings.json', 'w') as f:
+        json.dump(sorted(list(mapped_missing_mappings)), f, indent=2)
+
+    with open(f'scripts/output/willow_missing_mappings.json', 'w') as f:
+        json.dump(sorted(list(willow_missing_mappings)), f, indent=2)
 
 if __name__ == "__main__":
     main()
