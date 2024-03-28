@@ -2381,6 +2381,10 @@
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:LowTemperatureRefrigeratedFoodDisplayCase;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Temperature_Display_Case;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:LowTemperatureRefrigerationCompressor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Compressor;1"
     },
@@ -2435,6 +2439,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:MediumTemperatureRefrigeratedFoodDisplayCase;1",
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:MediumTemperatureRefrigeratedFoodDisplayCase;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Medium_Temperature_Display_Case;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:MediumTemperatureRefrigerationCompressor;1",

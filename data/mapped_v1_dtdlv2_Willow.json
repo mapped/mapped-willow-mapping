@@ -3587,6 +3587,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Parameter;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Temperature_Display_Case;1",
+      "OutputDtmi": "dtmi:com:willowinc:LowTemperatureRefrigeratedFoodDisplayCase;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Low_Voltage_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:LowVoltageAlarmState;1"
     },
@@ -3741,6 +3745,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Medical_Room;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Medium_Temperature_Display_Case;1",
+      "OutputDtmi": "dtmi:com:willowinc:MediumTemperatureRefrigeratedFoodDisplayCase;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Medium_Temperature_Hot_Water_Differential_Pressure_Load_Shed_Reset_Status;1",
