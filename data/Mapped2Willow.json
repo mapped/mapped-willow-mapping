@@ -879,6 +879,10 @@
       "OutputDtmi": "dtmi:com:willowinc:LowTemperatureAlarmSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Low_Temperature_Display_Case;1",
+      "OutputDtmi": "dtmi:com:willowinc:LowTemperatureRefrigeratedFoodDisplayCase;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Maintenance_Bypass_Switch;1",
       "OutputDtmi": "dtmi:com:willowinc:MaintenanceBypassSwitch;1"
     },
@@ -925,6 +929,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Median_Total_GHG_Emissions_Intensity;1",
       "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Medium_Temperature_Display_Case;1",
+      "OutputDtmi": "dtmi:com:willowinc:MediumTemperatureRefrigeratedFoodDisplayCase;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Min_Air_Temperature_Setpoint_Limit;1",
