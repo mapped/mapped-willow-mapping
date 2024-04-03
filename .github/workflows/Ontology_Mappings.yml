@@ -86,6 +86,27 @@ jobs:
       with:
         dotnet-version: 6.0.x
 
+    - name: Upload staging blobs
+      run: |
+        az storage blob upload \
+          --container-name ${{ env.containerName }} \
+          --file Ontologies.Mappings/src/Mappings/v1/Willow/Mapped2Willow.json \
+          --name mappings/Mapped2Willow/test \
+          --account-name ${{ env.storageAccount }} \
+          --overwrite \
+          --connection-string "${{ secrets.ONTOLOGY_BLOB_STORE_CONN_STR }}"
+
+        az storage blob upload \
+          --container-name ${{ env.containerName }} \
+          --file Ontologies.Mappings/src/Mappings/v1/Mapped/Willow2Mapped.json \
+          --name mappings/Willow2Mapped/test \
+          --account-name ${{ env.storageAccount }} \
+          --overwrite \
+          --connection-string "${{ secrets.ONTOLOGY_BLOB_STORE_CONN_STR }}"
+
+        sleep 10 # wait enough for the files to be available in the CDN, hopefully.
+
+
     - name: Restore dependencies
       shell: pwsh
       run: "& ./.github/workflows/scripts/restore.ps1"
@@ -100,7 +121,7 @@ jobs:
       run: "& ./.github/workflows/scripts/buildandpack.ps1 -config Release -publishPackage ${{ inputs.publish-package }} -nugetSecret '${{ secrets.NUGET_MAPPINGS_WILLOW_PUSH }}' -VERTUPLE ${{ steps.vtl.outputs.ver_semVerFourTupleNumeric }} -githubRepo ${{ github.repository }} -githubBranch ${{ github.ref }} -githubCommit ${{ github.sha }} -buildNumber ${{ steps.vtl.outputs.ver_buildNumber }}"
     
 
-    - name: Upload blobs
+    - name: Upload production blobs
       if: ${{ inputs.publish-package}} == true
       run: |
         az storage blob upload \
