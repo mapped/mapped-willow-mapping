@@ -19,7 +19,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
 
         [Theory]
         [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", LoaderType.Http)]
-        [InlineData("..\\..\\..\\..\\..\\data\\Mapped2Willow.json", LoaderType.File)]
+        [InlineData("..\\src\\Mappings\\v1\\Willow\\Mapped2Willow.json", LoaderType.File)]
         public void ValidateMappedDtmisAreValidFormat(string resourcePath, LoaderType loaderType)
         {
             var mockLogger = new Mock<ILogger>();
