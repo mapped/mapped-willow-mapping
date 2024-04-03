@@ -45,22 +45,22 @@ jobs:
       run: poetry run python scripts/generate_mappings.py
     
     - name: Sort Mapped Mappings
-      run: poetry run python scripts/sort_mappings.py Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json
+      run: poetry run python scripts/sort_mappings.py Ontologies.Mappings/src/Mappings/v1/Mapped/Willow2Mapped.json
 
     - name: Sort Willow Mappings
-      run: poetry run python scripts/sort_mappings.py Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json
+      run: poetry run python scripts/sort_mappings.py Ontologies.Mappings/src/Mappings/v1/Willow/Mapped2Willow.json
 
     - name: Upload Mapped Mappings Artifact
       uses: actions/upload-artifact@v2
       with:
         name: mapped-mappings
-        path: Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json
+        path: Ontologies.Mappings/src/Mappings/v1/Willow/Mapped2Willow.json
 
     - name: Upload Willow Mappings Artifact
       uses: actions/upload-artifact@v2
       with:
         name: willow-mappings
-        path: Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json
+        path: Ontologies.Mappings/src/Mappings/v1/Mapped/Willow2Mapped.json
 
     - name: Upload Mapped Missing Mappings Artifact
       uses: actions/upload-artifact@v2
@@ -105,7 +105,7 @@ jobs:
       run: |
         az storage blob upload \
           --container-name ${{ env.containerName }} \
-          --file Ontologies.Mappings/src/Mappings/v1/Willow/mapped_v1_dtdlv2_Willow.json \
+          --file Ontologies.Mappings/src/Mappings/v1/Willow/Mapped2Willow.json \
           --name mappings/Mapped2Willow/latest \
           --account-name ${{ env.storageAccount }} \
           --overwrite \
@@ -113,7 +113,7 @@ jobs:
 
         az storage blob upload \
           --container-name ${{ env.containerName }} \
-          --file Ontologies.Mappings/src/Mappings/v1/Mapped/willow_v1_dtdlv2_mapped.json \
+          --file Ontologies.Mappings/src/Mappings/v1/Mapped/Willow2Mapped.json \
           --name mappings/Willow2Mapped/latest \
           --account-name ${{ env.storageAccount }} \
           --overwrite \
