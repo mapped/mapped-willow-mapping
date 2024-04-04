@@ -39,10 +39,10 @@ def main():
     willow_building_version = get_package_version('WillowInc.Ontology.DTDLv3')
     willow_building_ontology = get_nuget_package('WillowInc.Ontology.DTDLv3', willow_building_version)
 
-    with open('data/mapped_v1_dtdlv2_Willow.json') as file:
+    with open('data/Mapped2Willow.json') as file:
         mapped_mappings = json.load(file)
 
-    with open('data/willow_v1_dtdlv2_mapped.json') as file:
+    with open('data/Willow2Mapped.json') as file:
         willow_mappings = json.load(file)
 
     root_mappings = {
@@ -177,10 +177,10 @@ def main():
     if not os.path.exists(mapped_dir):
         os.makedirs(mapped_dir)
 
-    with open(f'{willow_dir}/mapped_v1_dtdlv2_Willow.json', 'w') as f:
+    with open(f'{willow_dir}/Mapped2Willow.json', 'w') as f:
         json.dump(mapped_mappings, f, indent=2)
 
-    with open(f'{mapped_dir}/willow_v1_dtdlv2_mapped.json', 'w') as f:
+    with open(f'{mapped_dir}/Willow2Mapped.json', 'w') as f:
         json.dump(willow_mappings, f, indent=2)
     
     with open(f'scripts/output/mapped_missing_mappings.json', 'w') as f:
