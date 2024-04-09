@@ -2313,6 +2313,10 @@
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:LightPole;1",
+      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:LightingController;1",
       "OutputDtmi": "dtmi:mapped:core:Lighting_Controller;1"
     },
