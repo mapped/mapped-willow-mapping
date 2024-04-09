@@ -141,13 +141,13 @@ test = ["pytest (>=7.2)", "pytest-cov (>=4.0)"]
 
 [[package]]
 name = "ontology-mapper"
-version = "0.4.9"
+version = "0.4.11"
 description = ""
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "ontology-mapper-0.4.9.tar.gz", hash = "sha256:06904637283f26f322ddcc5d49ddb1dfcfc10787919280c333c46bcbe80d5115"},
-    {file = "ontology_mapper-0.4.9-py3-none-any.whl", hash = "sha256:ef7d0425f6255d6336dcec51ef3e11ce4f55ce20835e8b76f8b2c471fe1deeeb"},
+    {file = "ontology-mapper-0.4.11.tar.gz", hash = "sha256:634d415377b7ea642613302c1cdc2e00d79443486ee23dca31c7b20aa82e2dcc"},
+    {file = "ontology_mapper-0.4.11-py3-none-any.whl", hash = "sha256:d4c6a517a4d772446d24feb1e9eb4a4cc7112651f010ecdce53ec62de576ac90"},
 ]
 
 [package.dependencies]
