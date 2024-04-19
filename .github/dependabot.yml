@@ -31,12 +31,6 @@ updates:
     schedule:
       interval: "daily"
     allow:
-      - dependency-name: DTDLParser
-  - package-ecosystem: "nuget"
-    directory: "/Ontologies.Mappings/src"
-    schedule:
-      interval: "daily"
-    allow:
       - dependency-name: Mapped.Ontologies.Core.Dtdl
       - dependency-name: RealEstateCore.Ontology.DTDLv2
       - dependency-name: WillowInc.Ontology.DTDLv3
