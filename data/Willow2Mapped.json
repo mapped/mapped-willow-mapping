@@ -1501,10 +1501,6 @@
       "OutputDtmi": "dtmi:mapped:core:Entity;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:Fan;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:FanCoilUnit;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Coil_Unit;1"
     },

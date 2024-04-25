@@ -1772,7 +1772,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Booster_Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:Fan;1"
+      "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Box_Mode_Command;1",
@@ -2172,7 +2172,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Tower_Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:Fan;1"
+      "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Valve;1",
@@ -2824,7 +2824,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:Fan;1"
+      "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Coil_Unit;1",
@@ -4400,7 +4400,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Relief_Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:Fan;1"
+      "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Remotely_On_Off_Status;1",
@@ -4680,7 +4680,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Standby_Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:Fan;1"
+      "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Standby_Glycool_Unit_On_Off_Status;1",
