@@ -17792,33 +17792,9 @@
       "IsInferred": false
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:airport:AirportAsset;1",
-      "OutputDtmi": "dtmi:mapped:core:Asset_Tag;1",
-      "Confidence": 0.28,
-      "IsInferred": true
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:airport:AirportAssetCollection;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1",
-      "Confidence": 0.33,
-      "IsInferred": true
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:airport:AirportAudioVisualEquipment;1",
       "OutputDtmi": "dtmi:mapped:core:Audio_Visual_Equipment;1",
       "Confidence": 0.75,
-      "IsInferred": true
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:airport:AirportCapability;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1",
-      "Confidence": 0.1,
-      "IsInferred": true
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:airport:AirportCollection;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1",
-      "Confidence": 0.5,
       "IsInferred": true
     },
     {
@@ -17831,12 +17807,6 @@
       "InputDtmi": "dtmi:com:willowinc:airport:AirportEquipment;1",
       "OutputDtmi": "dtmi:mapped:core:Automotive_Equipment;1",
       "Confidence": 0.28,
-      "IsInferred": true
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:airport:AirportEquipmentCollection;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1",
-      "Confidence": 0.33,
       "IsInferred": true
     },
     {

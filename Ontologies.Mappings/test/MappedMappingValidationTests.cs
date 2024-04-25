@@ -179,7 +179,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
 
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
             var modelParser = new ModelParser();
-            var inputDtmi = LoadDtdl("Willow.Ontology.Airport.DTDLv3.jsonld");
+            var inputDtmi = LoadDtdl("Willow.Ontology.DTDLv3.jsonld");
             var inputModels = modelParser.Parse(inputDtmi);
             ontologyMappingManager.ValidateSourceOntologyMapping(inputModels, out var invalidSources);
             Console.WriteLine(invalidSources.Count());
