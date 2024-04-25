@@ -4531,6 +4531,10 @@
       "OutputDtmi": "dtmi:com:willowinc:RunState;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:RVAV;1",
+      "OutputDtmi": "dtmi:com:willowinc:VAVBoxReheat;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Safety_Equipment;1",
       "OutputDtmi": "dtmi:com:willowinc:SafetyEquipment;1"
     },
@@ -5171,8 +5175,16 @@
       "OutputDtmi": "dtmi:com:willowinc:VAVBox;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Variable_Air_Volume_Box_With_Reheat;1",
+      "OutputDtmi": "dtmi:com:willowinc:VAVBoxReheat;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Variable_Frequency_Drive;1",
       "OutputDtmi": "dtmi:com:willowinc:VariableFrequencyDrive;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:VAV;1",
+      "OutputDtmi": "dtmi:com:willowinc:VAVBox;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Velocity_Pressure_Sensor;1",
