@@ -34,10 +34,8 @@ def get_dtdl_interfaces(ontology_content: Dict):
 def main():
     mapped_version = get_package_version('Mapped.Ontologies.Core.Dtdl')
     mapped_ontology = get_nuget_package('Mapped.Ontologies.Core.Dtdl', mapped_version)
-    willow_airport_version = get_package_version('WillowInc.Ontology.Airport.DTDLv3')
-    willow_airport_ontology = get_nuget_package('WillowInc.Ontology.Airport.DTDLv3', willow_airport_version)
-    willow_building_version = get_package_version('WillowInc.Ontology.DTDLv3')
-    willow_building_ontology = get_nuget_package('WillowInc.Ontology.DTDLv3', willow_building_version)
+    willow_version = get_package_version('WillowInc.Ontology.DTDLv3')
+    willow_ontology = get_nuget_package('WillowInc.Ontology.DTDLv3', willow_version)
 
     with open('data/Mapped2Willow.json') as file:
         mapped_mappings = json.load(file)
@@ -79,7 +77,7 @@ def main():
     engine_building = MappingEngine(
         mapped_ontology,
         mapped_mappings,
-        willow_building_ontology,
+        willow_ontology,
         willow_mappings,
         root_mappings=root_mappings
     )
@@ -93,7 +91,7 @@ def main():
     
     _, inferable_nodes, uninferable_nodes = engine_building.classify_nodes() 
     engine_building.find_optimal_mappings(inferable_nodes)
-    mapped_combined_mappings, willow_combined_mappings_building = engine_building.aggregate_mappings() 
+    mapped_combined_mappings, willow_combined_mappings = engine_building.aggregate_mappings() 
     valid, invalid_inferred_mappings = engine_building.validate()
     for key, value in invalid_inferred_mappings.items():
         message = value['message']
@@ -112,41 +110,9 @@ def main():
             f"\n"
         )
     
-    engine_airport = MappingEngine(
-        mapped_ontology,
-        mapped_mappings,
-        willow_airport_ontology,
-        willow_mappings,
-        root_mappings=root_mappings
-    )
-
-    engine_airport.initialize_graph()
-    valid, invalid_mappings = engine_airport.validate()
-    if not valid:
-        formatted_mappings = pprint.pformat(invalid_mappings, indent=2)
-        error_message = f"Invalid manual mappings found:\n{formatted_mappings}"
-        raise Exception(error_message)
-    
-    _, inferable_nodes, uninferable_nodes = engine_airport.classify_nodes() 
-    engine_airport.find_optimal_mappings(inferable_nodes)
-    _, willow_combined_mappings_airport = engine_airport.aggregate_mappings() 
-    valid, invalid_inferred_mappings = engine_airport.validate()
-    for key, value in invalid_inferred_mappings.items():
-        message = value['message']
-        target = value['target']
-        source_parents = value['parents']['source']
-        target_parents = value['parents']['target']
-
-    
     willow_seen = set()
-    willow_combined_mappings = []
-    for mapping in willow_combined_mappings_building:
+    for mapping in willow_combined_mappings:
         if mapping['InputDtmi'] not in willow_seen:
-            willow_combined_mappings.append(mapping)
-            willow_seen.add(mapping['InputDtmi'])
-    for mapping in willow_combined_mappings_airport:
-        if mapping['InputDtmi'] not in willow_seen:
-            willow_combined_mappings.append(mapping)
             willow_seen.add(mapping['InputDtmi'])
 
     mapped_seen = set()
@@ -165,7 +131,7 @@ def main():
     
     mapped_interfaces = get_dtdl_interfaces(mapped_ontology)
     mapped_missing_mappings = mapped_interfaces - mapped_seen
-    willow_interfaces = get_dtdl_interfaces(willow_building_ontology) | get_dtdl_interfaces(willow_airport_ontology)
+    willow_interfaces = get_dtdl_interfaces(willow_ontology)
     willow_missing_mappings = willow_interfaces - willow_seen 
 
     willow_dir = 'Ontologies.Mappings/src/Mappings/v1/Willow'
