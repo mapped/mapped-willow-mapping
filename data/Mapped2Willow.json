@@ -4335,6 +4335,10 @@
       "OutputDtmi": "dtmi:com:willowinc:VariableFrequencyDrive;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:RVAV;1",
+      "OutputDtmi": "dtmi:com:willowinc:VAVBoxReheat;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Radiant_Panel_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
     },
@@ -4529,10 +4533,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Run_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:RunState;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:RVAV;1",
-      "OutputDtmi": "dtmi:com:willowinc:VAVBoxReheat;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Safety_Equipment;1",
@@ -5181,10 +5181,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Variable_Frequency_Drive;1",
       "OutputDtmi": "dtmi:com:willowinc:VariableFrequencyDrive;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:VAV;1",
-      "OutputDtmi": "dtmi:com:willowinc:VAVBox;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Velocity_Pressure_Sensor;1",
