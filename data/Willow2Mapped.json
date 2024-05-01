@@ -1085,10 +1085,6 @@
       "OutputDtmi": "dtmi:mapped:core:Domestic_Hot_Water_Circulating_Pump;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:DomesticHotWaterCirculatingPump;1",
-      "OutputDtmi": "dtmi:mapped:core:Domestic_Hot_Water_Circulating_Pump;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:DomesticHotWaterSystem;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Domestic_Hot_Water_System;1"
     },
@@ -1171,10 +1167,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricRadiantHeater;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Space_Heater;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ElectricTankWaterHeater;1",
-      "OutputDtmi": "dtmi:mapped:core:Tank_Electric_Water_Heater;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricTankWaterHeater;1",
@@ -3015,10 +3007,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingGlobeValve;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:PlumbingPressureReducingValve;1",
-      "OutputDtmi": "dtmi:mapped:core:Pressure_Reducing_Valve;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingPressureReducingValve;1",
