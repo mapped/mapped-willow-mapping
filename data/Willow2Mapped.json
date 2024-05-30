@@ -1686,7 +1686,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FloorBurnisher;1",
-      "OutputDtmi": "dtmi:mapped:core:Floor_Buffer;1"
+      "OutputDtmi": "dtmi:mapped:core:Floor_Burnisher;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FloorDrain;1",
