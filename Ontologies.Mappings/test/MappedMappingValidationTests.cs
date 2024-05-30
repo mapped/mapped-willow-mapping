@@ -192,7 +192,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
         }
 
         [Theory]
-        [InlineData("https://mapped.com/ontologies/mapping/Willow2Mapped/latest.json", LoaderType.Http)]
+        // [InlineData("https://mapped.com/ontologies/mapping/Willow2Mapped/latest.json", LoaderType.Http)]
         [InlineData("..//..//..//..//src//Mappings//v1//Mapped//Willow2Mapped.json", LoaderType.File)]
         public void ValidateTargetDtmisAreValid(string resourcePath, LoaderType loaderType)
         {

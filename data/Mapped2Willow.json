@@ -51,6 +51,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Zone;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Accordion_Door;1",
+      "OutputDtmi": "dtmi:com:willowinc:Door;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Active_Energy_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:TotalNetActiveElectricalEnergySensor;1"
     },
@@ -171,8 +175,16 @@
       "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Automatic_Sliding_Door;1",
+      "OutputDtmi": "dtmi:com:willowinc:AutomaticSlidingDoor;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Automatic_Transfer_Switch;1",
       "OutputDtmi": "dtmi:com:willowinc:AutomaticTransferSwitch;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Automobile_Lift;1",
+      "OutputDtmi": "dtmi:com:willowinc:VehicleServiceLift;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Automotive_Equipment;1",
@@ -203,12 +215,20 @@
       "OutputDtmi": "dtmi:com:willowinc:PlumbingBackflowPreventer;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Baler;1",
+      "OutputDtmi": "dtmi:com:willowinc:WasteBaler;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Bathtub;1",
       "OutputDtmi": "dtmi:com:willowinc:Bathtub;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Battery_Cabinet;1",
       "OutputDtmi": "dtmi:com:willowinc:BatteryCabinet;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Battery_Charger;1",
+      "OutputDtmi": "dtmi:com:willowinc:VehicleEquipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Battery_Status;1",
@@ -227,12 +247,20 @@
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Blast_Chiller;1",
+      "OutputDtmi": "dtmi:com:willowinc:BlastChiller;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Boiler_On_Off_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:OnOffActuator;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Booster_Pump;1",
       "OutputDtmi": "dtmi:com:willowinc:Pump;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Bread_Slicer;1",
+      "OutputDtmi": "dtmi:com:willowinc:BreadSlicer;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Busway;1",
@@ -295,6 +323,10 @@
       "OutputDtmi": "dtmi:com:willowinc:CleanAgentCabinet;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Cleaning_Equipment;1",
+      "OutputDtmi": "dtmi:com:willowinc:CleaningEquipment;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Close_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:CloseActuator;1"
     },
@@ -305,6 +337,14 @@
     {
       "InputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance;1",
       "OutputDtmi": "dtmi:com:willowinc:CoefficientOfPerformance;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Combination_Oven;1",
+      "OutputDtmi": "dtmi:com:willowinc:CombiOven;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Commercial_Rack_Washer;1",
+      "OutputDtmi": "dtmi:com:willowinc:Dishwasher;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Compressor_Discharge_Refrigerant_Pressure_Sensor;1",
@@ -343,8 +383,8 @@
       "OutputDtmi": "dtmi:com:willowinc:ConveyanceEquipment;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Cooking_Equipment;1",
-      "OutputDtmi": "dtmi:com:willowinc:CookingEquipment;1"
+      "InputDtmi": "dtmi:mapped:core:Cooking_Oil_Tank;1",
+      "OutputDtmi": "dtmi:com:willowinc:FatsOilsGreaseDisposal;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cooling_Air_Temperature_Setpoint_Offset;1",
@@ -381,6 +421,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Count_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Culinary_Equipment;1",
+      "OutputDtmi": "dtmi:com:willowinc:FoodserviceEquipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Current_Alarm;1",
@@ -479,6 +523,10 @@
       "OutputDtmi": "dtmi:com:willowinc:DeltaHotWaterTemperatureSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Donut_Thermoglazer;1",
+      "OutputDtmi": "dtmi:com:willowinc:CookingEquipment;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Door;1",
       "OutputDtmi": "dtmi:com:willowinc:Door;1"
     },
@@ -523,8 +571,24 @@
       "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Electric_Cart_Mover;1",
+      "OutputDtmi": "dtmi:com:willowinc:ShoppingCartMover;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Electric_Energy_Usage_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:BilledNetActiveElectricalEnergy;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Electric_Forklift;1",
+      "OutputDtmi": "dtmi:com:willowinc:Forklift;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Electric_Pallet_Jack;1",
+      "OutputDtmi": "dtmi:com:willowinc:PalletJack;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Electric_Shopping_Cart;1",
+      "OutputDtmi": "dtmi:com:willowinc:MotorizedShoppingCart;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Electric_Unit_Heater;1",
@@ -615,8 +679,16 @@
       "OutputDtmi": "dtmi:com:willowinc:DirtyFilterAlarmSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Fire_Accordion_Door;1",
+      "OutputDtmi": "dtmi:com:willowinc:Door;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Fire_Damper;1",
       "OutputDtmi": "dtmi:com:willowinc:FireDamper;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fire_Overhead_Door;1",
+      "OutputDtmi": "dtmi:com:willowinc:OverheadDoor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Fire_Sprinkler;1",
@@ -625,6 +697,14 @@
     {
       "InputDtmi": "dtmi:mapped:core:Fire_Sprinkler_Water_Storage_Tank;1",
       "OutputDtmi": "dtmi:com:willowinc:SprinklerTank;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fish_Tank;1",
+      "OutputDtmi": "dtmi:com:willowinc:FishTank;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Floor_Burnisher;1",
+      "OutputDtmi": "dtmi:com:willowinc:FloorBurnisher;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Floor_Level;1",
@@ -639,8 +719,20 @@
       "OutputDtmi": "dtmi:com:willowinc:FlushometerValve;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Food_Preperation_Table;1",
+      "OutputDtmi": "dtmi:com:willowinc:FoodPreparationWorkTable;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Forklift;1",
+      "OutputDtmi": "dtmi:com:willowinc:Forklift;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Freeze_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fryer;1",
+      "OutputDtmi": "dtmi:com:willowinc:Fryer;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Fuel_Moisture_Sensor;1",
@@ -681,6 +773,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Geo_Location_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Grease_Caddy;1",
+      "OutputDtmi": "dtmi:com:willowinc:CookingEquipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Grease_Interceptor;1",
@@ -795,6 +891,10 @@
       "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Key_Storage_Cabinet;1",
+      "OutputDtmi": "dtmi:com:willowinc:KeyStorageCabinet;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Lag_On_Off_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:OnOffActuator;1"
     },
@@ -837,6 +937,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Load_Current_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Loading_Dock_Leveler;1",
+      "OutputDtmi": "dtmi:com:willowinc:LoadingDockLeveler;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Location_Sensor;1",
@@ -907,6 +1011,10 @@
       "OutputDtmi": "dtmi:com:willowinc:MaxLimit;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Meat_Slicer;1",
+      "OutputDtmi": "dtmi:com:willowinc:MeatSlicer;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Median_Total_GHG_Emissions;1",
       "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissions;1"
     },
@@ -915,8 +1023,16 @@
       "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Medical_Equipment;1",
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Medium_Temperature_Display_Case;1",
       "OutputDtmi": "dtmi:com:willowinc:MediumTemperatureRefrigeratedFoodDisplayCase;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Microwave_Oven;1",
+      "OutputDtmi": "dtmi:com:willowinc:MicrowaveOven;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Min_Air_Temperature_Setpoint_Limit;1",
@@ -1009,6 +1125,26 @@
     {
       "InputDtmi": "dtmi:mapped:core:Oven;1",
       "OutputDtmi": "dtmi:com:willowinc:Oven;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Overhead_Door;1",
+      "OutputDtmi": "dtmi:com:willowinc:OverheadDoor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Paint_Dispenser;1",
+      "OutputDtmi": "dtmi:com:willowinc:PaintDispenser;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Paint_Shaker;1",
+      "OutputDtmi": "dtmi:com:willowinc:PaintShaker;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Pallet_Jack;1",
+      "OutputDtmi": "dtmi:com:willowinc:PalletJack;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Parcel_Locker;1",
+      "OutputDtmi": "dtmi:com:willowinc:RetailEquipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Person;1",
@@ -1107,6 +1243,10 @@
       "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Propane_Forklift;1",
+      "OutputDtmi": "dtmi:com:willowinc:Forklift;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Pump_Collection;1",
       "OutputDtmi": "dtmi:com:willowinc:PlumbingPumpGroup;1"
     },
@@ -1155,6 +1295,10 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Remote_Control_Locking_Cart_Wheel;1",
+      "OutputDtmi": "dtmi:com:willowinc:RetailEquipment;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Request_Count_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
@@ -1187,12 +1331,28 @@
       "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Rolling_Rack;1",
+      "OutputDtmi": "dtmi:com:willowinc:StorageEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Rotisserie;1",
+      "OutputDtmi": "dtmi:com:willowinc:RotisserieOven;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Run_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:RunActuator;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:SO2_Level_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:SO2AirQualitySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Safe;1",
+      "OutputDtmi": "dtmi:com:willowinc:SecuritySafe;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Scale;1",
+      "OutputDtmi": "dtmi:com:willowinc:RetailScale;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Schedule_Mode_Command;1",
@@ -1207,8 +1367,16 @@
       "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Scissor_Lift;1",
+      "OutputDtmi": "dtmi:com:willowinc:ScissorLift;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Screen_Orientation_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Scrubber;1",
+      "OutputDtmi": "dtmi:com:willowinc:FloorScrubber;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Sea_Level_Air_Pressure_Sensor;1",
@@ -1255,6 +1423,10 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Spectrometer;1",
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Speed_Mode_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:ModeActuator;1"
     },
@@ -1293,6 +1465,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Steam_Pressure_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:SteamPressureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Stock_Picker;1",
+      "OutputDtmi": "dtmi:com:willowinc:Forklift;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Storage_Tank;1",
@@ -1391,12 +1567,28 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Tire_Balancer;1",
+      "OutputDtmi": "dtmi:com:willowinc:VehicleEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Tire_Changer;1",
+      "OutputDtmi": "dtmi:com:willowinc:VehicleEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Tire_Conveyor;1",
+      "OutputDtmi": "dtmi:com:willowinc:ConveyanceEquipment;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Toilet;1",
       "OutputDtmi": "dtmi:com:willowinc:Toilet;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Torque_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:TorqueSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Tortilla_Machine;1",
+      "OutputDtmi": "dtmi:com:willowinc:CookingEquipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Total_GHG_Emissions;1",
@@ -1413,6 +1605,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Transfer_Switch;1",
       "OutputDtmi": "dtmi:com:willowinc:TransferSwitch;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Trash_Compactor;1",
+      "OutputDtmi": "dtmi:com:willowinc:WasteCompactor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:UV_Lighting_Command;1",
@@ -1447,6 +1643,10 @@
       "OutputDtmi": "dtmi:com:willowinc:LoadLevelState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Vacuum;1",
+      "OutputDtmi": "dtmi:com:willowinc:Vacuum;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Valve_Open_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:ValveOpenActuator;1"
     },
@@ -1461,6 +1661,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Valve_Position_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:ValvePositionSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Vehicle;1",
+      "OutputDtmi": "dtmi:com:willowinc:VehicleEquipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Visibility_Sensor;1",
@@ -1489,6 +1693,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Waste_Amount_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:QuantitySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Waste_Management_Equipment;1",
+      "OutputDtmi": "dtmi:com:willowinc:WasteHandlingEquipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Waste_Meter;1",
@@ -1553,6 +1761,14 @@
     {
       "InputDtmi": "dtmi:mapped:core:Wireless_Access_Point;1",
       "OutputDtmi": "dtmi:com:willowinc:WirelessAccessPoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Work_Assist_Vehicle;1",
+      "OutputDtmi": "dtmi:com:willowinc:VehicleEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Wrapping_Station;1",
+      "OutputDtmi": "dtmi:com:willowinc:RetailWrappingMachine;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Zone_Air_Conditioning_Mode_Command;1",

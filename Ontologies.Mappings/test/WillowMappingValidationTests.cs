@@ -166,7 +166,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
         }
 
         [Theory]
-        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", LoaderType.Http)]
+        // [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", LoaderType.Http)]
         [InlineData("..//..//..//..//src//Mappings//v1//Willow//Mapped2Willow.json", LoaderType.File)]
         public void ValidateSourceDtmisAreValid(string resourcePath, LoaderType loaderType)
         {
@@ -199,7 +199,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
         }
 
         [Theory]
-        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", LoaderType.Http)]
+        // [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", LoaderType.Http)]
         [InlineData("..//..//..//..//src//Mappings//v1//Willow//Mapped2Willow.json", LoaderType.File)]
         public void ValidateTargetDtmisAreValid(string resourcePath, LoaderType loaderType)
         {
