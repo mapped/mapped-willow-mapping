@@ -606,7 +606,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CombiOven;1",
-      "OutputDtmi": "dtmi:mapped:core:Deli_Combination_Oven;1"
+      "OutputDtmi": "dtmi:mapped:core:Combination_Oven;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Company;1",
@@ -774,7 +774,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CookingEquipment;1",
-      "OutputDtmi": "dtmi:mapped:core:Cooking_Equipment;1"
+      "OutputDtmi": "dtmi:mapped:core:Culinary_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CoolingCoilLeavingAirTemperatureSensor;1",
@@ -1694,7 +1694,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FloorScrubber;1",
-      "OutputDtmi": "dtmi:mapped:core:Floor_Scrubber;1"
+      "OutputDtmi": "dtmi:mapped:core:Scrubber;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FlowSensor;1",
@@ -2250,7 +2250,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:KeyStorageCabinet;1",
-      "OutputDtmi": "dtmi:mapped:core:Key_Box;1"
+      "OutputDtmi": "dtmi:mapped:core:Key_Storage_Cabinet;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Land;1",
@@ -2506,7 +2506,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:MicrowaveOven;1",
-      "OutputDtmi": "dtmi:mapped:core:Microwave;1"
+      "OutputDtmi": "dtmi:mapped:core:Microwave_Oven;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:MinLimit;1",
