@@ -379,6 +379,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Controller;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Convection_Microwave_Oven;1",
+      "OutputDtmi": "dtmi:com:willowinc:ConvectionMicrowaveOven;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Conveyor;1",
       "OutputDtmi": "dtmi:com:willowinc:ConveyanceEquipment;1"
     },
@@ -765,6 +769,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:GHG_Emissions_Intensity_Per_Energy;1",
       "OutputDtmi": "dtmi:com:willowinc:GreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Garbage_Disposal_Unit;1",
+      "OutputDtmi": "dtmi:com:willowinc:GarbageDisposal;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Generator;1",

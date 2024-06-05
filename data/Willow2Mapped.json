@@ -769,6 +769,10 @@
       "OutputDtmi": "dtmi:mapped:core:Controller;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:ConvectionMicrowaveOven;1",
+      "OutputDtmi": "dtmi:mapped:core:Convection_Microwave_Oven;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:ConveyanceEquipment;1",
       "OutputDtmi": "dtmi:mapped:core:Conveyor;1"
     },
@@ -1755,6 +1759,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:Furniture;1",
       "OutputDtmi": "dtmi:mapped:core:Furniture;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:GarbageDisposal;1",
+      "OutputDtmi": "dtmi:mapped:core:Garbage_Disposal_Unit;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:GasMeter;1",
