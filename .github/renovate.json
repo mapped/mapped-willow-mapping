@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "packageRules": [
+    {
+      "matchPackagePatterns": [ "Mapped\\.Ontologies\\.Core\\.Dtdl" ],
+      "automerge": true,
+      "labels": ["renovate", "auto"],
+      "groupName": "Mapped.Ontologies.Core.Dtdl",
+      "recreateClosed": true,
+      "commitMessage": "Update Mapped.Ontologies.Core.Dtdl",
+      "prBodyColumns": [
+        "Package",
+        "Change"
+      ]
+    }
+  ]
+}
