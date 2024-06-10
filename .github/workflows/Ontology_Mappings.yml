@@ -125,6 +125,9 @@ jobs:
       if: ${{ inputs.publish-package}} == "True"
       run: |
         echo "${{ inputs.publish-package}}"
+        echo "${{ inputs.publish-package == 'True'}}"
+        echo '${{ inputs.publish-package}} == "True"'
+        echo 'testing'
         az storage blob upload \
           --container-name ${{ env.containerName }} \
           --file Ontologies.Mappings/src/Mappings/v1/Willow/Mapped2Willow.json \
