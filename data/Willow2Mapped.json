@@ -353,6 +353,10 @@
       "OutputDtmi": "dtmi:mapped:core:Electric_Energy_Usage_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:BilledUtilityCost;1",
+      "OutputDtmi": "dtmi:mapped:core:Utility_Bill;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:BlastChiller;1",
       "OutputDtmi": "dtmi:mapped:core:Blast_Chiller;1"
     },
