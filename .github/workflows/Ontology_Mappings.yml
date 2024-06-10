@@ -128,7 +128,7 @@ jobs:
 
 
     - name: Upload production blobs
-      if: inputs.publish-package == true
+      if: inputs.publish-package == "true"
       run: |
         az storage blob upload \
           --container-name ${{ env.containerName }} \
