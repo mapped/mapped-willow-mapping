@@ -13,5 +13,5 @@ jobs:
   build:
     uses: './.github/workflows/Ontology_Mappings.yml'
     with: 
-      publish-package: false
+      publish-package: "False"
     secrets: inherit
