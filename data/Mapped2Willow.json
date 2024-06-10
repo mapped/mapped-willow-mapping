@@ -203,6 +203,14 @@
       "OutputDtmi": "dtmi:com:willowinc:AverageCurrentMagnitudeSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Average_Line_Voltage_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:AverageLineVoltageMagnitudeSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Average_Phase_Voltage_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:AveragePhaseVoltageMagnitudeSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:BACnet_Device;1",
       "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
     },
