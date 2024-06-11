@@ -4373,6 +4373,10 @@
       "OutputDtmi": "dtmi:mapped:core:Utility_Account;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:UtilityBillEvent;1",
+      "OutputDtmi": "dtmi:mapped:core:Utility_Bill;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:VAVBox;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Variable_Air_Volume_Box;1"
     },
