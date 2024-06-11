@@ -2413,14 +2413,6 @@
       "OutputDtmi": "dtmi:mapped:core:Line_C_Current_Sensor;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:LineGCurrentMagnitudeSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:Line_G_Current_Sensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:LineNCurrentMagnitudeSensor;1",
-      "OutputDtmi": "dtmi:mapped:core:Line_N_Current_Sensor;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:LinearSpeedSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Speed_Sensor;1"
     },

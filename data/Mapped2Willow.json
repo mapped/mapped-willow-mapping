@@ -964,11 +964,11 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Line_G_Current_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:LineGCurrentMagnitudeSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:CurrentSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Line_N_Current_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:LineNCurrentMagnitudeSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:CurrentSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Load_Current_Setpoint;1",
