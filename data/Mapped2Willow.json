@@ -951,6 +951,26 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Line_A_Current_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:LineACurrentMagnitudeSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Line_B_Current_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:LineBCurrentMagnitudeSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Line_C_Current_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:LineCCurrentMagnitudeSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Line_G_Current_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CurrentSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Line_N_Current_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CurrentSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Load_Current_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:Setpoint;1"
     },

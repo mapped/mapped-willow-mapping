@@ -2393,12 +2393,24 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Voltage_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:LineACurrentMagnitudeSensor;1",
+      "OutputDtmi": "dtmi:mapped:core:Line_A_Current_Sensor;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:LineBCVoltageMagnitudeSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Voltage_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:LineBCurrentMagnitudeSensor;1",
+      "OutputDtmi": "dtmi:mapped:core:Line_B_Current_Sensor;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:LineCAVoltageMagnitudeSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Voltage_Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:LineCCurrentMagnitudeSensor;1",
+      "OutputDtmi": "dtmi:mapped:core:Line_C_Current_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:LinearSpeedSensor;1",
