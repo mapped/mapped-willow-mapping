@@ -290,7 +290,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AverageLineVoltageMagnitudeSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Average_Line_Voltage_Sensor;1"
+      "OutputDtmi": "dtmi:mapped:core:Average_Line_Voltage_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AveragePhaseVoltageMagnitudeSensor;1",
