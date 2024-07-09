@@ -203,6 +203,10 @@
       "OutputDtmi": "dtmi:com:willowinc:AverageCurrentMagnitudeSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Average_GHG_Emissions_Rate;1",
+      "OutputDtmi": "dtmi:com:willowinc:AverageElectricityConsumptionGreenhouseGasEmissionsFactor;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Average_Line_Voltage_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:AverageLineVoltageMagnitudeSensor;1"
     },
@@ -607,12 +611,20 @@
       "OutputDtmi": "dtmi:com:willowinc:ElectricUnitHeater;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Electrical_Grid_Region;1",
+      "OutputDtmi": "dtmi:com:willowinc:GridRegion;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Electrical_Receptacle;1",
       "OutputDtmi": "dtmi:com:willowinc:ElectricalReceptacle;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Electricity_GHG_Emissions_Factor;1",
       "OutputDtmi": "dtmi:com:willowinc:ElectricityConsumptionGreenhouseGasEmissionsFactor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Electricity_GHG_Emissions_Health_Damage;1",
+      "OutputDtmi": "dtmi:com:willowinc:MarginalEmissionsHealthImpactCostFactor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Emergency_Light;1",
@@ -1009,6 +1021,14 @@
     {
       "InputDtmi": "dtmi:mapped:core:Maintenance_Bypass_Switch;1",
       "OutputDtmi": "dtmi:com:willowinc:MaintenanceBypassSwitch;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Marginal_GHG_Emissions_Rate;1",
+      "OutputDtmi": "dtmi:com:willowinc:MarginalElectricityConsumptionGreenhouseGasEmissionsFactor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Marginal_Operating_Emissions_Rate_Index;1",
+      "OutputDtmi": "dtmi:com:willowinc:MarginalElectricityConsumptionGreenhouseGasEmissionsFactorIndex;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Max_Air_Temperature_Setpoint_Limit;1",
