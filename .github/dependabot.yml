@@ -5,7 +5,7 @@ registries:
   python-fury:
     type: python-index
     url: https://pypi.fury.io/mapped/
-    username: ${{secrets.FURY_READ_TOKEN}}
+    username: ${{secrets.FURY_READ_USER}}
     password: ${{secrets.FURY_READ_TOKEN_PUBLIC}}
     replaces-base: false
 updates:
