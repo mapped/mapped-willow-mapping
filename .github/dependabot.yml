@@ -1,11 +1,16 @@
 # Please see the documentation for all configuration options:
 # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
-
-# Each csproj must be individually defined
-# https://github.com/dependabot/dependabot-core/issues/2178
-
 version: 2
+registries:
+  python-fury:
+    type: python-index
+    url: https://pypi.fury.io/mapped/
+    username: ${{secrets.FURY_READ_TOKEN}}
+    password: ${{secrets.FURY_READ_TOKEN_PUBLIC}}
+    replaces-base: false
 updates:
+  # Each csproj must be individually defined
+  # https://github.com/dependabot/dependabot-core/issues/2178
   - package-ecosystem: "nuget"
     directory: "/Ontologies.Mappings/src"
     schedule:
@@ -15,4 +20,16 @@ updates:
       - dependency-name: RealEstateCore.Ontology.DTDLv2
       - dependency-name: WillowInc.Ontology.DTDLv3
       - dependency-name: DTDLParser
-
+  - package-ecosystem: "pip"
+    directory: "/"
+    registries:
+      - python-fury
+    schedule:
+      interval: "weekly"
+    # Use Dependabot only for CVEs.
+    # We use Renovate to bump packages.
+    # https://stackoverflow.com/a/68254421/6619628
+    open-pull-requests-limit: 0
+    # Unfortunately it's impossible to make Dependabot work with pip w/o code execution
+    # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file#insecure-external-code-execution 
+    insecure-external-code-execution: allow
