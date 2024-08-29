@@ -192,11 +192,11 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Auto_Level_Deployed_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:AutoLevelDeployedState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Auto_Level_Fault_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
+      "OutputDtmi": "dtmi:com:willowinc:AutoLevelFaultAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Automatic_Door_Lock;1",
@@ -324,7 +324,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cable_Fault_Alarm;1",
-      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
+      "OutputDtmi": "dtmi:com:willowinc:CableFaultAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Calendar_Event;1",
@@ -340,7 +340,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Canopy_Down_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:CanopyDownState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Carbon_Monoxide_Detector;1",
@@ -4917,6 +4917,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Server_Room;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Service_Required_Alarm;1",
+      "OutputDtmi": "dtmi:com:willowinc:NonoperationalState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Service_Room;1",
