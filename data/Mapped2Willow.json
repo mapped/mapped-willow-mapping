@@ -51,6 +51,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Zone;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Accessibility_Equipment;1",
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Accordion_Door;1",
       "OutputDtmi": "dtmi:com:willowinc:Door;1"
     },
@@ -115,12 +119,32 @@
       "OutputDtmi": "dtmi:com:willowinc:IAQSensorEquipment;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Aircraft_Docked_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:AircraftDockState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Aircraft_Stand;1",
+      "OutputDtmi": "dtmi:com:willowinc:AircraftStand;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Aircraft_Stand_Mode_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:AircraftStandState;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Airfield_Lighting_Equipment;1",
       "OutputDtmi": "dtmi:com:willowinc:airport:AirfieldLightingEquipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Airport;1",
       "OutputDtmi": "dtmi:com:willowinc:airport:Airport;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Airport_Gate;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirportGate;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Airport_Terminal;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirportTerminal;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Alarm_Count_Sensor;1",
@@ -165,6 +189,14 @@
     {
       "InputDtmi": "dtmi:mapped:core:Audio_Visual_Equipment;1",
       "OutputDtmi": "dtmi:com:willowinc:AudioVisualEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Auto_Level_Deployed_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Auto_Level_Fault_Alarm;1",
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Automatic_Door_Lock;1",
@@ -291,6 +323,10 @@
       "OutputDtmi": "dtmi:com:willowinc:COAirQualityAlarmSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Cable_Fault_Alarm;1",
+      "OutputDtmi": "dtmi:com:willowinc:AlarmState;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Calendar_Event;1",
       "OutputDtmi": "dtmi:com:willowinc:Event;1"
     },
@@ -301,6 +337,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Canadian_Regional_Median_Total_GHG_Emissions_Intensity;1",
       "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Canopy_Down_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Carbon_Monoxide_Detector;1",
@@ -819,6 +859,10 @@
       "OutputDtmi": "dtmi:com:willowinc:LevelState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Ground_Power_Unit;1",
+      "OutputDtmi": "dtmi:com:willowinc:AircraftGroundPowerUnit;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:H2S_Level_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:LevelState;1"
     },
@@ -849,6 +893,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Heating_Thermal_Energy_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:ThermalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:High_Frequency_Alarm;1",
+      "OutputDtmi": "dtmi:com:willowinc:HighFrequencyAlarmState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:High_Humidity_Alarm_Setpoint;1",
@@ -999,6 +1047,10 @@
       "OutputDtmi": "dtmi:com:willowinc:OnOffActuator;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Low_Frequency_Alarm;1",
+      "OutputDtmi": "dtmi:com:willowinc:LowFrequencyAlarmState;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Low_Humidity_Alarm_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:LowAirHumidityAlarmSetpoint;1"
     },
@@ -1127,6 +1179,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Narrow_Body_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:National_Median_Total_GHG_Emissions;1",
       "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissions;1"
     },
@@ -1201,6 +1257,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Parcel_Locker;1",
       "OutputDtmi": "dtmi:com:willowinc:RetailEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Passenger_Boarding_Bridge;1",
+      "OutputDtmi": "dtmi:com:willowinc:PassengerBoardingBridge;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Person;1",
@@ -1793,6 +1853,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Weather_Condition_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Wheel_Chair_Lift;1",
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Wheel_On_Off_Command;1",
@@ -4449,6 +4513,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:PV_Panel;1",
       "OutputDtmi": "dtmi:com:willowinc:PhotovoltaicPanel;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Packaged_Air_Conditioner;1",
+      "OutputDtmi": "dtmi:com:willowinc:PackagedAirConditioner;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Parameter;1",
