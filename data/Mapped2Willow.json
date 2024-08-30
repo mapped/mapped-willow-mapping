@@ -120,15 +120,15 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Aircraft_Docked_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:AircraftDockState;1"
+      "OutputDtmi": "dtmi:com:willowinc:airport:AircraftDockState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Aircraft_Stand;1",
-      "OutputDtmi": "dtmi:com:willowinc:AircraftStand;1"
+      "OutputDtmi": "dtmi:com:willowinc:airport:AircraftStand;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Aircraft_Stand_Mode_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:AircraftStandState;1"
+      "OutputDtmi": "dtmi:com:willowinc:airport:AircraftStandState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Airfield_Lighting_Equipment;1",
@@ -140,11 +140,11 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Airport_Gate;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirportGate;1"
+      "OutputDtmi": "dtmi:com:willowinc:airport:AirportGate;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Airport_Terminal;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirportTerminal;1"
+      "OutputDtmi": "dtmi:com:willowinc:airport:AirportTerminal;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Alarm_Count_Sensor;1",
@@ -860,7 +860,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Ground_Power_Unit;1",
-      "OutputDtmi": "dtmi:com:willowinc:AircraftGroundPowerUnit;1"
+      "OutputDtmi": "dtmi:com:willowinc:airport:AircraftGroundPowerUnit;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:H2S_Level_Sensor;1",
