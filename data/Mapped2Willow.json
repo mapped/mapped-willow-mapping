@@ -140,7 +140,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Airport_Gate;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirportGate;1"
+      "OutputDtmi": "dtmi:com:willowinc:airport:AirportGate;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Airport_Terminal;1",
