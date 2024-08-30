@@ -128,7 +128,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Aircraft_Stand_Mode_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:airport:AircraftStandState;1"
+      "OutputDtmi": "dtmi:com:willowinc:AircraftStandState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Airfield_Lighting_Equipment;1",
@@ -140,7 +140,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Airport_Gate;1",
-      "OutputDtmi": "dtmi:com:willowinc:airport:AirportGate;1"
+      "OutputDtmi": "dtmi:com:willowinc:AirportGate;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Airport_Terminal;1",
@@ -1264,7 +1264,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Passenger_Boarding_Bridge;1",
-      "OutputDtmi": "dtmi:com:willowinc:PassengerBoardingBridge;1"
+      "OutputDtmi": "dtmi:com:willowinc:airport:PassengerBoardingBridge;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Person;1",
