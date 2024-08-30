@@ -204,7 +204,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Automatic_Mode_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
+      "OutputDtmi": "dtmi:com:willowinc:DefaultState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Automatic_Sliding_Door;1",
