@@ -1227,6 +1227,10 @@
       "OutputDtmi": "dtmi:com:willowinc:OpenPositionState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Opening;1",
+      "OutputDtmi": "dtmi:com:willowinc:SpaceOpening;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Operating_Room;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },

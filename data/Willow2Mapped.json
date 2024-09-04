@@ -3865,6 +3865,10 @@
       "OutputDtmi": "dtmi:mapped:core:Place;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:SpaceOpening;1",
+      "OutputDtmi": "dtmi:mapped:core:Opening;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:SpecificEnthalpySensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Enthalpy_Sensor;1"
     },
