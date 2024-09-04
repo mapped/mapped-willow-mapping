@@ -3866,7 +3866,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SpaceOpening;1",
-      "OutputDtmi": "dtmi:org:mapped:core:Opening;1"
+      "OutputDtmi": "dtmi:mapped:core:Opening;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SpecificEnthalpySensor;1",

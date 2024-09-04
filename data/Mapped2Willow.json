@@ -1227,6 +1227,10 @@
       "OutputDtmi": "dtmi:com:willowinc:OpenPositionState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Opening;1",
+      "OutputDtmi": "dtmi:com:willowinc:SpaceOpening;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Operating_Room;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
@@ -5717,10 +5721,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Zone_Unoccupied_Load_Shed_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:UnoccupiedActuator;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:mapped:core:Opening;1",
-      "OutputDtmi": "dtmi:com:willowinc:SpaceOpening;1"
     },
     {
       "InputDtmi": "dtmi:org:w3id:rec:Agent;1",
