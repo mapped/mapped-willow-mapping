@@ -5719,6 +5719,10 @@
       "OutputDtmi": "dtmi:com:willowinc:UnoccupiedActuator;1"
     },
     {
+      "InputDtmi": "dtmi:org:maped:core:Opening;1",
+      "OutputDtmi": "dtmi:com:willowinc:SpaceOpening;1"
+    },
+    {
       "InputDtmi": "dtmi:org:w3id:rec:Agent;1",
       "OutputDtmi": "dtmi:com:willowinc:Agent;1"
     },
