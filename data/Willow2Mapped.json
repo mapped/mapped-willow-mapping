@@ -4706,7 +4706,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Workstation;1",
-      "OutputDtmi": "dtmi:mapped:core:Desk;1"
+      "OutputDtmi": "dtmi:org:w3id:rec:Desk;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Zone;1",

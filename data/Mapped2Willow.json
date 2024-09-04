@@ -519,10 +519,6 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Desk;1",
-      "OutputDtmi": "dtmi:com:willowinc:Workstation;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Device;1",
       "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
     },
@@ -5733,6 +5729,10 @@
     {
       "InputDtmi": "dtmi:org:w3id:rec:Company;1",
       "OutputDtmi": "dtmi:com:willowinc:Company;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:w3id:rec:Desk;1",
+      "OutputDtmi": "dtmi:com:willowinc:Workstation;1"
     },
     {
       "InputDtmi": "dtmi:org:w3id:rec:Lease;1",
