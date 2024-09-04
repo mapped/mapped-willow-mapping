@@ -519,6 +519,10 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Desk;1",
+      "OutputDtmi": "dtmi:com:willowinc:Workstation;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Device;1",
       "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
     },
