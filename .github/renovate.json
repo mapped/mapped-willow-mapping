@@ -6,7 +6,7 @@
       "enabled": false 
     },
     {
-      "matchPackagePatterns": [ "Mapped\\.Ontologies\\.Core\\.Dtdl", "WillowInc\\.Ontology\\.DTDLv3", "WillowInc\\.Ontology\\.Airport\\.DTDLv3" ],
+      "matchPackagePatterns": [ "Mapped\\.Ontologies\\.Core\\.Dtdl", "WillowInc\\.Ontology\\.DTDLv3" ],
       "automerge": true,
       "labels": ["renovate", "auto"],
       "commitMessage": "Update proto related packages",
