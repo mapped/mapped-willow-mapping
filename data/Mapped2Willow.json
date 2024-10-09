@@ -2828,7 +2828,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Economizer_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:EconomizerDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Effective_Air_Temperature_Setpoint;1",
@@ -3160,7 +3160,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Exhaust_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:ExhaustDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Exhaust_Fan;1",
@@ -4168,7 +4168,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Mixed_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:MixedDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Mode_Command;1",
@@ -4444,7 +4444,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:OutsideDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Face_Surface_Temperature_Sensor;1",
@@ -4756,7 +4756,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Relief_Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
+      "OutputDtmi": "dtmi:com:willowinc:ReliefFan;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Remotely_On_Off_Status;1",
@@ -4848,7 +4848,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:ReturnDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Fan;1",
@@ -5745,6 +5745,10 @@
     {
       "InputDtmi": "dtmi:org:w3id:rec:SubBuilding;1",
       "OutputDtmi": "dtmi:com:willowinc:SubBuilding;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:w3id:rec:Workspace;1",
+      "OutputDtmi": "dtmi:com:willowinc:Workspace;1"
     }
   ],
   "NamespaceRemaps": [
@@ -5754,6 +5758,10 @@
     },
     {
       "InputNamespace": "dtmi:mapped:core:",
+      "OutputNamespace": "dtmi:com:willowinc:"
+    },
+    {
+      "InputNamespace": "dtmi:org:w3id:rec:",
       "OutputNamespace": "dtmi:com:willowinc:"
     }
   ],
