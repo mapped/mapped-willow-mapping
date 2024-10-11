@@ -2852,7 +2852,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Economizer;1",
-      "OutputDtmi": "dtmi:com:willowinc:EconomizerDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Economizer_Damper;1",
