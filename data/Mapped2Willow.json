@@ -299,6 +299,10 @@
       "OutputDtmi": "dtmi:com:willowinc:OnOffActuator;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Booster_Fan;1",
+      "OutputDtmi": "dtmi:com:willowinc:BoosterFan;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Booster_Pump;1",
       "OutputDtmi": "dtmi:com:willowinc:DomesticWaterBoosterPump;1"
     },
@@ -312,7 +316,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Bypass_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:BypassDamper;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:CO2_Alarm_Setpoint;1",
@@ -665,6 +669,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Electricity_GHG_Emissions_Health_Damage;1",
       "OutputDtmi": "dtmi:com:willowinc:MarginalEmissionsHealthImpactCostFactor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Elevator_Pressurization_Fan;1",
+      "OutputDtmi": "dtmi:com:willowinc:ElevatorPressurizationFan;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Emergency_Light;1",
@@ -1367,6 +1375,10 @@
       "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Pressurization_Fan;1",
+      "OutputDtmi": "dtmi:com:willowinc:PressurizationFan;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Propane_Forklift;1",
       "OutputDtmi": "dtmi:com:willowinc:Forklift;1"
     },
@@ -1565,6 +1577,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Stage_Enable_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:EnableState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Stairwell_Pressurization_Fan;1",
+      "OutputDtmi": "dtmi:com:willowinc:StairPressurizationFan;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Standby_Air_Temperature_Setpoint;1",
@@ -1949,6 +1965,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:AirQualityAlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Cooled_Condenser_Heat_Exchanger;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirCooledRefrigerationCondenser;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Differential_Pressure_Sensor;1",
@@ -2416,7 +2436,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Heat_Exchanger;1",
-      "OutputDtmi": "dtmi:com:willowinc:HeatExchanger;1"
+      "OutputDtmi": "dtmi:com:willowinc:Condenser;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Bypass_Valve;1",
@@ -2783,6 +2803,10 @@
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirTemperatureSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Discharge_Fan;1",
+      "OutputDtmi": "dtmi:com:willowinc:SupplyFan;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Disconnect_Switch;1",
       "OutputDtmi": "dtmi:com:willowinc:DisconnectSwitch;1"
     },
@@ -2825,6 +2849,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:EconCycle_Start_Stop_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Economizer;1",
+      "OutputDtmi": "dtmi:com:willowinc:EconomizerDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Economizer_Damper;1",
@@ -4103,6 +4131,10 @@
       "OutputDtmi": "dtmi:com:willowinc:MinLimit;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Min_Outside_Air_Damper;1",
+      "OutputDtmi": "dtmi:com:willowinc:OutsideAirDamper;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Min_Outside_Air_Flow_Setpoint_Limit;1",
       "OutputDtmi": "dtmi:com:willowinc:MinLimit;1"
     },
@@ -4444,7 +4476,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:OutsideDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:OutsideAirDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Face_Surface_Temperature_Sensor;1",
@@ -4752,7 +4784,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Relief_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:ReliefDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Relief_Fan;1",
@@ -5595,6 +5627,10 @@
       "OutputDtmi": "dtmi:com:willowinc:WaterLeakAlarmState;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Cooled_Condenser_Heat_Exchanger;1",
+      "OutputDtmi": "dtmi:com:willowinc:WaterCooledRefrigerationCondenser;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Differential_Pressure_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterDeltaPressureSetpoint;1"
     },
@@ -5713,6 +5749,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Zone_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:ZoneAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Zone_Damper;1",
+      "OutputDtmi": "dtmi:com:willowinc:ZoneDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Zone_Standby_Load_Shed_Command;1",
