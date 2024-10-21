@@ -1277,6 +1277,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Elevator;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:ElevatorShaft;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Elevator_Shaft;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:ElevatorTripEvent;1",
       "OutputDtmi": "dtmi:mapped:core:Event;1"
     },
