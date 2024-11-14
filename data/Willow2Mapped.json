@@ -337,6 +337,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Battery;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:BatteryLevelState;1",
+      "OutputDtmi": "dtmi:mapped:core:Battery_Status;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:BatterySystem;1",
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
@@ -682,7 +686,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Condenser;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser;1"
+      "OutputDtmi": "dtmi:mapped:core:Condensing_Unit;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CondenserLeavingRefrigerantStaticPressureSensor;1",
@@ -1275,6 +1279,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:Elevator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Elevator;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:ElevatorShaft;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Elevator_Shaft;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElevatorTripEvent;1",
@@ -4393,6 +4401,10 @@
       "OutputDtmi": "dtmi:mapped:core:Unoccupied_Heating_Air_Temperature_Setpoint;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingZoneAirTemperatureSetpoint;1",
+      "OutputDtmi": "dtmi:mapped:core:Unoccupied_Zone_Air_Heating_Temperature_Setpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:UnoccupiedState;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Mode_Status;1"
     },
@@ -4610,7 +4622,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WaterCooledCondenser;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser;1"
+      "OutputDtmi": "dtmi:mapped:core:Condensing_Unit;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WaterDeltaPressureSensor;1",
