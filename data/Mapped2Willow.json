@@ -2891,6 +2891,10 @@
       "OutputDtmi": "dtmi:com:willowinc:ElevatorShaft;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Elevator_Space;1",
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Embedded_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
     },
