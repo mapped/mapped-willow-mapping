@@ -419,6 +419,10 @@
       "OutputDtmi": "dtmi:com:willowinc:CondenserWaterPumpRunActuator;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Condensing_Unit;1",
+      "OutputDtmi": "dtmi:com:willowinc:Condenser;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Connected_Access_Point_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:OperationalState;1"
     },
@@ -2411,10 +2415,6 @@
       "OutputDtmi": "dtmi:com:willowinc:LeakAlarmState;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser;1",
-      "OutputDtmi": "dtmi:com:willowinc:Condenser;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Heat_Exchanger;1",
       "OutputDtmi": "dtmi:com:willowinc:HeatExchanger;1"
     },
@@ -4287,10 +4287,6 @@
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureDeadbandSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Heating_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingSetpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Humidity_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:HumiditySetpoint;1"
     },
@@ -4456,7 +4452,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:OutsideDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:OutsideAirDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Face_Surface_Temperature_Sensor;1",
@@ -5471,16 +5467,8 @@
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirFlowSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Cooling_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedCoolingSetpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Heating_Supply_Air_Flow_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirFlowSetpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Heating_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Humidity_Setpoint;1",
