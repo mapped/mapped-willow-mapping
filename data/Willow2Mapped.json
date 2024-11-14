@@ -2725,10 +2725,6 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupancy_Command;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Cooling_Temperature_Setpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1",
       "OutputDtmi": "dtmi:mapped:core:Occupied_Cooling_Air_Temperature_Setpoint;1"
     },
