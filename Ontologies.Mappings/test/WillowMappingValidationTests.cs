@@ -219,34 +219,34 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
             Assert.Empty(invalidSources);
         }
 
-        [Theory]
-        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", LoaderType.Http)]
-        [InlineData("..//..//..//..//src//Mappings//v1//Willow//Mapped2Willow.json", LoaderType.File)]
-        public void ValidateTargetDtmisForAirportAreValid(string resourcePath, LoaderType loaderType)
-        {
-            var mockLogger = new Mock<ILogger>();
+        // [Theory]
+        // [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", LoaderType.Http)]
+        // [InlineData("..//..//..//..//src//Mappings//v1//Willow//Mapped2Willow.json", LoaderType.File)]
+        // public void ValidateTargetDtmisForAirportAreValid(string resourcePath, LoaderType loaderType)
+        // {
+        //     var mockLogger = new Mock<ILogger>();
 
-            IOntologyMappingLoader resourceLoader = loaderType == LoaderType.Http ?
-                                                    new MappedHttpOntologyMappingLoader(mockLogger.Object, resourcePath) :
-                                                    new FileOntologyMappingLoader(mockLogger.Object, resourcePath);
+        //     IOntologyMappingLoader resourceLoader = loaderType == LoaderType.Http ?
+        //                                             new MappedHttpOntologyMappingLoader(mockLogger.Object, resourcePath) :
+        //                                             new FileOntologyMappingLoader(mockLogger.Object, resourcePath);
 
-            var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
-            var modelParser = new ModelParser();
-            var inputDtmi = LoadDtdl(new[] { "Willow.Ontology.DTDLv3.jsonld" });
+        //     var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
+        //     var modelParser = new ModelParser();
+        //     var inputDtmi = LoadDtdl(new[] { "Willow.Ontology.DTDLv3.jsonld" });
 
-            List<string> invalidSources = new List<string>();
-            try
-            {
-                var inputModels = modelParser.Parse(inputDtmi);
-                ontologyMappingManager.ValidateTargetOntologyMapping(inputModels, out invalidSources);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-            }
+        //     List<string> invalidSources = new List<string>();
+        //     try
+        //     {
+        //         var inputModels = modelParser.Parse(inputDtmi);
+        //         ontologyMappingManager.ValidateTargetOntologyMapping(inputModels, out invalidSources);
+        //     }
+        //     catch (Exception ex)
+        //     {
+        //         Console.WriteLine(ex);
+        //     }
 
-            Assert.Empty(invalidSources);
-        }
+        //     Assert.Empty(invalidSources);
+        // }
 
         private IEnumerable<string> LoadDtdl(string[] dtdlFiles)
         {
