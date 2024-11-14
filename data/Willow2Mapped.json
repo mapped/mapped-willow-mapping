@@ -2725,12 +2725,20 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupancy_Command;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Cooling_Temperature_Setpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1",
       "OutputDtmi": "dtmi:mapped:core:Occupied_Cooling_Air_Temperature_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:OccupiedCoolingZoneAirTemperatureSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Zone_Air_Cooling_Temperature_Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:OccupiedHeatingSetpoint",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Heating_Temperature_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:OccupiedHeatingSetpoint;1",
@@ -4390,7 +4398,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:UnoccupiedCoolingSetpoint;1",
-      "OutputDtmi": "dtmi:mapped:core:Unoccupied_Cooling_Air_Temperature_Setpoint;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Cooling_Temperature_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:UnoccupiedCoolingZoneAirTemperatureSetpoint;1",
@@ -4398,7 +4406,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingSetpoint;1",
-      "OutputDtmi": "dtmi:mapped:core:Unoccupied_Heating_Air_Temperature_Setpoint;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Heating_Temperature_Setpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingZoneAirTemperatureSetpoint;1",
+      "OutputDtmi": "dtmi:mapped:core:Unoccupied_Zone_Air_Heating_Temperature_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:UnoccupiedState;1",

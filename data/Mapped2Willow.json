@@ -1756,7 +1756,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Unoccupied_Zone_Air_Heating_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:StandbyHeatingSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Urinal;1",
@@ -4275,12 +4275,20 @@
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureDeadbandSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Cooling_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Heating_Supply_Air_Flow_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirFlowSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Heating_Temperature_Deadband_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureDeadbandSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Heating_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Humidity_Setpoint;1",
@@ -5463,8 +5471,16 @@
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirFlowSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Cooling_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedCoolingSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Heating_Supply_Air_Flow_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirFlowSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Heating_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Humidity_Setpoint;1",
