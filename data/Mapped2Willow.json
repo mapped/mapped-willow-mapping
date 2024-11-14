@@ -4275,10 +4275,6 @@
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureDeadbandSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Cooling_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Heating_Supply_Air_Flow_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirFlowSetpoint;1"
     },
