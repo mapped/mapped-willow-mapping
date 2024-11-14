@@ -276,7 +276,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Battery_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:BatteryLevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Billed_Electrical_Energy_Cost;1",

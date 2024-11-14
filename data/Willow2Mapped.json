@@ -337,6 +337,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Battery;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:BatteryLevelState;1",
+      "OutputDtmi": "dtmi:mapped:core:Battery_Status;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:BatterySystem;1",
       "OutputDtmi": "dtmi:mapped:core:Thing;1"
     },
