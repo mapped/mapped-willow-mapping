@@ -98,11 +98,11 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AirCooledCondenser;1",
-      "OutputDtmi": "dtmi:mapped:core:Condensing_Unit;1"
+      "OutputDtmi": "dtmi:mapped:core:Air_Cooled_Condenser_Heat_Exchanger;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AirCooledRefrigerationCondenser;1",
-      "OutputDtmi": "dtmi:mapped:core:Condensing_Unit;1"
+      "OutputDtmi": "dtmi:mapped:core:Air_Cooled_Condenser_Heat_Exchanger;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:AirCurtain;1",
@@ -4622,7 +4622,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WaterCooledCondenser;1",
-      "OutputDtmi": "dtmi:mapped:core:Condensing_Unit;1"
+      "OutputDtmi": "dtmi:mapped:core:Water_Cooled_Condenser_Heat_Exchanger;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WaterDeltaPressureSensor;1",
