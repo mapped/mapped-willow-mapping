@@ -2152,10 +2152,6 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Booster_Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:BoosterFan;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Booster_Fan;1",
       "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
     },
     {
