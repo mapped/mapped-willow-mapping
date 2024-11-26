@@ -8858,6 +8858,14 @@
       "IsOutputPropertyCollection": false,
       "OutputDtmiFilter": ".*",
       "OutputPropertyName": "externalID"
+    },
+    {
+        "InputPropertyNames": [
+            "level"
+        ],
+        "IsOutputPropertyCollection": false,
+        "OutputDtmiFilter": ".*",
+        "OutputPropertyName": "levelNumber"
     }
   ],
   "RelationshipRemaps": [

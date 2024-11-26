@@ -276,7 +276,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Battery_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:BatteryLevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Billed_Electrical_Energy_Cost;1",
@@ -421,6 +421,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Condenser_Water_Flow_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:CondenserWaterPumpRunActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Condensing_Unit;1",
+      "OutputDtmi": "dtmi:com:willowinc:Condenser;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Connected_Access_Point_Status;1",
@@ -1151,10 +1155,6 @@
       "OutputDtmi": "dtmi:com:willowinc:MicrowaveOven;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Min_Air_Temperature_Setpoint_Limit;1",
-      "OutputDtmi": "dtmi:com:willowinc:MinLimit;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Min_Cooling_Air_Temperature_Setpoint_Limit;1",
       "OutputDtmi": "dtmi:com:willowinc:MinLimit;1"
     },
@@ -1772,7 +1772,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Unoccupied_Zone_Air_Heating_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:StandbyHeatingSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Urinal;1",
@@ -2431,10 +2431,6 @@
       "OutputDtmi": "dtmi:com:willowinc:LeakAlarmState;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser;1",
-      "OutputDtmi": "dtmi:com:willowinc:Condenser;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Heat_Exchanger;1",
       "OutputDtmi": "dtmi:com:willowinc:Condenser;1"
     },
@@ -2916,7 +2912,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Elevator_Shaft;1",
-      "OutputDtmi": "dtmi:com:willowinc:Space;1"
+      "OutputDtmi": "dtmi:com:willowinc:ElevatorShaft;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Elevator_Space;1",
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Embedded_Temperature_Sensor;1",
@@ -5830,6 +5830,14 @@
       "IsOutputPropertyCollection": false,
       "OutputDtmiFilter": ".*",
       "OutputPropertyName": "externalID"
+    },
+    {
+        "InputPropertyNames": [
+            "level"
+        ],
+        "IsOutputPropertyCollection": false,
+        "OutputDtmiFilter": ".*",
+        "OutputPropertyName": "levelNumber"
     }
   ],
   "RelationshipRemaps": [
