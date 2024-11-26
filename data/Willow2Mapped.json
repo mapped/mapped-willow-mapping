@@ -4622,7 +4622,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WaterCooledCondenser;1",
-      "OutputDtmi": "dtmi:mapped:core:Water_Cooled_Condensing_Unit_Heat_Exchanger;1"
+      "OutputDtmi": "dtmi:mapped:core:Water_Cooled_Condenser_Heat_Exchanger;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:WaterDeltaPressureSensor;1",
