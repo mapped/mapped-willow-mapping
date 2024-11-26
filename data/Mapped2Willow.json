@@ -1859,6 +1859,10 @@
       "OutputDtmi": "dtmi:com:willowinc:WaterCooledChiller;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Water_Cooled_Condenser_Heat_Exchanger;1",
+      "OutputDtmi": "dtmi:com:willowinc:WaterCooledCondenser;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Water_Differential_Pressure_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterDeltaPressureSensor;1"
     },
@@ -5629,10 +5633,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterLeakAlarmState;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Cooled_Condenser_Heat_Exchanger;1",
-      "OutputDtmi": "dtmi:com:willowinc:WaterCooledRefrigerationCondenser;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Differential_Pressure_Setpoint;1",
