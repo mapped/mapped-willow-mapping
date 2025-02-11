@@ -675,6 +675,10 @@
       "OutputDtmi": "dtmi:com:willowinc:MarginalEmissionsHealthImpactCostFactor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Electricity_GHG_Emissions_Health_Damage_Forecast;1",
+      "OutputDtmi": "dtmi:com:willowinc:MarginalEmissionsHealthImpactCostFactorForecast;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Elevator_Pressurization_Fan;1",
       "OutputDtmi": "dtmi:com:willowinc:ElevatorPressurizationFan;1"
     },
@@ -797,6 +801,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Food_Preperation_Table;1",
       "OutputDtmi": "dtmi:com:willowinc:FoodPreparationWorkTable;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Forecast;1",
+      "OutputDtmi": "dtmi:com:willowinc:Forecast;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Forklift;1",
@@ -1089,6 +1097,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Marginal_GHG_Emissions_Rate;1",
       "OutputDtmi": "dtmi:com:willowinc:MarginalElectricityConsumptionGreenhouseGasEmissionsFactor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Marginal_GHG_Emissions_Rate_Forecast;1",
+      "OutputDtmi": "dtmi:com:willowinc:MarginalElectricityConsumptionGreenhouseGasEmissionsFactorForecast;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Marginal_Operating_Emissions_Rate_Index;1",
