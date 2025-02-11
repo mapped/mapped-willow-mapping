@@ -1749,6 +1749,10 @@
       "OutputDtmi": "dtmi:mapped:core:Culinary_Equipment;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Forecast;1",
+      "OutputDtmi": "dtmi:mapped:core:Forecast;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:Forklift;1",
       "OutputDtmi": "dtmi:mapped:core:Forklift;1"
     },
@@ -2509,12 +2513,20 @@
       "OutputDtmi": "dtmi:mapped:core:Marginal_GHG_Emissions_Rate;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:MarginalElectricityConsumptionGreenhouseGasEmissionsFactorForecast;1",
+      "OutputDtmi": "dtmi:mapped:core:Marginal_GHG_Emissions_Rate_Forecast;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:MarginalElectricityConsumptionGreenhouseGasEmissionsFactorIndex;1",
       "OutputDtmi": "dtmi:mapped:core:Marginal_Operating_Emissions_Rate_Index;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:MarginalEmissionsHealthImpactCostFactor;1",
       "OutputDtmi": "dtmi:mapped:core:Electricity_GHG_Emissions_Health_Damage;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:MarginalEmissionsHealthImpactCostFactorForecast;1",
+      "OutputDtmi": "dtmi:mapped:core:Electricity_GHG_Emissions_Health_Damage_Forecast;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:MassFlowSensor;1",
