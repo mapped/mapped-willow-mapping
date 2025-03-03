@@ -613,6 +613,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:ColdDeckSupplyFan;1",
+      "OutputDtmi": "dtmi:mapped:core:Cold_Deck_Supply_Fan;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:Collection;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1"
     },
@@ -2055,6 +2059,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:HoseBibb;1",
       "OutputDtmi": "dtmi:mapped:core:Faucet;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:HotDeckSupplyFan;1",
+      "OutputDtmi": "dtmi:mapped:core:Hot_Deck_Supply_Fan;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HotFoodDisplayCase;1",
