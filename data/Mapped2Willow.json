@@ -395,6 +395,10 @@
       "OutputDtmi": "dtmi:com:willowinc:CoefficientOfPerformance;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Cold_Deck_Supply_Fan;1",
+      "OutputDtmi": "dtmi:com:willowinc:ColdDeckSupplyFan;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Combination_Oven;1",
       "OutputDtmi": "dtmi:com:willowinc:CombiOven;1"
     },
@@ -627,8 +631,24 @@
       "OutputDtmi": "dtmi:com:willowinc:EffectiveCoolingZoneAirTemperatureSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Effective_Cooling_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:EffectiveCoolingZoneAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Effective_Cooling_Zone_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:EffectiveCoolingZoneAirTemperatureSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Effective_Heating_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Effective_Heating_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:EffectiveHeatingZoneAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Effective_Heating_Zone_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:EffectiveHeatingZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Effective_Occupied_Mode_Status;1",
@@ -941,6 +961,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:High_Voltage_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:HighVoltageAlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Hot_Deck_Supply_Fan;1",
+      "OutputDtmi": "dtmi:com:willowinc:HotDeckSupplyFan;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Hot_Water_GHG_Emissions_Factor;1",
