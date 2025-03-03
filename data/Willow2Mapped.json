@@ -1189,24 +1189,8 @@
       "OutputDtmi": "dtmi:mapped:core:Effective_Cooling_Air_Temperature_Setpoint;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:EffectiveCoolingZoneAirTemperatureSetpoint;1",
-      "OutputDtmi": "dtmi:mapped:core:Effective_Cooling_Air_Temperature_Setpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:EffectiveCoolingZoneAirTemperatureSetpoint;1",
-      "OutputDtmi": "dtmi:mapped:core:Effective_Cooling_Zone_Air_Temperature_Setpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:EffectiveHeatingZoneAirTemperatureSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Zone_Air_Heating_Temperature_Setpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:EffectiveHeatingZoneAirTemperatureSetpoint;1",
-      "OutputDtmi": "dtmi:mapped:core:Effective_Heating_Air_Temperature_Setpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:EffectiveHeatingZoneAirTemperatureSetpoint;1",
-      "OutputDtmi": "dtmi:mapped:core:Effective_Heating_Zone_Air_Temperature_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EffectiveZoneAirTemperatureSetpoint;1",

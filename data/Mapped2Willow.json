@@ -631,16 +631,8 @@
       "OutputDtmi": "dtmi:com:willowinc:EffectiveCoolingZoneAirTemperatureSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Effective_Cooling_Air_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:EffectiveCoolingZoneAirTemperatureSetpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Effective_Cooling_Zone_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:EffectiveCoolingZoneAirTemperatureSetpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Effective_Heating_Air_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Effective_Heating_Air_Temperature_Setpoint;1",
