@@ -2216,7 +2216,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Building_Chilled_Water_Meter;1",
-      "OutputDtmi": "dtmi:com:willowinc:WaterMeter;1"
+      "OutputDtmi": "dtmi:com:willowinc:ChilledWaterMeter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Building_Electrical_Meter;1",
@@ -2228,7 +2228,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Building_Hot_Water_Meter;1",
-      "OutputDtmi": "dtmi:com:willowinc:ThermalMeter;1"
+      "OutputDtmi": "dtmi:com:willowinc:HotWaterMeter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Building_Meter;1",
@@ -2368,7 +2368,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Meter;1",
-      "OutputDtmi": "dtmi:com:willowinc:WaterMeter;1"
+      "OutputDtmi": "dtmi:com:willowinc:ChilledWaterMeter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Pump;1",
@@ -3596,7 +3596,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Meter;1",
-      "OutputDtmi": "dtmi:com:willowinc:WaterMeter;1"
+      "OutputDtmi": "dtmi:com:willowinc:HotWaterMeter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Pump;1",
