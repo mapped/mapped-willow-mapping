@@ -1532,7 +1532,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Scheduled_Occupied_Mode_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
+      "OutputDtmi": "dtmi:com:willowinc:NormalScheduleOccupiedState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Scissor_Lift;1",
@@ -5540,7 +5540,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Mode_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Return_Air_Temperature_Setpoint;1",
