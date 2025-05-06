@@ -487,6 +487,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Cost_Estimate_Per_Interval;1",
+      "OutputDtmi": "dtmi:com:willowinc:CostSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Count_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
