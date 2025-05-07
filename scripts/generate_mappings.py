@@ -70,8 +70,10 @@ def main():
         # Exceptions 
         "dtmi:mapped:core:Billed_Electrical_Energy_Use;1": ["dtmi:com:willowinc:BilledActiveElectricalEnergy;1"],
         "dtmi:mapped:core:Billed_Electrical_Energy_Cost;1": ["dtmi:com:willowinc:BilledElectricalCost;1"],
+        "dtmi:mapped:core:Cost_Estimate_Per_Interval;1": ["dtmi:com:willowinc:CostSensor;1"],
         "dtmi:com:willowinc:BilledActiveElectricalEnergy;1": ["dtmi:mapped:core:Billed_Electrical_Energy_Use;1"],
         "dtmi:com:willowinc:BilledElectricalCost;1": ["dtmi:mapped:core:Billed_Electrical_Energy_Cost;1"],
+        "dtmi:com:willowinc:CostSensor;1": ["dtmi:mapped:core:Cost_Estimate_Per_Interval;1"],
     }
 
     engine_building = MappingEngine(
