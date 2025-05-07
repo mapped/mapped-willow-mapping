@@ -428,7 +428,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Condensing_Unit;1",
-      "OutputDtmi": "dtmi:com:willowinc:Condenser;1"
+      "OutputDtmi": "dtmi:com:willowinc:CondensingUnit;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Connected_Access_Point_Status;1",
