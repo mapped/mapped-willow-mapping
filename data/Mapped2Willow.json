@@ -4095,6 +4095,10 @@
       "OutputDtmi": "dtmi:com:willowinc:HighWaterLevelAlarmState;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:MDF;1",
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Mechanical_Room;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
@@ -5661,6 +5665,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Warmest_Zone_Air_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Waste_Storage;1",
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Alarm;1",
