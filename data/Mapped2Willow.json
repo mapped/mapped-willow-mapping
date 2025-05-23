@@ -751,6 +751,10 @@
       "OutputDtmi": "dtmi:com:willowinc:HVACExhaustAirSystem;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Exhaust_Fan_Array;1",
+      "OutputDtmi": "dtmi:com:willowinc:ExhaustFanGroup;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Exit_Sign;1",
       "OutputDtmi": "dtmi:com:willowinc:ExitSign;1"
     },
