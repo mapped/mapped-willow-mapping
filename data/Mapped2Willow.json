@@ -755,6 +755,10 @@
       "OutputDtmi": "dtmi:com:willowinc:ExitSign;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Fan_Array;1",
+      "OutputDtmi": "dtmi:com:willowinc:HVACFanGroup;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Fan_On_Off_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:FanRunActuator;1"
     },
@@ -1499,6 +1503,10 @@
       "OutputDtmi": "dtmi:com:willowinc:ReturnAirVelocityPressureSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Return_Fan_Array;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReturnFanGroup;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Road_Subsurface_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
     },
@@ -1685,6 +1693,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Supply_Air_Temperature_Reset_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Supply_Fan_Array;1",
+      "OutputDtmi": "dtmi:com:willowinc:SupplyFanGroup;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Switchboard;1",
