@@ -3296,7 +3296,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Final_Filter;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirFilter;1"
+      "OutputDtmi": "dtmi:com:willowinc:FinalFilter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Alarm;1",
@@ -4684,7 +4684,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pre_Filter;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirFilter;1"
+      "OutputDtmi": "dtmi:com:willowinc:PreFilter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pre_Filter_Status;1",
