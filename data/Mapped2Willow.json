@@ -2323,6 +2323,10 @@
       "OutputDtmi": "dtmi:com:willowinc:ChilledBeam;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Coil;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingCoil;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Differential_Pressure_Deadband_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:ChilledWaterDeltaPressureDeadbandSetpoint;1"
     },
@@ -2412,7 +2416,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Coil;1",
-      "OutputDtmi": "dtmi:com:willowinc:FanCoilUnit;1"
+      "OutputDtmi": "dtmi:com:willowinc:Coil;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cold_Box;1",
@@ -2532,7 +2536,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Coil;1",
-      "OutputDtmi": "dtmi:com:willowinc:FanCoilUnit;1"
+      "OutputDtmi": "dtmi:com:willowinc:CoolingCoil;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Command;1",
@@ -2772,11 +2776,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Direct_Expansion_Cooling_Coil;1",
-      "OutputDtmi": "dtmi:com:willowinc:FanCoilUnit;1"
+      "OutputDtmi": "dtmi:com:willowinc:CoolingCoil;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Direct_Expansion_Heating_Coil;1",
-      "OutputDtmi": "dtmi:com:willowinc:FanCoilUnit;1"
+      "OutputDtmi": "dtmi:com:willowinc:HeatingCoil;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Direction_Command;1",
@@ -3456,7 +3460,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Heating_Coil;1",
-      "OutputDtmi": "dtmi:com:willowinc:FanCoilUnitReheat;1"
+      "OutputDtmi": "dtmi:com:willowinc:HeatingCoil;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Heating_Command;1",
@@ -3557,6 +3561,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hold_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Coil;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingCoil;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Differential_Pressure_Deadband_Setpoint;1",
@@ -3991,6 +3999,10 @@
       "OutputDtmi": "dtmi:com:willowinc:LuminanceSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:MDF;1",
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Mail_Room;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
@@ -4093,10 +4105,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Max_Water_Level_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:HighWaterLevelAlarmState;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:MDF;1",
-      "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Mechanical_Room;1",
