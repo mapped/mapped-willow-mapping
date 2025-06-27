@@ -18,6 +18,10 @@ name = "fury"
 url = "https://pypi.fury.io/mapped/"
 priority = "supplemental"
 
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.2.0"
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
