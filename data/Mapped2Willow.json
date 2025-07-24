@@ -1332,7 +1332,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_A_Angle_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:PhaseACurrentAngleSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAVoltageAngleSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_A_Apparent_Energy_Sensor;1",
@@ -1368,7 +1368,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_B_Angle_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:PhaseBCurrentAngleSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBVoltageAngleSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_B_Apparent_Energy_Sensor;1",
@@ -1404,7 +1404,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_C_Angle_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:PhaseCCurrentAngleSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCVoltageAngleSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_C_Apparent_Energy_Sensor;1",
