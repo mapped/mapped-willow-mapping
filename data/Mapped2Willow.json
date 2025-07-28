@@ -466,9 +466,33 @@
       "InputDtmi": "dtmi:mapped:core:Cooling_Level_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:CoolingLevelActuator;1"
     },
+        {
+      "InputDtmi": "dtmi:mapped:core:Cooling_On_Off_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingOnActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Request;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingRequestState;1"
+    },
     {
       "InputDtmi": "dtmi:mapped:core:Cooling_Request_Count_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:CoolingRequestCountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Stage_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingStageCountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Stage_Enable_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingStageCountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Stage_On_Off_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingStageActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Stage_On_Off_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingStageCountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cooling_Thermal_Energy_Sensor;1",
@@ -923,8 +947,32 @@
       "OutputDtmi": "dtmi:com:willowinc:HeatingLevelActuator;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Heating_On_Off_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingOnActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heating_Request;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingRequestState;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Heating_Request_Count_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HeatingRequestCountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heating_Stage_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReheatStageCountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heating_Stage_Enable_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReheatStageCountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heating_Stage_On_Off_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingStageActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heating_Stage_On_Off_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReheatStageCountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Heating_Thermal_Energy_Sensor;1",
@@ -1589,6 +1637,18 @@
     {
       "InputDtmi": "dtmi:mapped:core:Regional_Median_Total_GHG_Emissions_Intensity;1",
       "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Reheat_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReheatLevelActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Reheat_On_Off_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReheatOnActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Reheat_On_Off_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingOnState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Relative_Humidity_Setpoint;1",
