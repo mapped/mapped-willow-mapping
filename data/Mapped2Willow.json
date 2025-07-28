@@ -1343,6 +1343,10 @@
       "OutputDtmi": "dtmi:com:willowinc:PhaseAApparentElectricalPowerSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Current_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseACurrenteAngleSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Phase_A_Power_Factor_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:PhaseAPowerFactorSensor;1"
     },
@@ -1353,6 +1357,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Phase_A_Reactive_Power_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:PhaseAReactiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Voltage_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAVoltageAngleSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_A_Voltage_Sensor;1",
@@ -1379,6 +1387,10 @@
       "OutputDtmi": "dtmi:com:willowinc:PhaseBApparentElectricalPowerSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Current_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBCurrenteAngleSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Phase_B_Power_Factor_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:PhaseBPowerFactorSensor;1"
     },
@@ -1389,6 +1401,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Phase_B_Reactive_Power_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:PhaseBReactiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Voltage_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBVoltageAngleSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_B_Voltage_Sensor;1",
@@ -1415,6 +1431,10 @@
       "OutputDtmi": "dtmi:com:willowinc:PhaseCApparentElectricalPowerSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Current_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCCurrenteAngleSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Phase_C_Power_Factor_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:PhaseCPowerFactorSensor;1"
     },
@@ -1425,6 +1445,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Phase_C_Reactive_Power_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:PhaseCReactiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Voltage_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCVoltageAngleSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_C_Voltage_Sensor;1",
