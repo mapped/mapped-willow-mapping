@@ -1392,7 +1392,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_A_Current_Angle_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:PhaseACurrenteAngleSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:PhaseACurrentAngleSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_A_Power_Factor_Sensor;1",
@@ -1436,7 +1436,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_B_Current_Angle_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:PhaseBCurrenteAngleSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBCurrentAngleSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_B_Power_Factor_Sensor;1",
@@ -1480,7 +1480,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_C_Current_Angle_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:PhaseCCurrenteAngleSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCCurrentAngleSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Phase_C_Power_Factor_Sensor;1",
@@ -1599,12 +1599,12 @@
       "OutputDtmi": "dtmi:com:willowinc:Forklift;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Pump_Collection;1",
-      "OutputDtmi": "dtmi:com:willowinc:PlumbingPumpGroup;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Pump_On_Off_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:PumpRunActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Pump_Skid;1",
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingPumpGroup;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Rain_Level_Sensor;1",
