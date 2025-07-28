@@ -466,7 +466,7 @@
       "InputDtmi": "dtmi:mapped:core:Cooling_Level_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:CoolingLevelActuator;1"
     },
-        {
+    {
       "InputDtmi": "dtmi:mapped:core:Cooling_On_Off_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:CoolingOnActuator;1"
     },
@@ -1371,6 +1371,126 @@
       "OutputDtmi": "dtmi:com:willowinc:Person;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Active_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAActiveElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Active_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAActiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Apparent_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAApparentElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Apparent_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAApparentElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Current_Phase_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseACurrentAngleSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Power_Factor_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAPowerFactorSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Reactive_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAReactiveElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Reactive_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAReactiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Voltage_Phase_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAVoltageAngleSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Voltage_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAVoltageMagnitudeSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Active_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBActiveElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Active_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBActiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Apparent_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBApparentElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Apparent_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBApparentElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Current_Phase_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBCurrentAngleSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Power_Factor_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBPowerFactorSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Reactive_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBReactiveElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Reactive_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBReactiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Voltage_Phase_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBVoltageAngleSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Voltage_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBVoltageMagnitudeSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Active_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCActiveElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Active_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCActiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Apparent_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCApparentElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Apparent_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCApparentElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Current_Phase_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCCurrentAngleSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Power_Factor_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCPowerFactorSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Reactive_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCReactiveElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Reactive_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCReactiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Voltage_Phase_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCVoltageAngleSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Voltage_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCVoltageMagnitudeSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Place;1",
       "OutputDtmi": "dtmi:com:willowinc:Space;1"
     },
@@ -1467,12 +1587,12 @@
       "OutputDtmi": "dtmi:com:willowinc:Forklift;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Pump_Collection;1",
-      "OutputDtmi": "dtmi:com:willowinc:PlumbingPumpGroup;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Pump_On_Off_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:PumpRunActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Pump_Skid;1",
+      "OutputDtmi": "dtmi:com:willowinc:PlumbingPumpGroup;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Rain_Level_Sensor;1",

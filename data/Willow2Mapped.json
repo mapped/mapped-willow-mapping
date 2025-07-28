@@ -3174,7 +3174,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingPumpGroup;1",
-      "OutputDtmi": "dtmi:mapped:core:Pump_Collection;1"
+      "OutputDtmi": "dtmi:mapped:core:Pump_Skid;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PlumbingShutOffValve;1",
