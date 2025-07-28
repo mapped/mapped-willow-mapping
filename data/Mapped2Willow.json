@@ -1467,7 +1467,7 @@
       "OutputDtmi": "dtmi:com:willowinc:PhaseCApparentElectricalPowerSensor;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Phase_C_Current_Phae_Angle_Sensor;1",
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Current_Phase_Angle_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:PhaseCCurrentAngleSensor;1"
     },
     {
