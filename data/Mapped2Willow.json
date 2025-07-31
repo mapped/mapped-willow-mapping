@@ -3476,7 +3476,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Filter_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:ReplaceFilterState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Final_Filter;1",
@@ -4876,7 +4876,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pre_Filter_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:ReplacePreFilterState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Preheat_Command;1",
