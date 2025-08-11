@@ -1252,7 +1252,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Min_Outside_Air_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:OutsideAirDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:MinOutsideAirDamper;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Min_Outside_Air_Damper_Position_Sensor;1",
@@ -1561,6 +1561,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Precipitation_Twentyfour_Hours_Accumulation_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:PrecipitationAccumulationSensor;1"
+    },
+        {
+      "InputDtmi": "dtmi:mapped:core:Preheat_Coil;1",
+      "OutputDtmi": "dtmi:com:willowinc:PreheatCoil;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Pressure_High_Reset_Setpoint;1",
