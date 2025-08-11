@@ -72,10 +72,12 @@ def main():
         "dtmi:mapped:core:Billed_Electrical_Energy_Cost;1": ["dtmi:com:willowinc:BilledElectricalCost;1"],
         "dtmi:mapped:core:Cost_Estimate_Per_Interval;1": ["dtmi:com:willowinc:CostSensor;1"],
         "dtmi:mapped:core:Pump_Skid;1": ["dtmi:com:willowinc:PlumbingPumpGroup;1", "dtmi:com:willowinc:Collection;1"],
+        "dtmi:mapped:core:Air_Flow_Rate_Command;1": ["dtmi:com:willowinc:AirflowPercentSetpoint;1"],
         "dtmi:com:willowinc:BilledActiveElectricalEnergy;1": ["dtmi:mapped:core:Billed_Electrical_Energy_Use;1"],
         "dtmi:com:willowinc:BilledElectricalCost;1": ["dtmi:mapped:core:Billed_Electrical_Energy_Cost;1"],
         "dtmi:com:willowinc:CostSensor;1": ["dtmi:mapped:core:Cost_Estimate_Per_Interval;1"],
         "dtmi:com:willowinc:PlumbingPumpGroup;1": ["dtmi:mapped:core:Pump_Skid;1"],
+        "dtmi:com:willowinc:AirflowPercentSetpoint;1": ["dtmi:mapped:core:Air_Flow_Rate_Command;1"],
     }
 
     engine_building = MappingEngine(
