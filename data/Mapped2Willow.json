@@ -436,7 +436,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Connected_Devices_Count_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:ConnectedDevicesCountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Controller;1",
