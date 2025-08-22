@@ -643,6 +643,10 @@
       "OutputDtmi": "dtmi:com:willowinc:AirStaticPressureSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Duct_Heater;1",
+      "OutputDtmi": "dtmi:com:willowinc:DuctHeater;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Duct_Smoke_Detector;1",
       "OutputDtmi": "dtmi:com:willowinc:DuctSmokeDetector;1"
     },
@@ -785,6 +789,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Fan_Powered_VAV;1",
       "OutputDtmi": "dtmi:com:willowinc:FanPoweredBox;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fan_Powered_VAV_With_Reheat;1",
+      "OutputDtmi": "dtmi:com:willowinc:FanPoweredBoxReheat;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Fan_Speed_Mode_Command;1",
@@ -1303,6 +1311,10 @@
       "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Occupied_Zone_Air_Heating_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingZoneAirTemperatureSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Offset;1",
       "OutputDtmi": "dtmi:com:willowinc:SetpointOffset;1"
     },
@@ -1629,6 +1641,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Regional_Median_Total_GHG_Emissions_Intensity;1",
       "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Reheat_Coil;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReheatCoil;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Reheat_Command;1",
@@ -2101,6 +2117,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Waterless_Urinal;1",
       "OutputDtmi": "dtmi:com:willowinc:UrinalWaterless;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Waterside_Economizer;1",
+      "OutputDtmi": "dtmi:com:willowinc:EconomizerCoil;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Weather_Condition_Sensor;1",
