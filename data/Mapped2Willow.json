@@ -88,7 +88,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Air_Cooled_Condenser_Heat_Exchanger;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirCooledRefrigerationCondenser;1"
+      "OutputDtmi": "dtmi:com:willowinc:AirCooledCondenser;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Air_Curtain;1",
@@ -121,6 +121,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Air_Quality_Sensing_Device;1",
       "OutputDtmi": "dtmi:com:willowinc:IAQSensorEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:VAVAirflowControlValve;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Aircraft_Docked_Status;1",
@@ -1693,6 +1697,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Return_Air_Temperature_Reset_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Return_Air_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReturnVAVAirflowControlValve;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Return_Air_Velocity_Pressure_Sensor;1",
