@@ -1788,7 +1788,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Snow_Accumulation_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:QuantitySensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:SnowfallAccumulationSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Solar_Inverter;1",
@@ -2681,6 +2681,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Computer_Room_Air_Conditioning;1",
       "OutputDtmi": "dtmi:com:willowinc:ComputerRoomAirConditioningUnit;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Computer_Room_Air_Handler;1",
+      "OutputDtmi": "dtmi:com:willowinc:ComputerRoomAirHandlingUnit;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Concession;1",
