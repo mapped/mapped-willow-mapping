@@ -86,6 +86,7 @@ def main():
         "dtmi:com:willowinc:SupplyFanGroup;1": ["dtmi:mapped:core:Supply_Fan_Array;1"],
         "dtmi:mapped:core:Pump_Skid;1": ["dtmi:com:willowinc:PumpGroup;1"],
         "dtmi:com:willowinc:PumpGroup;1": ["dtmi:mapped:core:Pump_Skid;1"],
+        "dtmi:com:willowinc:PlumbingPumpGroup;1": ["dtmi:mapped:core:Pump_Skid;1"],
     }
 
     engine_building = MappingEngine(
