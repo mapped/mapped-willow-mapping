@@ -3639,6 +3639,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Valve;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Gatehouse;1",
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Generator_Room;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
@@ -6001,6 +6005,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Wing;1",
       "OutputDtmi": "dtmi:com:willowinc:ArchitecturalBuildingComponent;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Workshop;1",
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Zone;1",
