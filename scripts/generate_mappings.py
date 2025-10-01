@@ -78,6 +78,14 @@ def main():
         "dtmi:com:willowinc:CostSensor;1": ["dtmi:mapped:core:Cost_Estimate_Per_Interval;1"],
         "dtmi:com:willowinc:PlumbingPumpGroup;1": ["dtmi:mapped:core:Pump_Skid;1"],
         "dtmi:com:willowinc:AirflowPercentSetpoint;1": ["dtmi:mapped:core:Air_Flow_Rate_Command;1"],
+        "dtmi:mapped:core:Exhaust_Fan_Array;1": ["dtmi:com:willowinc:ExhaustFanGroup;1"],
+        "dtmi:mapped:core:Fan_Array;1": ["dtmi:com:willowinc:FanGroup;1"],
+        "dtmi:mapped:core:Return_Fan_Array;1": ["dtmi:com:willowinc:ReturnFanGroup;1"],
+        "dtmi:mapped:core:Supply_Fan_Array;1": ["dtmi:com:willowinc:SupplyFanGroup;1"],
+        "dtmi:com:willowinc:ExhaustFanGroup;1": ["dtmi:mapped:core:Exhaust_Fan_Array;1"],
+        "dtmi:com:willowinc:FanGroup;1": ["dtmi:mapped:core:Fan_Array;1"],
+        "dtmi:com:willowinc:ReturnFanGroup;1": ["dtmi:mapped:core:Return_Fan_Array;1"],
+        "dtmi:com:willowinc:SupplyFanGroup;1": ["dtmi:mapped:core:Supply_Fan_Array;1"],
     }
 
     engine_building = MappingEngine(
