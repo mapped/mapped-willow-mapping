@@ -1628,7 +1628,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Pump_Skid;1",
-      "OutputDtmi": "dtmi:com:willowinc:PlumbingPumpGroup;1"
+      "OutputDtmi": "dtmi:com:willowinc:PumpGroup;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Rain_Level_Sensor;1",
