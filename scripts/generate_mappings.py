@@ -84,7 +84,7 @@ def main():
         "dtmi:com:willowinc:HVACFanGroup;1": ["dtmi:mapped:core:Fan_Array;1"],
         "dtmi:com:willowinc:ReturnFanGroup;1": ["dtmi:mapped:core:Return_Fan_Array;1"],
         "dtmi:com:willowinc:SupplyFanGroup;1": ["dtmi:mapped:core:Supply_Fan_Array;1"],
-        "dtmi:mapped:core:Pump_Skid;1": ["dtmi:com:willowinc:PumpGroup;1"],
+        "dtmi:mapped:core:Pump_Skid;1": ["dtmi:com:willowinc:PumpGroup;1", "dtmi:com:willowinc:PlumbingPumpGroup;1"],
         "dtmi:com:willowinc:PumpGroup;1": ["dtmi:mapped:core:Pump_Skid;1"],
         "dtmi:com:willowinc:PlumbingPumpGroup;1": ["dtmi:mapped:core:Pump_Skid;1"],
     }
