@@ -515,6 +515,10 @@
       "OutputDtmi": "dtmi:com:willowinc:CoolingLevelState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Tower_Group;1",
+      "OutputDtmi": "dtmi:com:willowinc:HVACCoolingTowerGroup;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Cooling_Tower_On_Off_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:OnOffState;1"
     },
@@ -965,6 +969,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Heat_Exchanger_Entering_Water_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:EnteringWaterTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heat_Exchanger_Group;1",
+      "OutputDtmi": "dtmi:com:willowinc:HVACHeatExchangerGroup;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Heat_Exchanger_Leaving_Water_Temperature_Setpoint;1",
