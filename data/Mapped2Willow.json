@@ -87,6 +87,10 @@
       "OutputDtmi": "dtmi:com:willowinc:AirCooledChiller;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Air_Cooled_Condenser_Heat_Exchanger;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirCooledCondenser;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Air_Curtain;1",
       "OutputDtmi": "dtmi:com:willowinc:AirCurtain;1"
     },
@@ -100,7 +104,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Air_Flow_Rate_Command;1",
-      "OutputDtmi": "dtmi:com:willowinc:Actuator;1"
+      "OutputDtmi": "dtmi:com:willowinc:AirflowPercentSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Air_Flow_Status;1",
@@ -117,6 +121,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Air_Quality_Sensing_Device;1",
       "OutputDtmi": "dtmi:com:willowinc:IAQSensorEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:VAVAirflowControlValve;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Aircraft_Docked_Status;1",
@@ -276,7 +284,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Battery_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:BatteryLevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Billed_Electrical_Energy_Cost;1",
@@ -295,12 +303,16 @@
       "OutputDtmi": "dtmi:com:willowinc:BlastChiller;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Boiler_Group;1",
+      "OutputDtmi": "dtmi:com:willowinc:BoilerGroup;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Boiler_On_Off_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:OnOffActuator;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Booster_Pump;1",
-      "OutputDtmi": "dtmi:com:willowinc:Pump;1"
+      "OutputDtmi": "dtmi:com:willowinc:DomesticWaterBoosterPump;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Bread_Slicer;1",
@@ -312,7 +324,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Bypass_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:BypassDamper;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:CO2_Alarm_Setpoint;1",
@@ -367,6 +379,10 @@
       "OutputDtmi": "dtmi:com:willowinc:QuantitySensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Chiller_Group;1",
+      "OutputDtmi": "dtmi:com:willowinc:ChillerGroup;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Chiller_Plant;1",
       "OutputDtmi": "dtmi:com:willowinc:ChilledWaterPlant;1"
     },
@@ -389,6 +405,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance;1",
       "OutputDtmi": "dtmi:com:willowinc:CoefficientOfPerformance;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cold_Deck_Supply_Fan;1",
+      "OutputDtmi": "dtmi:com:willowinc:ColdDeckSupplyFan;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Combination_Oven;1",
@@ -419,12 +439,16 @@
       "OutputDtmi": "dtmi:com:willowinc:CondenserWaterPumpRunActuator;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Condensing_Unit;1",
+      "OutputDtmi": "dtmi:com:willowinc:CondensingUnit;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Connected_Access_Point_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:OperationalState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Connected_Devices_Count_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:ConnectedDevicesCountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Controller;1",
@@ -455,8 +479,32 @@
       "OutputDtmi": "dtmi:com:willowinc:CoolingLevelActuator;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Cooling_On_Off_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingOnActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Request;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingRequestState;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Cooling_Request_Count_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:CoolingRequestCountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Stage_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingStageCountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Stage_Enable_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingStageCountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Stage_On_Off_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingStageActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Stage_On_Off_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingStageCountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cooling_Thermal_Energy_Sensor;1",
@@ -467,12 +515,20 @@
       "OutputDtmi": "dtmi:com:willowinc:CoolingLevelState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Tower_Group;1",
+      "OutputDtmi": "dtmi:com:willowinc:HVACCoolingTowerGroup;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Cooling_Tower_On_Off_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:OnOffState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Correlated_Color_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Cost_Estimate_Per_Interval;1",
+      "OutputDtmi": "dtmi:com:willowinc:CostSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Count_Sensor;1",
@@ -603,6 +659,10 @@
       "OutputDtmi": "dtmi:com:willowinc:AirStaticPressureSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Duct_Heater;1",
+      "OutputDtmi": "dtmi:com:willowinc:DuctHeater;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Duct_Smoke_Detector;1",
       "OutputDtmi": "dtmi:com:willowinc:DuctSmokeDetector;1"
     },
@@ -619,8 +679,16 @@
       "OutputDtmi": "dtmi:com:willowinc:EffectiveCoolingZoneAirTemperatureSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Effective_Cooling_Zone_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:EffectiveCoolingZoneAirTemperatureSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Effective_Heating_Air_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:EffectiveHeatingZoneAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Effective_Heating_Zone_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:EffectiveHeatingZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Effective_Occupied_Mode_Status;1",
@@ -665,6 +733,14 @@
     {
       "InputDtmi": "dtmi:mapped:core:Electricity_GHG_Emissions_Health_Damage;1",
       "OutputDtmi": "dtmi:com:willowinc:MarginalEmissionsHealthImpactCostFactor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Electricity_GHG_Emissions_Health_Damage_Forecast;1",
+      "OutputDtmi": "dtmi:com:willowinc:MarginalEmissionsHealthImpactCostFactorForecast;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Elevator_Pressurization_Fan;1",
+      "OutputDtmi": "dtmi:com:willowinc:ElevatorPressurizationFan;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Emergency_Light;1",
@@ -719,16 +795,32 @@
       "OutputDtmi": "dtmi:com:willowinc:HVACExhaustAirSystem;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Exhaust_Air_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:ExhaustVAVAirflowControlValve;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Exhaust_Fan_Array;1",
+      "OutputDtmi": "dtmi:com:willowinc:ExhaustFanGroup;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Exit_Sign;1",
       "OutputDtmi": "dtmi:com:willowinc:ExitSign;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Fan_Array;1",
+      "OutputDtmi": "dtmi:com:willowinc:HVACFanGroup;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Fan_On_Off_Command;1",
-      "OutputDtmi": "dtmi:com:willowinc:OnOffActuator;1"
+      "OutputDtmi": "dtmi:com:willowinc:FanRunActuator;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Fan_Powered_VAV;1",
       "OutputDtmi": "dtmi:com:willowinc:FanPoweredBox;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fan_Powered_VAV_With_Reheat;1",
+      "OutputDtmi": "dtmi:com:willowinc:FanPoweredBoxReheat;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Fan_Speed_Mode_Command;1",
@@ -785,6 +877,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Food_Preperation_Table;1",
       "OutputDtmi": "dtmi:com:willowinc:FoodPreparationWorkTable;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Forecast;1",
+      "OutputDtmi": "dtmi:com:willowinc:Forecast;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Forklift;1",
@@ -875,8 +971,16 @@
       "OutputDtmi": "dtmi:com:willowinc:EnteringWaterTemperatureSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Heat_Exchanger_Group;1",
+      "OutputDtmi": "dtmi:com:willowinc:HVACHeatExchangerGroup;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Heat_Exchanger_Leaving_Water_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:LeavingWaterTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heated_Display_Case;1",
+      "OutputDtmi": "dtmi:com:willowinc:HotFoodDisplayCase;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Heating_Enable_Status;1",
@@ -887,8 +991,32 @@
       "OutputDtmi": "dtmi:com:willowinc:HeatingLevelActuator;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Heating_On_Off_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingOnActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heating_Request;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingRequestState;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Heating_Request_Count_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:HeatingRequestCountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heating_Stage_Count_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReheatStageCountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heating_Stage_Enable_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReheatStageCountSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heating_Stage_On_Off_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingStageActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heating_Stage_On_Off_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReheatStageCountSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Heating_Thermal_Energy_Sensor;1",
@@ -907,6 +1035,10 @@
       "OutputDtmi": "dtmi:com:willowinc:HumiditySetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:High_Limit;1",
+      "OutputDtmi": "dtmi:com:willowinc:HighLimit;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:High_Static_Pressure_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:HighSupplyStaticPressureAlarmState;1"
     },
@@ -921,6 +1053,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:High_Voltage_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:HighVoltageAlarmState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Hot_Deck_Supply_Fan;1",
+      "OutputDtmi": "dtmi:com:willowinc:HotDeckSupplyFan;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Hot_Water_GHG_Emissions_Factor;1",
@@ -1059,6 +1195,10 @@
       "OutputDtmi": "dtmi:com:willowinc:HumiditySetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Low_Limit;1",
+      "OutputDtmi": "dtmi:com:willowinc:LowLimit;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Low_Static_Air_Pressure_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:LowSuctionStaticPressureAlarmState;1"
     },
@@ -1077,6 +1217,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Marginal_GHG_Emissions_Rate;1",
       "OutputDtmi": "dtmi:com:willowinc:MarginalElectricityConsumptionGreenhouseGasEmissionsFactor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Marginal_GHG_Emissions_Rate_Forecast;1",
+      "OutputDtmi": "dtmi:com:willowinc:MarginalElectricityConsumptionGreenhouseGasEmissionsFactorForecast;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Marginal_Operating_Emissions_Rate_Index;1",
@@ -1143,10 +1287,6 @@
       "OutputDtmi": "dtmi:com:willowinc:MicrowaveOven;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Min_Air_Temperature_Setpoint_Limit;1",
-      "OutputDtmi": "dtmi:com:willowinc:MinLimit;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Min_Cooling_Air_Temperature_Setpoint_Limit;1",
       "OutputDtmi": "dtmi:com:willowinc:MinLimit;1"
     },
@@ -1161,6 +1301,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Min_Heating_Air_Temperature_Setpoint_Limit;1",
       "OutputDtmi": "dtmi:com:willowinc:MinLimit;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Min_Outside_Air_Damper;1",
+      "OutputDtmi": "dtmi:com:willowinc:MinOutsideAirDamper;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Min_Outside_Air_Damper_Position_Sensor;1",
@@ -1209,6 +1353,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Occupied_Heating_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Occupied_Zone_Air_Heating_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Offset;1",
@@ -1277,6 +1425,126 @@
     {
       "InputDtmi": "dtmi:mapped:core:Person_Profile;1",
       "OutputDtmi": "dtmi:com:willowinc:Person;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Active_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAActiveElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Active_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAActiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Apparent_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAApparentElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Apparent_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAApparentElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Current_Phase_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseACurrentAngleSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Power_Factor_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAPowerFactorSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Reactive_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAReactiveElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Reactive_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAReactiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Voltage_Phase_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAVoltageAngleSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_A_Voltage_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseAVoltageMagnitudeSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Active_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBActiveElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Active_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBActiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Apparent_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBApparentElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Apparent_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBApparentElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Current_Phase_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBCurrentAngleSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Power_Factor_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBPowerFactorSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Reactive_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBReactiveElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Reactive_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBReactiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Voltage_Phase_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBVoltageAngleSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_B_Voltage_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseBVoltageMagnitudeSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Active_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCActiveElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Active_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCActiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Apparent_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCApparentElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Apparent_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCApparentElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Current_Phase_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCCurrentAngleSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Power_Factor_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCPowerFactorSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Reactive_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCReactiveElectricalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Reactive_Power_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCReactiveElectricalPowerSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Voltage_Phase_Angle_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCVoltageAngleSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Phase_C_Voltage_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:PhaseCVoltageMagnitudeSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Place;1",
@@ -1351,6 +1619,10 @@
       "OutputDtmi": "dtmi:com:willowinc:PrecipitationAccumulationSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Preheat_Coil;1",
+      "OutputDtmi": "dtmi:com:willowinc:PreheatCoil;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Pressure_High_Reset_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:PressureSetpoint;1"
     },
@@ -1367,16 +1639,20 @@
       "OutputDtmi": "dtmi:com:willowinc:CountSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Pressurization_Fan;1",
+      "OutputDtmi": "dtmi:com:willowinc:PressurizationFan;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Propane_Forklift;1",
       "OutputDtmi": "dtmi:com:willowinc:Forklift;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Pump_Collection;1",
-      "OutputDtmi": "dtmi:com:willowinc:PlumbingPumpGroup;1"
+      "InputDtmi": "dtmi:mapped:core:Pump_On_Off_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:PumpRunActuator;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Pump_On_Off_Command;1",
-      "OutputDtmi": "dtmi:com:willowinc:OnOffActuator;1"
+      "InputDtmi": "dtmi:mapped:core:Pump_Skid;1",
+      "OutputDtmi": "dtmi:com:willowinc:PumpGroup;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Rain_Level_Sensor;1",
@@ -1409,6 +1685,22 @@
     {
       "InputDtmi": "dtmi:mapped:core:Regional_Median_Total_GHG_Emissions_Intensity;1",
       "OutputDtmi": "dtmi:com:willowinc:TotalGreenhouseGasEmissionsIntensity;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Reheat_Coil;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReheatCoil;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Reheat_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReheatLevelActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Reheat_On_Off_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReheatOnActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Reheat_On_Off_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingOnState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Relative_Humidity_Setpoint;1",
@@ -1447,8 +1739,16 @@
       "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Return_Air_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReturnVAVAirflowControlValve;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Return_Air_Velocity_Pressure_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:ReturnAirVelocityPressureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Return_Fan_Array;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReturnFanGroup;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Road_Subsurface_Temperature_Sensor;1",
@@ -1488,7 +1788,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Scheduled_Occupied_Mode_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
+      "OutputDtmi": "dtmi:com:willowinc:NormalScheduleOccupiedState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Scissor_Lift;1",
@@ -1532,7 +1832,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Snow_Accumulation_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:QuantitySensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:SnowfallAccumulationSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Solar_Inverter;1",
@@ -1565,6 +1865,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Stage_Enable_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:EnableState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Stairwell_Pressurization_Fan;1",
+      "OutputDtmi": "dtmi:com:willowinc:StairPressurizationFan;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Standby_Air_Temperature_Setpoint;1",
@@ -1633,6 +1937,14 @@
     {
       "InputDtmi": "dtmi:mapped:core:Supply_Air_Temperature_Reset_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Supply_Air_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:SupplyVAVAirflowControlValve;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Supply_Fan_Array;1",
+      "OutputDtmi": "dtmi:com:willowinc:SupplyFanGroup;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Switchboard;1",
@@ -1747,6 +2059,10 @@
       "OutputDtmi": "dtmi:com:willowinc:UPS;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Unit_Heater;1",
+      "OutputDtmi": "dtmi:com:willowinc:UnitHeater;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Unoccupied_Cooling_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:UnoccupiedCoolingSetpoint;1"
     },
@@ -1756,7 +2072,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Unoccupied_Zone_Air_Heating_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:StandbyHeatingSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Urinal;1",
@@ -1839,6 +2155,10 @@
       "OutputDtmi": "dtmi:com:willowinc:WaterCooledChiller;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Water_Cooled_Condenser_Heat_Exchanger;1",
+      "OutputDtmi": "dtmi:com:willowinc:WaterCooledCondenser;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Water_Differential_Pressure_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterDeltaPressureSensor;1"
     },
@@ -1861,6 +2181,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Waterless_Urinal;1",
       "OutputDtmi": "dtmi:com:willowinc:UrinalWaterless;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Waterside_Economizer;1",
+      "OutputDtmi": "dtmi:com:willowinc:EconomizerCoil;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Weather_Condition_Sensor;1",
@@ -1913,6 +2237,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Zone_Conditioning_Mode_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Zone_Damper;1",
+      "OutputDtmi": "dtmi:com:willowinc:ZoneDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Ablutions_Room;1",
@@ -2160,7 +2488,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Building_Chilled_Water_Meter;1",
-      "OutputDtmi": "dtmi:com:willowinc:WaterMeter;1"
+      "OutputDtmi": "dtmi:com:willowinc:ChilledWaterMeter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Building_Electrical_Meter;1",
@@ -2172,7 +2500,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Building_Hot_Water_Meter;1",
-      "OutputDtmi": "dtmi:com:willowinc:ThermalMeter;1"
+      "OutputDtmi": "dtmi:com:willowinc:HotWaterMeter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Building_Meter;1",
@@ -2263,6 +2591,10 @@
       "OutputDtmi": "dtmi:com:willowinc:ChilledBeam;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Coil;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingCoil;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Differential_Pressure_Deadband_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:ChilledWaterDeltaPressureDeadbandSetpoint;1"
     },
@@ -2312,11 +2644,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Meter;1",
-      "OutputDtmi": "dtmi:com:willowinc:WaterMeter;1"
+      "OutputDtmi": "dtmi:com:willowinc:ChilledWaterMeter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Pump;1",
-      "OutputDtmi": "dtmi:com:willowinc:DomesticWaterPump;1"
+      "OutputDtmi": "dtmi:com:willowinc:ChilledWaterPump;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Static_Pressure_Setpoint;1",
@@ -2352,11 +2684,15 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Coil;1",
-      "OutputDtmi": "dtmi:com:willowinc:FanCoilUnit;1"
+      "OutputDtmi": "dtmi:com:willowinc:Coil;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cold_Box;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cold_Deck;1",
+      "OutputDtmi": "dtmi:com:willowinc:ColdDeckAirHandlingUnitDischargeSection;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Coldest_Zone_Air_Temperature_Sensor;1",
@@ -2403,6 +2739,10 @@
       "OutputDtmi": "dtmi:com:willowinc:ComputerRoomAirConditioningUnit;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Computer_Room_Air_Handler;1",
+      "OutputDtmi": "dtmi:com:willowinc:ComputerRoomAirHandlingUnit;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Concession;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
@@ -2411,12 +2751,8 @@
       "OutputDtmi": "dtmi:com:willowinc:LeakAlarmState;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser;1",
-      "OutputDtmi": "dtmi:com:willowinc:Condenser;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Heat_Exchanger;1",
-      "OutputDtmi": "dtmi:com:willowinc:HeatExchanger;1"
+      "OutputDtmi": "dtmi:com:willowinc:Condenser;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Bypass_Valve;1",
@@ -2436,7 +2772,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Pump;1",
-      "OutputDtmi": "dtmi:com:willowinc:Pump;1"
+      "OutputDtmi": "dtmi:com:willowinc:CondenserWaterPump;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Water_System;1",
@@ -2476,7 +2812,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Coil;1",
-      "OutputDtmi": "dtmi:com:willowinc:FanCoilUnit;1"
+      "OutputDtmi": "dtmi:com:willowinc:CoolingCoil;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Command;1",
@@ -2716,11 +3052,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Direct_Expansion_Cooling_Coil;1",
-      "OutputDtmi": "dtmi:com:willowinc:FanCoilUnit;1"
+      "OutputDtmi": "dtmi:com:willowinc:CoolingCoil;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Direct_Expansion_Heating_Coil;1",
-      "OutputDtmi": "dtmi:com:willowinc:FanCoilUnit;1"
+      "OutputDtmi": "dtmi:com:willowinc:HeatingCoil;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Direction_Command;1",
@@ -2775,12 +3111,24 @@
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirStaticPressureSensor;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Cooling_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingDischargeAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Heating_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingDischargeAirTemperatureSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirTemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Discharge_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Discharge_Fan;1",
+      "OutputDtmi": "dtmi:com:willowinc:SupplyFan;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Disconnect_Switch;1",
@@ -2827,12 +3175,20 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Economizer;1",
+      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Economizer_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:EconomizerDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Effective_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Effective_Discharge_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:ActiveDischargeAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Effective_Return_Air_Temperature_Setpoint;1",
@@ -2848,7 +3204,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Effective_Zone_Air_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:EffectiveZoneAirTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:ActiveZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Electric_Baseboard_Radiator;1",
@@ -2888,7 +3244,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Elevator_Shaft;1",
-      "OutputDtmi": "dtmi:com:willowinc:Space;1"
+      "OutputDtmi": "dtmi:com:willowinc:ElevatorShaft;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Elevator_Space;1",
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Embedded_Temperature_Sensor;1",
@@ -3072,7 +3432,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Evaporative_Heat_Exchanger;1",
-      "OutputDtmi": "dtmi:com:willowinc:HeatExchanger;1"
+      "OutputDtmi": "dtmi:com:willowinc:Evaporator;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Even_Month_Status;1",
@@ -3160,7 +3520,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Exhaust_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:ExhaustDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Exhaust_Fan;1",
@@ -3185,6 +3545,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:FanRunActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_On_Off_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:FanRunState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Speed_Command;1",
@@ -3220,11 +3584,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Filter_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:ReplaceFilterState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Final_Filter;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirFilter;1"
+      "OutputDtmi": "dtmi:com:willowinc:FinalFilter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Alarm;1",
@@ -3304,7 +3668,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fume_Hood;1",
-      "OutputDtmi": "dtmi:com:willowinc:VentilationHood;1"
+      "OutputDtmi": "dtmi:com:willowinc:FumeHood;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Fume_Hood_Air_Flow_Sensor;1",
@@ -3329,6 +3693,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Gas_Valve;1",
       "OutputDtmi": "dtmi:com:willowinc:Valve;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Gatehouse;1",
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Generator_Room;1",
@@ -3384,7 +3752,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Heating_Coil;1",
-      "OutputDtmi": "dtmi:com:willowinc:FanCoilUnitReheat;1"
+      "OutputDtmi": "dtmi:com:willowinc:HeatingCoil;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Heating_Command;1",
@@ -3487,6 +3855,18 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Deck;1",
+      "OutputDtmi": "dtmi:com:willowinc:HotDeckAirHandlingUnitDischargeSection;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Baseboard_Radiator;1",
+      "OutputDtmi": "dtmi:com:willowinc:HydronicBaseboardHeater;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Coil;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingCoil;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Differential_Pressure_Deadband_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:HotWaterDeltaPressureDeadbandSetpoint;1"
     },
@@ -3528,11 +3908,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Meter;1",
-      "OutputDtmi": "dtmi:com:willowinc:WaterMeter;1"
+      "OutputDtmi": "dtmi:com:willowinc:HotWaterMeter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Pump;1",
-      "OutputDtmi": "dtmi:com:willowinc:Pump;1"
+      "OutputDtmi": "dtmi:com:willowinc:HeatingHotWaterPump;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Static_Pressure_Setpoint;1",
@@ -3919,6 +4299,10 @@
       "OutputDtmi": "dtmi:com:willowinc:LuminanceSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:MDF;1",
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Mail_Room;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
@@ -4168,7 +4552,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Mixed_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:MixedDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Mode_Command;1",
@@ -4444,7 +4828,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:OutsideAirDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Face_Surface_Temperature_Sensor;1",
@@ -4608,11 +4992,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pre_Filter;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirFilter;1"
+      "OutputDtmi": "dtmi:com:willowinc:PreFilter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pre_Filter_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:State;1"
+      "OutputDtmi": "dtmi:com:willowinc:ReplacePreFilterState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Preheat_Command;1",
@@ -4664,7 +5048,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pump;1",
-      "OutputDtmi": "dtmi:com:willowinc:Pump;1"
+      "OutputDtmi": "dtmi:com:willowinc:HVACPump;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Pump_Command;1",
@@ -4752,11 +5136,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Relief_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:ReliefDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Relief_Fan;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACFan;1"
+      "OutputDtmi": "dtmi:com:willowinc:ReliefFan;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Remotely_On_Off_Status;1",
@@ -4848,7 +5232,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Damper;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACDamper;1"
+      "OutputDtmi": "dtmi:com:willowinc:ReturnDamper;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Fan;1",
@@ -5472,7 +5856,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Mode_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Return_Air_Temperature_Setpoint;1",
@@ -5591,6 +5975,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Waste_Storage;1",
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:WaterLeakAlarmState;1"
     },
@@ -5683,6 +6071,10 @@
       "OutputDtmi": "dtmi:com:willowinc:ArchitecturalBuildingComponent;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Workshop;1",
+      "OutputDtmi": "dtmi:com:willowinc:Room;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Zone;1",
       "OutputDtmi": "dtmi:com:willowinc:Zone;1"
     },
@@ -5749,6 +6141,10 @@
     {
       "InputDtmi": "dtmi:org:w3id:rec:SubBuilding;1",
       "OutputDtmi": "dtmi:com:willowinc:SubBuilding;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:w3id:rec:Workspace;1",
+      "OutputDtmi": "dtmi:com:willowinc:Workspace;1"
     }
   ],
   "NamespaceRemaps": [
@@ -5758,6 +6154,10 @@
     },
     {
       "InputNamespace": "dtmi:mapped:core:",
+      "OutputNamespace": "dtmi:com:willowinc:"
+    },
+    {
+      "InputNamespace": "dtmi:org:w3id:rec:",
       "OutputNamespace": "dtmi:com:willowinc:"
     }
   ],
@@ -5786,6 +6186,14 @@
       "IsOutputPropertyCollection": false,
       "OutputDtmiFilter": ".*",
       "OutputPropertyName": "externalID"
+    },
+    {
+      "InputPropertyNames": [
+        "level"
+      ],
+      "IsOutputPropertyCollection": false,
+      "OutputDtmiFilter": ".*",
+      "OutputPropertyName": "levelNumber"
     }
   ],
   "RelationshipRemaps": [
