@@ -379,6 +379,10 @@
       "OutputDtmi": "dtmi:com:willowinc:QuantitySensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Chiller_Group;1",
+      "OutputDtmi": "dtmi:com:willowinc:ChillerGroup;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Chiller_Plant;1",
       "OutputDtmi": "dtmi:com:willowinc:ChilledWaterPlant;1"
     },
@@ -1023,6 +1027,10 @@
       "OutputDtmi": "dtmi:com:willowinc:HumiditySetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:High_Limit;1",
+      "OutputDtmi": "dtmi:com:willowinc:HighLimit;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:High_Static_Pressure_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:HighSupplyStaticPressureAlarmState;1"
     },
@@ -1177,6 +1185,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Low_Humidity_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:HumiditySetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Low_Limit;1",
+      "OutputDtmi": "dtmi:com:willowinc:LowLimit;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Low_Static_Air_Pressure_Alarm;1",
@@ -1632,7 +1644,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Pump_Skid;1",
-      "OutputDtmi": "dtmi:com:willowinc:PlumbingPumpGroup;1"
+      "OutputDtmi": "dtmi:com:willowinc:PumpGroup;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Rain_Level_Sensor;1",
