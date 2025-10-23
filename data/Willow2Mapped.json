@@ -4737,6 +4737,10 @@
       "OutputDtmi": "dtmi:mapped:core:Wireless_Access_Point;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Workstation;1",
+      "OutputDtmi": "dtmi:org:w3id:rec:Desk;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:Zone;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Zone;1"
     },

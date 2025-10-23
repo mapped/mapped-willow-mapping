@@ -6155,6 +6155,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Company;1"
     },
     {
+      "InputDtmi": "dtmi:org:w3id:rec:Desk;1",
+      "OutputDtmi": "dtmi:com:willowinc:Workstation;1"
+    },
+    {
       "InputDtmi": "dtmi:org:w3id:rec:Lease;1",
       "OutputDtmi": "dtmi:com:willowinc:Lease;1"
     },
