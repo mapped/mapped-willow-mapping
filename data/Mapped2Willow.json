@@ -60,7 +60,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Active_Energy_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:TotalNetActiveElectricalEnergySensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:ActiveElectricalEnergySensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Active_Status;1",
@@ -1351,8 +1351,16 @@
       "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Occupied_Cooling_Zone_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingZoneAirTemperatureSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Occupied_Heating_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Occupied_Heating_Zone_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Occupied_Zone_Air_Heating_Temperature_Setpoint;1",
@@ -1879,7 +1887,15 @@
       "OutputDtmi": "dtmi:com:willowinc:StandbyCoolingZoneAirTemperatureSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Standby_Cooling_Zone_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:StandbyCoolingZoneAirTemperatureSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Standby_Heating_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:StandbyHeatingZoneAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Standby_Heating_Zone_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:StandbyHeatingZoneAirTemperatureSetpoint;1"
     },
     {
@@ -2067,8 +2083,16 @@
       "OutputDtmi": "dtmi:com:willowinc:UnoccupiedCoolingSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Unoccupied_Cooling_Zone_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedCoolingZoneAirTemperatureSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Unoccupied_Heating_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Unoccupied_Heating_Zone_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Unoccupied_Zone_Air_Heating_Temperature_Setpoint;1",
@@ -2233,6 +2257,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Zone_Air_Conditioning_Mode_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:ModeActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Zone_CO2_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:ZoneAirCO2Sensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Zone_Conditioning_Mode_Status;1",
@@ -3745,6 +3773,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Heat_Sink_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Heat_Wheel;1",
+      "OutputDtmi": "dtmi:com:willowinc:EnergyRecoveryDevice;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Heat_Wheel_VFD;1",
