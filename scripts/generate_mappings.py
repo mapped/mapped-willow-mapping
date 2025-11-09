@@ -87,6 +87,9 @@ def main():
         "dtmi:mapped:core:Pump_Skid;1": ["dtmi:com:willowinc:PumpGroup;1", "dtmi:com:willowinc:PlumbingPumpGroup;1"],
         "dtmi:com:willowinc:PumpGroup;1": ["dtmi:mapped:core:Pump_Skid;1"],
         "dtmi:com:willowinc:PlumbingPumpGroup;1": ["dtmi:mapped:core:Pump_Skid;1"],
+
+        "dtmi:mapped:core:Air_Change_Rate_Sensor;1": ["dtmi:com:willowinc:AirChangesPerHour;1"],
+        "dtmi:com:willowinc:AirChangesPerHour;1": ["dtmi:mapped:core:Air_Change_Rate_Sensor;1"],
     }
 
     engine_building = MappingEngine(
