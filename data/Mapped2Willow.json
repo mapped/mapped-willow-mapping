@@ -1367,6 +1367,10 @@
       "OutputDtmi": "dtmi:com:willowinc:MinOutsideAirDamperPositionState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Min_Outside_Air_Flow_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:MinOutsideAirFlowSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Min_Water_Temperature_Setpoint_Limit;1",
       "OutputDtmi": "dtmi:com:willowinc:MinLimit;1"
     },
