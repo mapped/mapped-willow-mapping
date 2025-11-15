@@ -4148,7 +4148,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Intake_Air_Filter;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirFilter;1"
+      "OutputDtmi": "dtmi:com:willowinc:OutsideAirFilter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Intake_Air_Temperature_Sensor;1",
@@ -4672,7 +4672,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Mixed_Air_Filter;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirFilter;1"
+      "OutputDtmi": "dtmi:com:willowinc:MixedAirFilter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Mixed_Air_Flow_Sensor;1",
@@ -5336,7 +5336,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Air_Filter;1",
-      "OutputDtmi": "dtmi:com:willowinc:AirFilter;1"
+      "OutputDtmi": "dtmi:com:willowinc:ReturnAirFilter;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Air_Flow_Sensor;1",
