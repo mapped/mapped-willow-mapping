@@ -2908,7 +2908,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Isolation_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:Valve;1"
+      "OutputDtmi": "dtmi:com:willowinc:IsolationValve;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Pump;1",
@@ -4176,7 +4176,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Isolation_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:PlumbingShutOffValve;1"
+      "OutputDtmi": "dtmi:com:willowinc:IsolationValve;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Janitor_Room;1",
