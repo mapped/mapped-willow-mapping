@@ -495,6 +495,10 @@
       "OutputDtmi": "dtmi:com:willowinc:CoolingLevelActuator;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Level_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingLevelState;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Cooling_On_Off_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:CoolingOnActuator;1"
     },
@@ -571,15 +575,15 @@
       "OutputDtmi": "dtmi:com:willowinc:StartsCountSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Damper_Open_Close_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:DamperOpenState;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Damper_Open_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:DamperOpenActuator;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Damper_Open_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:DamperOpenState;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Damper_Open_Close_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:DamperOpenState;1"
     },
     {
@@ -771,6 +775,10 @@
       "OutputDtmi": "dtmi:com:willowinc:MarginalEmissionsHealthImpactCostFactorForecast;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Electronic_Expansion_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:ElectronicExpansionValve;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Elevator_Pressurization_Fan;1",
       "OutputDtmi": "dtmi:com:willowinc:ElevatorPressurizationFan;1"
     },
@@ -789,6 +797,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Energy_Star_Score;1",
       "OutputDtmi": "dtmi:com:willowinc:EnergyStarScore;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Entering_Air_Temperature_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:EnteringAirTemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Entry;1",
@@ -1035,6 +1047,10 @@
       "OutputDtmi": "dtmi:com:willowinc:HeatingLevelActuator;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Heating_Level_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingLevelState;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Heating_On_Off_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:HeatingOnActuator;1"
     },
@@ -1165,6 +1181,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Lead_On_Off_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:OnOffState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Leaving_Air_Temperature_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:LeavingAirTemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Level_Command;1",
@@ -1747,12 +1767,20 @@
       "OutputDtmi": "dtmi:com:willowinc:RainfallRateSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Refrigerant_Metering_Device;1",
+      "OutputDtmi": "dtmi:com:willowinc:RefrigerantMeteringDevice;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Refrigerant_Saturation_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Refrigerant_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:RefrigerantTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Refrigerant_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:RefrigerantValve;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Refrigeration_Equipment;1",
@@ -1839,6 +1867,10 @@
       "OutputDtmi": "dtmi:com:willowinc:ReturnFanGroup;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Reversing_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReversingValve;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Road_Subsurface_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
     },
@@ -1855,16 +1887,16 @@
       "OutputDtmi": "dtmi:com:willowinc:RunActuator;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Sash_Position_Command;1",
-      "OutputDtmi": "dtmi:com:willowinc:SashPositionActuator;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:SO2_Level_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:SO2AirQualitySensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Safe;1",
       "OutputDtmi": "dtmi:com:willowinc:SecuritySafe;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Sash_Position_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:SashPositionActuator;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Scale;1",
@@ -2097,6 +2129,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Thermal_Expansion_Tank;1",
       "OutputDtmi": "dtmi:com:willowinc:PlumbingExpansionTank;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Thermal_Expansion_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:ThermalExpansionValve;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Thing;1",
@@ -4884,7 +4920,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Operating_Mode_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
+      "OutputDtmi": "dtmi:com:willowinc:OperatingModeState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Outdoor_Area;1",
