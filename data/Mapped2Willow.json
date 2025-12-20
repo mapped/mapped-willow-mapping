@@ -775,6 +775,10 @@
       "OutputDtmi": "dtmi:com:willowinc:MarginalEmissionsHealthImpactCostFactorForecast;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Electronic_Expansion_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:ElectronicExpansionValve;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Elevator_Pressurization_Fan;1",
       "OutputDtmi": "dtmi:com:willowinc:ElevatorPressurizationFan;1"
     },
@@ -1759,12 +1763,20 @@
       "OutputDtmi": "dtmi:com:willowinc:RainfallRateSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Refrigerant_Metering_Device;1",
+      "OutputDtmi": "dtmi:com:willowinc:RefrigerantMeteringDevice;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Refrigerant_Saturation_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Refrigerant_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:RefrigerantTemperatureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Refrigerant_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:RefrigerantValve;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Refrigeration_Equipment;1",
@@ -1849,6 +1861,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Return_Fan_Array;1",
       "OutputDtmi": "dtmi:com:willowinc:ReturnFanGroup;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Reversing_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:ReversingValve;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Road_Subsurface_Temperature_Sensor;1",
@@ -2109,6 +2125,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Thermal_Expansion_Tank;1",
       "OutputDtmi": "dtmi:com:willowinc:PlumbingExpansionTank;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Thermal_Expansion_Valve;1",
+      "OutputDtmi": "dtmi:com:willowinc:ThermalExpansionValve;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Thing;1",
@@ -2920,7 +2940,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Isolation_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:Valve;1"
+      "OutputDtmi": "dtmi:com:willowinc:IsolationValve;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Pump;1",
@@ -4188,7 +4208,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Isolation_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:PlumbingShutOffValve;1"
+      "OutputDtmi": "dtmi:com:willowinc:IsolationValve;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Janitor_Room;1",
