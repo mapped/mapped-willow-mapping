@@ -104,7 +104,7 @@ jobs:
           --overwrite \
           --connection-string "${{ secrets.ONTOLOGY_BLOB_STORE_CONN_STR }}"
 
-        sleep 10 # wait enough for the files to be available in the CDN, hopefully.
+        sleep 45 # wait enough for the files to be available in the CDN, hopefully.
 
 
     - name: Restore dependencies
