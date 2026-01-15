@@ -4,9 +4,10 @@ version = "0.1.0"
 description = ""
 authors = ["Connor Cantrell <connor@mapped.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.14"
 ontology-mapper = {version = "^0.4.2", source = "fury"}
 
 [[tool.poetry.source]]
@@ -17,6 +18,10 @@ priority = "primary"
 name = "fury"
 url = "https://pypi.fury.io/mapped/"
 priority = "supplemental"
+
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.2.0"
 
 [build-system]
 requires = ["poetry-core"]

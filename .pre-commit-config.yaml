@@ -3,12 +3,12 @@ repos:
   hooks:
     - id: sort-manual-mapped-mappings
       name: Sort Manual Mapped Mappings
-      entry: python scripts/sort_mappings.py data/Mapped2Willow.json
+      entry: poetry run python scripts/sort_mappings.py data/Mapped2Willow.json
       language: system
       pass_filenames: false
     - id: sort-manual-willow-mappings
       name: Sort Manual Willow Mappings
-      entry: python scripts/sort_mappings.py data/Willow2Mapped.json
+      entry: poetry run python scripts/sort_mappings.py data/Willow2Mapped.json
       language: system
       pass_filenames: false
 - repo: https://github.com/pre-commit/pre-commit-hooks
