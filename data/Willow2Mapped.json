@@ -902,7 +902,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CoolingPlant;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Chiller_Plant;1"
+      "OutputDtmi": "dtmi:mapped:core:Chiller_Plant;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CoolingTower;1",
@@ -910,7 +910,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CoolingTowerGroup;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Tower_Group;1"
+      "OutputDtmi": "dtmi:mapped:core:Cooling_Tower_Group;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CoolingZoneAirTemperatureSetpoint;1",
@@ -1262,7 +1262,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DualDuctVAVBox;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Dual_Duct_Variable_Air_Volume_Box;1"
+      "OutputDtmi": "dtmi:mapped:core:Dual_Duct_Variable_Air_Volume_Box;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DuctHeater;1",
@@ -4382,7 +4382,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SteamUnitHeater;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Unit_Heater;1"
+      "OutputDtmi": "dtmi:mapped:core:Unit_Heater;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SteamValve;1",
