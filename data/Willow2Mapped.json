@@ -605,6 +605,10 @@
       "OutputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:Coil;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Coil;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:CoilEnteringWaterTemperatureSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Water_Temperature_Sensor;1"
     },
@@ -795,6 +799,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:CookingEquipment;1",
       "OutputDtmi": "dtmi:mapped:core:Culinary_Equipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:CoolingCoil;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Coil;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CoolingCoilLeavingAirTemperatureSensor;1",
@@ -1185,6 +1193,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Time_Setpoint;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:EconomizerCoil;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Coil;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:EffectiveCoolingZoneAirTemperatureSetpoint;1",
       "OutputDtmi": "dtmi:mapped:core:Effective_Cooling_Air_Temperature_Setpoint;1"
     },
@@ -1329,6 +1341,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Enable_Status;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:EnergyRecoveryDevice;1",
+      "OutputDtmi": "dtmi:mapped:core:Energy_Recovery_Unit;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:EnergySensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Energy_Sensor;1"
     },
@@ -1439,6 +1455,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:EvaporativeCoolingTower;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Tower;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:Evaporator;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Evaporative_Heat_Exchanger;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EvaporatorEnteringRefrigerantStaticPressureSensor;1",
@@ -2023,6 +2043,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:HeatExchanger;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Heat_Exchanger;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:HeatingCoil;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Heating_Coil;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HeatingDegreeDays;1",
@@ -3249,6 +3273,10 @@
       "OutputDtmi": "dtmi:mapped:core:Precipitation_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:PreheatCoil;1",
+      "OutputDtmi": "dtmi:mapped:core:Preheat_Coil;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:PreheatCoilEnteringWaterTemperatureSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Water_Temperature_Sensor;1"
     },
@@ -3455,6 +3483,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:Region;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Region;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:ReheatCoil;1",
+      "OutputDtmi": "dtmi:mapped:core:Reheat_Coil;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ReheatCoilEnteringWaterTemperatureSensor;1",
