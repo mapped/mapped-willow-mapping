@@ -5149,10 +5149,6 @@
       "OutputDtmi": "dtmi:mapped:core:Audio_Visual_Equipment;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:airport:AirportGate;1",
-      "OutputDtmi": "dtmi:mapped:core:Gate;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:airport:AirportTerminal;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Building;1"
     },
