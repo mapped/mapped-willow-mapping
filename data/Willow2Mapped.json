@@ -557,10 +557,6 @@
       "OutputDtmi": "dtmi:mapped:core:Chilled_Water_GHG_Emissions_Factor;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:ChilledWaterCoolingCoil;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Coil;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:ChilledWaterDeltaPressureDeadbandSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Differential_Pressure_Deadband_Setpoint;1"
     },
@@ -909,10 +905,6 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Tower;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:CoolingTowerGroup;1",
-      "OutputDtmi": "dtmi:mapped:core:Cooling_Tower_Group;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:CoolingZoneAirTemperatureSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Zone_Air_Cooling_Temperature_Setpoint;1"
     },
@@ -1083,10 +1075,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:DirectEvaporativeCoolingTower;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Cooling_Tower;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:DirectExpansionCoolingCoil;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Direct_Expansion_Cooling_Coil;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DirectGreenhouseGasEmissions;1",
