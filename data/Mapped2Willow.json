@@ -2700,7 +2700,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Bypass_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:Valve;1"
+      "OutputDtmi": "dtmi:com:willowinc:BypassValve;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Bypass_Water_Flow_Sensor;1",
