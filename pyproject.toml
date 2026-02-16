@@ -4,10 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["Connor Cantrell <connor@mapped.com>"]
 readme = "README.md"
-package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.14"
+python = "^3.10"
 ontology-mapper = {version = "^0.4.2", source = "fury"}
 
 [[tool.poetry.source]]
