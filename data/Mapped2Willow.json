@@ -347,8 +347,12 @@
       "OutputDtmi": "dtmi:com:willowinc:CableFaultAlarmState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Calendar;1",
+      "OutputDtmi": "dtmi:com:willowinc:Calendar;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Calendar_Event;1",
-      "OutputDtmi": "dtmi:com:willowinc:Event;1"
+      "OutputDtmi": "dtmi:com:willowinc:CalendarEvent;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Canadian_Regional_Median_Total_GHG_Emissions;1",
@@ -484,7 +488,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cooling_Air_Temperature_Setpoint_Offset;1",
-      "OutputDtmi": "dtmi:com:willowinc:SetpointOffset;1"
+      "OutputDtmi": "dtmi:com:willowinc:CoolingAirTemperatureSetpointOffset;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Cooling_Enable_Status;1",
@@ -1039,6 +1043,10 @@
       "OutputDtmi": "dtmi:com:willowinc:HotFoodDisplayCase;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Heating_Air_Temperature_Setpoint_Offset;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingAirTemperatureSetpointOffset;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Heating_Enable_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:EnableState;1"
     },
@@ -1439,12 +1447,20 @@
       "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Occupied_Cooling_Air_Temperature_Setpoint_Offset;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingAirTemperatureSetpointOffset;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Occupied_Cooling_Zone_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Occupied_Heating_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Occupied_Heating_Air_Temperature_Setpoint_Offset;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingAirTemperatureSetpointOffset;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Occupied_Heating_Zone_Air_Temperature_Setpoint;1",
@@ -1975,6 +1991,10 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Space_Booking_Calendar;1",
+      "OutputDtmi": "dtmi:com:willowinc:Calendar;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Spectrometer;1",
       "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
     },
@@ -2003,12 +2023,20 @@
       "OutputDtmi": "dtmi:com:willowinc:StandbyCoolingZoneAirTemperatureSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Standby_Cooling_Air_Temperature_Setpoint_Offset;1",
+      "OutputDtmi": "dtmi:com:willowinc:StandbyCoolingAirTemperatureSetpointOffset;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Standby_Cooling_Zone_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:StandbyCoolingZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Standby_Heating_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:StandbyHeatingZoneAirTemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Standby_Heating_Air_Temperature_Setpoint_Offset;1",
+      "OutputDtmi": "dtmi:com:willowinc:StandbyHeatingAirTemperatureSetpointOffset;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Standby_Heating_Zone_Air_Temperature_Setpoint;1",
@@ -2113,6 +2141,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Temperature_Alarm_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:TemperatureSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Temperature_Setpoint_Offset;1",
+      "OutputDtmi": "dtmi:com:willowinc:TemperatureSetpointOffset;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Test_Point;1",
@@ -2231,12 +2263,20 @@
       "OutputDtmi": "dtmi:com:willowinc:UnoccupiedCoolingSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Unoccupied_Cooling_Air_Temperature_Setpoint_Offset;1",
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedCoolingAirTemperatureSetpointOffset;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Unoccupied_Cooling_Zone_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:UnoccupiedCoolingZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Unoccupied_Heating_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Unoccupied_Heating_Air_Temperature_Setpoint_Offset;1",
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedHeatingAirTemperatureSetpointOffset;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Unoccupied_Heating_Zone_Air_Temperature_Setpoint;1",
