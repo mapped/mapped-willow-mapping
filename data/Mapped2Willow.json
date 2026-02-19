@@ -347,8 +347,12 @@
       "OutputDtmi": "dtmi:com:willowinc:CableFaultAlarmState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Calendar;1",
+      "OutputDtmi": "dtmi:com:willowinc:Calendar;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Calendar_Event;1",
-      "OutputDtmi": "dtmi:com:willowinc:Event;1"
+      "OutputDtmi": "dtmi:com:willowinc:CalendarEvent;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Canadian_Regional_Median_Total_GHG_Emissions;1",
@@ -1985,6 +1989,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Sound_Volume_Level_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Space_Booking_Calendar;1",
+      "OutputDtmi": "dtmi:com:willowinc:Calendar;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Spectrometer;1",
