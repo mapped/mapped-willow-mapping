@@ -415,6 +415,10 @@
       "OutputDtmi": "dtmi:com:willowinc:CloseActuator;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Close_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:ClosedState;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance;1",
       "OutputDtmi": "dtmi:com:willowinc:CoefficientOfPerformance;1"
     },
@@ -1467,6 +1471,10 @@
       "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingZoneAirTemperatureSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Offset;1",
+      "OutputDtmi": "dtmi:com:willowinc:Offset;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Open_Close_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:OpenCloseActuator;1"
     },
@@ -1955,6 +1963,10 @@
       "OutputDtmi": "dtmi:com:willowinc:NonoperationalState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Setpoint_Offset;1",
+      "OutputDtmi": "dtmi:com:willowinc:Offset;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Sink;1",
       "OutputDtmi": "dtmi:com:willowinc:Sink;1"
     },
@@ -2409,6 +2421,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Window;1",
       "OutputDtmi": "dtmi:com:willowinc:Window;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Window_Open_Close_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:OpenClosedState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Window_Status;1",
@@ -3121,6 +3137,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:DamperPositionActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:DamperPositionSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Sensor;1",
@@ -4925,6 +4945,10 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:On_Timer_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:TimeSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Open_Close_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:OpenClosedState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Open_Heating_Valve_Outside_Air_Temperature_Setpoint;1",

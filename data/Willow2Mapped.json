@@ -649,6 +649,10 @@
       "OutputDtmi": "dtmi:mapped:core:Close_Status;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:ClosedState;1",
+      "OutputDtmi": "dtmi:mapped:core:Close_Status;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:CoefficientOfPerformance;1",
       "OutputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance;1"
     },
@@ -2947,6 +2951,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:OpenCloseActuator;1",
       "OutputDtmi": "dtmi:mapped:core:Open_Close_Command;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:OpenClosedState;1",
+      "OutputDtmi": "dtmi:mapped:core:Open_Close_Status;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:OpenPositionState;1",
