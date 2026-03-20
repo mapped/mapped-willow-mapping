@@ -415,10 +415,6 @@
       "OutputDtmi": "dtmi:com:willowinc:CloseActuator;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Close_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:CloseState;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance;1",
       "OutputDtmi": "dtmi:com:willowinc:CoefficientOfPerformance;1"
     },
@@ -2423,10 +2419,6 @@
       "OutputDtmi": "dtmi:com:willowinc:Window;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Window_Open_Close_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:OpenCloseState;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Window_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
@@ -3141,10 +3133,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:DamperPositionState;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ReturnAirDamperPositionSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Deadband_Setpoint;1",
@@ -4945,10 +4933,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:On_Timer_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:TimeSensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Open_Close_Status;1",
-      "OutputDtmi": "dtmi:com:willowinc:OpenCloseState;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Open_Heating_Valve_Outside_Air_Temperature_Setpoint;1",

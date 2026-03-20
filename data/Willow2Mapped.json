@@ -649,10 +649,6 @@
       "OutputDtmi": "dtmi:mapped:core:Close_Status;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:CloseState;1",
-      "OutputDtmi": "dtmi:mapped:core:Close_Status;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:CoefficientOfPerformance;1",
       "OutputDtmi": "dtmi:mapped:core:Coefficient_Of_Performance;1"
     },
@@ -1097,14 +1093,6 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Setpoint;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:DischargeAirDamperPositionActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Command;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:DischargeAirDamperPositionSetpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Setpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:DischargeAirDeltaPressureSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_Differential_Pressure_Sensor;1"
     },
@@ -1159,18 +1147,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:DischargeFanRunActuator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:DischargeFanRunState;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Status;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:DischargeFanVFDFrequencySensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Output_Frequency_Sensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:DischargeFanVFDRunLevelActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Speed_Command;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DischargeFilterAirDeltaPressureSensor;1",
@@ -1573,14 +1549,6 @@
       "OutputDtmi": "dtmi:mapped:core:Event;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:ExhaustAirDamperPositionActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Command;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ExhaustAirDamperPositionSetpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Setpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:ExhaustAirDeltaPressureSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Exhaust_Air_Differential_Pressure_Sensor;1"
     },
@@ -1635,22 +1603,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:ExhaustFan;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Exhaust_Fan;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ExhaustFanRunActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ExhaustFanRunState;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Status;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ExhaustFanVFDFrequencySensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Output_Frequency_Sensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ExhaustFanVFDRunLevelActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Speed_Command;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ExitSign;1",
@@ -2389,14 +2341,6 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupancy_Sensor;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:InletAirDamperPositionActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Command;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:InletAirDamperPositionSetpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Setpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:InletAirDeltaPressureSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Differential_Pressure_Sensor;1"
     },
@@ -2785,16 +2729,8 @@
       "OutputDtmi": "dtmi:mapped:core:Min_Outside_Air_Damper;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:MinOutsideAirDamperPositionActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Command;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:MinOutsideAirFlowSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Air_Flow_Setpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:MixedAirDamperPositionActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Command;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:MixedAirEnthalpySensor;1",
@@ -2847,22 +2783,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:MixedDamper;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Mixed_Damper;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:MixedFanRunActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:MixedFanRunState;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Status;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:MixedFanVFDFrequencySensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Output_Frequency_Sensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:MixedFanVFDRunLevelActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Speed_Command;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ModbusController;1",
@@ -3029,10 +2949,6 @@
       "OutputDtmi": "dtmi:mapped:core:Open_Close_Command;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:OpenCloseState;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Open_Close_Status;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:OpenPositionState;1",
       "OutputDtmi": "dtmi:mapped:core:Open_Status;1"
     },
@@ -3055,14 +2971,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:OutsideAirDamper;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Damper;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:OutsideAirDamperPositionActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Command;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:OutsideAirDamperPositionSetpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:OutsideAirEnthalpySensor;1",
@@ -3123,22 +3031,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:OutsideAirVelocityPressureSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Velocity_Pressure_Setpoint;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:OutsideFanRunActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:OutsideFanRunState;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Status;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:OutsideFanVFDFrequencySensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Output_Frequency_Sensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:OutsideFanVFDRunLevelActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Speed_Command;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:OutsideFilterAirDeltaPressureSensor;1",
@@ -3757,14 +3649,6 @@
       "OutputDtmi": "dtmi:mapped:core:Relative_Humidity_Setpoint;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:ReliefAirDamperPositionActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Command;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ReliefAirDamperPositionSetpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Setpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:ReliefAirDeltaPressureSetpoint;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Air_Differential_Pressure_Setpoint;1"
     },
@@ -3817,22 +3701,6 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Relief_Fan;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:ReliefFanRunActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ReliefFanRunState;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Status;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ReliefFanVFDFrequencySensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Output_Frequency_Sensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ReliefFanVFDRunLevelActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Speed_Command;1"
-    },
-    {
       "InputDtmi": "dtmi:com:willowinc:ReliefFilterAirDeltaPressureSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Filter_Differential_Pressure_Sensor;1"
     },
@@ -3875,14 +3743,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:RetailWrappingMachine;1",
       "OutputDtmi": "dtmi:mapped:core:Wrapping_Station;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ReturnAirDamperPositionActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Command;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ReturnAirDamperPositionSetpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper_Position_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ReturnAirDeltaPressureSensor;1",
@@ -3959,18 +3819,6 @@
     {
       "InputDtmi": "dtmi:com:willowinc:ReturnFanRunActuator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ReturnFanRunState;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Status;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ReturnFanVFDFrequencySensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Output_Frequency_Sensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:com:willowinc:ReturnFanVFDRunLevelActuator;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Speed_Command;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ReturnFilterAirDeltaPressureSensor;1",
