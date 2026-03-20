@@ -90,6 +90,24 @@ def main():
 
         "dtmi:mapped:core:Air_Change_Rate_Sensor;1": ["dtmi:com:willowinc:AirChangesPerHour;1"],
         "dtmi:com:willowinc:AirChangesPerHour;1": ["dtmi:mapped:core:Air_Change_Rate_Sensor;1"],
+        "dtmi:mapped:core:Discharge_Air_Temperature_Reset_Setpoint;1": ["dtmi:com:willowinc:Limit;1"],
+        "dtmi:mapped:core:Outside_Air_Temperature_Reset_Setpoint;1": ["dtmi:com:willowinc:Limit;1"],
+        "dtmi:mapped:core:Return_Air_Temperature_Reset_Setpoint;1": ["dtmi:com:willowinc:Limit;1"],
+        "dtmi:org:brickschema:schema:Brick:Outside_Air_Temperature_High_Reset_Setpoint;1": ["dtmi:com:willowinc:OutsideAirTemperatureResetHighLimit;1"],
+        "dtmi:org:brickschema:schema:Brick:Outside_Air_Temperature_Low_Reset_Setpoint;1": ["OutputDtmi": "dtmi:com:willowinc:OutsideAirTemperatureResetLowLimit;1"],
+        "dtmi:org:brickschema:schema:Brick:Reset_Setpoint;1": [ "OutputDtmi": "dtmi:com:willowinc:Limit;1"],
+        "dtmi:org:brickschema:schema:Brick:Return_Air_Temperature_High_Reset_Setpoint;1": ["dtmi:com:willowinc:ResetHighLimit;1"],
+        "dtmi:org:brickschema:schema:Brick:Return_Air_Temperature_Low_Reset_Setpoint;1": ["dtmi:com:willowinc:ResetLowLimit;1"],
+        "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_High_Reset_Setpoint;1": ["dtmi:com:willowinc:ResetHighLimit;1"],
+        "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Low_Reset_Setpoint;1": ["dtmi:com:willowinc:ResetLowLimit;1"],
+        "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Reset_Differential_Setpoint;1": ["dtmi:com:willowinc:Limit;1"],
+        "dtmi:org:brickschema:schema:Brick:Temperature_Differential_Reset_Setpoint;1": ["dtmi:com:willowinc:Limit;1"],
+        "dtmi:org:brickschema:schema:Brick:Temperature_High_Reset_Setpoint;1": ["dtmi:com:willowinc:ResetHighLimit;1"],
+        "dtmi:org:brickschema:schema:Brick:Temperature_Low_Reset_Setpoint;1": ["dtmi:com:willowinc:ResetLowLimit;1"],
+
+
+
+
     }
 
     engine_building = MappingEngine(
