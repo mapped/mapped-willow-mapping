@@ -1467,10 +1467,6 @@
       "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingZoneAirTemperatureSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Offset;1",
-      "OutputDtmi": "dtmi:com:willowinc:SetpointOffset;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Open_Close_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:OpenCloseActuator;1"
     },
@@ -1957,10 +1953,6 @@
     {
       "InputDtmi": "dtmi:mapped:core:Service_Required_Alarm;1",
       "OutputDtmi": "dtmi:com:willowinc:NonoperationalState;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Setpoint_Offset;1",
-      "OutputDtmi": "dtmi:com:willowinc:SetpointOffset;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Sink;1",
