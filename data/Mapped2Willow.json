@@ -648,7 +648,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Discharge_Air_Temperature_Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:Limit;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Dishwasher;1",
@@ -1496,7 +1496,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Outside_Air_Temperature_Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:Limit;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Oven;1",
@@ -1868,7 +1868,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Return_Air_Temperature_Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:Limit;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Return_Air_Valve;1",
@@ -5028,11 +5028,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Air_Temperature_High_Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:OutsideAirTemperatureResetHighLimit;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Air_Temperature_Low_Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:OutsideAirTemperatureResetLowLimit;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Outside_Air_Temperature_Sensor;1",
@@ -5372,7 +5372,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:Limit;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Rest_Room;1",
@@ -5436,11 +5436,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Air_Temperature_High_Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:ResetHighLimit;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Air_Temperature_Low_Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:ResetLowLimit;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Air_Temperature_Sensor;1",
@@ -5824,11 +5824,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_High_Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:ResetHighLimit;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Low_Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:ResetLowLimit;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Proportional_Band_Parameter;1",
@@ -5836,7 +5836,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Reset_Differential_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:Limit;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Air_Temperature_Sensor;1",
@@ -5932,15 +5932,15 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Temperature_Differential_Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:Limit;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Temperature_High_Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:ResetHighLimit;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Temperature_Low_Reset_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ResetSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:ResetLowLimit;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Temperature_Parameter;1",
