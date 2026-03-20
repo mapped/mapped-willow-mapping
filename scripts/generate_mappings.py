@@ -51,7 +51,7 @@ def main():
         "dtmi:org:brickschema:schema:Brick:Command;1": ["dtmi:com:willowinc:Actuator;1"],
         "dtmi:org:brickschema:schema:Brick:Status;1": ["dtmi:com:willowinc:State;1", "dtmi:com:willowinc:Sensor;1"],
         "dtmi:org:brickschema:schema:Brick:Sensor;1": ["dtmi:com:willowinc:Sensor;1", "dtmi:com:willowinc:State;1"],
-        "dtmi:org:brickschema:schema:Brick:Setpoint;1": ["dtmi:com:willowinc:Setpoint;1"],
+        "dtmi:org:brickschema:schema:Brick:Setpoint;1": ["dtmi:com:willowinc:Setpoint;1", "dtmi:com:willowinc:Parameter;1"],
         "dtmi:org:brickschema:schema:Brick:Location;1": ["dtmi:com:willowinc:Space;1"],
         "dtmi:org:brickschema:schema:Brick:Parameter;1": ["dtmi:com:willowinc:Parameter;1"],
         "dtmi:mapped:core:Thing;1": ["dtmi:com:willowinc:Asset;1"],
@@ -64,7 +64,7 @@ def main():
         "dtmi:com:willowinc:State;1": ["dtmi:org:brickschema:schema:Brick:Status;1", "dtmi:org:brickschema:schema:Brick:Sensor;1", "dtmi:org:brickschema:schema:Brick:Alarm;1"],
         "dtmi:com:willowinc:Setpoint;1": ["dtmi:org:brickschema:schema:Brick:Setpoint;1"],
         "dtmi:com:willowinc:Space;1": ["dtmi:org:brickschema:schema:Brick:Location;1"],
-        "dtmi:com:willowinc:Parameter;1": ["dtmi:org:brickschema:schema:Brick:Parameter;1"],
+        "dtmi:com:willowinc:Parameter;1": ["dtmi:org:brickschema:schema:Brick:Parameter;1", "dtmi:org:brickschema:schema:Brick:Setpoint;1"],
         "dtmi:com:willowinc:Asset;1": ["dtmi:mapped:core:Thing;1"],
 
         # Exceptions 
