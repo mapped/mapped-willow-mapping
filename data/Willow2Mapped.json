@@ -2954,7 +2954,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:OpenClosedState;1",
-      "OutputDtmi": "dtmi:mapped:core:Open_Close_Status;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Open_Close_Status;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:OpenPositionState;1",
