@@ -1980,7 +1980,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Snowmelt_System;1",
-      "OutputDtmi": "dtmi:com:willowinc:SnowmeltingSystem;1"
+      "OutputDtmi": "dtmi:com:willowinc:SnowMeltingSystem;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Solar_Inverter;1",
