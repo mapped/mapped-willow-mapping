@@ -839,6 +839,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Event;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Exhaust_Air_Handling_Unit;1",
+      "OutputDtmi": "dtmi:com:willowinc:ExhaustAirHandlingUnit;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Exhaust_Air_System;1",
       "OutputDtmi": "dtmi:com:willowinc:HVACExhaustAirSystem;1"
     },
@@ -1973,6 +1977,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Snow_Accumulation_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:SnowfallAccumulationSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Snowmelt_System;1",
+      "OutputDtmi": "dtmi:com:willowinc:SnowmeltingSystem;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Solar_Inverter;1",
