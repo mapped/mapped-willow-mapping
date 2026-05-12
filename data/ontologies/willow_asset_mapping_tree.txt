@@ -1,0 +1,775 @@
+WILLOW ASSET HIERARCHY WITH MAPPINGS
+============================================================
+
+Asset -> Thing
+  Architectural Asset -> Entity
+    Barrier Asset -> Thing
+      Access Panel -> [UNMAPPED]
+      Door -> Door
+        Overhead Door -> Overhead_Door
+        Revolving Door -> [UNMAPPED]
+          Automatic Revolving Door -> [UNMAPPED]
+        Sliding Door -> [UNMAPPED]
+          Automatic Sliding Door -> Automatic_Sliding_Door
+      Partition -> [UNMAPPED]
+      Turnstile -> Turnstile
+      Window -> Window
+    Barrier Asset Hardware -> [UNMAPPED]
+      Door Hardware -> Thing
+        Automatic Door Opener -> [UNMAPPED]
+      Window Hardware -> Thing
+    Bath Accessory -> [UNMAPPED]
+      Shower Partition -> Thing
+      Towel Storage -> [UNMAPPED]
+        Towel Bar -> [UNMAPPED]
+        Towel Rack -> [UNMAPPED]
+        Towel Ring -> [UNMAPPED]
+    Fish Tank -> Fish_Tank
+    Hand Sanitizer Dispenser -> [UNMAPPED]
+    Hand Soap Dispenser -> [UNMAPPED]
+    Key Storage Cabinet -> Key_Storage_Cabinet
+    Mirror -> [UNMAPPED]
+      Lighted Mirror -> [UNMAPPED]
+    Restroom Accessory -> [UNMAPPED]
+      Hand Dryer -> [UNMAPPED]
+      Paper Towel Dispenser -> [UNMAPPED]
+      Toilet Partition -> [UNMAPPED]
+      Toilet Seat Cover Dispenser -> [UNMAPPED]
+      Urinal Partition -> [UNMAPPED]
+    Security Safe -> Safe
+    Toilet Accessory -> [UNMAPPED]
+      Toilet Paper Dispenser -> [UNMAPPED]
+  Distribution Asset -> Thing
+    Cable -> [UNMAPPED]
+      Electrical Cable -> [UNMAPPED]
+      Telecommunication Cable -> [UNMAPPED]
+        Coaxial Cable -> [UNMAPPED]
+        Fiber Optic Cable -> [UNMAPPED]
+          Multimode Fiber Optic Cable -> [UNMAPPED]
+          Singlemode Fiber Optic Cable -> [UNMAPPED]
+        Telecommunication Patch Cord -> [UNMAPPED]
+          Coaxial Patch Cord -> [UNMAPPED]
+          Fiber Optic Patch Cord -> [UNMAPPED]
+          Multimode Fiber Optic Patch Cord -> [UNMAPPED]
+          Singlemode Fiber Optic Patch Cord -> [UNMAPPED]
+          Twisted Pair Patch Cord -> [UNMAPPED]
+        Twisted Pair Cable -> [UNMAPPED]
+    Distribution Connector -> [UNMAPPED]
+      HVAC Duct Fitting -> [UNMAPPED]
+      Handhole -> [UNMAPPED]
+      Manhole -> Thing
+      Pipe Fitting -> [UNMAPPED]
+        Pipe Fitting Adapter -> [UNMAPPED]
+        Pipe Fitting Cap -> [UNMAPPED]
+        Pipe Fitting Coupling -> [UNMAPPED]
+        Pipe Fitting Cross -> [UNMAPPED]
+        Pipe Fitting Elbow -> [UNMAPPED]
+        Pipe Fitting Flange -> [UNMAPPED]
+        Pipe Fitting Plug -> [UNMAPPED]
+          Drain Cleanout -> [UNMAPPED]
+        Pipe Fitting Tee -> [UNMAPPED]
+        Pipe Fitting Trap -> [UNMAPPED]
+        Pipe Fitting Wye -> [UNMAPPED]
+      Storm Sewer Inlet -> [UNMAPPED]
+        Curb Inlet -> [UNMAPPED]
+          Combination Grate-Curb Inlet -> [UNMAPPED]
+        Drop Curb Inlet -> [UNMAPPED]
+        Drop Grate Inlet -> [UNMAPPED]
+        Grate Inlet -> [UNMAPPED]
+      Storm Sewer Outlet -> [UNMAPPED]
+        Headwall -> [UNMAPPED]
+      Telecommunication Cable Connector -> [UNMAPPED]
+        Coaxial Cable Connector -> [UNMAPPED]
+        Fiber Optic Cable Adapter -> [UNMAPPED]
+          Multimode Fiber Optic Cable Adapter -> [UNMAPPED]
+          Singlemode Fiber Optic Cable Adapter -> [UNMAPPED]
+        Fiber Optic Cable Connector -> [UNMAPPED]
+          Multimode Fiber Optic Cable Connector -> [UNMAPPED]
+          Singlemode Fiber Optic Cable Connector -> [UNMAPPED]
+        Twisted Pair Cable Connector -> [UNMAPPED]
+          RJ45 Jack -> [UNMAPPED]
+          RJ45 Plug -> [UNMAPPED]
+    Distribution Raceway -> [UNMAPPED]
+      Cable Tray -> [UNMAPPED]
+      Conduit -> [UNMAPPED]
+    Distribution Storage -> [UNMAPPED]
+      Water Storage Basin -> Water_Storage_Basin
+        Catch Basin -> [UNMAPPED]
+        Cistern -> [UNMAPPED]
+    HVAC Duct -> [UNMAPPED]
+      HVAC Oval Duct -> [UNMAPPED]
+      HVAC Rectangular Duct -> [UNMAPPED]
+      HVAC Round Duct -> [UNMAPPED]
+    Pipe -> [UNMAPPED]
+  Equipment -> Device
+    Airport Equipment -> [UNMAPPED]
+      Aircraft Boarding Equipment -> [UNMAPPED]
+        Aircraft Boarding Chair -> [UNMAPPED]
+        Passenger Boarding Bridge -> Passenger_Boarding_Bridge
+        Passenger Boarding Lift -> [UNMAPPED]
+        Passenger Boarding Ramp -> [UNMAPPED]
+      Aircraft Electrical Equipment -> [UNMAPPED]
+        Aircraft Ground Power Unit -> [UNMAPPED]
+      Aircraft HVAC Equipment -> [UNMAPPED]
+        Aircraft Preconditioned Air Unit -> [UNMAPPED]
+      Airfield Signage Equipment -> [UNMAPPED]
+        Boundary Sign -> [UNMAPPED]
+          ILS Critical Area / POFZ Boundary Sign -> [UNMAPPED]
+          RSA/OFZ and Runway Approach/Departure Boundary Sign -> [UNMAPPED]
+        Destination Sign -> [UNMAPPED]
+          Inbound Destination Sign -> [UNMAPPED]
+          Outbound Destination Sign -> [UNMAPPED]
+        Direction Sign -> [UNMAPPED]
+          Runway Exit Sign -> [UNMAPPED]
+          Taxiway Direction Sign -> [UNMAPPED]
+        Information Sign -> [UNMAPPED]
+          VOR Receiver Checkpoint Sign -> [UNMAPPED]
+        Location Sign -> [UNMAPPED]
+          Runway Location Sign -> [UNMAPPED]
+          Taxiway Location Sign -> [UNMAPPED]
+        Mandatory Instruction Sign -> [UNMAPPED]
+          Holding Position Sign -> [UNMAPPED]
+            ILS Critical Area / POFZ Holding Position Sign -> [UNMAPPED]
+            Military Landing Zone Holding Position Sign -> [UNMAPPED]
+            Runway Approach/Departure Holding Position Sign -> [UNMAPPED]
+            Runway Intersection Holding Position Sign -> [UNMAPPED]
+          No Entry Sign -> [UNMAPPED]
+        Runway Distance Remaining Sign -> [UNMAPPED]
+        Runway One-Half Distance Remaining Sign -> [UNMAPPED]
+        Taxiway Ending Marker Sign -> [UNMAPPED]
+        Vehicle Roadway Sign -> [UNMAPPED]
+      Airport ICT Equipment -> [UNMAPPED]
+        Airport Audio Visual Equipment -> [UNMAPPED]
+          Airport Display -> [UNMAPPED]
+            Display -> Display
+      Baggage Handling Equipment -> [UNMAPPED]
+        Baggage Conveyor -> [UNMAPPED]
+          Baggage Claim Carousel -> [UNMAPPED]
+          Passenger Check-In Baggage Conveyor -> [UNMAPPED]
+        Baggage Scale -> [UNMAPPED]
+        Baggage Screening Equipment -> [UNMAPPED]
+      Lighting Equipment -> Airfield_Lighting_Equipment
+        Approach Light Fixture -> [UNMAPPED]
+          Omni-Directional Approach Light (ODAL) Fixture -> [UNMAPPED]
+          Precision Approach Path Indicator (PAPI) Light Fixture -> [UNMAPPED]
+          Runway End Identifier Light (REIL) Fixture -> [UNMAPPED]
+        Obstruction Light Fixture -> [UNMAPPED]
+        Rotating Beacon -> [UNMAPPED]
+        Runway Light Fixture -> [UNMAPPED]
+          Runway Centerline Light Fixture -> [UNMAPPED]
+          Runway Edge Light Fixture -> [UNMAPPED]
+          Runway Touchdown Light Fixture -> [UNMAPPED]
+        Taxiway Light Fixture -> [UNMAPPED]
+          Runway Guard Light Fixture -> [UNMAPPED]
+            Combination Runway Stop Bar - Runway Guard Light Fixture -> [UNMAPPED]
+          Runway Stop Bar Light Fixture -> [UNMAPPED]
+          Taxiway Centerline Light Fixture -> [UNMAPPED]
+          Taxiway Edge Light Fixture -> [UNMAPPED]
+      Wind Cone -> [UNMAPPED]
+    Cleaning Equipment -> Cleaning_Equipment
+      Floor Buffer -> Floor_Buffer
+      Floor Burnisher -> Floor_Burnisher
+      Floor Scrubber -> Scrubber
+      Vacuum -> Vacuum
+        Combination Cleaner Vacuum -> [UNMAPPED]
+    Conveyance Equipment -> Conveyor
+      Elevating Platform Lift -> [UNMAPPED]
+        Scissor Lift -> Scissor_Lift
+        Telescoping Platform Lift -> [UNMAPPED]
+      Elevator -> Elevator
+      Elevator Machine -> [UNMAPPED]
+      Escalator -> Escalator
+      Moving Walkway -> [UNMAPPED]
+      Vehicle Service Lift -> Automobile_Lift
+    Electrical Equipment -> Electrical_Equipment
+      Electrical Distribution Equipment -> Electrical_Equipment
+        Busway -> Busway
+        Disconnect Switch -> Disconnect_Switch
+        Electric Vehicle Charging Station -> [UNMAPPED]
+        Electrical Panelboard -> Breaker_Panel
+          Electrical Panelboard MCB -> Breaker_Panel
+          Electrical Panelboard MLO -> Breaker_Panel
+        Electrical Wiring Device -> Electrical_Equipment
+          Electrical Receptacle -> Electrical_Receptacle
+          Electrical Switch -> Switch
+        Motor Control Center -> Motor_Control_Center
+        Motor Controller -> Controller
+          Motor Starter -> [UNMAPPED]
+            Across-the-Line Motor Starter -> [UNMAPPED]
+            Reduced Voltage Motor Starter -> [UNMAPPED]
+            Reversing Motor Starter -> [UNMAPPED]
+          Variable Frequency Drive -> Variable_Frequency_Drive
+        Switchboard -> Switchboard
+        Switchgear -> Switchgear
+          Low-voltage Switchgear -> [UNMAPPED]
+          Medium-voltage Switchgear -> Switchgear
+        Transfer Switch -> Transfer_Switch
+          Automatic Transfer Switch -> Automatic_Transfer_Switch
+          Maintenance Bypass Switch -> Maintenance_Bypass_Switch
+        Transformer -> Transformer
+      Electrical Generation & Storage Equipment -> Electrical_Equipment
+        Battery Equipment -> Battery
+          Battery Cabinet -> Battery_Cabinet
+          Battery Charger -> Thing
+          Battery Rack -> [UNMAPPED]
+          Battery System -> Thing
+        Generator -> Generator
+          Cogenerator -> [UNMAPPED]
+        Inverter -> Inverter
+          Solar Inverter -> Solar_Inverter
+        PV Panel -> PV_Panel
+        UPS -> Uninterruptible_Power_Supply
+        Voltage Regulator -> [UNMAPPED]
+    Fire Protection Equipment -> Fire_Safety_Equipment
+      Fire Alarm Equipment -> Fire_Alarm
+        Fire Alarm Control Panel -> Fire_Control_Panel
+        Fire Alarm Initiating Device -> [UNMAPPED]
+          Fire Alarm Flow Switch -> Fire_Safety_Equipment
+          Fire Alarm Pressure Switch -> Switch
+          Fire Alarm Pull Station -> Thing
+          Fire Detector -> [UNMAPPED]
+            Carbon Monoxide Detector -> Carbon_Monoxide_Detector
+              Smoke and Carbon Monoxide Detector -> [UNMAPPED]
+            Heat Detector -> Heat_Detector
+            Smoke Detector -> Smoke_Detector
+              Duct Smoke Detector -> Duct_Smoke_Detector
+        Fire Alarm Notification Appliance -> Fire_Alarm
+          Fire Alarm Bell -> Fire_Alarm
+          Fire Alarm Chime -> [UNMAPPED]
+            Fire Alarm Chime Strobe -> [UNMAPPED]
+          Fire Alarm Horn -> [UNMAPPED]
+            Fire Alarm Horn Strobe -> Thing
+          Fire Alarm Speaker -> Speaker
+            Fire Alarm Speaker Strobe -> Thing
+          Fire Alarm Strobe -> Thing
+      Fire Suppression Equipment -> Fire_Safety_Equipment
+        Clean Agent Equipment -> [UNMAPPED]
+          Clean Agent Cabinet -> Clean_Agent_Fire_Suppression_Unit
+          Clean Agent Tank -> [UNMAPPED]
+        Fire Extinguisher -> Fire_Extinguisher
+        Fire Hydrant -> Thing
+        Fire Suppression Tank -> [UNMAPPED]
+        Sprinkler Equipment -> [UNMAPPED]
+          Fire Pump -> Water_Pump
+          Fire Sprinkler Head -> Fire_Sprinkler
+          Fire Sprinkler Riser Manifold -> [UNMAPPED]
+          Heat Tracing (Sprinkler) -> [UNMAPPED]
+          Jockey Pump -> Pump
+          Pre-Action Equipment -> [UNMAPPED]
+            Pre-Action Cabinet -> Thing
+            Pre-Action Tank -> [UNMAPPED]
+          Sprinkler Tank -> Fire_Sprinkler_Water_Storage_Tank
+          Sprinkler Valve -> Valve
+            Backflow Preventer (Sprinkler) -> Backflow_Preventer
+            Balancing Valve (Sprinkler) -> Valve
+            Check Valve (Sprinkler) -> Valve
+            Globe Valve (Sprinkler) -> Valve
+            Pressure Reducing Station (Sprinkler) -> [UNMAPPED]
+            Pressure-reducing Valve (Sprinkler) -> Valve
+            Shut-off Valve (Sprinkler) -> [UNMAPPED]
+            Solenoid Valve (Sprinkler) -> Valve
+    Fitness Equipment -> [UNMAPPED]
+      Cardio Fitness Equipment -> [UNMAPPED]
+        Stationary Bicycle -> [UNMAPPED]
+        Treadmill -> [UNMAPPED]
+      Strength Fitness Equipment -> [UNMAPPED]
+    Foodservice Equipment -> Culinary_Equipment
+      Beverage Equipment -> Thing
+      Cooking Equipment -> Culinary_Equipment
+        Cooktop -> [UNMAPPED]
+        Fryer -> Fryer
+        Oven -> Oven
+          Combi Oven -> Combination_Oven
+          Microwave Oven -> Microwave_Oven
+            Convection Microwave Oven -> Convection_Microwave_Oven
+          Rotisserie Oven -> Rotisserie
+      Dishwashing Equipment -> [UNMAPPED]
+        Dishwasher -> Dishwasher
+        Garbage Disposal -> Garbage_Disposal_Unit
+      Food Display Equipment -> Thing
+        Food Display Case -> [UNMAPPED]
+          Dry Food Display Case -> [UNMAPPED]
+          Hot Food Display Case -> Thing
+          Refrigerated Food Display Case -> Device
+            Low-Temperature Refrigerated Food Display Case -> Low_Temperature_Display_Case
+            Medium-Temperature Refrigerated Food Display Case -> Medium_Temperature_Display_Case
+      Food Preparation Equipment -> Thing
+        Blender -> [UNMAPPED]
+        Bread Slicer -> Bread_Slicer
+        Food Packaging Equipment -> [UNMAPPED]
+          Food Packaging Vacuum Sealer -> [UNMAPPED]
+        Food Preparation Work Table -> Food_Preperation_Table
+        Food Processor -> [UNMAPPED]
+        Meat Slicer -> Meat_Slicer
+        Mixer -> [UNMAPPED]
+        Salad Dryer -> [UNMAPPED]
+      Food Storage Equipment -> Thing
+        Food Storage Rack -> [UNMAPPED]
+        Food Storage Refrigeration Equipment -> [UNMAPPED]
+          Blast Chiller -> Blast_Chiller
+          Freezer -> Refrigeration_Equipment
+          Ice Machine -> [UNMAPPED]
+          Refrigerator -> Refrigerator
+          Walk-In Refrigeration Equipment -> [UNMAPPED]
+            Walk-In Cooler -> Walk_In_Refrigerator
+              Walk-In Combination Cooler / Freezer -> [UNMAPPED]
+            Walk-In Freezer -> Walk_In_Freezer
+      Food Transport Equipment -> [UNMAPPED]
+        Foodservice Cart -> [UNMAPPED]
+          Beverage Service Cart -> [UNMAPPED]
+          Condiment Cart -> [UNMAPPED]
+          Dish Cleanup Cart -> [UNMAPPED]
+          Dish Storage Cart -> [UNMAPPED]
+        Foodservice Dolly -> [UNMAPPED]
+      Food Warming Equipment -> [UNMAPPED]
+    General-purpose Equipment -> [UNMAPPED]
+      Coil -> Coil
+        Cooling Coil -> Cooling_Coil
+        Economizer Coil -> Coil
+        Heating Coil -> Heating_Coil
+          Preheat Coil -> Preheat_Coil
+          Reheat Coil -> Reheat_Coil
+      Compressor -> Compressor
+        HVAC Compressor -> [UNMAPPED]
+        Refrigeration Compressor -> [UNMAPPED]
+          Low-Temperature Refrigeration Compressor -> Compressor
+          Medium-Temperature Refrigeration Compressor -> Compressor
+      Condenser -> Condensing_Unit
+        Air-Cooled Condenser -> Air_Cooled_Condenser_Heat_Exchanger
+          Air-Cooled Refrigeration Condenser -> Air_Cooled_Condenser_Heat_Exchanger
+        Refrigeration Condenser -> Condensing_Unit
+          Water-Cooled Refrigeration Condenser -> [UNMAPPED]
+        Water-Cooled Condenser -> Water_Cooled_Condenser_Heat_Exchanger
+      Energy Recovery Device -> Energy_Recovery_Unit
+      Evaporator -> Evaporative_Heat_Exchanger
+      Fan -> Fan
+        HVAC Fan -> Fan
+          Air Curtain -> Air_Curtain
+          Booster Fan -> Booster_Fan
+          Ceiling Fan -> Ceiling_Fan
+          Exhaust Fan -> Exhaust_Fan
+          Outside Air Fan -> Fan
+          Pressurization Fan -> Pressurization_Fan
+            Elevator Pressurization Fan -> Elevator_Pressurization_Fan
+            Stair Pressurization Fan -> Fan
+          Relief Fan -> Relief_Fan
+          Return Fan -> Return_Fan
+          Supply Fan -> Supply_Fan
+            Cold Deck Supply Fan -> Cold_Deck_Supply_Fan
+            Hot Deck Supply Fan -> Hot_Deck_Supply_Fan
+          Transfer Fan -> Transfer_Fan
+      Heat Tracing -> [UNMAPPED]
+        Heat Tracing (HVAC) -> [UNMAPPED]
+        Heat Tracing (Plumbing) -> [UNMAPPED]
+      Manifold -> [UNMAPPED]
+        HVAC Manifold -> [UNMAPPED]
+          Radiant Heating Manifold -> [UNMAPPED]
+        Plumbing Manifold -> [UNMAPPED]
+      Pump -> Pump
+        HVAC Pump -> HVAC_Pump
+          Condensate Pump -> Pump
+            Steam Condensate Pump -> Pump
+          Hydronic Pump -> Pump
+            Chilled Water Pump -> Chilled_Water_Pump
+            Condenser Water Pump -> Condenser_Water_Pump
+            Heating Hot Water Pump -> [UNMAPPED]
+            Hydronic Circulating Pump -> Pump
+        Plumbing Pump -> Plumbing_Pump
+          Domestic Water Pump -> Water_Pump
+            Domestic Hot Water Circulating Pump -> Domestic_Hot_Water_Circulating_Pump
+            Domestic Water Booster Pump -> [UNMAPPED]
+          Ejector Pump -> Pump
+          Irrigation Pump -> Pump
+          Sump Pump -> Pump
+      Tank -> Tank
+        HVAC Tank -> Storage_Tank
+        Plumbing Tank -> Tank
+          Dilution Tank -> [UNMAPPED]
+          Expansion Tank -> Thermal_Expansion_Tank
+          Plumbing Storage Tank -> Storage_Tank
+        Refrigeration Tank -> [UNMAPPED]
+          Refrigeration Liquid Refrigerant Receiver -> [UNMAPPED]
+          Refrigeration Suction Line Accumulator -> [UNMAPPED]
+      Valve -> Valve
+        Bypass Valve -> Bypass_Valve
+        HVAC Valve -> HVAC_Valve
+          Backflow Preventer (HVAC) -> [UNMAPPED]
+          Balancing Valve (HVAC) -> Valve
+          Check Valve (HVAC) -> Valve
+          Chilled Water Valve -> Chilled_Water_Valve
+          Condenser Water Valve -> Condenser_Water_Valve
+          Globe Valve (HVAC) -> Valve
+          Heating Hot Water Valve -> [UNMAPPED]
+            Preheat Hot Water Valve -> Preheat_Hot_Water_Valve
+            Reheat Hot Water Valve -> [UNMAPPED]
+          Pressure Reducing Station (HVAC) -> [UNMAPPED]
+          Pressure Reducing Valve (HVAC) -> Valve
+          Refrigerant Valve -> Refrigerant_Valve
+            Refrigerant Metering Device -> Refrigerant_Metering_Device
+              Electronic Expansion Valve -> Electronic_Expansion_Valve
+              Thermal Expansion Valve -> Thermal_Expansion_Valve
+            Reversing Valve -> Reversing_Valve
+          Shut-off Valve (HVAC) -> Isolation_Valve
+          Solenoid Valve (HVAC) -> Valve
+          Steam Valve -> Steam_Valve
+        Isolation Valve -> Isolation_Valve
+          Shut-Off Valve (Plumbing) -> Isolation_Valve
+        Plumbing Valve -> Plumbing_Valve
+          Backflow Preventer (Plumbing) -> Backflow_Preventer
+          Balancing Valve (Plumbing) -> Valve
+          Check Valve (Plumbing) -> Valve
+          Globe Valve (Plumbing) -> Valve
+          Pressure Reducing Station (Plumbing) -> [UNMAPPED]
+          Pressure Reducing Valve (Plumbing) -> Pressure_Reducing_Valve
+          Solenoid Valve (Plumbing) -> Valve
+    HVAC Equipment -> HVAC_Equipment
+      Air Filter -> Filter
+        Final Filter -> Final_Filter
+        Mixed Air Filter -> Mixed_Air_Filter
+        Outside Air Filter -> [UNMAPPED]
+        Pre-Filter -> Pre_Filter
+        Return Air Filter -> Return_Air_Filter
+      Air Handling Unit -> Air_Handling_Unit
+        Computer Room Air Conditioning (CRAC) Unit -> Computer_Room_Air_Conditioning
+        Computer Room Air Handling (CRAH) Unit -> Computer_Room_Air_Handler
+        Dedicated Outdoor Air System -> Dedicated_Outdoor_Air_System_Unit
+          EnergyRecoveryVentilator -> [UNMAPPED]
+        Makeup Air Unit -> Makeup_Air_Unit
+        Rooftop Unit -> Rooftop_Unit
+          Heat Pump Rooftop Unit -> [UNMAPPED]
+      Air Handling Unit Section -> [UNMAPPED]
+        Air Handling Unit Discharge Section -> [UNMAPPED]
+          Cold Deck Air Handling Unit Discharge Section -> [UNMAPPED]
+          Hot Deck Air Handling Unit Discharge Section -> [UNMAPPED]
+          Neutral Deck Air Handling Unit Discharge Section -> [UNMAPPED]
+        Air Handling Unit Exhaust Section -> [UNMAPPED]
+        Air Handling Unit Fan Section -> [UNMAPPED]
+        Air Handling Unit Return Section -> [UNMAPPED]
+        Air Handling Unit Section -> [UNMAPPED]
+      Air Inlets and Outlets -> [UNMAPPED]
+        Air Diffuser -> Air_Diffuser
+          Return Air Diffuser -> Return_Air_Diffuser
+          Supply Air Diffuser -> Supply_Air_Diffuser
+        Air Grille -> Air_Grille
+          Return Air Grille -> Air_Grille
+          Supply Air Grille -> Air_Grille
+        Air Register -> [UNMAPPED]
+          Return Air Register -> [UNMAPPED]
+          Supply Air Register -> [UNMAPPED]
+      Air Treatment (HVAC) -> [UNMAPPED]
+        Dehumidifier -> Dehumidifier
+          Desiccant Dehumidifier -> [UNMAPPED]
+        Humidifier -> Humidifier
+      Chiller -> Chiller
+        Absorption Chiller -> Absorption_Chiller
+        Air-Cooled Chiller -> Air_Cooled_Chiller
+        Heat Pump Chiller -> Heat_Pump_Chiller
+          Air-Cooled Heat Pump Chiller -> Air_Cooled_Heat_Pump_Chiller
+          Water-Cooled Heat Pump Chiller -> Water_Cooled_Heat_Pump_Chiller
+        Heat Recovery Chiller -> Heat_Recovery_Chiller
+          Air-Cooled Heat Recovery Chiller -> [UNMAPPED]
+          Water-Cooled Heat Recovery Chiller -> [UNMAPPED]
+        Water-Cooled Chiller -> Water_Cooled_Chiller
+      Condensing Unit -> Condensing_Unit
+        Ground Source Condensing Unit -> [UNMAPPED]
+          Ground Source Heat Pump Condensing Unit -> [UNMAPPED]
+        Heat Pump Condensing Unit -> [UNMAPPED]
+          VRF Heat Pump Outdoor Unit -> [UNMAPPED]
+            VRF Water Source Heat Pump Outdoor Unit -> [UNMAPPED]
+          Water Source Heat Pump Condensing Unit -> [UNMAPPED]
+        Heat Recovery Condensing Unit -> [UNMAPPED]
+          VRF Heat Recovery Outdoor Unit -> [UNMAPPED]
+            VRF Water Source Heat Recovery Outdoor Unit -> [UNMAPPED]
+          Water Source Heat Recovery Condensing Unit -> [UNMAPPED]
+        VRF Outdoor Unit -> [UNMAPPED]
+        Water Source Condensing Unit -> [UNMAPPED]
+      Cooling Tower -> Cooling_Tower
+        Adiabatic Cooler -> [UNMAPPED]
+        Dry Cooler -> Dry_Cooler
+          Hybrid Cooling Tower -> Cooling_Tower
+        Evaporative Cooling Tower -> Cooling_Tower
+          Direct Evaporative Cooling Tower -> Cooling_Tower
+          Indirect Evaporative Cooling Tower -> Cooling_Tower
+      Duct Heater -> Space_Heater
+        Electric Duct Heater -> [UNMAPPED]
+        Hot Water Duct Heater -> [UNMAPPED]
+        Steam Duct Heater -> [UNMAPPED]
+      Duct Silencer -> HVAC_Equipment
+      HVAC Damper -> Damper
+        Backdraft Damper -> Damper
+          Relief Damper -> Damper
+            Barometric Relief Damper -> Damper
+        Bypass Damper -> Bypass_Damper
+          Energy Recovery Device Discharge Air Bypass Damper -> [UNMAPPED]
+          Energy Recovery Device Return Air Bypass Damper -> [UNMAPPED]
+        Economizer Damper -> Economizer_Damper
+          Preconditioned Economizer Damper -> [UNMAPPED]
+        Exhaust Damper -> Exhaust_Damper
+        Face and Bypass Damper -> Face_And_Bypass_Damper
+        Fire Damper -> Fire_Damper
+          Fire/Smoke Damper -> Damper
+        Inlet Damper -> [UNMAPPED]
+          Cold Deck Inlet Damper -> [UNMAPPED]
+          Hot Deck Inlet Damper -> [UNMAPPED]
+          Neutral Deck Inlet Damper -> [UNMAPPED]
+        Min Outside Air Damper -> Min_Outside_Air_Damper
+          Preconditioned Min Outside Air Damper -> [UNMAPPED]
+        Mixed Damper -> Mixed_Damper
+        Outside Air Damper -> [UNMAPPED]
+          Preconditioned Outside Air Damper -> [UNMAPPED]
+        Return Damper -> Return_Damper
+        Smoke Damper -> Damper
+        Zone Damper -> Zone_Damper
+      HVAC Probe Heater -> [UNMAPPED]
+      Heat Exchanger -> Heat_Exchanger
+        Plate Heat Exchanger -> [UNMAPPED]
+          Brazed Plate Heat Exchanger -> [UNMAPPED]
+          Plate-and-frame Heat Exchanger -> [UNMAPPED]
+          Welded Plate Heat Exchanger -> [UNMAPPED]
+        Shell-and-tube Heat Exchanger -> [UNMAPPED]
+      Hydronic Air Separator -> Thing
+      Packaged Air Conditioner -> Packaged_Air_Conditioner
+        Packaged Heat Pump -> [UNMAPPED]
+          Air-Source Packaged Heat Pump -> [UNMAPPED]
+          Ground-Source Packaged Heat Pump -> [UNMAPPED]
+          Water-Source Packaged Heat Pump -> [UNMAPPED]
+        Portable Air Conditioner -> [UNMAPPED]
+        Wall Air Conditioner -> Wall_Air_Conditioner
+          Packaged Terminal Air Conditioner (PTAC) -> [UNMAPPED]
+        Water-Source Packaged Air Conditioner -> [UNMAPPED]
+        Window Air Conditioner -> [UNMAPPED]
+      Radiant Heater -> [UNMAPPED]
+        Electric Radiant Heater -> Space_Heater
+          Electric Baseboard Heater -> Electric_Baseboard_Radiator
+        Hydronic Radiant Heater -> [UNMAPPED]
+          Hydronic Baseboard Heater -> [UNMAPPED]
+      Steam Trap -> [UNMAPPED]
+      Terminal Unit -> Terminal_Unit
+        CAV Box -> Constant_Air_Volume_Box
+          CAV Box with Reheat -> [UNMAPPED]
+        Chilled Beam -> Chilled_Beam
+          Active Chilled Beam -> Active_Chilled_Beam
+          Passive Chilled Beam -> Passive_Chilled_Beam
+        Fan Coil Unit -> Fan_Coil_Unit
+          Fan Coil Unit with Reheat -> Fan_Coil_Unit
+          Horizontal Fan Coil Unit -> Fan_Coil_Unit
+            Horizontal Fan Coil Unit with Reheat -> [UNMAPPED]
+          VRF Indoor Unit -> [UNMAPPED]
+          Vertical Fan Coil Unit -> Fan_Coil_Unit
+            Vertical Fan Coil Unit with Reheat -> Fan_Coil_Unit
+            Vertical Stack Fan Coil Unit -> Fan_Coil_Unit
+              Vertical Stack Fan Coil Unit with Reheat -> Fan_Coil_Unit
+        VAV Airflow Control Valve -> [UNMAPPED]
+          Exhaust VAV Airflow Control Valve -> [UNMAPPED]
+            Fume Exhaust VAV Airflow Control Valve -> [UNMAPPED]
+            General Exhaust VAV Airflow Control Valve -> [UNMAPPED]
+          Return VAV Airflow Control Valve -> [UNMAPPED]
+          Supply VAV Airflow Control Valve -> [UNMAPPED]
+            Supply VAV Airflow Control Valve with Reheat -> [UNMAPPED]
+        VAV Box -> Variable_Air_Volume_Box
+          Dual Duct VAV Box -> [UNMAPPED]
+          Fan Powered Box -> Fan_Powered_VAV
+            Fan Powered Box with Reheat -> Fan_Powered_VAV
+          VAV Box with Reheat -> RVAV
+      Unit Heater -> Space_Heater
+        Electric Unit Heater -> Electric_Unit_Heater
+        Hot Water Unit Heater -> Space_Heater
+        Steam Unit Heater -> [UNMAPPED]
+      Ventilation Hood -> Fume_Hood
+        Fume Hood -> Fume_Hood
+          Benchtop Fume Hood -> [UNMAPPED]
+          Snorkel Exhaust Fume Hood -> [UNMAPPED]
+          Walk-In Fume Hood -> [UNMAPPED]
+      Water Treatment (HVAC) -> HVAC_Equipment
+        Water Filtration (HVAC) -> HVAC_Equipment
+    ICT Equipment -> ICT_Equipment
+      Audio Visual Equipment -> Audio_Visual_Equipment
+        Audio Amplifier -> Audio_Visual_Equipment
+        Audio Digital Signal Processor (DSP) -> [UNMAPPED]
+      Controller -> Controller
+        BACnet Controller -> BACnet_Device
+        Modbus Controller -> Controller
+      Data Network Equipment -> ICT_Equipment
+        Ethernet Router -> [UNMAPPED]
+        Ethernet Switch -> Switch
+        Ethernet Switch Port -> Ethernet_Switch
+        Gateway -> [UNMAPPED]
+        Network Security Equipment -> [UNMAPPED]
+        Wireless Access Point -> Wireless_Access_Point
+      ICT Hardware -> ICT_Equipment
+        Computer Monitor -> [UNMAPPED]
+          All-In-One Desktop Computer -> [UNMAPPED]
+        Desktop Computer -> [UNMAPPED]
+        Laptop Computer -> [UNMAPPED]
+        Server -> [UNMAPPED]
+      IT Rack -> IT_Rack
+      Sensor Equipment -> Sensor_Equipment
+        Daylight Sensor Equipment -> [UNMAPPED]
+        Gas Detector -> [UNMAPPED]
+        Indoor Air Quality Sensor Equipment -> Air_Quality_Sensing_Device
+        Leak Detector -> [UNMAPPED]
+        Occupancy Sensor Equipment -> Occupancy_Sensing_Device
+        People Count Sensor Equipment -> [UNMAPPED]
+        Thermostat -> Thermostat
+        Vibration Sensor Equipment -> [UNMAPPED]
+        Water Quality Sensor -> [UNMAPPED]
+        Weather Station -> Weather_Station
+      Structured Cabling Equipment -> [UNMAPPED]
+        Copper Cabling Equipment -> [UNMAPPED]
+          Copper Cabling Patch Panel -> [UNMAPPED]
+        Fiber Optic Cabling Equipment -> [UNMAPPED]
+          Fiber Optic Cabling Patch Panel -> [UNMAPPED]
+        Patch Panel -> [UNMAPPED]
+    Laundry Equipment -> [UNMAPPED]
+      Dryer -> [UNMAPPED]
+        Combination Washer Dryer -> [UNMAPPED]
+        Stacked Laundry Center -> [UNMAPPED]
+      Washer -> [UNMAPPED]
+    Lighting Equipment -> Lighting_Equipment
+      Lighting Controller -> Lighting_Controller
+      Luminaire -> Luminaire
+        Indoor Luminaire -> [UNMAPPED]
+        Outdoor Luminaire -> [UNMAPPED]
+          Bollard Luminaire -> [UNMAPPED]
+          Light Pole -> Lighting_Equipment
+      Safety Lighting -> Lighting_Equipment
+        Emergency Light -> Emergency_Light
+        Emergency Lighting Power Inverter -> Inverter
+        Exit Sign -> Exit_Sign
+    Material Handling Equipment -> [UNMAPPED]
+      Forklift -> Forklift
+      Positioning Equipment -> [UNMAPPED]
+      Shopping Cart Mover -> Electric_Cart_Mover
+      Storage Equipment -> [UNMAPPED]
+      Transport Equipment -> [UNMAPPED]
+        Cart -> [UNMAPPED]
+        Dolly -> [UNMAPPED]
+        Hand Truck -> [UNMAPPED]
+        Pallet Jack -> Pallet_Jack
+        Pallet Stacker -> [UNMAPPED]
+      Unit Load Formation Equipment -> [UNMAPPED]
+        Pallet -> [UNMAPPED]
+    Meter Equipment -> Meter
+      Electrical Meter -> Electrical_Meter
+      Gas Meter -> Gas_Meter
+      Thermal Meter -> Thermal_Power_Meter
+        Chilled Water Meter -> Chilled_Water_Meter
+        Hot Water Meter -> Hot_Water_Meter
+        Steam Meter -> [UNMAPPED]
+      Water Meter -> Water_Meter
+    Plumbing Equipment -> Plumbing_Equipment
+      Air Admittance Valve -> Valve
+      Boiler -> Boiler
+        Condensing Boiler -> [UNMAPPED]
+        Non-Condensing Boiler -> [UNMAPPED]
+      Chemical Dilution Drainage Equipment -> [UNMAPPED]
+        Dilution Trap -> [UNMAPPED]
+      Compressed Air Equipment -> [UNMAPPED]
+        Air Compressor -> Air_Compressor
+        Air Compressor Dryer -> Air_Compressor_Dryer
+        Air Compressor Filter -> Filter
+        Air Receiver Tank -> [UNMAPPED]
+      Drain -> Plumbing_Equipment
+        Floor Drain -> Plumbing_Equipment
+        Roof Drain -> Plumbing_Equipment
+      Fats, Oils, and Grease Disposal -> Cooking_Oil_Tank
+        Grease Interceptor -> Grease_Interceptor
+        Grease Trap -> Grease_Trap
+      Plumbing Fixture -> Plumbing_Fixture
+        Bathtub -> Bathtub
+        Drinking Water Fixture -> Drinking_Water_Fixture
+          Drinking Fountain -> Drinking_Fountain
+          Drinking Fountain Remote Water Chiller -> [UNMAPPED]
+          Drinking Water Bottle Filling Station -> [UNMAPPED]
+        Emergency Plumbing Fixture -> [UNMAPPED]
+          Emergency Eye Wash Station -> Emergency_Wash_Station
+            Emergency Eye Wash / Shower -> Thing
+          Emergency Shower -> Plumbing_Equipment
+        Faucet -> Faucet
+          Hose Bibb -> Faucet
+          Shower Head -> [UNMAPPED]
+        Flushometer-Valve -> Flush_Valve
+        Shower -> Plumbing_Equipment
+        Sink -> Sink
+        Toilet -> Toilet
+          Toilet with Flushometer -> [UNMAPPED]
+          Toilet with Tank -> [UNMAPPED]
+        Urinal -> Urinal
+          Urinal - Waterless -> Waterless_Urinal
+          Urinal with Flushometer -> [UNMAPPED]
+      Vent Pipe Filter -> [UNMAPPED]
+      Water Heater -> Water_Heater
+        Tank Water Heater -> Water_Heater
+          Electric Tank Water Heater -> Tank_Electric_Water_Heater
+          Gas Tank Water Heater -> Water_Heater
+        Tankless Water Heater -> Water_Heater
+          Electric Tankless Water Heater -> Water_Heater
+          Gas Tankless Water Heater -> Water_Heater
+      Water Treatment (Plumbing) -> Plumbing_Equipment
+        Water Filtration (Plumbing) -> Plumbing_Equipment
+        Water Softener -> Thing
+    Refrigeration Equipment -> Refrigeration_Equipment
+      Packaged Refrigeration Unit -> [UNMAPPED]
+      Refrigeration Compressor Rack -> [UNMAPPED]
+        Low-Temperature Refrigeration Compressor Rack -> Thing
+        Medium-Temperature Refrigeration Compressor Rack -> Thing
+      Refrigeration Evaporator Unit -> [UNMAPPED]
+      Refrigeration Heat Exchanger -> [UNMAPPED]
+        Refrigeration Desuperheater -> [UNMAPPED]
+        Refrigeration Subcooler -> [UNMAPPED]
+    Retail Equipment -> [UNMAPPED]
+      Paint Retail Equipment -> [UNMAPPED]
+        Paint Color Identifier -> [UNMAPPED]
+        Paint Dispenser -> Paint_Dispenser
+        Paint Shaker -> Paint_Shaker
+      Payment Equipment -> [UNMAPPED]
+        Payment Terminal -> [UNMAPPED]
+        Point-Of-Sale Register -> Thing
+      Retail Scale -> Scale
+      Retail Scale -> Wrapping_Station
+    Safety Equipment -> Safety_Equipment
+      Emergency Preparedness Equipment -> [UNMAPPED]
+        Building Emergency Supply Kit -> [UNMAPPED]
+    Security Equipment -> Security_Equipment
+      Access Control Equipment -> Access_Control_Equipment
+        Access Control Panel -> Access_Control_Unit
+        Access Keypad -> [UNMAPPED]
+          Access Reader with Keypad -> Access_Card_Reader
+        Access Reader -> Access_Card_Reader
+        Duress Alarm Button -> Access_Control_Equipment
+        Intercom Entry -> Intercom_Equipment
+        Request to Exit Device -> Automatic_Door_Lock
+      Intrusion Detection Equipment -> Intrusion_Detection_Equipment
+      Video Surveillance Equipment -> Video_Surveillance_Equipment
+        Network Video Recorder -> Network_Video_Recorder
+        Video Surveillance Camera -> Surveillance_Camera
+    Swimming Pool Equipment -> Pool_Equipment
+    Vehicle Equipment -> Automotive_Equipment
+      Loading Dock Equipment -> Device
+        Loading Dock Leveler -> Loading_Dock_Leveler
+          Edge of Dock Loading Dock Leveler -> [UNMAPPED]
+          Pit Loading Dock Leveler -> [UNMAPPED]
+          Vertical Loading Dock Leveler -> [UNMAPPED]
+            Rail Loading Dock Leveler -> [UNMAPPED]
+      Parking Equipment -> [UNMAPPED]
+        Parking Payment Equipment -> [UNMAPPED]
+        Parking Ticket Dispenser -> [UNMAPPED]
+      Traffic Equipment -> [UNMAPPED]
+        Pedestrian Signal -> [UNMAPPED]
+        Traffic Signal -> [UNMAPPED]
+      Vehicle Access Control Equipment -> Access_Control_Equipment
+        Vehicle Bollard -> Entity
+        Vehicle Gate Barrier -> Thing
+        Vehicle Wedge Barrier -> [UNMAPPED]
+    Waste Handling Equipment -> Waste_Management_Equipment
+      Waste Baler -> Baler
+      Waste Compactor -> Trash_Compactor
+  Furniture -> Furniture
+    Bed -> [UNMAPPED]
+    Chair -> [UNMAPPED]
+    Table -> [UNMAPPED]
+    Workstation -> [UNMAPPED]
+  Vehicle -> Vehicle
+    Airport Vehicle -> [UNMAPPED]
+      Aircraft -> [UNMAPPED]
+    Motorized Shopping Cart -> Electric_Shopping_Cart

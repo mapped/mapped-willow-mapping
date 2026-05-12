@@ -1,0 +1,55 @@
+WILLOW SPACE HIERARCHY WITH MAPPINGS
+============================================================
+
+Space -> Place
+  Airport Space -> [UNMAPPED]
+    Aircraft Parking Spot -> [UNMAPPED]
+    Aircraft Stand -> Aircraft_Stand
+    Airfield -> [UNMAPPED]
+    Airport Terminal -> Building
+    Apron -> [UNMAPPED]
+    Gate -> Gate
+    Runway -> [UNMAPPED]
+    Taxiway -> [UNMAPPED]
+  Aisle -> [UNMAPPED]
+    Retail Store Aisle -> [UNMAPPED]
+    Seating Aisle -> [UNMAPPED]
+  Aisle Section -> [UNMAPPED]
+    Endcap -> [UNMAPPED]
+  Bay -> [UNMAPPED]
+  Building -> Building
+  Building Outdoor Area -> [UNMAPPED]
+    Balcony -> [UNMAPPED]
+    Building Terrace -> [UNMAPPED]
+      Roof Terrace -> [UNMAPPED]
+    Roof Area -> [UNMAPPED]
+  Land -> Site
+    Airport -> Airport
+      Air Base -> [UNMAPPED]
+      Heliport -> [UNMAPPED]
+      Seaplane Base -> [UNMAPPED]
+  Level -> Floor
+    Basement Level -> Basement
+    Mezzanine Level -> MezzanineLevel
+    Roof Level -> Rooftop
+  Outdoor Area -> Outdoor_Area
+    Landscaped Area -> [UNMAPPED]
+  Parking Spot -> Parking_Space
+  Region -> Region
+    Grid Region -> Electrical_Grid_Region
+  Room -> Room
+  Sub-Building -> SubBuilding
+    Building Podium -> [UNMAPPED]
+    Building Tower -> [UNMAPPED]
+    Building Wing -> Wing
+  Substructure -> [UNMAPPED]
+  Workspace -> Workspace
+  Zone -> Zone
+    HVAC Zone -> HVAC_Zone
+      HVAC Pressurization Zone -> [UNMAPPED]
+        HVAC Negative Pressurization Zone -> [UNMAPPED]
+        HVAC Positive Pressurization Zone -> [UNMAPPED]
+    Illuminance Zone -> [UNMAPPED]
+    Lighting Zone -> Lighting_Zone
+    Occupancy Zone -> Occupancy_Zone
+    Retail Store Zone -> [UNMAPPED]

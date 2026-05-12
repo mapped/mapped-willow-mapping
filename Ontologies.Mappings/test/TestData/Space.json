@@ -1,4 +1,8 @@
 {
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:initialization;1"
+  ],
   "@id": "dtmi:org:w3id:rec:Space;1",
   "@type": "Interface",
   "contents": [
@@ -94,9 +98,5 @@
   },
   "displayName": {
     "en": "Space"
-  },
-  "@context": [
-    "dtmi:dtdl:context;3",
-    "dtmi:dtdl:extension:initialization;1"
-  ]
+  }
 }
