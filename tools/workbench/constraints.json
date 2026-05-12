@@ -1,0 +1,102 @@
+{
+  "description": "Mapping constraints. Each entry defines what a category can map to.",
+  "compatible": [
+    {
+      "input": "dtmi:mapped:core:Sensor;1",
+      "output": [
+        "dtmi:com:willowinc:Sensor;1"
+      ]
+    },
+    {
+      "input": "dtmi:mapped:core:Setpoint;1",
+      "output": [
+        "dtmi:com:willowinc:Parameter;1"
+      ]
+    },
+    {
+      "input": "dtmi:mapped:core:Command;1",
+      "output": [
+        "dtmi:com:willowinc:Actuator;1"
+      ]
+    },
+    {
+      "input": "dtmi:mapped:core:Parameter;1",
+      "output": [
+        "dtmi:com:willowinc:Parameter;1"
+      ]
+    },
+    {
+      "input": "dtmi:mapped:core:Status;1",
+      "output": [
+        "dtmi:com:willowinc:State;1"
+      ]
+    },
+    {
+      "input": "dtmi:mapped:core:Alarm;1",
+      "output": [
+        "dtmi:com:willowinc:State;1"
+      ]
+    },
+    {
+      "input": "dtmi:mapped:core:Thing;1",
+      "output": [
+        "dtmi:com:willowinc:Asset;1",
+        "dtmi:com:willowinc:Component;1"
+      ]
+    },
+    {
+      "input": "dtmi:mapped:core:Collection;1",
+      "output": [
+        "dtmi:com:willowinc:Collection;1"
+      ]
+    },
+    {
+      "input": "dtmi:mapped:core:Place;1",
+      "output": [
+        "dtmi:com:willowinc:Space;1"
+      ]
+    },
+    {
+      "input": "dtmi:org:brickschema:schema:Brick:Sensor;1",
+      "output": [
+        "dtmi:com:willowinc:Sensor;1"
+      ]
+    },
+    {
+      "input": "dtmi:org:brickschema:schema:Brick:Setpoint;1",
+      "output": [
+        "dtmi:com:willowinc:Parameter;1"
+      ]
+    },
+    {
+      "input": "dtmi:org:brickschema:schema:Brick:Command;1",
+      "output": [
+        "dtmi:com:willowinc:Actuator;1"
+      ]
+    },
+    {
+      "input": "dtmi:org:brickschema:schema:Brick:Parameter;1",
+      "output": [
+        "dtmi:com:willowinc:Parameter;1"
+      ]
+    },
+    {
+      "input": "dtmi:org:brickschema:schema:Brick:Status;1",
+      "output": [
+        "dtmi:com:willowinc:State;1"
+      ]
+    },
+    {
+      "input": "dtmi:org:brickschema:schema:Brick:Alarm;1",
+      "output": [
+        "dtmi:com:willowinc:State;1"
+      ]
+    }
+  ],
+  "exceptions": [
+    {
+      "input": "dtmi:com:willowinc:HVACPumpGroup;1",
+      "output": "dtmi:mapped:core:Pump_Skid;1"
+    }
+  ]
+}
