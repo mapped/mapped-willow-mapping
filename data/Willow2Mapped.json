@@ -1754,7 +1754,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmSpeakerStrobe;1",
-      "OutputDtmi": "dtmi:mapped:core:Speaker;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Alarm;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmStrobe;1",
@@ -1834,7 +1834,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FoodDisplayEquipment;1",
-      "OutputDtmi": "dtmi:mapped:core:Culinary_Equipment;1"
+      "OutputDtmi": "dtmi:mapped:core:Display_Case;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FoodPreparationEquipment;1",
@@ -2158,7 +2158,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HeatingHotWaterValve;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Heating_Valve;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Valve;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HeatingLevelActuator;1",

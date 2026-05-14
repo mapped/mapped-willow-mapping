@@ -355,6 +355,10 @@
       "OutputDtmi": "dtmi:com:willowinc:CableFaultAlarmState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Calendar;1",
+      "OutputDtmi": "dtmi:com:willowinc:Calendar;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Calendar_Event;1",
       "OutputDtmi": "dtmi:com:willowinc:CalendarEvent;1"
     },
@@ -841,6 +845,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Event;1",
       "OutputDtmi": "dtmi:com:willowinc:Event;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Exhaust_Air_Handling_Unit;1",
+      "OutputDtmi": "dtmi:com:willowinc:ExhaustAirHandlingUnit;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Exhaust_Air_System;1",
@@ -1780,7 +1788,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:Pump_Skid;1",
-      "OutputDtmi": "dtmi:com:willowinc:HVACPumpGroup;1"
+      "OutputDtmi": "dtmi:com:willowinc:PumpGroup;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Rain_Level_Sensor;1",
@@ -1979,6 +1987,10 @@
       "OutputDtmi": "dtmi:com:willowinc:SnowfallAccumulationSensor;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Snowmelt_System;1",
+      "OutputDtmi": "dtmi:com:willowinc:SnowMeltingSystem;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Solar_Inverter;1",
       "OutputDtmi": "dtmi:com:willowinc:SolarInverter;1"
     },
@@ -1993,6 +2005,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Sound_Volume_Level_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Space_Booking_Calendar;1",
+      "OutputDtmi": "dtmi:com:willowinc:Calendar;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Spectrometer;1",
@@ -2948,7 +2964,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Heat_Exchanger;1",
-      "OutputDtmi": "dtmi:com:willowinc:HeatExchanger;1"
+      "OutputDtmi": "dtmi:com:willowinc:Condenser;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Bypass_Valve;1",
@@ -3488,7 +3504,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Emergency_Wash_Station;1",
-      "OutputDtmi": "dtmi:com:willowinc:EmergencyEyeWashShower;1"
+      "OutputDtmi": "dtmi:com:willowinc:EmergencyEyeWashStation;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Employee_Entrance_Lobby;1",
