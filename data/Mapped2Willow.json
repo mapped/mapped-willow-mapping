@@ -499,6 +499,10 @@
       "OutputDtmi": "dtmi:com:willowinc:FatsOilsGreaseDisposal;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Air_Temperature_Setpoint_Offset;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingAirTemperatureSetpointOffset;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Cooling_Enable_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:EnableState;1"
     },
