@@ -1795,6 +1795,10 @@
       "OutputDtmi": "dtmi:com:willowinc:PressurizationFan;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Pressurization_Zone;1",
+      "OutputDtmi": "dtmi:com:willowinc:HVACPressurizationZone;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Propane_Forklift;1",
       "OutputDtmi": "dtmi:com:willowinc:Forklift;1"
     },

@@ -3445,6 +3445,10 @@
       "OutputDtmi": "dtmi:mapped:core:Pressurization_Fan;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:HVACPressurizationZone;1",
+      "OutputDtmi": "dtmi:mapped:core:Pressurization_Zone;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:PrimaryLoopChilledWaterDeltaPressureSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Differential_Pressure_Sensor;1"
     },
