@@ -21,6 +21,10 @@
       "OutputDtmi": "dtmi:mapped:core:Alternating_Current_Electrical_System;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:AbsenceSensor;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Sensor;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:AbsoluteHumiditySensor;1",
       "OutputDtmi": "dtmi:mapped:core:Absolute_Humidity_Sensor;1"
     },
@@ -326,7 +330,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:BarometricReliefDamper;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Relief_Damper;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:BarrierAsset;1",
@@ -366,7 +370,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:BeverageEquipment;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Culinary_Equipment;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:BilledActiveElectricalEnergy;1",
@@ -630,7 +634,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ChillerGroup;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1"
+      "OutputDtmi": "dtmi:mapped:core:Chiller_Group;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CleanAgentCabinet;1",
@@ -1234,7 +1238,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DuctHeater;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Space_Heater;1"
+      "OutputDtmi": "dtmi:mapped:core:Duct_Heater;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:DuctSilencer;1",
@@ -1290,7 +1294,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricTanklessWaterHeater;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Heater;1"
+      "OutputDtmi": "dtmi:mapped:core:Tankless_Water_Heater;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElectricUnitHeater;1",
@@ -1378,7 +1382,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EmergencyEyeWashShower;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Emergency_Wash_Station;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:EmergencyEyeWashStation;1",
@@ -1750,7 +1754,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmSpeakerStrobe;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fire_Alarm;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireAlarmStrobe;1",
@@ -1770,7 +1774,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireHydrant;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Fire_Hydrant;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireProtectionEquipment;1",
@@ -1786,7 +1790,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireSmokeDamper;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper;1"
+      "OutputDtmi": "dtmi:mapped:core:Fire_Smoke_Damper;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FireSprinklerHead;1",
@@ -1830,7 +1834,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FoodDisplayEquipment;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Display_Case;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:FoodPreparationEquipment;1",
@@ -1898,7 +1902,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:GasTankWaterHeater;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Heater;1"
+      "OutputDtmi": "dtmi:mapped:core:Gas_Water_Heater;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:GasTanklessWaterHeater;1",
@@ -1958,7 +1962,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACCoolingTowerGroup;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1"
+      "OutputDtmi": "dtmi:mapped:core:Cooling_Tower_Group;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACDamper;1",
@@ -2010,7 +2014,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACPumpGroup;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1"
+      "OutputDtmi": "dtmi:mapped:core:Pump_Skid;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACRefrigerantSystem;1",
@@ -2153,6 +2157,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Point;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:HeatingHotWaterValve;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Valve;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:HeatingLevelActuator;1",
       "OutputDtmi": "dtmi:mapped:core:Heating_Level_Command;1"
     },
@@ -2190,7 +2198,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HotFoodDisplayCase;1",
-      "OutputDtmi": "dtmi:mapped:core:Thing;1"
+      "OutputDtmi": "dtmi:mapped:core:Heated_Display_Case;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HotWaterConsumptionGreenhouseGasEmissionsFactor;1",
@@ -2286,7 +2294,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HydronicCirculatingPump;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Pump;1"
+      "OutputDtmi": "dtmi:mapped:core:Circulating_Pump;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HydronicPump;1",
@@ -3194,7 +3202,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PhaseBExportReactiveElectricalEnergySensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Sensor;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Reactive_Energy_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PhaseBImportActiveElectricalEnergySensor;1",
@@ -3614,7 +3622,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationCompressorGroup;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1"
+      "OutputDtmi": "dtmi:mapped:core:Compressor_Group;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationCondenser;1",
@@ -3706,7 +3714,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ReliefDamper;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Damper;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Relief_Damper;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ReliefFan;1",
@@ -4122,7 +4130,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:StairPressurizationFan;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan;1"
+      "OutputDtmi": "dtmi:mapped:core:Stairwell_Pressurization_Fan;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Stairway;1",
@@ -4582,7 +4590,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:UnitHeater;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Space_Heater;1"
+      "OutputDtmi": "dtmi:mapped:core:Unit_Heater;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:UnoccupiedActuator;1",
@@ -4630,7 +4638,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:VAVBoxReheat;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:RVAV;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Variable_Air_Volume_Box_With_Reheat;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:VFDFrequencySensor;1",

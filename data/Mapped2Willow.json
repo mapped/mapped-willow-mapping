@@ -35,6 +35,10 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Access_Card_Pin_Reader;1",
+      "OutputDtmi": "dtmi:com:willowinc:AccessReader;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Access_Card_Reader;1",
       "OutputDtmi": "dtmi:com:willowinc:AccessReader;1"
     },
@@ -129,6 +133,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Air_Quality_Sensing_Device;1",
       "OutputDtmi": "dtmi:com:willowinc:IAQSensorEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Source_Heat_Pump;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirSourcePackagedHeatPump;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Air_Valve;1",
@@ -264,7 +272,7 @@
     },
     {
       "InputDtmi": "dtmi:mapped:core:BACnet_Device;1",
-      "OutputDtmi": "dtmi:com:willowinc:Equipment;1"
+      "OutputDtmi": "dtmi:com:willowinc:BACnetController;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:BACnet_Vendor_Id;1",
@@ -437,6 +445,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Compressor_Discharge_Refrigerant_Pressure_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:CompressorLeavingRefrigerantStaticPressureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Compressor_Group;1",
+      "OutputDtmi": "dtmi:com:willowinc:RefrigerationCompressorGroup;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Compressor_Operating_Mode_Status;1",
@@ -907,8 +919,16 @@
       "OutputDtmi": "dtmi:com:willowinc:FireDamper;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Fire_Hydrant;1",
+      "OutputDtmi": "dtmi:com:willowinc:FireHydrant;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Fire_Overhead_Door;1",
       "OutputDtmi": "dtmi:com:willowinc:OverheadDoor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Fire_Smoke_Damper;1",
+      "OutputDtmi": "dtmi:com:willowinc:FireSmokeDamper;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Fire_Sprinkler;1",
@@ -969,6 +989,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Furniture;1",
       "OutputDtmi": "dtmi:com:willowinc:Furniture;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Gas_Water_Heater;1",
+      "OutputDtmi": "dtmi:com:willowinc:GasTankWaterHeater;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:GHG_Emissions;1",
@@ -2900,7 +2924,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:Valve;1"
+      "OutputDtmi": "dtmi:com:willowinc:ChilledWaterValve;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Chiller;1",
@@ -2984,7 +3008,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Bypass_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:Valve;1"
+      "OutputDtmi": "dtmi:com:willowinc:BypassValve;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Flow_Sensor;1",
@@ -3012,11 +3036,11 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:Valve;1"
+      "OutputDtmi": "dtmi:com:willowinc:CondenserWaterValve;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condensing_Natural_Gas_Boiler;1",
-      "OutputDtmi": "dtmi:com:willowinc:Boiler;1"
+      "OutputDtmi": "dtmi:com:willowinc:CondensingBoiler;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Conductivity_Sensor;1",
@@ -3228,7 +3252,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Bypass_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:Valve;1"
+      "OutputDtmi": "dtmi:com:willowinc:BypassValve;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Deadband_Setpoint;1",
@@ -4168,7 +4192,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Water_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:Valve;1"
+      "OutputDtmi": "dtmi:com:willowinc:HeatingHotWaterValve;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Humidification_Start_Stop_Status;1",
@@ -4852,7 +4876,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Noncondensing_Natural_Gas_Boiler;1",
-      "OutputDtmi": "dtmi:com:willowinc:Boiler;1"
+      "OutputDtmi": "dtmi:com:willowinc:NonCondensingBoiler;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupancy_Command;1",
@@ -5244,7 +5268,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Preheat_Hot_Water_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:Valve;1"
+      "OutputDtmi": "dtmi:com:willowinc:PreheatHotWaterValve;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Preheat_Supply_Air_Temperature_Sensor;1",
@@ -5472,7 +5496,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Heating_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:Valve;1"
+      "OutputDtmi": "dtmi:com:willowinc:HeatingHotWaterValve;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Rooftop;1",
@@ -5720,7 +5744,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Steam_Valve;1",
-      "OutputDtmi": "dtmi:com:willowinc:Valve;1"
+      "OutputDtmi": "dtmi:com:willowinc:SteamValve;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Step_Parameter;1",
