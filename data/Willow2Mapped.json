@@ -709,7 +709,7 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Static_Pressure_Sensor;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:CompressorEnteringRefrigerantTemperatureSensor;1",
+      "InputDtmi": "dtmi:com:willowinc:EnteringRefrigerantTemperatureSensor;1",
       "OutputDtmi": "dtmi:mapped:core:Suction_Line_Refrigerant_Temperature_Sensor;1"
     },
     {
@@ -717,8 +717,8 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Status;1"
     },
     {
-      "InputDtmi": "dtmi:com:willowinc:CompressorLeavingRefrigerantStaticPressureSensor;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Static_Pressure_Sensor;1"
+      "InputDtmi": "dtmi:com:willowinc:LeavingRefrigerantStaticPressureSensor;1",
+      "OutputDtmi": "dtmi:mapped:core:Compressor_Discharge_Refrigerant_Pressure_Sensor;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:CompressorLeavingRefrigerantStaticPressureSetpoint;1",
