@@ -72,6 +72,19 @@ def load_mappings(path: Path) -> list[dict]:
     return data["InterfaceRemaps"]
 
 
+def _infer_ontology(dtmi: str) -> str:
+    """Infer the ontology of a DTMI from its namespace prefix."""
+    if dtmi.startswith("dtmi:com:willowinc:"):
+        return "willow"
+    if dtmi.startswith("dtmi:mapped:core:"):
+        return "mapped"
+    if dtmi.startswith("dtmi:org:brickschema:"):
+        return "brick"
+    if dtmi.startswith("dtmi:org:w3id:rec:"):
+        return "rec"
+    return "external"
+
+
 def build_graph() -> nx.DiGraph:
     G = nx.DiGraph()
 
@@ -93,9 +106,9 @@ def build_graph() -> nx.DiGraph:
             src = remap["InputDtmi"]
             dst = remap["OutputDtmi"]
             if src not in G:
-                G.add_node(src, ontology="external", display_name="")
+                G.add_node(src, ontology=_infer_ontology(src), display_name="")
             if dst not in G:
-                G.add_node(dst, ontology="external", display_name="")
+                G.add_node(dst, ontology=_infer_ontology(dst), display_name="")
             G.add_edge(src, dst, type="mapsTo")
 
     return G
