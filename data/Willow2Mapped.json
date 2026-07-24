@@ -673,6 +673,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Sensor;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:ColdDeckAirHandlingUnitDischargeSection;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Cold_Deck;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:ColdDeckInletDamper;1",
       "OutputDtmi": "dtmi:mapped:core:Cold_Deck_Damper;1"
     },
@@ -1613,6 +1617,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Exhaust_Fan;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:ExhaustFanGroup;1",
+      "OutputDtmi": "dtmi:mapped:core:Exhaust_Fan_Array;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:ExitSign;1",
       "OutputDtmi": "dtmi:mapped:core:Exit_Sign;1"
     },
@@ -1985,6 +1993,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:HVACFanGroup;1",
+      "OutputDtmi": "dtmi:mapped:core:Fan_Array;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:HVACGlobeValve;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Valve;1"
     },
@@ -2187,6 +2199,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:HoseBibb;1",
       "OutputDtmi": "dtmi:mapped:core:Faucet;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:HotDeckAirHandlingUnitDischargeSection;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Hot_Deck;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HotDeckInletDamper;1",
@@ -3837,6 +3853,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Return_Fan;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:ReturnFanGroup;1",
+      "OutputDtmi": "dtmi:mapped:core:Return_Fan_Array;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:ReturnFanRunActuator;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Fan_Command;1"
     },
@@ -4275,6 +4295,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:SupplyFan;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Supply_Fan;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:SupplyFanGroup;1",
+      "OutputDtmi": "dtmi:mapped:core:Supply_Fan_Array;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:SurfaceTemperatureSensor;1",
