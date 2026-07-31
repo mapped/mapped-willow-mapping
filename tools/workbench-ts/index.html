@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mapping Workbench</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font: 13px/1.5 monospace; background: #111; color: #bbb; height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
+
+header { padding: 6px 14px; border-bottom: 1px solid #1e1e1e; display: flex; align-items: center; background: #0d0d0d; flex-shrink: 0; }
+header h1 { font-size: 13px; font-weight: normal; color: #ddd; }
+
+nav { display: flex; padding: 0 14px; border-bottom: 1px solid #1e1e1e; background: #0d0d0d; flex-shrink: 0; }
+.tab { padding: 5px 12px; border: none; border-bottom: 2px solid transparent; background: none; color: #444; font: inherit; cursor: pointer; white-space: nowrap; }
+.tab.active { color: #bbb; border-bottom-color: #555; }
+.tab:hover:not(.active) { color: #777; }
+.tab-count { font-size: 11px; margin-left: 3px; }
+
+/* Toolbar */
+.toolbar { padding: 5px 14px; border-bottom: 1px solid #1a1a1a; display: flex; gap: 8px; align-items: center; flex-shrink: 0; }
+.btn { padding: 3px 10px; border: 1px solid #2a2a2a; border-radius: 2px; background: #181818; color: #999; font: inherit; cursor: pointer; font-size: 12px; white-space: nowrap; }
+.btn:hover { background: #1e1e1e; color: #bbb; }
+.btn-danger { border-color: #3a1a1a; color: #b05050; }
+.btn-danger:hover { background: #2a1a1a; color: #d06060; }
+.btn-save { border-color: #1a3a1a; color: #4a8c5c; }
+.btn-save:hover { background: #152015; color: #5aac6c; }
+.btn-add-out { margin-top: 12px; border-color: #1a2a3a; color: #4a7a9c; }
+.btn-add-out:hover { background: #101820; color: #5a9abc; }
+
+/* Mode seg */
+.seg { display: inline-flex; border: 1px solid #2a2a2a; border-radius: 2px; overflow: hidden; }
+.seg button { padding: 3px 10px; border: none; background: none; color: #444; font: inherit; font-size: 12px; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+.seg button:hover { color: #777; }
+.seg button.active { background: #1e1e1e; color: #bbb; }
+.seg-div { width: 1px; background: #2a2a2a; flex-shrink: 0; }
+.mode-cnt { font-size: 10px; color: #3a3a3a; }
+.seg button.active .mode-cnt { color: #555; }
+
+/* Table */
+.main { flex: 1; overflow-y: auto; }
+table { width: 100%; border-collapse: collapse; }
+thead tr th { padding: 5px 10px; text-align: left; font-size: 10px; font-weight: normal; color: #3a3a3a; border-bottom: 1px solid #1a1a1a; background: #0d0d0d; position: sticky; top: 0; z-index: 3; text-transform: uppercase; letter-spacing: 0.06em; white-space: nowrap; }
+tbody td { padding: 6px 10px; border-bottom: 1px solid #161616; vertical-align: middle; white-space: nowrap; }
+td[data-dtmi] { cursor: pointer; }
+td[data-dtmi]:hover { background: #181818; }
+td[data-dtmi].cell-sel { background: #1e1e1e; outline: 1px solid #333; outline-offset: -1px; }
+th[data-sort] { cursor: pointer; user-select: none; }
+th[data-sort]:hover { color: #666; }
+th[data-sort].sort-active { color: #888; }
+
+/* Badges */
+.badge { display: inline-block; min-width: 22px; text-align: center; padding: 1px 5px; border-radius: 2px; font-size: 11px; }
+.badge-unmapped { background: #2a1a18; color: #c9734a; }
+.badge-degraded { background: #2a2415; color: #b8852a; }
+.badge-ok { background: #152015; color: #4a8c5c; }
+.badge-unknown { color: #3a3a3a; }
+
+.dtmi-ns { color: #3a3a3a; }
+.dtmi-name { color: #aaa; }
+
+/* Drawer */
+.drawer { position: fixed; top: 0; right: 0; width: 480px; height: 100vh; background: #0d0d0d; border-left: 1px solid #222; transform: translateX(100%); transition: transform 0.18s ease; z-index: 10; display: flex; flex-direction: column; }
+.drawer.open { transform: translateX(0); }
+.drawer-header { padding: 7px 12px; border-bottom: 1px solid #1e1e1e; display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.drawer-title { flex: 1; font-size: 11px; color: #555; text-transform: uppercase; letter-spacing: 0.06em; }
+.drawer-close { background: none; border: none; color: #3a3a3a; font: inherit; font-size: 15px; cursor: pointer; padding: 0 2px; line-height: 1; }
+.drawer-close:hover { color: #bbb; }
+.drawer-body { flex: 1; overflow-y: auto; padding: 12px; }
+
+.d-dtmi { font-size: 11px; color: #444; word-break: break-all; padding-bottom: 10px; border-bottom: 1px solid #1a1a1a; margin-bottom: 12px; }
+.d-section-hdr { font-size: 10px; color: #3a3a3a; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 6px; }
+.d-section { margin-bottom: 14px; }
+.d-row { display: flex; align-items: center; gap: 6px; margin-bottom: 3px; font-size: 12px; }
+.d-arrow { color: #2e2e2e; flex-shrink: 0; }
+.d-target { color: #777; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; cursor: pointer; }
+.d-target:hover { color: #bbb; }
+.d-edit-btn { background: none; border: 1px solid #252525; border-radius: 2px; color: #444; font: inherit; font-size: 10px; padding: 1px 5px; cursor: pointer; flex-shrink: 0; }
+.d-edit-btn:hover { color: #bbb; border-color: #444; }
+
+.field-group { margin-bottom: 10px; }
+.field-label { display: block; font-size: 10px; color: #3a3a3a; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 3px; }
+input.edit-val { width: 100%; padding: 4px 7px; background: #181818; border: 1px solid #2a2a2a; border-radius: 2px; color: #bbb; font: inherit; outline: none; }
+input.edit-val:focus { border-color: #444; }
+input.edit-val[readonly] { color: #444; border-color: #1a1a1a; background: #141414; }
+.drawer-actions { display: flex; gap: 6px; align-items: center; }
+.status-text { font-size: 11px; color: #444; margin-left: 4px; }
+.status-text.ok { color: #4a8c5c; }
+.status-text.err { color: #b05050; }
+.back-link { display: inline-block; font-size: 11px; color: #444; cursor: pointer; margin-bottom: 12px; }
+.back-link:hover { color: #bbb; }
+
+.combo-wrap { position: relative; }
+.combo-drop { position: absolute; top: 100%; left: 0; right: 0; background: #181818; border: 1px solid #333; border-top: none; max-height: 220px; overflow-y: auto; z-index: 20; }
+.combo-drop.hidden { display: none; }
+.combo-item { padding: 4px 8px; font-size: 12px; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.combo-item:hover, .combo-item.combo-active { background: #222; color: #ddd; }
+
+/* Filter combobox in toolbar */
+.filter-wrap { position: relative; width: 260px; }
+.filter-wrap input { width: 100%; padding: 3px 24px 3px 8px; background: #181818; border: 1px solid #2a2a2a; border-radius: 2px; color: #bbb; font: inherit; outline: none; }
+.filter-wrap input:focus { border-color: #444; }
+.filter-wrap input.filtered { border-color: #3a3a3a; color: #ddd; }
+.filter-clear { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #3a3a3a; font: inherit; font-size: 14px; cursor: pointer; padding: 0 2px; line-height: 1; display: none; }
+.filter-clear:hover { color: #bbb; }
+#filterDrop { min-width: 480px; }
+#filterDrop .combo-item { direction: rtl; unicode-bidi: plaintext; }
+
+.empty-msg { padding: 40px 14px; color: #2a2a2a; text-align: center; }
+
+/* Fix button (hover-only) */
+.fix-btn { display: none; background: none; border: 1px solid #252525; border-radius: 2px; color: #444; font: inherit; font-size: 10px; padding: 1px 5px; cursor: pointer; margin-left: 6px; vertical-align: middle; flex-shrink: 0; }
+.fix-btn:hover { color: #bbb; border-color: #555; }
+tr:hover .fix-btn { display: inline-block; }
+
+/* Modal */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.65); z-index: 50; display: none; align-items: center; justify-content: center; }
+.modal-overlay.open { display: flex; }
+.modal { background: #0d0d0d; border: 1px solid #333; border-radius: 3px; padding: 20px; max-width: 460px; width: 90%; }
+.modal-msg { font-size: 12px; color: #999; margin-bottom: 16px; line-height: 1.7; word-break: break-all; }
+.modal-msg strong { color: #ddd; font-weight: normal; }
+.modal-actions { display: flex; gap: 8px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mapping Workbench</h1>
+</header>
+
+<nav>
+  <button class="tab active" data-tab="m2w">Mapped <span class="tab-count" id="tcM2W"></span></button>
+  <button class="tab" data-tab="w2m">Willow <span class="tab-count" id="tcW2M"></span></button>
+</nav>
+
+<div class="toolbar">
+  <div class="filter-wrap combo-wrap">
+    <input type="text" id="filterInput" placeholder="Filter by class…" autocomplete="off" />
+    <button class="filter-clear" id="filterClear" title="Clear filter">×</button>
+    <div class="combo-drop hidden" id="filterDrop"></div>
+  </div>
+  <div class="seg" id="modeSeg">
+    <button data-mode="all" class="active">All</button>
+    <span class="seg-div"></span>
+    <button data-mode="unmapped">Unmapped <span class="mode-cnt" id="cntUnmapped"></span></button>
+    <span class="seg-div"></span>
+    <button data-mode="degraded">Degraded <span class="mode-cnt" id="cntDegraded"></span></button>
+  </div>
+  <button class="btn" id="refreshBtn">Refresh</button>
+</div>
+
+<div class="main" id="main"><div class="empty-msg">Loading…</div></div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-msg" id="modalMsg"></div>
+    <div class="modal-actions">
+      <button class="btn btn-save" id="modalConfirm">Confirm</button>
+      <button class="btn" id="modalCancel">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div class="drawer" id="drawer">
+  <div class="drawer-header">
+    <span class="drawer-title" id="drawerTitle">Entity</span>
+    <button class="drawer-close" id="drawerCloseBtn" title="Close (Esc)">✕</button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+</div>
+
+<script>
+const state = {
+  m2w: [], w2m: [],
+  rtM2W: null, rtW2M: null,
+  unM2W: null, unW2M: null,
+  ont: null,           // Map<id, children[]>
+  mappedIds: null,     // Set<string> — all IDs from mapped ontology
+  willowIds: null,     // Set<string> — all IDs from willow ontology
+  filterDtmi: null,    // selected class for descendant filter
+  tab: 'm2w',
+  mode: 'all',
+  allSort: 'in', allSortDir: -1,
+  drawerOpen: false, drawerDtmi: null, drawerMode: null, drawerEdit: null,
+};
+
+function shortDtmi(dtmi) {
+  if (!dtmi) return '–';
+  return dtmi.split(':').pop().split(';')[0];
+}
+
+function dtmiSpan(dtmi) {
+  if (!dtmi) return '–';
+  const name = shortDtmi(dtmi);
+  const ns = dtmi.includes('willowinc') ? 'willow'
+           : dtmi.includes('mapped:core') ? 'mapped'
+           : dtmi.includes('brickschema') ? 'brick'
+           : dtmi.includes('w3id:rec') ? 'rec' : '';
+  return `<span class="dtmi-ns">${ns ? ns + ':' : ''}</span><span class="dtmi-name">${name}</span>`;
+}
+
+function deltaHtml(trip) {
+  if (trip.unmappedReturn) return '<span class="badge badge-unmapped">unmapped</span>';
+  if (trip.granularityLoss === 0) return '<span class="badge badge-ok">0</span>';
+  if (trip.granularityLoss === null) return '<span class="badge badge-unknown">?</span>';
+  return `<span class="badge badge-degraded">+${trip.granularityLoss}</span>`;
+}
+
+function entityMappings(dtmi) {
+  return {
+    outM2W: state.m2w.filter(r => r.InputDtmi === dtmi),
+    outW2M: state.w2m.filter(r => r.InputDtmi === dtmi),
+    inM2W:  state.m2w.filter(r => r.OutputDtmi === dtmi),
+    inW2M:  state.w2m.filter(r => r.OutputDtmi === dtmi),
+  };
+}
+
+// BFS down children map
+function descendants(dtmi) {
+  const result = new Set([dtmi]);
+  const queue = [dtmi];
+  while (queue.length) {
+    for (const child of state.ont?.get(queue.shift()) ?? []) {
+      if (!result.has(child)) { result.add(child); queue.push(child); }
+    }
+  }
+  return result;
+}
+
+// --- Data loading ---
+
+async function loadAll() {
+  document.getElementById('refreshBtn').textContent = 'Loading…';
+  try {
+    const [m2w, w2m] = await Promise.all([
+      fetch('/api/mappings/m2w').then(r => r.json()),
+      fetch('/api/mappings/w2m').then(r => r.json()),
+    ]);
+    state.m2w = m2w;
+    state.w2m = w2m;
+    state.rtM2W = null; state.rtW2M = null;
+    state.unM2W = null; state.unW2M = null;
+    document.getElementById('tcM2W').textContent = `(${m2w.length})`;
+    document.getElementById('tcW2M').textContent = `(${w2m.length})`;
+  } finally {
+    document.getElementById('refreshBtn').textContent = 'Refresh';
+  }
+  await loadOntology();
+  await updateModeCounts();
+  render();
+  if (state.drawerOpen && state.drawerMode === 'entity') renderEntityDrawer();
+}
+
+async function loadOntology() {
+  if (state.ont) return state.ont;
+  const data = await fetch('/api/ontology').then(r => r.json());
+  const children = new Map();
+  const mappedIds = new Set();
+  const willowIds = new Set();
+  for (const { id, parents, source } of data) {
+    if (source === 'mapped') mappedIds.add(id); else willowIds.add(id);
+    if (!children.has(id)) children.set(id, []);
+    for (const p of parents) {
+      if (!children.has(p)) children.set(p, []);
+      children.get(p).push(id);
+    }
+  }
+  state.ont = children;
+  state.mappedIds = mappedIds;
+  state.willowIds = willowIds;
+  return children;
+}
+
+async function loadRoundTrips(dir) {
+  const cached = dir === 'm2w' ? state.rtM2W : state.rtW2M;
+  if (cached) return cached;
+  const trips = await fetch(`/api/roundtrips?dir=${dir}`).then(r => r.json());
+  if (dir === 'm2w') state.rtM2W = trips;
+  else state.rtW2M = trips;
+  return trips;
+}
+
+async function loadUnmapped(dir) {
+  const cached = dir === 'm2w' ? state.unM2W : state.unW2M;
+  if (cached) return cached;
+  const list = await fetch(`/api/unmapped/${dir}`).then(r => r.json());
+  if (dir === 'm2w') state.unM2W = list;
+  else state.unW2M = list;
+  return list;
+}
+
+async function updateModeCounts() {
+  const [trips, unmapped] = await Promise.all([
+    loadRoundTrips(state.tab),
+    loadUnmapped(state.tab),
+  ]);
+  document.getElementById('cntUnmapped').textContent = unmapped.length;
+  document.getElementById('cntDegraded').textContent = trips.filter(t => !t.unmappedReturn && t.granularityLoss > 0).length;
+}
+
+// --- Rendering ---
+
+function dtmiTd(dtmi) {
+  const td = document.createElement('td');
+  if (dtmi) {
+    td.dataset.dtmi = dtmi;
+    if (dtmi === state.drawerDtmi) td.classList.add('cell-sel');
+    td.innerHTML = dtmiSpan(dtmi);
+  } else {
+    td.innerHTML = '<span style="color:#2e2e2e">–</span>';
+  }
+  return td;
+}
+
+async function render() {
+  const descSet = state.filterDtmi ? descendants(state.filterDtmi) : null;
+  const main = document.getElementById('main');
+  switch (state.mode) {
+    case 'all': renderAll(descSet, main); break;
+    case 'unmapped': {
+      const list = await loadUnmapped(state.tab);
+      renderUnmapped(list, descSet, main);
+      break;
+    }
+    default: {
+      const trips = await loadRoundTrips(state.tab);
+      renderTrips(trips, descSet, main);
+    }
+  }
+}
+
+function renderAll(descSet, main) {
+  const incoming = new Map();
+  for (const r of [...state.m2w, ...state.w2m])
+    incoming.set(r.OutputDtmi, (incoming.get(r.OutputDtmi) ?? 0) + 1);
+
+  const mappings = state.tab === 'm2w' ? state.m2w : state.w2m;
+  const mappingIndex = new Map(mappings.map(r => [r.InputDtmi, r.OutputDtmi]));
+
+  const ontIds = state.tab === 'm2w' ? state.mappedIds : state.willowIds;
+  let classes = [...(ontIds ?? [])].filter(d => state.ont?.has(d));
+  if (descSet) classes = classes.filter(d => descSet.has(d));
+  if (!classes.length) { main.innerHTML = '<div class="empty-msg">No results</div>'; return; }
+
+  const { allSort: col, allSortDir: dir } = state;
+  classes = [...classes].sort((a, b) => {
+    const av = col === 'in' ? (incoming.get(a) ?? 0) : col === 'target' ? (mappingIndex.get(a) ?? '') : a;
+    const bv = col === 'in' ? (incoming.get(b) ?? 0) : col === 'target' ? (mappingIndex.get(b) ?? '') : b;
+    return av < bv ? dir : av > bv ? -dir : 0;
+  });
+
+  function th(label, key) {
+    const active = col === key;
+    const arrow = active ? (dir === -1 ? ' ↓' : ' ↑') : '';
+    return `<th data-sort="${key}" class="${active ? 'sort-active' : ''}">${label}${arrow}</th>`;
+  }
+
+  const tbl = document.createElement('table');
+  tbl.innerHTML = `<thead><tr>${th('Class','class')}${th('Target','target')}${th('In','in')}</tr></thead>`;
+  const tbody = document.createElement('tbody');
+  for (const cls of classes) {
+    const target = mappingIndex.get(cls) ?? null;
+    const tr = document.createElement('tr');
+    tr.appendChild(dtmiTd(cls));
+    tr.appendChild(dtmiTd(target));
+    const tdIn = document.createElement('td');
+    const cnt = incoming.get(cls) ?? 0;
+    tdIn.style.color = cnt > 0 ? '#888' : '#2e2e2e';
+    tdIn.textContent = cnt;
+    tr.appendChild(tdIn);
+    tbody.appendChild(tr);
+  }
+  tbl.appendChild(tbody);
+  main.innerHTML = '';
+  main.appendChild(tbl);
+}
+
+function renderUnmapped(list, descSet, main) {
+  const data = descSet ? list.filter(d => descSet.has(d)) : list;
+  if (!data.length) { main.innerHTML = '<div class="empty-msg">No results</div>'; return; }
+  const tbl = document.createElement('table');
+  tbl.innerHTML = `<thead><tr><th>Class</th></tr></thead>`;
+  const tbody = document.createElement('tbody');
+  for (const dtmi of data) {
+    const tr = document.createElement('tr');
+    tr.appendChild(dtmiTd(dtmi));
+    tbody.appendChild(tr);
+  }
+  tbl.appendChild(tbody);
+  main.innerHTML = '';
+  main.appendChild(tbl);
+}
+
+function renderTrips(allTrips, descSet, main) {
+  let data = allTrips.filter(t => {
+    if (state.mode === 'degraded') return !t.unmappedReturn && t.granularityLoss !== null && t.granularityLoss > 0;
+    return true;
+  });
+  if (descSet) data = data.filter(t => descSet.has(t.inputDtmi));
+  if (!data.length) { main.innerHTML = '<div class="empty-msg">No results</div>'; return; }
+
+  const dir = state.tab;
+  const [c1, c2, c3] = dir === 'm2w'
+    ? ['Input (mapped)', 'Willow', 'Return (mapped)']
+    : ['Input (willow)', 'Mapped', 'Return (willow)'];
+
+  const tbl = document.createElement('table');
+  tbl.innerHTML = `<thead><tr><th>Delta</th><th>${c1}</th><th>${c2}</th><th>${c3}</th></tr></thead>`;
+  const tbody = document.createElement('tbody');
+  const secondaryFile = state.tab === 'm2w' ? 'w2m' : 'm2w';
+  for (const t of data) {
+    const tr = document.createElement('tr');
+    const td = document.createElement('td');
+    td.innerHTML = deltaHtml(t);
+    tr.appendChild(td);
+    tr.appendChild(dtmiTd(t.inputDtmi));
+    tr.appendChild(dtmiTd(t.midDtmi));
+
+    const returnTd = dtmiTd(t.returnDtmi);
+    const fixBtn = document.createElement('button');
+    fixBtn.className = 'fix-btn';
+    fixBtn.textContent = 'use input';
+    fixBtn.title = `Map ${shortDtmi(t.midDtmi)} → ${shortDtmi(t.inputDtmi)}`;
+    fixBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      const method = t.returnDtmi ? 'PUT' : 'POST';
+      showModal(
+        `<strong>${t.midDtmi}</strong><br>↓<br><strong>${t.inputDtmi}</strong>` +
+        (t.returnDtmi ? `<br><br>was: ${t.returnDtmi}` : ''),
+        async () => {
+          const res = await fetch(`/api/mapping/${secondaryFile}`, {
+            method,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ inputDtmi: t.midDtmi, outputDtmi: t.inputDtmi }),
+          });
+          const d = await res.json();
+          if (d.ok) await loadAll();
+          else showModal(`Error: ${d.error ?? 'unknown'}`, () => {});
+        }
+      );
+    });
+    returnTd.appendChild(fixBtn);
+    tr.appendChild(returnTd);
+    tbody.appendChild(tr);
+  }
+  tbl.appendChild(tbody);
+  main.innerHTML = '';
+  main.appendChild(tbl);
+}
+
+// --- Drawer ---
+
+function openEntityDrawer(dtmi) {
+  state.drawerDtmi = dtmi;
+  state.drawerMode = 'entity';
+  state.drawerOpen = true;
+  state.drawerEdit = null;
+  document.getElementById('drawer').classList.add('open');
+  renderEntityDrawer();
+  render();
+}
+
+function closeDrawer() {
+  state.drawerOpen = false;
+  state.drawerDtmi = null;
+  state.drawerMode = null;
+  state.drawerEdit = null;
+  document.getElementById('drawer').classList.remove('open');
+  render();
+}
+
+function renderEntityDrawer() {
+  const dtmi = state.drawerDtmi;
+  const { outM2W, outW2M, inM2W, inW2M } = entityMappings(dtmi);
+  const ns = dtmi.includes('willowinc') ? 'willow' : dtmi.includes('mapped:core') ? 'mapped' : 'entity';
+  document.getElementById('drawerTitle').textContent = ns;
+
+  const body = document.getElementById('drawerBody');
+  body.innerHTML = '';
+
+  const dtmiEl = document.createElement('div');
+  dtmiEl.className = 'd-dtmi';
+  dtmiEl.textContent = dtmi;
+  body.appendChild(dtmiEl);
+
+  function addSection(label, entries, isOutgoing) {
+    if (!entries.length) return;
+    const sec = document.createElement('div');
+    sec.className = 'd-section';
+    const hdr = document.createElement('div');
+    hdr.className = 'd-section-hdr';
+    hdr.textContent = `${label} (${entries.length})`;
+    sec.appendChild(hdr);
+    for (const { r, file } of entries) {
+      const other = isOutgoing ? r.OutputDtmi : r.InputDtmi;
+      const row = document.createElement('div');
+      row.className = 'd-row';
+
+      const arrow = document.createElement('span');
+      arrow.className = 'd-arrow';
+      arrow.textContent = isOutgoing ? '→' : '←';
+      row.appendChild(arrow);
+
+      const target = document.createElement('span');
+      target.className = 'd-target';
+      target.innerHTML = dtmiSpan(other);
+      target.title = other;
+      target.addEventListener('click', () => openEntityDrawer(other));
+      row.appendChild(target);
+
+      const editBtn = document.createElement('button');
+      editBtn.className = 'd-edit-btn';
+      editBtn.textContent = 'edit';
+      editBtn.addEventListener('click', () => openEditForm(r.InputDtmi, r.OutputDtmi, file));
+      row.appendChild(editBtn);
+
+      sec.appendChild(row);
+    }
+    body.appendChild(sec);
+  }
+
+  const inEntries = [
+    ...inM2W.map(r => ({ r, file: 'm2w' })),
+    ...inW2M.map(r => ({ r, file: 'w2m' })),
+  ];
+  const outEntries = [
+    ...outM2W.map(r => ({ r, file: 'm2w' })),
+    ...outW2M.map(r => ({ r, file: 'w2m' })),
+  ];
+  addSection('Incoming', inEntries, false);
+  addSection('Outgoing', outEntries, true);
+
+  if (!inEntries.length && !outEntries.length) {
+    const el = document.createElement('div');
+    el.className = 'empty-msg';
+    el.textContent = 'No mappings';
+    body.appendChild(el);
+  }
+
+  if (!outEntries.length) {
+    const file = dtmi.startsWith('dtmi:mapped:') ? 'm2w' : 'w2m';
+    const addBtn = document.createElement('button');
+    addBtn.className = 'btn btn-add-out';
+    addBtn.textContent = '+ Add outgoing';
+    addBtn.addEventListener('click', () => openEditForm(dtmi, '', file, true));
+    body.appendChild(addBtn);
+  }
+}
+
+function openEditForm(inputDtmi, outputDtmi, file, isNew = false) {
+  state.drawerMode = 'edit';
+  state.drawerEdit = { inputDtmi, outputDtmi, file, isNew };
+  renderEditForm();
+}
+
+function allDtmis() {
+  const s = new Set();
+  for (const r of state.m2w) { s.add(r.InputDtmi); s.add(r.OutputDtmi); }
+  for (const r of state.w2m) { s.add(r.InputDtmi); s.add(r.OutputDtmi); }
+  return [...s].sort();
+}
+
+function renderEditForm() {
+  const { inputDtmi, outputDtmi, file, isNew } = state.drawerEdit;
+  document.getElementById('drawerTitle').textContent = isNew ? 'Add mapping' : (file === 'm2w' ? 'Mapped2Willow.json' : 'Willow2Mapped.json');
+
+  const body = document.getElementById('drawerBody');
+  body.innerHTML = '';
+
+  const back = document.createElement('span');
+  back.className = 'back-link';
+  back.textContent = `← ${shortDtmi(state.drawerDtmi)}`;
+  back.addEventListener('click', () => {
+    state.drawerMode = 'entity';
+    state.drawerEdit = null;
+    const ns = state.drawerDtmi.includes('willowinc') ? 'willow' : state.drawerDtmi.includes('mapped:core') ? 'mapped' : 'entity';
+    document.getElementById('drawerTitle').textContent = ns;
+    renderEntityDrawer();
+  });
+  body.appendChild(back);
+
+  const inputGroup = document.createElement('div');
+  inputGroup.className = 'field-group';
+  inputGroup.innerHTML = '<label class="field-label">Input DTMI</label>';
+  const inputField = document.createElement('input');
+  inputField.className = 'edit-val';
+  inputField.id = 'editInput';
+  inputField.value = inputDtmi;
+  inputField.readOnly = true;
+  inputGroup.appendChild(inputField);
+  body.appendChild(inputGroup);
+
+  const outputGroup = document.createElement('div');
+  outputGroup.className = 'field-group';
+  outputGroup.innerHTML = '<label class="field-label">Output DTMI</label>';
+  const comboWrap = document.createElement('div');
+  comboWrap.className = 'combo-wrap';
+  const outputField = document.createElement('input');
+  outputField.className = 'edit-val';
+  outputField.id = 'editOutput';
+  outputField.value = outputDtmi;
+  const drop = document.createElement('div');
+  drop.className = 'combo-drop hidden';
+  comboWrap.appendChild(outputField);
+  comboWrap.appendChild(drop);
+  outputGroup.appendChild(comboWrap);
+  body.appendChild(outputGroup);
+
+  const outIds = file === 'm2w' ? state.willowIds : state.mappedIds;
+  wireCombo(outputField, drop, () => [...(outIds ?? [])].sort());
+
+  const actions = document.createElement('div');
+  actions.className = 'drawer-actions';
+  const saveBtn = document.createElement('button');
+  saveBtn.className = 'btn btn-save';
+  saveBtn.textContent = isNew ? 'Add' : 'Save';
+  saveBtn.addEventListener('click', saveEdit);
+  actions.appendChild(saveBtn);
+  if (!isNew) {
+    const delBtn = document.createElement('button');
+    delBtn.className = 'btn btn-danger';
+    delBtn.textContent = 'Delete';
+    delBtn.addEventListener('click', deleteEdit);
+    actions.appendChild(delBtn);
+  }
+  const status = document.createElement('span');
+  status.className = 'status-text';
+  status.id = 'editStatus';
+  actions.appendChild(status);
+  body.appendChild(actions);
+  outputField.focus();
+}
+
+// Shared combobox keyboard/mouse logic for a (input, drop) pair.
+// getItems() called lazily on each keystroke.
+function wireCombo(input, drop, getItems) {
+  let activeIdx = -1;
+
+  function refresh() {
+    const q = input.value.toLowerCase();
+    drop.innerHTML = '';
+    activeIdx = -1;
+    if (!q) { drop.classList.add('hidden'); return; }
+    const words = q.split(/\s+/).filter(Boolean);
+    const matches = getItems().filter(d => { const dl = d.toLowerCase(); return words.every(w => dl.includes(w)); }).slice(0, 30);
+    if (!matches.length) { drop.classList.add('hidden'); return; }
+    for (const d of matches) {
+      const item = document.createElement('div');
+      item.className = 'combo-item';
+      item.textContent = d;
+      item.addEventListener('mousedown', e => { e.preventDefault(); input.value = d; drop.classList.add('hidden'); activeIdx = -1; });
+      drop.appendChild(item);
+    }
+    drop.classList.remove('hidden');
+  }
+
+  function move(delta) {
+    const items = drop.querySelectorAll('.combo-item');
+    if (!items.length) return;
+    items[activeIdx]?.classList.remove('combo-active');
+    activeIdx = Math.max(-1, Math.min(items.length - 1, activeIdx + delta));
+    if (activeIdx >= 0) { items[activeIdx].classList.add('combo-active'); items[activeIdx].scrollIntoView({ block: 'nearest' }); }
+  }
+
+  input.addEventListener('input', refresh);
+  input.addEventListener('focus', refresh);
+  input.addEventListener('blur', () => setTimeout(() => drop.classList.add('hidden'), 150));
+  input.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); move(1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); move(-1); }
+    else if (e.key === 'Enter') {
+      const active = drop.querySelector('.combo-active');
+      if (active) { e.preventDefault(); input.value = active.textContent; drop.classList.add('hidden'); activeIdx = -1; }
+    } else if (e.key === 'Escape') { drop.classList.add('hidden'); }
+  });
+}
+
+async function saveEdit() {
+  const inputDtmi = document.getElementById('editInput').value;
+  const outputDtmi = document.getElementById('editOutput').value.trim();
+  const statusEl = document.getElementById('editStatus');
+  if (!outputDtmi) { setStatus(statusEl, 'required', false); return; }
+  const method = state.drawerEdit.isNew ? 'POST' : 'PUT';
+  const res = await fetch(`/api/mapping/${state.drawerEdit.file}`, {
+    method,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ inputDtmi, outputDtmi }),
+  });
+  const d = await res.json();
+  if (d.ok) { setStatus(statusEl, 'saved', true); state.drawerEdit.outputDtmi = outputDtmi; state.drawerEdit.isNew = false; await loadAll(); }
+  else setStatus(statusEl, d.error ?? 'error', false);
+}
+
+async function deleteEdit() {
+  const inputDtmi = document.getElementById('editInput').value;
+  const statusEl = document.getElementById('editStatus');
+  if (!confirm(`Delete mapping for ${shortDtmi(inputDtmi)}?`)) return;
+  const res = await fetch(`/api/mapping/${state.drawerEdit.file}`, {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ inputDtmi }),
+  });
+  const d = await res.json();
+  if (d.ok) { state.drawerMode = 'entity'; state.drawerEdit = null; await loadAll(); }
+  else setStatus(statusEl, d.error ?? 'error', false);
+}
+
+function setStatus(el, msg, isOk) {
+  el.textContent = msg;
+  el.className = 'status-text ' + (isOk ? 'ok' : 'err');
+}
+
+// --- Modal ---
+
+function showModal(html, onConfirm) {
+  const overlay = document.getElementById('modalOverlay');
+  document.getElementById('modalMsg').innerHTML = html;
+  overlay.classList.add('open');
+
+  // Clone to clear any stale listeners from previous (cancelled) modals
+  for (const id of ['modalConfirm', 'modalCancel']) {
+    const el = document.getElementById(id);
+    el.replaceWith(el.cloneNode(true));
+  }
+
+  function close() { overlay.classList.remove('open'); }
+
+  document.getElementById('modalConfirm').addEventListener('click', async () => {
+    close();
+    try { await onConfirm(); }
+    catch (err) { console.error('Modal confirm error:', err); }
+  });
+  document.getElementById('modalCancel').addEventListener('click', close);
+
+  function onBackdrop(e) {
+    if (e.target === overlay) { close(); overlay.removeEventListener('click', onBackdrop); }
+  }
+  overlay.addEventListener('click', onBackdrop);
+}
+
+// --- Filter combobox ---
+
+function initFilterCombo() {
+  const input = document.getElementById('filterInput');
+  const drop = document.getElementById('filterDrop');
+  const clearBtn = document.getElementById('filterClear');
+  let activeIdx = -1;
+
+  function getClasses() {
+    const ontIds = state.tab === 'm2w' ? state.mappedIds : state.willowIds;
+    return [...(ontIds ?? [])].sort();
+  }
+
+  function refresh() {
+    const q = input.value.toLowerCase().trim();
+    drop.innerHTML = '';
+    activeIdx = -1;
+    if (!q) { drop.classList.add('hidden'); return; }
+    const words = q.split(/\s+/).filter(Boolean);
+    const matches = getClasses().filter(d => { const dl = d.toLowerCase(); return words.every(w => dl.includes(w)); }).slice(0, 40);
+    if (!matches.length) { drop.classList.add('hidden'); return; }
+    for (const d of matches) {
+      const item = document.createElement('div');
+      item.className = 'combo-item';
+      item.textContent = d;
+      item.addEventListener('mousedown', e => { e.preventDefault(); selectClass(d); });
+      drop.appendChild(item);
+    }
+    drop.classList.remove('hidden');
+  }
+
+  function move(delta) {
+    const items = drop.querySelectorAll('.combo-item');
+    if (!items.length) return;
+    items[activeIdx]?.classList.remove('combo-active');
+    activeIdx = Math.max(-1, Math.min(items.length - 1, activeIdx + delta));
+    if (activeIdx >= 0) { items[activeIdx].classList.add('combo-active'); items[activeIdx].scrollIntoView({ block: 'nearest' }); }
+  }
+
+  function selectClass(dtmi) {
+    state.filterDtmi = dtmi;
+    input.value = shortDtmi(dtmi);
+    input.classList.add('filtered');
+    clearBtn.style.display = '';
+    drop.classList.add('hidden');
+    activeIdx = -1;
+    render();
+  }
+
+  function clearFilter() {
+    state.filterDtmi = null;
+    input.value = '';
+    input.classList.remove('filtered');
+    clearBtn.style.display = 'none';
+    drop.classList.add('hidden');
+    activeIdx = -1;
+    render();
+  }
+
+  input.addEventListener('input', () => {
+    if (state.filterDtmi) { state.filterDtmi = null; input.classList.remove('filtered'); render(); }
+    refresh();
+  });
+  input.addEventListener('focus', refresh);
+  input.addEventListener('blur', () => setTimeout(() => drop.classList.add('hidden'), 150));
+  input.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown') { e.preventDefault(); move(1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); move(-1); }
+    else if (e.key === 'Enter') {
+      const active = drop.querySelector('.combo-active');
+      if (active) { e.preventDefault(); selectClass(active.textContent); }
+    } else if (e.key === 'Escape') { clearFilter(); }
+  });
+  clearBtn.addEventListener('click', clearFilter);
+}
+
+// --- Event wiring ---
+
+document.getElementById('main').addEventListener('click', e => {
+  const th = e.target.closest('th[data-sort]');
+  if (th && state.mode === 'all') {
+    const key = th.dataset.sort;
+    if (state.allSort === key) state.allSortDir *= -1;
+    else { state.allSort = key; state.allSortDir = key === 'in' ? -1 : 1; }
+    render();
+    return;
+  }
+  const td = e.target.closest('td[data-dtmi]');
+  if (td) openEntityDrawer(td.dataset.dtmi);
+});
+
+document.querySelectorAll('.tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    state.tab = btn.dataset.tab;
+    // reset filter on tab change
+    state.filterDtmi = null;
+    const fi = document.getElementById('filterInput');
+    fi.value = '';
+    fi.classList.remove('filtered');
+    document.getElementById('filterClear').style.display = 'none';
+    updateModeCounts().then(() => render());
+  });
+});
+
+document.getElementById('modeSeg').addEventListener('click', e => {
+  const btn = e.target.closest('button[data-mode]');
+  if (!btn) return;
+  state.mode = btn.dataset.mode;
+  document.querySelectorAll('#modeSeg button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  render();
+});
+
+document.getElementById('refreshBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('refreshBtn');
+  btn.textContent = 'Updating ontology…';
+  btn.disabled = true;
+  try {
+    const res = await fetch('/api/ontology/refresh', { method: 'POST' });
+    if (!res.ok) console.warn('Ontology refresh failed:', await res.text());
+  } catch (e) {
+    console.warn('Ontology refresh error:', e);
+  } finally {
+    btn.disabled = false;
+  }
+  state.ont = null; state.mappedIds = null; state.willowIds = null; // bust cache so loadAll re-fetches
+  await loadAll();
+});
+document.getElementById('drawerCloseBtn').addEventListener('click', closeDrawer);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+initFilterCombo();
+loadAll();
+</script>
+</body>
+</html>

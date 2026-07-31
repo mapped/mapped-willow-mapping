@@ -3,164 +3,284 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mapping Gaps</title>
+<title>Mapping Workbench</title>
 <script src="https://unpkg.com/cytoscape@3.30.4/dist/cytoscape.min.js"></script>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: system-ui, -apple-system, sans-serif; background: #0f1117; color: #e0e0e0; height: 100vh; display: flex; flex-direction: column; }
+  body { font-family: system-ui, -apple-system, sans-serif; background: #0f1117; color: #e0e0e0; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
 
-  header { display: flex; align-items: center; gap: 12px; padding: 10px 16px; background: #1a1d27; border-bottom: 1px solid #2a2d3a; flex-shrink: 0; }
-  header h1 { font-size: 16px; font-weight: 600; white-space: nowrap; }
-  .search-box { display: flex; align-items: center; gap: 6px; flex: 1; max-width: 480px; }
-  .search-box input { flex: 1; padding: 6px 10px; background: #0f1117; border: 1px solid #3a3d4a; border-radius: 6px; color: #e0e0e0; font-size: 13px; outline: none; }
-  .search-box input:focus { border-color: #5b8def; }
-  .header-actions { display: flex; gap: 8px; margin-left: auto; }
+  /* ── Header ── */
+  header { display: flex; align-items: center; gap: 12px; padding: 0 20px; height: 48px; background: #1a1d27; border-bottom: 1px solid #2a2d3a; flex-shrink: 0; }
+  header h1 { font-size: 15px; font-weight: 600; color: #f0f0f0; white-space: nowrap; }
+  header .spacer { flex: 1; }
 
-  button { padding: 6px 14px; border: 1px solid #3a3d4a; border-radius: 6px; background: #1a1d27; color: #e0e0e0; font-size: 13px; cursor: pointer; white-space: nowrap; }
-  button:hover { background: #2a2d3a; }
-  button.primary { background: #2563eb; border-color: #2563eb; color: #fff; }
-  button.primary:hover { background: #1d4ed8; }
-
-  .main-area { display: flex; flex: 1; overflow: hidden; }
-  .center-pane { flex: 1; display: flex; flex-direction: column; overflow: hidden; position: relative; }
-  #cy { flex: 1; background: #0f1117; }
-
-  /* ── Gap detail view ── */
-  #gapView { flex: 1; display: none; overflow: auto; }
-  #gapView.active { display: flex; flex-direction: column; }
-
-  /* Toolbar */
-  .gap-toolbar { padding: 10px 24px; border-bottom: 1px solid #2a2d3a; background: #1a1d27; flex-shrink: 0; display: flex; align-items: center; gap: 12px; }
-  .gap-toolbar .gap-title { font-size: 14px; font-weight: 600; flex: 1; }
-  .gap-toolbar .gap-dist { font-size: 12px; color: #888; }
-  .gap-toolbar-actions { display: flex; gap: 8px; }
-
-  /* Scrollable body */
-  .gap-body { flex: 1; overflow: auto; padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 24px; }
-
-  /* Suggest/search section */
-  .gap-remap-section { width: 100%; max-width: 960px; }
-  .gap-remap-section h3 { font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
-  .gap-search-input { width: 100%; padding: 8px 12px; background: #0f1117; border: 1px solid #3a3d4a; border-radius: 6px; color: #e0e0e0; font-size: 13px; outline: none; margin-bottom: 10px; }
-  .gap-search-input:focus { border-color: #5b8def; }
-  .gap-results-list { list-style: none; max-height: 260px; overflow-y: auto; }
-  .gap-results-list li { padding: 8px 12px; border: 1.5px solid #2a2d3a; border-radius: 6px; font-size: 13px; cursor: pointer; transition: all 0.1s; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
-  .gap-results-list li:hover { border-color: #5b8def; background: #1e293b; }
-  .gap-results-list li.selected { border-color: #3b82f6; background: #1e3a5f; }
-  .gap-results-list li .apply-check { margin-left: auto; background: none; border: none; padding: 2px 6px; cursor: pointer; font-size: 18px; line-height: 1; color: #22c55e; border-radius: 4px; flex-shrink: 0; }
-  .gap-results-list li .apply-check:hover { background: rgba(34,197,94,0.2); }
-  .gap-results-list .no-results { color: #555; cursor: default; border: none; }
-  .gap-results-list .no-results:hover { background: none; border: none; }
-  .gap-suggest-label { font-size: 11px; color: #555; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
-  .columns-container { display: flex; gap: 0; justify-content: center; align-items: flex-start; min-height: 200px; width: 100%; }
-  .column { flex: 1; min-width: 0; max-width: 400px; }
-  .column-header { text-align: center; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 8px; margin-bottom: 8px; border-radius: 6px; }
-  .column-header.left-header { background: rgba(59,130,246,0.15); color: #3b82f6; }
-  .column-header.right-header { background: rgba(34,197,94,0.15); color: #22c55e; }
-  .column-node { padding: 10px 14px; margin-bottom: 2px; border-radius: 6px; border: 1.5px solid #2a2d3a; background: #1a1d27; font-size: 13px; text-align: center; }
-  .column-node .node-name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .subclass-arrow { text-align: center; color: #555; font-size: 18px; line-height: 18px; padding: 0; user-select: none; }
-  .columns-wrapper { position: relative; width: 100%; max-width: 960px; }
-  .cross-edge-svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; }
-  .middle-lane { width: 140px; flex-shrink: 0; }
-
-  /* Sidebar */
-  .sidebar { width: 380px; background: #1a1d27; border-left: 1px solid #2a2d3a; display: flex; flex-direction: column; overflow: hidden; flex-shrink: 0; }
-  .tab-bar { display: flex; border-bottom: 1px solid #2a2d3a; }
-  .tab-bar button { flex: 1; border: none; border-radius: 0; border-bottom: 2px solid transparent; padding: 8px; font-size: 12px; }
-  .tab-bar button.active { border-bottom-color: #3b82f6; color: #3b82f6; }
-  .sidebar-content { flex: 1; overflow-y: auto; padding: 10px 14px; }
-
-  .stats-bar { display: flex; gap: 16px; padding: 8px 16px; background: #1a1d27; border-bottom: 1px solid #2a2d3a; font-size: 12px; color: #888; flex-shrink: 0; }
-  .stats-bar span { display: flex; gap: 4px; align-items: center; }
-  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  /* ── Nav bar ── */
+  .nav-bar { display: flex; align-items: center; padding: 0 20px; height: 40px; background: #13151f; border-bottom: 1px solid #2a2d3a; flex-shrink: 0; gap: 0; }
+  .nav-tabs { display: flex; height: 100%; }
+  .nav-tab { height: 100%; padding: 0 16px; background: none; border: none; border-bottom: 2px solid transparent; color: #888; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; border-radius: 0; }
+  .nav-tab:hover { color: #ccc; background: none; }
+  .nav-tab.active { border-bottom-color: #3b82f6; color: #e0e0e0; }
+  .nav-count { font-size: 11px; padding: 1px 6px; border-radius: 10px; background: #2a2d3a; color: #666; }
+  .nav-tab.active .nav-count { background: #1e3a5f; color: #3b82f6; }
+  .nav-spacer { flex: 1; }
+  .stats-pills { display: flex; gap: 14px; font-size: 12px; color: #555; }
+  .stats-pills span { display: flex; align-items: center; gap: 4px; }
+  .stats-pills b { color: #888; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
   .dot.mapped { background: #3b82f6; }
   .dot.willow { background: #22c55e; }
   .dot.external { background: #6b7280; }
 
-  .search-results { list-style: none; }
-  .search-results li { padding: 6px 8px; border-radius: 4px; cursor: pointer; font-size: 13px; display: flex; align-items: center; gap: 8px; }
-  .search-results li:hover { background: #2a2d3a; }
-  .ont-badge { font-size: 10px; padding: 1px 6px; border-radius: 3px; font-weight: 600; text-transform: uppercase; flex-shrink: 0; }
+  /* ── Buttons ── */
+  button { padding: 6px 14px; border: 1px solid #3a3d4a; border-radius: 6px; background: #1a1d27; color: #e0e0e0; font-size: 13px; cursor: pointer; white-space: nowrap; }
+  button:hover { background: #252838; }
+  button.primary { background: #2563eb; border-color: #2563eb; color: #fff; }
+  button.primary:hover { background: #1d4ed8; }
+  button.ghost { background: none; border: none; color: #666; padding: 4px 8px; border-radius: 4px; }
+  button.ghost:hover { color: #e0e0e0; background: #2a2d3a; }
+
+  /* ── App body ── */
+  .app-body { flex: 1; display: flex; overflow: hidden; transition: margin-right 0.25s ease; }
+  .app-body.drawer-open { margin-right: 520px; }
+
+  /* ── Views ── */
+  .view { flex: 1; display: none; flex-direction: column; overflow: hidden; }
+  .view.active { display: flex; }
+
+  /* ── Graph view ── */
+  .view-toolbar { padding: 10px 20px; background: #13151f; border-bottom: 1px solid #2a2d3a; display: flex; align-items: center; gap: 10px; flex-shrink: 0; position: relative; }
+  #cy { flex: 1; background: #0b0d14; }
+
+  /* ── Inputs ── */
+  .search-input, .filter-input { padding: 6px 10px; background: #0f1117; border: 1px solid #3a3d4a; border-radius: 6px; color: #e0e0e0; font-size: 13px; outline: none; }
+  .search-input:focus, .filter-input:focus { border-color: #5b8def; }
+  .search-input { flex: 1; max-width: 400px; }
+  .filter-input { width: 200px; }
+
+  /* Search dropdown */
+  .search-dropdown { position: absolute; top: calc(100% + 2px); left: 20px; width: 400px; background: #1a1d27; border: 1px solid #3a3d4a; border-radius: 8px; max-height: 320px; overflow-y: auto; z-index: 50; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+  .search-dropdown.hidden { display: none; }
+  .search-dropdown-item { padding: 8px 12px; cursor: pointer; font-size: 13px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #1f2233; }
+  .search-dropdown-item:last-child { border-bottom: none; }
+  .search-dropdown-item:hover { background: #252838; }
+
+  /* ── List views (Gaps / Unmapped) ── */
+  .list-toolbar { padding: 10px 20px; background: #13151f; border-bottom: 1px solid #2a2d3a; display: flex; align-items: center; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+  .list-body { flex: 1; overflow-y: auto; }
+
+  /* Class filter combo */
+  .filter-combo { position: relative; }
+  .filter-combo-dropdown { position: absolute; top: calc(100% + 4px); left: 0; width: 320px; background: #1a1d27; border: 1px solid #3a3d4a; border-radius: 8px; max-height: 220px; overflow-y: auto; z-index: 20; box-shadow: 0 8px 24px rgba(0,0,0,0.5); list-style: none; }
+  .filter-combo-dropdown.hidden { display: none; }
+  .filter-combo-dropdown li { padding: 7px 12px; cursor: pointer; font-size: 12px; border-bottom: 1px solid #1a1c27; }
+  .filter-combo-dropdown li:last-child { border-bottom: none; }
+  .filter-combo-dropdown li:hover { background: #252838; }
+
+  .filter-chip { display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px 3px 10px; background: #1e3a5f; border: 1px solid #3b82f6; border-radius: 12px; font-size: 11px; color: #60a5fa; }
+  .filter-chip button { background: none; border: none; padding: 0; color: #60a5fa; font-size: 14px; cursor: pointer; line-height: 1; opacity: 0.7; }
+  .filter-chip button:hover { opacity: 1; background: none; }
+
+  /* Gap / unmapped table */
+  .data-table { width: 100%; border-collapse: collapse; }
+  .data-table th { padding: 8px 20px; text-align: left; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #444; border-bottom: 1px solid #1f2233; background: #0d0f18; position: sticky; top: 0; z-index: 5; }
+  .data-table td { padding: 10px 20px; font-size: 13px; border-bottom: 1px solid #161824; vertical-align: middle; }
+  .data-table tbody tr { cursor: pointer; }
+  .data-table tbody tr:hover td { background: #14172066; }
+  .data-table tbody tr.selected td { background: #1a2640; }
+  .chain-node { color: #b0bcd8; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 260px; }
+  .dist-badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #1e293b; color: #64748b; min-width: 36px; text-align: center; }
+  .dist-badge.low { background: #1e3a5f; color: #60a5fa; }
+  .dist-badge.med { background: #3a2d1a; color: #f59e0b; }
+  .dist-badge.high { background: #3a1a1a; color: #f87171; }
+  .empty-state { padding: 60px 20px; text-align: center; color: #333; font-size: 14px; }
+
+  /* Ontology badge */
+  .ont-badge { font-size: 10px; padding: 2px 6px; border-radius: 3px; font-weight: 600; text-transform: uppercase; flex-shrink: 0; }
   .ont-badge.mapped { background: #1e3a5f; color: #3b82f6; }
   .ont-badge.willow { background: #14532d; color: #22c55e; }
   .ont-badge.external { background: #374151; color: #9ca3af; }
 
-  .node-detail { font-size: 13px; }
-  .node-detail .label { color: #888; font-size: 11px; text-transform: uppercase; margin-top: 10px; margin-bottom: 2px; }
-  .node-detail .value { word-break: break-all; }
-  .node-detail .edge-list { list-style: none; margin-top: 4px; }
-  .node-detail .edge-list li { padding: 3px 0; cursor: pointer; color: #93c5fd; }
-  .node-detail .edge-list li:hover { text-decoration: underline; }
-  .edge-type { font-size: 10px; padding: 1px 5px; border-radius: 3px; margin-right: 4px; }
+  /* Ontology segmented control */
+  .ont-seg { display: inline-flex; border: 1px solid #2a2d3a; border-radius: 7px; overflow: hidden; flex-shrink: 0; }
+  .ont-seg button { border: none; border-radius: 0; padding: 5px 16px; font-size: 12px; font-weight: 600; background: transparent; color: #555; cursor: pointer; }
+  .ont-seg button:hover { background: #1f2235; color: #aaa; }
+  .ont-seg button.active-mapped { background: #1e3a5f; color: #3b82f6; }
+  .ont-seg button.active-willow { background: #14532d; color: #22c55e; }
+
+  /* ── Drawer ── */
+  .drawer { position: fixed; top: 0; right: 0; width: 520px; height: 100vh; background: #1a1d27; border-left: 1px solid #2a2d3a; display: flex; flex-direction: column; transform: translateX(100%); transition: transform 0.25s ease; z-index: 40; }
+  .drawer.open { transform: translateX(0); }
+  .drawer-header { display: flex; align-items: center; padding: 0 16px; height: 48px; border-bottom: 1px solid #2a2d3a; gap: 12px; flex-shrink: 0; background: #1f2235; }
+  .drawer-title { font-size: 13px; font-weight: 600; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #c8d0e8; }
+  .drawer-body { flex: 1; overflow-y: auto; }
+
+  /* Node detail */
+  .node-detail { padding: 20px; font-size: 13px; }
+  .detail-section { margin-bottom: 18px; }
+  .detail-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: #444; margin-bottom: 5px; }
+  .detail-value { color: #c8d0e8; }
+  .detail-value.mono { font-size: 11px; color: #666; font-family: monospace; word-break: break-all; }
+  .edge-list { list-style: none; }
+  .edge-list li { padding: 4px 0; cursor: pointer; color: #93c5fd; font-size: 12px; display: flex; align-items: center; gap: 6px; }
+  .edge-list li:hover { text-decoration: underline; }
+  .edge-type { font-size: 10px; padding: 1px 5px; border-radius: 3px; flex-shrink: 0; }
   .edge-type.subClassOf { background: #3a2d1a; color: #f59e0b; }
   .edge-type.mapsTo { background: #1a2d3a; color: #38bdf8; }
 
-  .gap-list { list-style: none; }
-  .gap-item { padding: 8px; margin-bottom: 4px; border: 1px solid #2a2d3a; border-radius: 6px; font-size: 12px; display: flex; align-items: center; gap: 8px; cursor: pointer; }
-  .gap-item:hover { background: #2a2d3a; }
-  .gap-item.selected { border-color: #3b82f6; background: #1e293b; }
-  .gap-chain { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; flex: 1; min-width: 0; }
-  .gap-chain .arrow { color: #555; }
-  .gap-distance-badge { font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 4px; background: #2a2d3a; color: #e0e0e0; flex-shrink: 0; }
-  .gap-count { font-size: 12px; color: #666; margin-bottom: 8px; }
+  /* Gap detail */
+  .gap-detail-actions { padding: 10px 16px; border-bottom: 1px solid #2a2d3a; display: flex; align-items: center; gap: 8px; background: #161825; flex-shrink: 0; }
+  .gap-detail-actions .dist-label { margin-left: auto; font-size: 12px; color: #444; }
+  .gap-detail-content { padding: 20px; }
 
-  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 100; }
+  /* Columns */
+  .columns-wrapper { position: relative; width: 100%; margin-bottom: 24px; }
+  .cross-edge-svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; }
+  .columns-container { display: flex; align-items: flex-start; min-height: 80px; }
+  .column { flex: 1; min-width: 0; }
+  .column-header { text-align: center; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 5px 8px; margin-bottom: 6px; border-radius: 5px; }
+  .column-header.left-header { background: rgba(59,130,246,0.1); color: #3b82f6; }
+  .column-header.right-header { background: rgba(34,197,94,0.1); color: #22c55e; }
+  .column-node { padding: 7px 10px; margin-bottom: 2px; border-radius: 6px; border: 1.5px solid #2a2d3a; background: #13151f; font-size: 12px; text-align: center; }
+  .column-node .node-name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .subclass-arrow { text-align: center; color: #333; font-size: 14px; padding: 0; user-select: none; }
+  .middle-lane { width: 60px; flex-shrink: 0; }
+
+  /* Remap */
+  .remap-section { }
+  .remap-heading { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #444; margin-bottom: 8px; }
+  .remap-search { width: 100%; padding: 7px 10px; background: #0f1117; border: 1px solid #3a3d4a; border-radius: 6px; color: #e0e0e0; font-size: 13px; outline: none; margin-bottom: 8px; }
+  .remap-search:focus { border-color: #5b8def; }
+  .remap-list-label { font-size: 10px; color: #333; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .remap-results { list-style: none; max-height: 240px; overflow-y: auto; }
+  .remap-results li { padding: 7px 10px; border: 1.5px solid #2a2d3a; border-radius: 6px; font-size: 12px; cursor: pointer; display: flex; align-items: center; gap: 8px; margin-bottom: 3px; }
+  .remap-results li:hover { border-color: #5b8def; background: #1a2035; }
+  .remap-results li.selected { border-color: #3b82f6; background: #1e3a5f; }
+  .remap-results .no-results { color: #333; cursor: default; border-color: transparent; }
+  .remap-results .no-results:hover { background: none; border-color: transparent; }
+  .apply-btn { width: 100%; margin-top: 10px; padding: 8px; background: #2563eb; border-color: #2563eb; color: #fff; font-size: 13px; font-weight: 600; border-radius: 6px; cursor: pointer; }
+  .apply-btn:hover { background: #1d4ed8; }
+  .apply-btn:disabled { background: #1a1d27; border-color: #2a2d3a; color: #444; cursor: default; }
+
+  /* Modal */
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.65); display: flex; align-items: center; justify-content: center; z-index: 100; }
   .modal-overlay.hidden { display: none; }
-  .modal { background: #1a1d27; border: 1px solid #2a2d3a; border-radius: 10px; padding: 20px; width: 420px; }
-  .modal h2 { font-size: 16px; margin-bottom: 14px; }
-  .modal label { display: block; font-size: 13px; margin-bottom: 4px; color: #aaa; }
-  .modal select, .modal input[type=file] { width: 100%; padding: 6px 10px; background: #0f1117; border: 1px solid #3a3d4a; border-radius: 6px; color: #e0e0e0; font-size: 13px; margin-bottom: 12px; }
-  .modal .actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 8px; }
+  .modal { background: #1a1d27; border: 1px solid #2a2d3a; border-radius: 10px; padding: 24px; width: 440px; }
+  .modal h2 { font-size: 15px; font-weight: 600; margin-bottom: 16px; }
+  .modal label { display: block; font-size: 12px; margin-bottom: 4px; color: #888; }
+  .modal select, .modal input[type=file] { width: 100%; padding: 7px 10px; background: #0f1117; border: 1px solid #3a3d4a; border-radius: 6px; color: #e0e0e0; font-size: 13px; margin-bottom: 14px; }
+  .modal .actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px; }
 
-  .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid #555; border-top-color: #3b82f6; border-radius: 50%; animation: spin 0.6s linear infinite; }
+  .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid #333; border-top-color: #3b82f6; border-radius: 50%; animation: spin 0.6s linear infinite; }
   @keyframes spin { to { transform: rotate(360deg); } }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>Mapping Gaps</h1>
-  <div class="search-box"><input id="searchInput" type="text" placeholder="Search nodes by name or ID..." /></div>
-  <div class="header-actions">
-    <button onclick="openUploadModal()">Upload</button>
-    <button class="primary" onclick="runDiagnosis()">Diagnose</button>
-  </div>
+  <h1>Mapping Workbench</h1>
+  <div class="spacer"></div>
+  <button onclick="openUploadModal()">Upload</button>
+  <button class="primary" onclick="runDiagnosis()">Diagnose</button>
 </header>
 
-<div class="stats-bar">
-  <span><span class="dot mapped"></span> Mapped: <b id="statMapped">-</b></span>
-  <span><span class="dot willow"></span> Willow: <b id="statWillow">-</b></span>
-  <span><span class="dot external"></span> External: <b id="statExternal">-</b></span>
-  <span>|</span>
-  <span>subClassOf: <b id="statSubclass">-</b></span>
-  <span>mapsTo: <b id="statMapsTo">-</b></span>
+<div class="nav-bar">
+  <div class="nav-tabs">
+    <button class="nav-tab active" data-view="graph" onclick="switchView('graph')">Graph</button>
+    <button class="nav-tab" data-view="gaps" onclick="switchView('gaps')">
+      Gaps <span class="nav-count" id="navCountGaps">–</span>
+    </button>
+    <button class="nav-tab" data-view="unmapped" onclick="switchView('unmapped')">
+      Unmapped <span class="nav-count" id="navCountUnmapped">–</span>
+    </button>
+  </div>
+  <div class="nav-spacer"></div>
+  <div class="stats-pills">
+    <span><span class="dot mapped"></span><b id="statMapped">–</b> mapped</span>
+    <span><span class="dot willow"></span><b id="statWillow">–</b> willow</span>
+    <span><span class="dot external"></span><b id="statExternal">–</b> ext</span>
+    <span style="color:#2a2d3a">|</span>
+    <span><b id="statSubclass">–</b> subClassOf</span>
+    <span><b id="statMapsTo">–</b> mapsTo</span>
+  </div>
 </div>
 
-<div class="main-area">
-  <div class="center-pane">
+<div class="app-body" id="appBody">
+
+  <!-- Graph view -->
+  <div class="view active" id="view-graph">
+    <div class="view-toolbar">
+      <input class="search-input" id="searchInput" type="text" placeholder="Search nodes by name or ID…" autocomplete="off" />
+      <div class="search-dropdown hidden" id="searchDropdown"></div>
+    </div>
     <div id="cy"></div>
-    <div id="gapView"></div>
   </div>
-  <div class="sidebar">
-    <div class="tab-bar">
-      <button class="active" data-tab="search" onclick="switchTab('search')">Search</button>
-      <button data-tab="detail" onclick="switchTab('detail')">Detail</button>
-      <button data-tab="diagnose" onclick="switchTab('diagnose')">Diagnosis</button>
+
+  <!-- Gaps view -->
+  <div class="view" id="view-gaps">
+    <div class="list-toolbar">
+      <div class="ont-seg">
+        <button id="gapSegMapped" class="active-mapped" onclick="setGapOnt('mapped')">Mapped</button>
+        <button id="gapSegWillow" onclick="setGapOnt('willow')">Willow</button>
+      </div>
+      <input class="filter-input" id="gapFilterInput" type="text" placeholder="Search gaps…" oninput="renderFilteredGaps()" />
+      <div class="filter-combo">
+        <input class="filter-input" id="classFilterInput" type="text" placeholder="Filter by class…" autocomplete="off" />
+        <ul class="filter-combo-dropdown hidden" id="classFilterDropdown"></ul>
+      </div>
+      <span id="classFilterChip" style="display:none;"></span>
     </div>
-    <div class="sidebar-content" id="tab-search">
-      <ul class="search-results" id="searchResults"></ul>
-      <div id="searchEmpty" style="color:#555;font-size:13px;padding:20px 0;text-align:center;">Type to search nodes</div>
-    </div>
-    <div class="sidebar-content" id="tab-detail" style="display:none;">
-      <div id="nodeDetail"><div style="color:#555;font-size:13px;padding:20px 0;text-align:center;">Click a node to view details</div></div>
-    </div>
-    <div class="sidebar-content" id="tab-diagnose" style="display:none;">
-      <div id="diagnoseContent"><div style="color:#555;font-size:13px;padding:20px 0;text-align:center;">Click "Diagnose" to find roundtrip gaps</div></div>
+    <div class="list-body">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width:56px;">Dist</th>
+            <th>Start</th>
+            <th>Mid</th>
+            <th>End</th>
+          </tr>
+        </thead>
+        <tbody id="gapTableBody">
+          <tr><td colspan="4" class="empty-state">Click "Diagnose" to find roundtrip gaps</td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
+
+  <!-- Unmapped view -->
+  <div class="view" id="view-unmapped">
+    <div class="list-toolbar">
+      <div class="ont-seg">
+        <button id="unmappedSegMapped" class="active-mapped" onclick="setUnmappedOnt('mapped')">Mapped</button>
+        <button id="unmappedSegWillow" onclick="setUnmappedOnt('willow')">Willow</button>
+      </div>
+      <input class="filter-input" id="unmappedFilterInput" type="text" placeholder="Search unmapped…" oninput="filterUnmapped()" />
+    </div>
+    <div class="list-body">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Class</th>
+          </tr>
+        </thead>
+        <tbody id="unmappedTableBody">
+          <tr><td class="empty-state">Click "Diagnose" to find unmapped classes</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
 </div>
 
+<!-- Drawer -->
+<div class="drawer" id="drawer">
+  <div class="drawer-header">
+    <span class="drawer-title" id="drawerTitle">Detail</span>
+    <button class="ghost" onclick="closeDrawer()" title="Close (Esc)">✕</button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+</div>
+
+<!-- Upload modal -->
 <div class="modal-overlay hidden" id="uploadModal">
   <div class="modal">
     <h2>Upload File</h2>
@@ -196,8 +316,31 @@ const cy = cytoscape({
 });
 
 let allGaps = [], graphData = null, selectedGapKey = null, totalDistance = 0, ignoredGaps = new Set();
-let classFilterIds = null; // null = no filter, Set = only show gaps whose start is in this set
+let classFilterIds = null;
 let currentGap = null, actionTargetId = null, remapSourceId = null, currentSuggest = null;
+let allUnmapped = [];
+let gapOntFilter = 'mapped', unmappedOntFilter = 'mapped';
+
+function nodeOntology(id) {
+  if (id.startsWith('dtmi:com:willowinc:')) return 'willow';
+  return 'mapped';
+}
+
+function setGapOnt(ont) {
+  gapOntFilter = ont;
+  document.getElementById('gapSegMapped').className = ont === 'mapped' ? 'active-mapped' : '';
+  document.getElementById('gapSegWillow').className = ont === 'willow' ? 'active-willow' : '';
+  closeDrawer();
+  renderFilteredGaps();
+}
+
+function setUnmappedOnt(ont) {
+  unmappedOntFilter = ont;
+  document.getElementById('unmappedSegMapped').className = ont === 'mapped' ? 'active-mapped' : '';
+  document.getElementById('unmappedSegWillow').className = ont === 'willow' ? 'active-willow' : '';
+  closeDrawer();
+  filterUnmapped();
+}
 
 async function init() { graphData = await (await fetch('/api/graph')).json(); updateStats(graphData.stats); }
 init();
@@ -226,30 +369,57 @@ function tokenizeId(id) {
   return words.filter(w => w).map(w => w.toLowerCase()).join(' ');
 }
 
-// ── Views ──
-function showCyView() { document.getElementById('cy').style.display = ''; document.getElementById('gapView').classList.remove('active'); }
-function showGapView() { document.getElementById('cy').style.display = 'none'; document.getElementById('gapView').classList.add('active'); }
+// ── View switching ──
+function switchView(name) {
+  document.querySelectorAll('.nav-tab').forEach(b => b.classList.toggle('active', b.dataset.view === name));
+  document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id === 'view-' + name));
+}
 
-// ── Search ──
+// ── Drawer ──
+function openDrawer() {
+  document.getElementById('drawer').classList.add('open');
+  document.getElementById('appBody').classList.add('drawer-open');
+}
+function closeDrawer() {
+  document.getElementById('drawer').classList.remove('open');
+  document.getElementById('appBody').classList.remove('drawer-open');
+  selectedGapKey = null;
+  document.querySelectorAll('.data-table tr.selected').forEach(r => r.classList.remove('selected'));
+}
+
+// ── Search (graph view) ──
 let searchTimeout = null;
 document.getElementById('searchInput').addEventListener('input', (e) => {
   clearTimeout(searchTimeout);
   const q = e.target.value.trim();
-  if (!q) { document.getElementById('searchResults').innerHTML = ''; document.getElementById('searchEmpty').style.display = ''; return; }
+  const dd = document.getElementById('searchDropdown');
+  if (!q) { dd.classList.add('hidden'); return; }
   searchTimeout = setTimeout(() => doSearch(q), 200);
 });
+document.getElementById('searchInput').addEventListener('blur', () => {
+  setTimeout(() => document.getElementById('searchDropdown').classList.add('hidden'), 200);
+});
+
 async function doSearch(q) {
   const results = await (await fetch(`/api/search?q=${encodeURIComponent(q)}`)).json();
-  document.getElementById('searchEmpty').style.display = results.length ? 'none' : '';
-  document.getElementById('searchResults').innerHTML = results.map(r => `
-    <li onclick="focusNode('${r.id}')"><span class="ont-badge ${r.ontology}">${r.ontology}</span><span>${r.display_name || shortId(r.id)}</span></li>
-  `).join('');
-  switchTab('search');
+  const dd = document.getElementById('searchDropdown');
+  if (!results.length) {
+    dd.innerHTML = '<div style="padding:10px 14px;color:#444;font-size:13px;">No results</div>';
+    dd.classList.remove('hidden');
+    return;
+  }
+  dd.innerHTML = results.slice(0, 12).map(r => `
+    <div class="search-dropdown-item" onclick="focusNode('${r.id}')">
+      <span class="ont-badge ${r.ontology}">${r.ontology}</span>
+      <span>${r.display_name || shortId(r.id)}</span>
+    </div>`).join('');
+  dd.classList.remove('hidden');
 }
 
-// ── Focus node ──
+// ── Focus node (graph view) ──
 async function focusNode(nodeId) {
-  showCyView();
+  document.getElementById('searchDropdown').classList.add('hidden');
+  switchView('graph');
   const data = await (await fetch(`/api/neighborhood/${encodeURIComponent(nodeId)}`)).json();
   cy.elements().remove();
   for (const n of data.nodes) cy.add({ group: 'nodes', data: { id: n.id, label: n.display_name || shortId(n.id), ontology: n.ontology } });
@@ -257,79 +427,74 @@ async function focusNode(nodeId) {
   cy.getElementById(nodeId)?.addClass('focused');
   cy.layout({ name: 'concentric', concentric: (n) => n.id() === nodeId ? 10 : 1, levelWidth: () => 1, minNodeSpacing: 40, animate: false }).run();
   cy.fit(undefined, 40);
-  const node = data.nodes.find(n => n.id === nodeId);
-  if (node) {
-    const inc = data.edges.filter(e => e.target === nodeId), out = data.edges.filter(e => e.source === nodeId);
-    const mkLi = (e, nid) => { const o = data.nodes.find(n => n.id === nid); return `<li onclick="focusNode('${nid}')"><span class="edge-type ${e.type}">${e.type}</span>${o ? (o.display_name || shortId(o.id)) : shortId(nid)}</li>`; };
-    document.getElementById('nodeDetail').innerHTML = `<div class="node-detail">
-      <div class="label">Name</div><div class="value"><b>${node.display_name || '(none)'}</b></div>
-      <div class="label">ID</div><div class="value" style="font-size:11px;color:#888;">${node.id}</div>
-      <div class="label">Ontology</div><div class="value"><span class="ont-badge ${node.ontology}">${node.ontology}</span></div>
-      <div class="label">Incoming (${inc.length})</div><ul class="edge-list">${inc.map(e => mkLi(e, e.source)).join('') || '<li style="color:#555">none</li>'}</ul>
-      <div class="label">Outgoing (${out.length})</div><ul class="edge-list">${out.map(e => mkLi(e, e.target)).join('') || '<li style="color:#555">none</li>'}</ul>
-    </div>`;
-  }
-  switchTab('detail');
+  showNodeDetail(nodeId, data);
 }
-cy.on('tap', 'node', async (evt) => { await focusNode(evt.target.id()); });
 
-// ── Tabs ──
-function switchTab(name) {
-  document.querySelectorAll('.tab-bar button').forEach(b => b.classList.toggle('active', b.dataset.tab === name));
-  ['search','detail','diagnose'].forEach(t => document.getElementById('tab-'+t).style.display = t === name ? '' : 'none');
+function showNodeDetail(nodeId, data) {
+  const node = data.nodes.find(n => n.id === nodeId);
+  if (!node) return;
+  const inc = data.edges.filter(e => e.target === nodeId);
+  const out = data.edges.filter(e => e.source === nodeId);
+  const mkLi = (e, nid) => {
+    const o = data.nodes.find(n => n.id === nid);
+    return `<li onclick="focusNode('${nid}')"><span class="edge-type ${e.type}">${e.type}</span>${o ? (o.display_name || shortId(o.id)) : shortId(nid)}</li>`;
+  };
+  document.getElementById('drawerTitle').textContent = node.display_name || shortId(node.id);
+  document.getElementById('drawerBody').innerHTML = `
+    <div class="node-detail">
+      <div class="detail-section">
+        <div class="detail-label">Name</div>
+        <div class="detail-value">${node.display_name || '(none)'}</div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">ID</div>
+        <div class="detail-value mono">${node.id}</div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Ontology</div>
+        <div class="detail-value"><span class="ont-badge ${node.ontology}">${node.ontology}</span></div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Incoming (${inc.length})</div>
+        <ul class="edge-list">${inc.map(e => mkLi(e, e.source)).join('') || '<li style="color:#333">none</li>'}</ul>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Outgoing (${out.length})</div>
+        <ul class="edge-list">${out.map(e => mkLi(e, e.target)).join('') || '<li style="color:#333">none</li>'}</ul>
+      </div>
+    </div>`;
+  openDrawer();
 }
+
+cy.on('tap', 'node', async (evt) => { await focusNode(evt.target.id()); });
 
 // ── Upload ──
 function openUploadModal() { document.getElementById('uploadModal').classList.remove('hidden'); }
 function closeUploadModal() { document.getElementById('uploadModal').classList.add('hidden'); }
 async function doUpload() {
   const [kind, key] = document.getElementById('uploadType').value.split(':');
-  const fi = document.getElementById('uploadFile'); if (!fi.files.length) return alert('Select a file');
+  const fi = document.getElementById('uploadFile');
+  if (!fi.files.length) return alert('Select a file');
   const fd = new FormData(); fd.append('file', fi.files[0]);
   if (kind === 'ontology') fd.append('ontology', key); else fd.append('direction', key);
   const res = await (await fetch(kind === 'ontology' ? '/api/upload/ontology' : '/api/upload/mapping', { method: 'POST', body: fd })).json();
   if (res.error) { alert(res.error); return; }
-  closeUploadModal(); graphData = await (await fetch('/api/graph')).json(); updateStats(graphData.stats); cy.elements().remove();
+  closeUploadModal();
+  graphData = await (await fetch('/api/graph')).json();
+  updateStats(graphData.stats);
+  cy.elements().remove();
 }
 
 // ── Diagnosis ──
-let allUnmapped = [], diagView = 'gaps';
-
 async function runDiagnosis() {
-  switchTab('diagnose');
-  document.getElementById('diagnoseContent').innerHTML = '<div style="text-align:center;padding:30px;"><span class="spinner"></span> Analyzing...</div>';
+  switchView('gaps');
+  document.getElementById('gapTableBody').innerHTML = '<tr><td colspan="4" class="empty-state"><span class="spinner"></span> Analyzing&hellip;</td></tr>';
   const data = await (await fetch('/api/diagnose')).json();
   allGaps = data.gaps; totalDistance = data.total_distance; allUnmapped = data.unmapped || [];
-  renderDiagPanel();
-}
-
-function renderDiagPanel() {
-  const all = allGaps.filter(g => !ignoredGaps.has(gapKey(g)));
-  const filterLabel = classFilterIds ? `<span style="font-size:11px;color:#3b82f6;cursor:pointer;" onclick="clearClassFilter()">clear</span>` : '';
-  document.getElementById('diagnoseContent').innerHTML = `
-    <div style="display:flex;gap:12px;margin-bottom:10px;font-size:12px;">
-      <span style="cursor:pointer;padding:4px 0;border-bottom:2px solid ${diagView==='gaps'?'#3b82f6':'transparent'};color:${diagView==='gaps'?'#3b82f6':'#888'};" onclick="diagView='gaps';renderDiagBody();">
-        Gaps (${all.length}) &middot; distance: ${totalDistance}
-      </span>
-      <span style="cursor:pointer;padding:4px 0;border-bottom:2px solid ${diagView==='unmapped'?'#3b82f6':'transparent'};color:${diagView==='unmapped'?'#3b82f6':'#888'};" onclick="diagView='unmapped';renderDiagBody();">
-        Unmapped (${allUnmapped.length})
-      </span>
-    </div>
-    <div style="display:flex;gap:8px;margin-bottom:8px;align-items:center;position:relative;">
-      <div style="position:relative;flex-shrink:0;">
-        <input type="text" id="classFilterInput" placeholder="Filter by class..." style="width:200px;padding:5px 8px;background:#0f1117;border:1px solid #3a3d4a;border-radius:6px;color:#e0e0e0;font-size:12px;outline:none;" />
-        <ul id="classFilterDropdown" style="display:none;position:absolute;top:100%;left:0;width:300px;background:#1a1d27;border:1px solid #3a3d4a;border-radius:6px;max-height:220px;overflow-y:auto;list-style:none;margin-top:4px;z-index:20;"></ul>
-      </div>
-      ${filterLabel}
-    </div>
-    <div id="diagBody"></div>`;
-  document.getElementById('classFilterInput').addEventListener('input', onClassFilterInput);
-  renderDiagBody();
-}
-
-function renderDiagBody() {
-  if (diagView === 'gaps') renderGapListInner();
-  else renderUnmappedList();
+  document.getElementById('navCountGaps').textContent = allGaps.length.toLocaleString();
+  document.getElementById('navCountUnmapped').textContent = allUnmapped.length.toLocaleString();
+  renderFilteredGaps();
+  filterUnmapped();
 }
 
 function gapKey(g) { return g.start + '|' + g.mid + '|' + g.end; }
@@ -348,6 +513,7 @@ function filterVisibleGaps() {
   const q = (document.getElementById('gapFilterInput')?.value || '').toLowerCase().trim();
   const terms = q ? q.split(/\s+/) : [];
   let visible = allGaps.filter(g => !ignoredGaps.has(gapKey(g)));
+  visible = visible.filter(g => (g.start_ontology || nodeOntology(g.start)) === gapOntFilter);
   if (classFilterIds) visible = visible.filter(g => classFilterIds.has(g.start));
   if (terms.length) {
     const scored = [];
@@ -358,30 +524,35 @@ function filterVisibleGaps() {
   return visible;
 }
 
-function renderGapList() {
-  diagView = 'gaps';
-  renderDiagPanel();
+function distClass(d) {
+  if (d === null) return '';
+  if (d <= 1) return 'low';
+  if (d <= 3) return 'med';
+  return 'high';
 }
 
-function renderGapListInner() {
-  document.getElementById('diagBody').innerHTML = `
-    <input type="text" id="gapFilterInput" placeholder="Search gaps..." oninput="renderFilteredGaps()" style="width:100%;padding:5px 8px;margin-bottom:8px;background:#0f1117;border:1px solid #3a3d4a;border-radius:6px;color:#e0e0e0;font-size:12px;outline:none;" />
-    <ul class="gap-list" id="gapList"></ul>`;
-  renderFilteredGaps();
-}
-
-function renderUnmappedList() {
-  const body = document.getElementById('diagBody');
-  body.innerHTML = `
-    <input type="text" id="unmappedFilter" placeholder="Search unmapped..." oninput="filterUnmapped()" style="width:100%;padding:5px 8px;margin-bottom:8px;background:#0f1117;border:1px solid #3a3d4a;border-radius:6px;color:#e0e0e0;font-size:12px;outline:none;" />
-    <ul class="gap-list" id="unmappedList"></ul>`;
-  filterUnmapped();
+function renderFilteredGaps() {
+  const visible = filterVisibleGaps();
+  if (!visible.length) {
+    document.getElementById('gapTableBody').innerHTML = '<tr><td colspan="4" class="empty-state">No gaps found</td></tr>';
+    return;
+  }
+  document.getElementById('gapTableBody').innerHTML = visible.slice(0, 500).map(g => {
+    const sel = gapKey(g) === selectedGapKey ? ' selected' : '';
+    const dc = distClass(g.distance);
+    return `<tr class="${sel}" data-gapkey="${gapKey(g)}" onclick='selectGap(${JSON.stringify(g)})'>
+      <td><span class="dist-badge ${dc}">${g.distance !== null ? '+' + g.distance : '?'}</span></td>
+      <td><span class="chain-node">${shortId(g.start)}</span></td>
+      <td><span class="chain-node">${shortId(g.mid)}</span></td>
+      <td><span class="chain-node">${shortId(g.end)}</span></td>
+    </tr>`;
+  }).join('') + (visible.length > 500 ? `<tr><td colspan="4" style="padding:10px 20px;color:#333;text-align:center;font-size:12px;">Showing 500 of ${visible.length}</td></tr>` : '');
 }
 
 function filterUnmapped() {
-  const q = (document.getElementById('unmappedFilter')?.value || '').toLowerCase().trim();
+  const q = (document.getElementById('unmappedFilterInput')?.value || '').toLowerCase().trim();
   const terms = q ? q.split(/\s+/) : [];
-  let visible = allUnmapped;
+  let visible = allUnmapped.filter(u => u.ontology === unmappedOntFilter);
   if (classFilterIds) visible = visible.filter(u => classFilterIds.has(u.id));
   if (terms.length) {
     visible = visible.filter(u => {
@@ -389,116 +560,65 @@ function filterUnmapped() {
       return terms.every(t => hay.includes(t));
     });
   }
-  const ul = document.getElementById('unmappedList');
-  ul.innerHTML = visible.slice(0, 500).map(u => `
-    <li class="gap-item" onclick="selectUnmapped('${u.id}', '${u.ontology}')">
-      <span class="ont-badge ${u.ontology}">${u.ontology}</span>
-      <span>${shortId(u.id)}</span>
-    </li>`).join('') + (visible.length > 500 ? `<li style="padding:8px;color:#555;text-align:center;">Showing 500 of ${visible.length}</li>` : '');
+  const tb = document.getElementById('unmappedTableBody');
+  if (!visible.length) {
+    tb.innerHTML = '<tr><td class="empty-state">No unmapped classes</td></tr>';
+    return;
+  }
+  tb.innerHTML = visible.slice(0, 500).map(u => `
+    <tr onclick="selectUnmapped('${u.id}', '${u.ontology}')">
+      <td>${u.display_name || shortId(u.id)}</td>
+    </tr>`).join('') +
+    (visible.length > 500 ? `<tr><td style="padding:10px 20px;color:#333;text-align:center;font-size:12px;">Showing 500 of ${visible.length}</td></tr>` : '');
 }
 
+// ── Class filter ──
 let classFilterTimeout = null;
-function onClassFilterInput(e) {
+document.getElementById('classFilterInput').addEventListener('input', (e) => {
   clearTimeout(classFilterTimeout);
   const q = e.target.value.trim();
   const ul = document.getElementById('classFilterDropdown');
-  if (!q) { ul.style.display = 'none'; return; }
+  if (!q) { ul.classList.add('hidden'); return; }
   classFilterTimeout = setTimeout(async () => {
     const results = await (await fetch(`/api/search?q=${encodeURIComponent(q)}`)).json();
-    if (!results.length) { ul.innerHTML = '<li style="color:#555;padding:8px;">No matches</li>'; ul.style.display = ''; return; }
-    ul.innerHTML = results.slice(0, 15).map(r => `<li style="padding:6px 10px;cursor:pointer;font-size:12px;" onclick="applyClassFilter('${r.id}')">${shortId(r.id)}</li>`).join('');
-    ul.style.display = '';
+    if (!results.length) {
+      ul.innerHTML = '<li style="color:#444;padding:8px 12px;">No matches</li>';
+      ul.classList.remove('hidden');
+      return;
+    }
+    ul.innerHTML = results.slice(0, 15).map(r => `<li onclick="applyClassFilter('${r.id}')">${shortId(r.id)}</li>`).join('');
+    ul.classList.remove('hidden');
   }, 200);
-}
+});
+document.getElementById('classFilterInput').addEventListener('blur', () => {
+  setTimeout(() => document.getElementById('classFilterDropdown').classList.add('hidden'), 200);
+});
 
 async function applyClassFilter(nodeId) {
-  document.getElementById('classFilterDropdown').style.display = 'none';
+  document.getElementById('classFilterDropdown').classList.add('hidden');
   document.getElementById('classFilterInput').value = shortId(nodeId);
   const descendants = await (await fetch(`/api/descendants/${encodeURIComponent(nodeId)}`)).json();
   classFilterIds = new Set(descendants);
-  renderDiagBody();
+  document.getElementById('classFilterChip').innerHTML =
+    `<span class="filter-chip">${shortId(nodeId)}<button onclick="clearClassFilter()" title="Clear">&#x2715;</button></span>`;
+  document.getElementById('classFilterChip').style.display = '';
+  renderFilteredGaps();
+  filterUnmapped();
 }
 
 function clearClassFilter() {
   classFilterIds = null;
-  renderDiagPanel();
+  document.getElementById('classFilterInput').value = '';
+  document.getElementById('classFilterChip').style.display = 'none';
+  renderFilteredGaps();
+  filterUnmapped();
 }
 
-function renderFilteredGaps() {
-  const visible = filterVisibleGaps();
-  document.getElementById('gapList').innerHTML = visible.slice(0, 500).map(g => {
-    const sel = gapKey(g) === selectedGapKey ? ' selected' : '';
-    return `<li class="gap-item${sel}" data-gapkey="${gapKey(g)}" onclick='selectGap(${JSON.stringify(g)})'>
-      <span class="gap-distance-badge">${g.distance !== null ? '+' + g.distance : '?'}</span>
-      <div class="gap-chain"><span>${shortId(g.start)}</span><span class="arrow">&rarr;</span><span>${shortId(g.mid)}</span><span class="arrow">&rarr;</span><span>${shortId(g.end)}</span></div>
-    </li>`;
-  }).join('') + (visible.length > 500 ? `<li style="padding:8px;color:#555;text-align:center;">Showing 500 of ${visible.length}</li>` : '');
-}
-
-async function selectUnmapped(nodeId, ontology) {
-  currentGap = { start: nodeId, mid: null, end: null, start_ontology: ontology, distance: null };
-  remapSourceId = nodeId;
-  actionTargetId = null;
-
-  const suggest = await (await fetch(`/api/suggest-mappings/${encodeURIComponent(nodeId)}`)).json();
-  currentSuggest = suggest;
-
-  showGapView();
-  const targetOnt = ontology === 'willow' ? 'mapped' : 'willow';
-  const ontLabel = ontology === 'mapped' ? 'Mapped' : ontology === 'willow' ? 'Willow' : ontology;
-
-  const detail = await (await fetch(`/api/gap-detail?start=${encodeURIComponent(nodeId)}&mid=${encodeURIComponent(nodeId)}&end=${encodeURIComponent(nodeId)}`)).json();
-  const leftNodes = [...detail.left].reverse();
-  const nodeH = (n) => `<div class="column-node" data-node-id="${n.id}"><div class="node-name">${shortId(n.id)}</div></div>`;
-  let leftHtml = '';
-  for (let i = 0; i < leftNodes.length; i++) { leftHtml += nodeH(leftNodes[i]); if (i < leftNodes.length - 1) leftHtml += '<div class="subclass-arrow">&uarr;</div>'; }
-
-  document.getElementById('gapView').innerHTML = `
-    <div class="gap-toolbar">
-      <button onclick="showCyView()" style="padding:4px 10px;">&larr;</button>
-      <span class="gap-title">${shortId(nodeId)} &rarr; <b>?</b></span>
-      <span class="gap-dist">unmapped</span>
-      <div class="gap-toolbar-actions"></div>
-    </div>
-    <div class="gap-body">
-      <div class="columns-wrapper">
-        <div class="columns-container">
-          <div class="column" id="leftColumn"><div class="column-header left-header">${ontLabel}</div>${leftHtml}<div id="leftRemapTarget"></div></div>
-          <div class="middle-lane"></div>
-          <div class="column" id="rightColumn"><div class="column-header right-header">${targetOnt}</div><div id="rightRemapTarget"></div></div>
-        </div>
-      </div>
-    </div>`;
-  renderRemapSection();
-}
-
-async function gapApplyUnmapped() {
-  if (!remapSourceId || !actionTargetId) return;
-  const source = remapSourceId;
-  const newTarget = actionTargetId;
-  const res = await (await fetch('/api/mapping', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
-  if (res.error) {
-    const addExc = confirm(`Constraint violation:\n${res.error}\n\nAdd ${shortId(source)} \u2194 ${shortId(newTarget)} as an exception?`);
-    if (!addExc) return;
-    await (await fetch('/api/add-exception', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
-    const retry = await (await fetch('/api/mapping', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
-    if (retry.error) { alert(retry.error); return; }
-  }
-  const [gResp, dResp] = await Promise.all([fetch('/api/graph'), fetch('/api/diagnose')]);
-  graphData = await gResp.json(); updateStats(graphData.stats);
-  const d = await dResp.json(); allGaps = d.gaps; totalDistance = d.total_distance; allUnmapped = d.unmapped || [];
-  renderDiagPanel();
-  // Show the newly created mapping as a gap detail
-  const ont = source.startsWith('dtmi:com:willowinc:') ? 'willow' : 'mapped';
-  await selectGap({ start: source, mid: newTarget, end: newTarget, start_ontology: ont, distance: 0 });
-}
-
-// ── Select gap → render toolbar + columns ──
+// ── Select gap → drawer ──
 async function selectGap(gap) {
   currentGap = gap; actionTargetId = null;
   selectedGapKey = gapKey(gap);
-  document.querySelectorAll('.gap-item').forEach(el => el.classList.toggle('selected', el.dataset.gapkey === selectedGapKey));
-
+  document.querySelectorAll('.data-table tr').forEach(r => r.classList.toggle('selected', r.dataset.gapkey === selectedGapKey));
   const [detail, suggest] = await Promise.all([
     (await fetch(`/api/gap-detail?start=${encodeURIComponent(gap.start)}&mid=${encodeURIComponent(gap.mid)}&end=${encodeURIComponent(gap.end)}`)).json(),
     (await fetch(`/api/suggest-mappings/${encodeURIComponent(gap.start)}`)).json(),
@@ -507,10 +627,8 @@ async function selectGap(gap) {
 }
 
 function renderGapDetail(detail, gap, suggest) {
-  showGapView();
-  remapSourceId = gap.start; // default: remap A→B
+  remapSourceId = gap.start;
   currentSuggest = suggest;
-  const container = document.getElementById('gapView');
   const leftOnt = detail.left[0]?.ontology || '?';
   const rightOnt = detail.right[0]?.ontology || '?';
   const leftLabel = leftOnt === 'mapped' ? 'Mapped' : leftOnt === 'willow' ? 'Willow' : leftOnt;
@@ -519,8 +637,8 @@ function renderGapDetail(detail, gap, suggest) {
   const nodeHtml = (n, column) => {
     const clickable = (column === 'left' && n.id === gap.start) || (column === 'right' && n.id === gap.mid);
     const onclick = clickable ? `onclick="switchRemapSource('${n.id}')"` : '';
-    const cursor = clickable ? 'cursor:pointer;' : '';
     const sel = n.id === remapSourceId ? 'border-color:#3b82f6;' : '';
+    const cursor = clickable ? 'cursor:pointer;' : '';
     return `<div class="column-node" data-node-id="${n.id}" ${onclick} style="${cursor}${sel}"><div class="node-name">${shortId(n.id)}</div></div>`;
   };
   const leftNodes = [...detail.left].reverse(), rightNodes = [...detail.right].reverse();
@@ -528,17 +646,14 @@ function renderGapDetail(detail, gap, suggest) {
   for (let i = 0; i < leftNodes.length; i++) { leftHtml += nodeHtml(leftNodes[i], 'left'); if (i < leftNodes.length - 1) leftHtml += '<div class="subclass-arrow">&uarr;</div>'; }
   for (let i = 0; i < rightNodes.length; i++) { rightHtml += nodeHtml(rightNodes[i], 'right'); if (i < rightNodes.length - 1) rightHtml += '<div class="subclass-arrow">&uarr;</div>'; }
 
-  container.innerHTML = `
-    <div class="gap-toolbar">
-      <button onclick="showCyView()" style="padding:4px 10px;">&larr;</button>
-      <span class="gap-title">${shortId(gap.start)} &rarr; ${shortId(gap.mid)} &rarr; ${shortId(gap.end)}</span>
-      <span class="gap-dist">distance +${gap.distance ?? '?'}</span>
-      <div class="gap-toolbar-actions">
-        <button onclick="gapFlag()">Flag gap</button>
-        <button onclick="gapIgnore()">Ignore</button>
-      </div>
+  document.getElementById('drawerTitle').textContent = `${shortId(gap.start)} \u2192 ${shortId(gap.mid)} \u2192 ${shortId(gap.end)}`;
+  document.getElementById('drawerBody').innerHTML = `
+    <div class="gap-detail-actions">
+      <button onclick="gapFlag()">Flag</button>
+      <button onclick="gapIgnore()">Ignore</button>
+      <span class="dist-label">distance +${gap.distance ?? '?'}</span>
     </div>
-    <div class="gap-body">
+    <div class="gap-detail-content">
       <div class="columns-wrapper" id="columnsWrapper">
         <svg class="cross-edge-svg" id="crossEdgeSvg"></svg>
         <div class="columns-container">
@@ -547,19 +662,17 @@ function renderGapDetail(detail, gap, suggest) {
           <div class="column" id="rightColumn"><div class="column-header right-header">${rightLabel}</div>${rightHtml}<div id="rightRemapTarget"></div></div>
         </div>
       </div>
+      <div id="remapContainer"></div>
     </div>`;
-
+  openDrawer();
   renderRemapSection();
   requestAnimationFrame(() => requestAnimationFrame(() => drawCrossEdges(detail)));
 }
 
 async function switchRemapSource(nodeId) {
   if (nodeId === remapSourceId) return;
-  remapSourceId = nodeId;
-  actionTargetId = null;
-  // Fetch new suggestions for this source
+  remapSourceId = nodeId; actionTargetId = null;
   currentSuggest = await (await fetch(`/api/suggest-mappings/${encodeURIComponent(nodeId)}`)).json();
-  // Re-highlight selected node in columns
   document.querySelectorAll('.column-node').forEach(el => {
     el.style.borderColor = el.dataset.nodeId === nodeId ? '#3b82f6' : '';
   });
@@ -568,39 +681,22 @@ async function switchRemapSource(nodeId) {
 
 function renderRemapSection() {
   const suggest = currentSuggest;
-  const sourceOnt = (() => {
-    const id = remapSourceId || '';
-    if (id.startsWith('dtmi:com:willowinc:')) return 'willow';
-    return 'mapped';
-  })();
+  const sourceOnt = (remapSourceId || '').startsWith('dtmi:com:willowinc:') ? 'willow' : 'mapped';
   const targetOnt = sourceOnt === 'willow' ? 'mapped' : 'willow';
 
-  // Determine which column gets the search UI (opposite of source)
-  const leftTarget = document.getElementById('leftRemapTarget');
-  const rightTarget = document.getElementById('rightRemapTarget');
-  if (leftTarget) leftTarget.innerHTML = '';
-  if (rightTarget) rightTarget.innerHTML = '';
-
-  // Source in left column → search goes in right, and vice versa
-  // In gap view, gap.start is always left, gap.mid is always right
-  const isSourceLeft = !currentGap?.mid || remapSourceId !== currentGap.mid;
-  const container = isSourceLeft ? rightTarget : leftTarget;
-  if (!container) return;
-
   const sugItems = suggest?.suggestions?.length
-    ? suggest.suggestions.slice(0, 3).map(s =>
-        `<li onclick="gapSelectTarget('${s.id}', this)">${shortId(s.id)}</li>`
-      ).join('')
+    ? suggest.suggestions.slice(0, 5).map(s =>
+        `<li onclick="gapSelectTarget('${s.id}', this)">${shortId(s.id)}</li>`).join('')
     : '<li class="no-results">No suggestions</li>';
 
-  container.innerHTML = `
-    <div class="gap-remap-section" style="margin-top:12px;">
-      <h3>Remap ${shortId(remapSourceId)} &rarr; ?</h3>
-      <input type="text" class="gap-search-input" id="gapSearchInput" placeholder="Search ${targetOnt} classes..." data-target-ont="${targetOnt}" />
-      <div class="gap-suggest-label">Suggestions</div>
-      <ul class="gap-results-list" id="gapResultsList">${sugItems}</ul>
+  document.getElementById('remapContainer').innerHTML = `
+    <div class="remap-section">
+      <div class="remap-heading">Remap ${shortId(remapSourceId)} &rarr; ?</div>
+      <input type="text" class="remap-search" id="gapSearchInput" placeholder="Search ${targetOnt} classes&hellip;" data-target-ont="${targetOnt}" />
+      <div class="remap-list-label" id="remapListLabel">Suggestions</div>
+      <ul class="remap-results" id="gapResultsList">${sugItems}</ul>
+      <button class="apply-btn" id="applyMappingBtn" disabled onclick="doApply()">Apply mapping</button>
     </div>`;
-
   document.getElementById('gapSearchInput').addEventListener('input', gapOnSearchInput);
 }
 
@@ -631,27 +727,65 @@ function drawCrossEdges(detail) {
   svg.innerHTML = c;
 }
 
-// ── Gap actions ──
+// ── Select unmapped → drawer ──
+async function selectUnmapped(nodeId, ontology) {
+  currentGap = { start: nodeId, mid: null, end: null, start_ontology: ontology, distance: null };
+  remapSourceId = nodeId; actionTargetId = null;
+  currentSuggest = await (await fetch(`/api/suggest-mappings/${encodeURIComponent(nodeId)}`)).json();
+  const detail = await (await fetch(`/api/gap-detail?start=${encodeURIComponent(nodeId)}&mid=${encodeURIComponent(nodeId)}&end=${encodeURIComponent(nodeId)}`)).json();
+  const leftNodes = [...detail.left].reverse();
+  const ontLabel = ontology === 'mapped' ? 'Mapped' : ontology === 'willow' ? 'Willow' : ontology;
+  const targetOnt = ontology === 'willow' ? 'mapped' : 'willow';
+
+  let leftHtml = '';
+  for (let i = 0; i < leftNodes.length; i++) {
+    leftHtml += `<div class="column-node" data-node-id="${leftNodes[i].id}"><div class="node-name">${shortId(leftNodes[i].id)}</div></div>`;
+    if (i < leftNodes.length - 1) leftHtml += '<div class="subclass-arrow">&uarr;</div>';
+  }
+
+  const sugItems = currentSuggest?.suggestions?.length
+    ? currentSuggest.suggestions.slice(0, 5).map(s => `<li onclick="gapSelectTarget('${s.id}', this)">${shortId(s.id)}</li>`).join('')
+    : '<li class="no-results">No suggestions</li>';
+
+  document.getElementById('drawerTitle').textContent = `${shortId(nodeId)} \u2192 ?`;
+  document.getElementById('drawerBody').innerHTML = `
+    <div class="gap-detail-content">
+      <div class="columns-wrapper">
+        <div class="columns-container">
+          <div class="column"><div class="column-header left-header">${ontLabel}</div>${leftHtml}</div>
+          <div class="middle-lane"></div>
+          <div class="column"><div class="column-header right-header">${targetOnt}</div></div>
+        </div>
+      </div>
+      <div class="remap-section" id="remapContainer">
+        <div class="remap-heading">Remap ${shortId(nodeId)} &rarr; ?</div>
+        <input type="text" class="remap-search" id="gapSearchInput" placeholder="Search ${targetOnt} classes&hellip;" data-target-ont="${targetOnt}" />
+        <div class="remap-list-label" id="remapListLabel">Suggestions</div>
+        <ul class="remap-results" id="gapResultsList">${sugItems}</ul>
+        <button class="apply-btn" id="applyMappingBtn" disabled onclick="doApply()">Apply mapping</button>
+      </div>
+    </div>`;
+  openDrawer();
+  document.getElementById('gapSearchInput').addEventListener('input', gapOnSearchInput);
+}
+
+// ── Gap search / select ──
 let gapSearchTimeout = null;
 function gapOnSearchInput(e) {
   clearTimeout(gapSearchTimeout);
   const q = e.target.value.trim();
   const ul = document.getElementById('gapResultsList');
-  const label = document.querySelector('.gap-suggest-label');
+  const label = document.getElementById('remapListLabel');
   if (!q) {
-    // Restore default suggestions
-    label.textContent = 'Suggestions';
-    const suggest = currentSuggest;
-    const sugItems = suggest?.suggestions?.length
-      ? suggest.suggestions.slice(0, 3).map(s =>
-          `<li onclick="gapSelectTarget('${s.id}', this)">${shortId(s.id)}</li>`
-        ).join('')
+    if (label) label.textContent = 'Suggestions';
+    const sugItems = currentSuggest?.suggestions?.length
+      ? currentSuggest.suggestions.slice(0, 5).map(s => `<li onclick="gapSelectTarget('${s.id}', this)">${shortId(s.id)}</li>`).join('')
       : '<li class="no-results">No suggestions</li>';
     ul.innerHTML = sugItems;
     return;
   }
   gapSearchTimeout = setTimeout(async () => {
-    label.textContent = 'Results';
+    if (label) label.textContent = 'Results';
     const results = await (await fetch(`/api/search?q=${encodeURIComponent(q)}&ontology=${encodeURIComponent(e.target.dataset.targetOnt)}`)).json();
     if (!results.length) { ul.innerHTML = '<li class="no-results">No matches</li>'; return; }
     ul.innerHTML = results.map(r => `<li onclick="gapSelectTarget('${r.id}', this)">${shortId(r.id)}</li>`).join('');
@@ -660,68 +794,76 @@ function gapOnSearchInput(e) {
 
 function gapSelectTarget(nodeId, el) {
   actionTargetId = nodeId;
-  // Clear previous selection and checkmarks
-  document.querySelectorAll('.gap-results-list li').forEach(e => {
-    e.classList.remove('selected');
-    const old = e.querySelector('.apply-check');
-    if (old) old.remove();
-  });
-  if (el) {
-    el.classList.add('selected');
-    const check = document.createElement('button');
-    check.className = 'apply-check';
-    check.innerHTML = '&#x2714;';
-    check.title = 'Apply mapping';
-    check.onclick = (e) => { e.stopPropagation(); doApply(); };
-    el.appendChild(check);
-  }
+  document.querySelectorAll('.remap-results li').forEach(e => e.classList.remove('selected'));
+  if (el) el.classList.add('selected');
+  const btn = document.getElementById('applyMappingBtn');
+  if (btn) btn.disabled = false;
 }
 
 async function doApply() {
   if (!actionTargetId || !remapSourceId) return;
-  const isUnmapped = !currentGap?.mid;
-  if (isUnmapped) { await gapApplyUnmapped(); }
-  else { await gapApply(); }
+  if (!currentGap?.mid) await gapApplyUnmapped();
+  else await gapApply();
 }
 
-async function gapApply() {
-  if (!currentGap || !actionTargetId) return;
-  const newTarget = actionTargetId;
-  const source = remapSourceId;
+async function gapApplyUnmapped() {
+  const source = remapSourceId, newTarget = actionTargetId;
   const res = await (await fetch('/api/mapping', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
-
   if (res.error) {
-    const addExc = confirm(`Constraint violation:\n${res.error}\n\nAdd ${shortId(source)} \u2194 ${shortId(newTarget)} as an exception?`);
-    if (!addExc) return;
+    if (!confirm(`Constraint violation:\n${res.error}\n\nAdd ${shortId(source)} \u2194 ${shortId(newTarget)} as an exception?`)) return;
     await (await fetch('/api/add-exception', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
     const retry = await (await fetch('/api/mapping', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
     if (retry.error) { alert(retry.error); return; }
   }
+  await refreshAfterMapping();
+  const ont = source.startsWith('dtmi:com:willowinc:') ? 'willow' : 'mapped';
+  await selectGap({ start: source, mid: newTarget, end: newTarget, start_ontology: ont, distance: 0 });
+}
 
-  const [gResp, dResp] = await Promise.all([fetch('/api/graph'), fetch('/api/diagnose')]);
-  graphData = await gResp.json(); updateStats(graphData.stats);
-  const d = await dResp.json(); allGaps = d.gaps; totalDistance = d.total_distance; allUnmapped = d.unmapped || []; renderGapList();
+async function gapApply() {
+  const source = remapSourceId, newTarget = actionTargetId;
+  const res = await (await fetch('/api/mapping', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
+  if (res.error) {
+    if (!confirm(`Constraint violation:\n${res.error}\n\nAdd ${shortId(source)} \u2194 ${shortId(newTarget)} as an exception?`)) return;
+    await (await fetch('/api/add-exception', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
+    const retry = await (await fetch('/api/mapping', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
+    if (retry.error) { alert(retry.error); return; }
+  }
+  await refreshAfterMapping();
   const updatedGap = { ...currentGap };
   if (source === currentGap.start) updatedGap.mid = newTarget;
   await selectGap(updatedGap);
 }
 
+async function refreshAfterMapping() {
+  const [gResp, dResp] = await Promise.all([fetch('/api/graph'), fetch('/api/diagnose')]);
+  graphData = await gResp.json(); updateStats(graphData.stats);
+  const d = await dResp.json(); allGaps = d.gaps; totalDistance = d.total_distance; allUnmapped = d.unmapped || [];
+  document.getElementById('navCountGaps').textContent = allGaps.length.toLocaleString();
+  document.getElementById('navCountUnmapped').textContent = allUnmapped.length.toLocaleString();
+  renderFilteredGaps(); filterUnmapped();
+}
+
 async function gapFlag() {
   if (!currentGap) return;
   await fetch('/api/flag-gap', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ start: currentGap.start, mid: currentGap.mid, end: currentGap.end }) });
-  const d = await (await fetch('/api/diagnose')).json(); allGaps = d.gaps; totalDistance = d.total_distance; allUnmapped = d.unmapped || [];  showCyView(); renderGapList();
+  const d = await (await fetch('/api/diagnose')).json();
+  allGaps = d.gaps; totalDistance = d.total_distance; allUnmapped = d.unmapped || [];
+  document.getElementById('navCountGaps').textContent = allGaps.length.toLocaleString();
+  document.getElementById('navCountUnmapped').textContent = allUnmapped.length.toLocaleString();
+  closeDrawer(); renderFilteredGaps();
 }
 
 function gapIgnore() {
   if (!currentGap) return;
   ignoredGaps.add(gapKey(currentGap));
-  showCyView(); renderGapList();
+  closeDrawer(); renderFilteredGaps();
 }
 
 // ── Keyboard ──
 document.addEventListener('keydown', (e) => {
-  if (e.key === '/' && document.activeElement.tagName !== 'INPUT') { e.preventDefault(); document.getElementById('searchInput').focus(); }
-  if (e.key === 'Escape') showCyView();
+  if (e.key === '/' && document.activeElement.tagName !== 'INPUT') { e.preventDefault(); document.getElementById('searchInput').focus(); switchView('graph'); }
+  if (e.key === 'Escape') closeDrawer();
 });
 </script>
 </body>
