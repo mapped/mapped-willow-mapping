@@ -24,6 +24,8 @@ nav { display: flex; padding: 0 14px; border-bottom: 1px solid #1e1e1e; backgrou
 .btn-danger:hover { background: #2a1a1a; color: #d06060; }
 .btn-save { border-color: #1a3a1a; color: #4a8c5c; }
 .btn-save:hover { background: #152015; color: #5aac6c; }
+.btn-add-out { margin-top: 12px; border-color: #1a2a3a; color: #4a7a9c; }
+.btn-add-out:hover { background: #101820; color: #5a9abc; }
 
 /* Mode seg */
 .seg { display: inline-flex; border: 1px solid #2a2a2a; border-radius: 2px; overflow: hidden; }
@@ -100,6 +102,8 @@ input.edit-val[readonly] { color: #444; border-color: #1a1a1a; background: #1414
 .filter-wrap input.filtered { border-color: #3a3a3a; color: #ddd; }
 .filter-clear { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); background: none; border: none; color: #3a3a3a; font: inherit; font-size: 14px; cursor: pointer; padding: 0 2px; line-height: 1; display: none; }
 .filter-clear:hover { color: #bbb; }
+#filterDrop { min-width: 480px; }
+#filterDrop .combo-item { direction: rtl; unicode-bidi: plaintext; }
 
 .empty-msg { padding: 40px 14px; color: #2a2a2a; text-align: center; }
 
@@ -124,8 +128,8 @@ tr:hover .fix-btn { display: inline-block; }
 </header>
 
 <nav>
-  <button class="tab active" data-tab="m2w">Mapped→Willow <span class="tab-count" id="tcM2W"></span></button>
-  <button class="tab" data-tab="w2m">Willow→Mapped <span class="tab-count" id="tcW2M"></span></button>
+  <button class="tab active" data-tab="m2w">Mapped <span class="tab-count" id="tcM2W"></span></button>
+  <button class="tab" data-tab="w2m">Willow <span class="tab-count" id="tcW2M"></span></button>
 </nav>
 
 <div class="toolbar">
@@ -170,6 +174,8 @@ const state = {
   rtM2W: null, rtW2M: null,
   unM2W: null, unW2M: null,
   ont: null,           // Map<id, children[]>
+  mappedIds: null,     // Set<string> — all IDs from mapped ontology
+  willowIds: null,     // Set<string> — all IDs from willow ontology
   filterDtmi: null,    // selected class for descendant filter
   tab: 'm2w',
   mode: 'all',
@@ -248,7 +254,10 @@ async function loadOntology() {
   if (state.ont) return state.ont;
   const data = await fetch('/api/ontology').then(r => r.json());
   const children = new Map();
-  for (const { id, parents } of data) {
+  const mappedIds = new Set();
+  const willowIds = new Set();
+  for (const { id, parents, source } of data) {
+    if (source === 'mapped') mappedIds.add(id); else willowIds.add(id);
     if (!children.has(id)) children.set(id, []);
     for (const p of parents) {
       if (!children.has(p)) children.set(p, []);
@@ -256,6 +265,8 @@ async function loadOntology() {
     }
   }
   state.ont = children;
+  state.mappedIds = mappedIds;
+  state.willowIds = willowIds;
   return children;
 }
 
@@ -322,15 +333,18 @@ function renderAll(descSet, main) {
   for (const r of [...state.m2w, ...state.w2m])
     incoming.set(r.OutputDtmi, (incoming.get(r.OutputDtmi) ?? 0) + 1);
 
-  let data = (state.tab === 'm2w' ? state.m2w : state.w2m).filter(r =>
-    !descSet || descSet.has(r.InputDtmi)
-  );
-  if (!data.length) { main.innerHTML = '<div class="empty-msg">No results</div>'; return; }
+  const mappings = state.tab === 'm2w' ? state.m2w : state.w2m;
+  const mappingIndex = new Map(mappings.map(r => [r.InputDtmi, r.OutputDtmi]));
+
+  const ontIds = state.tab === 'm2w' ? state.mappedIds : state.willowIds;
+  let classes = [...(ontIds ?? [])].filter(d => state.ont?.has(d));
+  if (descSet) classes = classes.filter(d => descSet.has(d));
+  if (!classes.length) { main.innerHTML = '<div class="empty-msg">No results</div>'; return; }
 
   const { allSort: col, allSortDir: dir } = state;
-  data = [...data].sort((a, b) => {
-    const av = col === 'in' ? (incoming.get(a.InputDtmi) ?? 0) : col === 'target' ? a.OutputDtmi : a.InputDtmi;
-    const bv = col === 'in' ? (incoming.get(b.InputDtmi) ?? 0) : col === 'target' ? b.OutputDtmi : b.InputDtmi;
+  classes = [...classes].sort((a, b) => {
+    const av = col === 'in' ? (incoming.get(a) ?? 0) : col === 'target' ? (mappingIndex.get(a) ?? '') : a;
+    const bv = col === 'in' ? (incoming.get(b) ?? 0) : col === 'target' ? (mappingIndex.get(b) ?? '') : b;
     return av < bv ? dir : av > bv ? -dir : 0;
   });
 
@@ -343,12 +357,13 @@ function renderAll(descSet, main) {
   const tbl = document.createElement('table');
   tbl.innerHTML = `<thead><tr>${th('Class','class')}${th('Target','target')}${th('In','in')}</tr></thead>`;
   const tbody = document.createElement('tbody');
-  for (const r of data) {
+  for (const cls of classes) {
+    const target = mappingIndex.get(cls) ?? null;
     const tr = document.createElement('tr');
-    tr.appendChild(dtmiTd(r.InputDtmi));
-    tr.appendChild(dtmiTd(r.OutputDtmi));
+    tr.appendChild(dtmiTd(cls));
+    tr.appendChild(dtmiTd(target));
     const tdIn = document.createElement('td');
-    const cnt = incoming.get(r.InputDtmi) ?? 0;
+    const cnt = incoming.get(cls) ?? 0;
     tdIn.style.color = cnt > 0 ? '#888' : '#2e2e2e';
     tdIn.textContent = cnt;
     tr.appendChild(tdIn);
@@ -520,11 +535,20 @@ function renderEntityDrawer() {
     el.textContent = 'No mappings';
     body.appendChild(el);
   }
+
+  if (!outEntries.length) {
+    const file = dtmi.startsWith('dtmi:mapped:') ? 'm2w' : 'w2m';
+    const addBtn = document.createElement('button');
+    addBtn.className = 'btn btn-add-out';
+    addBtn.textContent = '+ Add outgoing';
+    addBtn.addEventListener('click', () => openEditForm(dtmi, '', file, true));
+    body.appendChild(addBtn);
+  }
 }
 
-function openEditForm(inputDtmi, outputDtmi, file) {
+function openEditForm(inputDtmi, outputDtmi, file, isNew = false) {
   state.drawerMode = 'edit';
-  state.drawerEdit = { inputDtmi, outputDtmi, file };
+  state.drawerEdit = { inputDtmi, outputDtmi, file, isNew };
   renderEditForm();
 }
 
@@ -536,8 +560,8 @@ function allDtmis() {
 }
 
 function renderEditForm() {
-  const { inputDtmi, outputDtmi, file } = state.drawerEdit;
-  document.getElementById('drawerTitle').textContent = file === 'm2w' ? 'Mapped2Willow.json' : 'Willow2Mapped.json';
+  const { inputDtmi, outputDtmi, file, isNew } = state.drawerEdit;
+  document.getElementById('drawerTitle').textContent = isNew ? 'Add mapping' : (file === 'm2w' ? 'Mapped2Willow.json' : 'Willow2Mapped.json');
 
   const body = document.getElementById('drawerBody');
   body.innerHTML = '';
@@ -581,20 +605,23 @@ function renderEditForm() {
   outputGroup.appendChild(comboWrap);
   body.appendChild(outputGroup);
 
-  wireCombo(outputField, drop, () => allDtmis());
+  const outIds = file === 'm2w' ? state.willowIds : state.mappedIds;
+  wireCombo(outputField, drop, () => [...(outIds ?? [])].sort());
 
   const actions = document.createElement('div');
   actions.className = 'drawer-actions';
   const saveBtn = document.createElement('button');
   saveBtn.className = 'btn btn-save';
-  saveBtn.textContent = 'Save';
+  saveBtn.textContent = isNew ? 'Add' : 'Save';
   saveBtn.addEventListener('click', saveEdit);
   actions.appendChild(saveBtn);
-  const delBtn = document.createElement('button');
-  delBtn.className = 'btn btn-danger';
-  delBtn.textContent = 'Delete';
-  delBtn.addEventListener('click', deleteEdit);
-  actions.appendChild(delBtn);
+  if (!isNew) {
+    const delBtn = document.createElement('button');
+    delBtn.className = 'btn btn-danger';
+    delBtn.textContent = 'Delete';
+    delBtn.addEventListener('click', deleteEdit);
+    actions.appendChild(delBtn);
+  }
   const status = document.createElement('span');
   status.className = 'status-text';
   status.id = 'editStatus';
@@ -613,7 +640,8 @@ function wireCombo(input, drop, getItems) {
     drop.innerHTML = '';
     activeIdx = -1;
     if (!q) { drop.classList.add('hidden'); return; }
-    const matches = getItems().filter(d => d.toLowerCase().includes(q)).slice(0, 30);
+    const words = q.split(/\s+/).filter(Boolean);
+    const matches = getItems().filter(d => { const dl = d.toLowerCase(); return words.every(w => dl.includes(w)); }).slice(0, 30);
     if (!matches.length) { drop.classList.add('hidden'); return; }
     for (const d of matches) {
       const item = document.createElement('div');
@@ -651,13 +679,14 @@ async function saveEdit() {
   const outputDtmi = document.getElementById('editOutput').value.trim();
   const statusEl = document.getElementById('editStatus');
   if (!outputDtmi) { setStatus(statusEl, 'required', false); return; }
+  const method = state.drawerEdit.isNew ? 'POST' : 'PUT';
   const res = await fetch(`/api/mapping/${state.drawerEdit.file}`, {
-    method: 'PUT',
+    method,
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ inputDtmi, outputDtmi }),
   });
   const d = await res.json();
-  if (d.ok) { setStatus(statusEl, 'saved', true); state.drawerEdit.outputDtmi = outputDtmi; await loadAll(); }
+  if (d.ok) { setStatus(statusEl, 'saved', true); state.drawerEdit.outputDtmi = outputDtmi; state.drawerEdit.isNew = false; await loadAll(); }
   else setStatus(statusEl, d.error ?? 'error', false);
 }
 
@@ -686,12 +715,26 @@ function showModal(html, onConfirm) {
   const overlay = document.getElementById('modalOverlay');
   document.getElementById('modalMsg').innerHTML = html;
   overlay.classList.add('open');
-  const confirmBtn = document.getElementById('modalConfirm');
-  const cancelBtn = document.getElementById('modalCancel');
+
+  // Clone to clear any stale listeners from previous (cancelled) modals
+  for (const id of ['modalConfirm', 'modalCancel']) {
+    const el = document.getElementById(id);
+    el.replaceWith(el.cloneNode(true));
+  }
+
   function close() { overlay.classList.remove('open'); }
-  confirmBtn.addEventListener('click', () => { close(); onConfirm(); }, { once: true });
-  cancelBtn.addEventListener('click', close, { once: true });
-  overlay.addEventListener('click', e => { if (e.target === overlay) close(); }, { once: true });
+
+  document.getElementById('modalConfirm').addEventListener('click', async () => {
+    close();
+    try { await onConfirm(); }
+    catch (err) { console.error('Modal confirm error:', err); }
+  });
+  document.getElementById('modalCancel').addEventListener('click', close);
+
+  function onBackdrop(e) {
+    if (e.target === overlay) { close(); overlay.removeEventListener('click', onBackdrop); }
+  }
+  overlay.addEventListener('click', onBackdrop);
 }
 
 // --- Filter combobox ---
@@ -703,7 +746,8 @@ function initFilterCombo() {
   let activeIdx = -1;
 
   function getClasses() {
-    return [...(state.ont?.keys() ?? [])].sort();
+    const ontIds = state.tab === 'm2w' ? state.mappedIds : state.willowIds;
+    return [...(ontIds ?? [])].sort();
   }
 
   function refresh() {
@@ -711,7 +755,8 @@ function initFilterCombo() {
     drop.innerHTML = '';
     activeIdx = -1;
     if (!q) { drop.classList.add('hidden'); return; }
-    const matches = getClasses().filter(d => d.toLowerCase().includes(q)).slice(0, 40);
+    const words = q.split(/\s+/).filter(Boolean);
+    const matches = getClasses().filter(d => { const dl = d.toLowerCase(); return words.every(w => dl.includes(w)); }).slice(0, 40);
     if (!matches.length) { drop.classList.add('hidden'); return; }
     for (const d of matches) {
       const item = document.createElement('div');
@@ -807,7 +852,21 @@ document.getElementById('modeSeg').addEventListener('click', e => {
   render();
 });
 
-document.getElementById('refreshBtn').addEventListener('click', loadAll);
+document.getElementById('refreshBtn').addEventListener('click', async () => {
+  const btn = document.getElementById('refreshBtn');
+  btn.textContent = 'Updating ontology…';
+  btn.disabled = true;
+  try {
+    const res = await fetch('/api/ontology/refresh', { method: 'POST' });
+    if (!res.ok) console.warn('Ontology refresh failed:', await res.text());
+  } catch (e) {
+    console.warn('Ontology refresh error:', e);
+  } finally {
+    btn.disabled = false;
+  }
+  state.ont = null; state.mappedIds = null; state.willowIds = null; // bust cache so loadAll re-fetches
+  await loadAll();
+});
 document.getElementById('drawerCloseBtn').addEventListener('click', closeDrawer);
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
 

@@ -1,5 +1,6 @@
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, unlinkSync } from "node:fs";
 import { join, resolve } from "node:path";
+import { tmpdir } from "node:os";
 
 // --- Types ---
 export type Remap = { InputDtmi: string; OutputDtmi: string; [k: string]: unknown };
@@ -14,16 +15,36 @@ export type RoundTrip = {
 
 // --- Paths ---
 const REPO_ROOT = resolve(import.meta.dir, "../..");
-export const M2W_PATH = join(
-  REPO_ROOT,
-  "Ontologies.Mappings/src/Mappings/v1/Willow/Mapped2Willow.json"
-);
-export const W2M_PATH = join(
-  REPO_ROOT,
-  "Ontologies.Mappings/src/Mappings/v1/Mapped/Willow2Mapped.json"
-);
+export const M2W_PATH = join(REPO_ROOT, "data/Mapped2Willow.json");
+export const W2M_PATH = join(REPO_ROOT, "data/Willow2Mapped.json");
 const MAPPED_ONT = join(REPO_ROOT, "data/ontologies/mapped.json");
 const WILLOW_ONT = join(REPO_ROOT, "data/ontologies/willow.jsonld");
+
+const NUGET_BASE = "https://api.nuget.org/v3-flatcontainer";
+const ONTOLOGY_PACKAGES = [
+  { pkg: "mapped.ontologies.core.dtdl",  content: "content/mapped_dtdl.json",                  cache: MAPPED_ONT },
+  { pkg: "willowinc.ontology.dtdlv3",    content: "content/Willow.Ontology.DTDLv3.jsonld",     cache: WILLOW_ONT },
+] as const;
+
+async function refreshOntologies(): Promise<void> {
+  for (const { pkg, content, cache } of ONTOLOGY_PACKAGES) {
+    const verRes = await fetch(`${NUGET_BASE}/${pkg}/index.json`);
+    if (!verRes.ok) throw new Error(`NuGet index failed for ${pkg}: ${verRes.status}`);
+    const { versions } = await verRes.json() as { versions: string[] };
+    const version = versions[versions.length - 1];
+
+    const nupkgUrl = `${NUGET_BASE}/${pkg}/${version}/${pkg}.${version}.nupkg`;
+    const nupkgRes = await fetch(nupkgUrl);
+    if (!nupkgRes.ok) throw new Error(`NuGet download failed for ${pkg}@${version}: ${nupkgRes.status}`);
+
+    const tmp = join(tmpdir(), `${pkg}-${version}.nupkg`);
+    writeFileSync(tmp, new Uint8Array(await nupkgRes.arrayBuffer()));
+    const result = Bun.spawnSync(["unzip", "-p", tmp, content]);
+    unlinkSync(tmp);
+    if (result.exitCode !== 0) throw new Error(`unzip failed for ${pkg}: ${result.stderr.toString()}`);
+    writeFileSync(cache, result.stdout);
+  }
+}
 
 // --- Mapping I/O ---
 export function loadDoc(path: string): MappingDoc {
@@ -31,8 +52,9 @@ export function loadDoc(path: string): MappingDoc {
 }
 
 export function saveDoc(path: string, doc: MappingDoc): void {
+  // Plain code-point comparison to match scripts/sort_mappings.py
   const sorted = [...doc.InterfaceRemaps].sort((a, b) =>
-    a.InputDtmi.localeCompare(b.InputDtmi)
+    a.InputDtmi < b.InputDtmi ? -1 : a.InputDtmi > b.InputDtmi ? 1 : 0
   );
   writeFileSync(path, JSON.stringify({ ...doc, InterfaceRemaps: sorted }, null, 2) + "\n", "utf8");
 }
@@ -167,13 +189,23 @@ if (import.meta.main) {
         return json(trips);
       }
 
-      // GET /api/ontology — id + parents for both ontologies
+      // POST /api/ontology/refresh — download latest from NuGet
+      if (method === "POST" && path === "/api/ontology/refresh") {
+        try {
+          await refreshOntologies();
+          return json({ ok: true });
+        } catch (e) {
+          return jsonErr(String(e), 500);
+        }
+      }
+
+      // GET /api/ontology — id + parents + source for both ontologies
       if (method === "GET" && path === "/api/ontology") {
-        const out: Array<{ id: string; parents: string[] }> = [];
-        for (const ontPath of [MAPPED_ONT, WILLOW_ONT]) {
+        const out: Array<{ id: string; parents: string[]; source: string }> = [];
+        for (const [ontPath, source] of [[MAPPED_ONT, "mapped"], [WILLOW_ONT, "willow"]] as const) {
           try {
             for (const [id, parents] of loadParents(ontPath))
-              out.push({ id, parents });
+              out.push({ id, parents, source });
           } catch {}
         }
         return json(out);
