@@ -443,10 +443,6 @@
       "OutputDtmi": "dtmi:com:willowinc:Dishwasher;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Compressor_Discharge_Refrigerant_Pressure_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CompressorLeavingRefrigerantStaticPressureSensor;1"
-    },
-    {
       "InputDtmi": "dtmi:mapped:core:Compressor_Group;1",
       "OutputDtmi": "dtmi:com:willowinc:RefrigerationCompressorGroup;1"
     },
@@ -2101,10 +2097,6 @@
     {
       "InputDtmi": "dtmi:mapped:core:Storage_Tank;1",
       "OutputDtmi": "dtmi:com:willowinc:PlumbingStorageTank;1"
-    },
-    {
-      "InputDtmi": "dtmi:mapped:core:Suction_Line_Refrigerant_Temperature_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:CompressorEnteringRefrigerantTemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Suction_Pressure_Sensor;1",
@@ -6476,3 +6468,4 @@
     }
   ]
 }
+

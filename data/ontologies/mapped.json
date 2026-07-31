@@ -882,6 +882,16 @@
   },
   {
     "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Battery_Level_Sensor;1",
+    "@type": "Interface",
+    "description": "Measures the remaining battery level or charge of a device",
+    "displayName": "Battery_Level_Sensor",
+    "extends": [
+      "dtmi:org:brickschema:schema:Brick:Sensor;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:mapped:core:Battery_Status;1",
     "@type": "Interface",
     "description": "",
@@ -1625,6 +1635,16 @@
     "displayName": "Connected_Devices_Count_Sensor",
     "extends": [
       "dtmi:mapped:core:Count_Sensor;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Constant_Air_Volume_Box_With_Reheat;1",
+    "@type": "Interface",
+    "description": "A constant air volume terminal unit equipped with a reheat coil that maintains a fixed supply air flow rate while modulating reheat energy to vary discharge air temperature to meet zone thermal loads",
+    "displayName": "Constant_Air_Volume_Box_With_Reheat",
+    "extends": [
+      "dtmi:org:brickschema:schema:Brick:Constant_Air_Volume_Box;1"
     ]
   },
   {
@@ -3003,6 +3023,16 @@
   },
   {
     "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Exhaust_Air_Handling_Unit;1",
+    "@type": "Interface",
+    "description": "An air handling unit designed to handle exhaust air, typically equipped with fans and filters to manage and treat air being expelled from a building.",
+    "displayName": "Exhaust_Air_Handling_Unit",
+    "extends": [
+      "dtmi:org:brickschema:schema:Brick:Air_Handling_Unit;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:mapped:core:Exhaust_Air_System;1",
     "@type": "Interface",
     "description": "",
@@ -3757,6 +3787,36 @@
   },
   {
     "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Heat_Exchanger_Primary_Side;1",
+    "@type": "Interface",
+    "description": "The primary side of a heat exchanger is the side where the fluid is circulating to the load (e.g. heating or cooling coil).",
+    "displayName": "Heat_Exchanger_Primary_Side",
+    "extends": [
+      "dtmi:mapped:core:Heat_Exchanger_Side;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Heat_Exchanger_Secondary_Side;1",
+    "@type": "Interface",
+    "description": "The secondary side of a heat exchanger is the side where the fluid is circulating to the load (e.g. heating or cooling coil).",
+    "displayName": "Heat_Exchanger_Secondary_Side",
+    "extends": [
+      "dtmi:mapped:core:Heat_Exchanger_Side;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Heat_Exchanger_Side;1",
+    "@type": "Interface",
+    "description": "A heat exchanger side represents one side of a heat exchanger, which can be either the primary side or the secondary side.",
+    "displayName": "Heat_Exchanger_Side",
+    "extends": [
+      "dtmi:org:brickschema:schema:Brick:HVAC_Equipment;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:mapped:core:Heat_Pump;1",
     "@type": "Interface",
     "description": "A self-contained unit designed to transfer heat energy to or from a designated space, capable of offering both heating and cooling functions",
@@ -4288,6 +4348,16 @@
     "extends": [
       "dtmi:mapped:core:GHG_Emissions_Intensity_Per_Area;1",
       "dtmi:mapped:core:Indirect_GHG_Emissions_Intensity;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Intermediate_Filter;1",
+    "@type": "Interface",
+    "description": "A filter installed between the pre-filter and final filter in a multi-stage filtration sequence, providing a intermediate stage of particulate removal to reduce loading on the downstream high-efficiency final filter",
+    "displayName": "Intermediate_Filter",
+    "extends": [
+      "dtmi:org:brickschema:schema:Brick:Filter;1"
     ]
   },
   {
@@ -5474,6 +5544,16 @@
   },
   {
     "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Occupied_Cooling_Air_Temperature_Setpoint_Offset;1",
+    "@type": "Interface",
+    "description": "An offset above a target temperature setpoint during occupied mode, indicating where the Cooling Air Temperature Setpoint is located relative to the target setpoint.",
+    "displayName": "Occupied_Cooling_Air_Temperature_Setpoint_Offset",
+    "extends": [
+      "dtmi:mapped:core:Cooling_Air_Temperature_Setpoint_Offset;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:mapped:core:Occupied_Cooling_Zone_Air_Temperature_Setpoint;1",
     "@type": "Interface",
     "description": "",
@@ -5490,6 +5570,16 @@
     "displayName": "Occupied_Heating_Air_Temperature_Setpoint",
     "extends": [
       "dtmi:org:brickschema:schema:Brick:Occupied_Air_Temperature_Setpoint;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Occupied_Heating_Air_Temperature_Setpoint_Offset;1",
+    "@type": "Interface",
+    "description": "An offset below a target air temperature setpoint during occupied mode, indicating where the Heating Air Temperature Setpoint is located relative to the target setpoint.",
+    "displayName": "Occupied_Heating_Air_Temperature_Setpoint_Offset",
+    "extends": [
+      "dtmi:mapped:core:Heating_Air_Temperature_Setpoint_Offset;1"
     ]
   },
   {
@@ -6139,7 +6229,7 @@
     "description": "A phone number associated with an agent such as a person.",
     "displayName": "Phone_Number",
     "extends": [
-      "dtmi:mapped:core:Meta;1"
+      "dtmi:mapped:core:Entity;1"
     ]
   },
   {
@@ -6496,6 +6586,16 @@
   },
   {
     "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Pressurization_Zone;1",
+    "@type": "Interface",
+    "description": "",
+    "displayName": "Pressurization_Zone",
+    "extends": [
+      "dtmi:org:brickschema:schema:Brick:HVAC_Zone;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:mapped:core:Projection_Screen;1",
     "@type": "Interface",
     "description": "an installation consisting of a surface and a support structure used for displaying a projected image for the view of an audience.",
@@ -6520,6 +6620,16 @@
     "@type": "Interface",
     "description": "",
     "displayName": "PropertyBag",
+    "extends": [
+      "dtmi:mapped:core:Meta;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Property_Node;1",
+    "@type": "Interface",
+    "description": "",
+    "displayName": "Property_Node",
     "extends": [
       "dtmi:mapped:core:Meta;1"
     ]
@@ -6939,6 +7049,16 @@
   },
   {
     "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Reverse_Osmosis_Unit;1",
+    "@type": "Interface",
+    "description": "A water purification system that uses a semipermeable membrane to remove ions, molecules, and larger particles from drinking water, providing clean and safe water for various applications in buildings.",
+    "displayName": "Reverse_Osmosis_Unit",
+    "extends": [
+      "dtmi:mapped:core:Device;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:mapped:core:Reversing_Valve;1",
     "@type": "Interface",
     "description": "",
@@ -7269,6 +7389,16 @@
   },
   {
     "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Snowmelt_System;1",
+    "@type": "Interface",
+    "description": "A snowmelt system is a system that prevents the build-up of snow and ice on sidewalks, roads, or driveways by using warm fluid to melt it",
+    "displayName": "Snowmelt_System",
+    "extends": [
+      "dtmi:org:brickschema:schema:Brick:System;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:mapped:core:Solar_Inverter;1",
     "@type": "Interface",
     "description": "A specialized type of inverter specifically designed for converting direct current generated by solar panels into alternating current.",
@@ -7470,6 +7600,16 @@
   },
   {
     "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Standby_Cooling_Air_Temperature_Setpoint_Offset;1",
+    "@type": "Interface",
+    "description": "An offset above a target temperature setpoint during standby mode, indicating where the Cooling Air Temperature Setpoint is located relative to the target setpoint.",
+    "displayName": "Standby_Cooling_Air_Temperature_Setpoint_Offset",
+    "extends": [
+      "dtmi:mapped:core:Cooling_Air_Temperature_Setpoint_Offset;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:mapped:core:Standby_Cooling_Zone_Air_Temperature_Setpoint;1",
     "@type": "Interface",
     "description": "",
@@ -7487,6 +7627,16 @@
     "extends": [
       "dtmi:org:brickschema:schema:Brick:Heating_Temperature_Setpoint;1",
       "dtmi:mapped:core:Standby_Air_Temperature_Setpoint;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Standby_Heating_Air_Temperature_Setpoint_Offset;1",
+    "@type": "Interface",
+    "description": "An offset below a target air temperature setpoint during standby mode, indicating where the Heating Air Temperature Setpoint is located relative to the target setpoint.",
+    "displayName": "Standby_Heating_Air_Temperature_Setpoint_Offset",
+    "extends": [
+      "dtmi:mapped:core:Heating_Air_Temperature_Setpoint_Offset;1"
     ]
   },
   {
@@ -8185,6 +8335,16 @@
   },
   {
     "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Ultraviolet_C_Lamp;1",
+    "@type": "Interface",
+    "description": "A lamp that emits ultraviolet C-band radiation to inactivate microorganisms in air streams, on coil surfaces, or on drain pans within HVAC equipment",
+    "displayName": "Ultraviolet_C_Lamp",
+    "extends": [
+      "dtmi:org:brickschema:schema:Brick:HVAC_Equipment;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:mapped:core:Uninterruptible_Power_Supply;1",
     "@type": "Interface",
     "description": "A type of continual power system that provides automated backup electric power to a load when the input power source or mains power fails",
@@ -8235,6 +8395,16 @@
   },
   {
     "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Unoccupied_Cooling_Air_Temperature_Setpoint_Offset;1",
+    "@type": "Interface",
+    "description": "An offset above a target temperature setpoint during unoccupied mode, indicating where the Cooling Air Temperature Setpoint is located relative to the target setpoint.",
+    "displayName": "Unoccupied_Cooling_Air_Temperature_Setpoint_Offset",
+    "extends": [
+      "dtmi:mapped:core:Cooling_Air_Temperature_Setpoint_Offset;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:mapped:core:Unoccupied_Cooling_Zone_Air_Temperature_Setpoint;1",
     "@type": "Interface",
     "description": "",
@@ -8251,6 +8421,16 @@
     "displayName": "Unoccupied_Heating_Air_Temperature_Setpoint",
     "extends": [
       "dtmi:org:brickschema:schema:Brick:Unoccupied_Air_Temperature_Setpoint;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Unoccupied_Heating_Air_Temperature_Setpoint_Offset;1",
+    "@type": "Interface",
+    "description": "An offset below a target air temperature setpoint during unoccupied mode, indicating where the Heating Air Temperature Setpoint is located relative to the target setpoint.",
+    "displayName": "Unoccupied_Heating_Air_Temperature_Setpoint_Offset",
+    "extends": [
+      "dtmi:mapped:core:Heating_Air_Temperature_Setpoint_Offset;1"
     ]
   },
   {
@@ -8663,6 +8843,16 @@
   },
   {
     "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:mapped:core:Water_Filtration_System;1",
+    "@type": "Interface",
+    "description": "",
+    "displayName": "Water_Filtration_System",
+    "extends": [
+      "dtmi:org:brickschema:schema:Brick:System;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:mapped:core:Water_Leak_Event_Status;1",
     "@type": "Interface",
     "description": "Logs the events related to water leak at a specific device.",
@@ -9033,6 +9223,116 @@
     "extends": [
       "dtmi:org:brickschema:schema:Brick:Damper;1",
       "dtmi:org:brickschema:schema:Brick:Terminal_Unit;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:org:ashrae:bacnet:AnalogInputObject;1",
+    "@type": "Interface",
+    "description": "",
+    "displayName": "AnalogInputObject",
+    "extends": [
+      "dtmi:mapped:core:Entity;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:org:ashrae:bacnet:AnalogOutputObject;1",
+    "@type": "Interface",
+    "description": "",
+    "displayName": "AnalogOutputObject",
+    "extends": [
+      "dtmi:mapped:core:Entity;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:org:ashrae:bacnet:AnalogValueObject;1",
+    "@type": "Interface",
+    "description": "",
+    "displayName": "AnalogValueObject",
+    "extends": [
+      "dtmi:mapped:core:Entity;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:org:ashrae:bacnet:BinaryInputObject;1",
+    "@type": "Interface",
+    "description": "",
+    "displayName": "BinaryInputObject",
+    "extends": [
+      "dtmi:mapped:core:Entity;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:org:ashrae:bacnet:BinaryOutputObject;1",
+    "@type": "Interface",
+    "description": "",
+    "displayName": "BinaryOutputObject",
+    "extends": [
+      "dtmi:mapped:core:Entity;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:org:ashrae:bacnet:BinaryValueObject;1",
+    "@type": "Interface",
+    "description": "",
+    "displayName": "BinaryValueObject",
+    "extends": [
+      "dtmi:mapped:core:Entity;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:org:ashrae:bacnet:DeviceObject;1",
+    "@type": "Interface",
+    "description": "",
+    "displayName": "DeviceObject",
+    "extends": [
+      "dtmi:mapped:core:Entity;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:org:ashrae:bacnet:MultistateInputObject;1",
+    "@type": "Interface",
+    "description": "",
+    "displayName": "MultistateInputObject",
+    "extends": [
+      "dtmi:mapped:core:Entity;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:org:ashrae:bacnet:MultistateOutputObject;1",
+    "@type": "Interface",
+    "description": "",
+    "displayName": "MultistateOutputObject",
+    "extends": [
+      "dtmi:mapped:core:Entity;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:org:ashrae:bacnet:MultistateValueObject;1",
+    "@type": "Interface",
+    "description": "",
+    "displayName": "MultistateValueObject",
+    "extends": [
+      "dtmi:mapped:core:Entity;1"
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:org:ashrae:bacnet:TimeStamp;1",
+    "@type": "Interface",
+    "description": "",
+    "displayName": "TimeStamp",
+    "extends": [
+      "dtmi:mapped:core:Entity;1"
     ]
   },
   {
