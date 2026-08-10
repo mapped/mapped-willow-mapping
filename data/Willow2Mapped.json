@@ -2033,6 +2033,18 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Heat_Exchanger;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:HeatExchangerPrimarySide;1",
+      "OutputDtmi": "dtmi:mapped:core:Heat_Exchanger_Primary_Side;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:HeatExchangerSecondarySide;1",
+      "OutputDtmi": "dtmi:mapped:core:Heat_Exchanger_Secondary_Side;1"
+    },
+        {
+      "InputDtmi": "dtmi:com:willowinc:HeatExchangerSide;1",
+      "OutputDtmi": "dtmi:mapped:core:Heat_Exchanger_Side;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:HeatPumpChiller;1",
       "OutputDtmi": "dtmi:mapped:core:Heat_Pump_Chiller;1"
     },
