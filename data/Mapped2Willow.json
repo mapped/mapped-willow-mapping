@@ -1067,6 +1067,18 @@
       "OutputDtmi": "dtmi:com:willowinc:LeavingWaterTemperatureSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Heat_Exchanger_Primary_Side;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatExchangerPrimarySide;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heat_Exchanger_Secondary_Side;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatExchangerSecondarySide;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heat_Exchanger_Side;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatExchangerSide;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Heated_Display_Case;1",
       "OutputDtmi": "dtmi:com:willowinc:HotFoodDisplayCase;1"
     },
