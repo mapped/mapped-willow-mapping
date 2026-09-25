@@ -2821,6 +2821,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Mode_Status;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:OccupiedTargetZoneAirTemperatureSetpoint;1",
+      "OutputDtmi": "dtmi:mapped:core:Occupied_Target_Zone_Air_Temperature_Setpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:OccupiedUnoccupiedState;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Mode_Status;1"
     },
@@ -4185,6 +4189,10 @@
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Water_Heater;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:TargetZoneAirTemperatureSetpoint;1",
+      "OutputDtmi": "dtmi:mapped:core:Target_Zone_Air_Temperature_Setpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:TemperatureSensor;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Temperature_Sensor;1"
     },
@@ -4487,6 +4495,10 @@
     {
       "InputDtmi": "dtmi:com:willowinc:UnoccupiedState;1",
       "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Mode_Status;1"
+    },
+    {
+      "InputDtmi": "dtmi:com:willowinc:UnoccupiedTargetZoneAirTemperatureSetpoint;1",
+      "OutputDtmi": "dtmi:mapped:core:Unoccupied_Target_Zone_Air_Temperature_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Urinal;1",
