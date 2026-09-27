@@ -33,7 +33,7 @@ def get_dtdl_interfaces(ontology_content: Dict):
 
 def main():
     mapped_version = get_package_version('Mapped.Ontologies.Core.Dtdl')
-    mapped_ontology = get_nuget_package('Mapped.Ontologies.Core.Dtdl', mapped_version, 'mapped_dtdl_strict.json')
+    mapped_ontology = get_nuget_package('Mapped.Ontologies.Core.Dtdl', mapped_version, 'mapped_dtdl.json')
     willow_version = get_package_version('WillowInc.Ontology.DTDLv3')
     willow_ontology = get_nuget_package('WillowInc.Ontology.DTDLv3', willow_version)
 

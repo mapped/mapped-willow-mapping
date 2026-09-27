@@ -4846,7 +4846,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ZoneAirTemperatureSetpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Zone_Air_Temperature_Setpoint;1"
+      "OutputDtmi": "dtmi:mapped:core:Target_Zone_Air_Temperature_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ZoneDamper;1",
