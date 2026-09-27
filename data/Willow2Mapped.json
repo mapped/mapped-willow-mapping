@@ -406,7 +406,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Building;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Building;1"
+      "OutputDtmi": "dtmi:org:w3id:rec:Building;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:BuildingAirStaticPressureSensor;1",
@@ -422,7 +422,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:BuildingWing;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Wing;1"
+      "OutputDtmi": "dtmi:org:w3id:rec:Wing;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Busway;1",
@@ -1270,7 +1270,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElevatorShaft;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Elevator_Shaft;1"
+      "OutputDtmi": "dtmi:org:w3id:rec:ElevatorShaft;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ElevatorTripEvent;1",
@@ -1778,7 +1778,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Furniture;1",
-      "OutputDtmi": "dtmi:mapped:core:Furniture;1"
+      "OutputDtmi": "dtmi:org:w3id:rec:Furniture;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:GarbageDisposal;1",
@@ -1914,7 +1914,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACRefrigerantSystem;1",
-      "OutputDtmi": "dtmi:mapped:core:Refrigeration_System;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Refrigeration_System;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACReturnAirSystem;1",
@@ -1962,7 +1962,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HVACZone;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:HVAC_Zone;1"
+      "OutputDtmi": "dtmi:org:w3id:rec:HVACZone;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:HeaderChilledWaterFlowSensor;1",
@@ -2350,7 +2350,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Land;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Site;1"
+      "OutputDtmi": "dtmi:org:w3id:rec:Site;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Lease;1",
@@ -3018,7 +3018,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ParkingSpot;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Parking_Space;1"
+      "OutputDtmi": "dtmi:org:w3id:rec:ParkingSpace;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PassiveChilledBeam;1",
@@ -3274,7 +3274,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Portfolio;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Portfolio;1"
+      "OutputDtmi": "dtmi:org:w3id:rec:Portfolio;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:PositionActuator;1",
@@ -3502,7 +3502,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationCircuit;1",
-      "OutputDtmi": "dtmi:mapped:core:Refrigeration_System;1"
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Refrigeration_System;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RefrigerationCompressorGroup;1",
@@ -3522,7 +3522,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Region;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Region;1"
+      "OutputDtmi": "dtmi:org:w3id:rec:Region;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ReheatCoil;1",
@@ -3734,7 +3734,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Room;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Room;1"
+      "OutputDtmi": "dtmi:org:w3id:rec:Room;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:RotisserieOven;1",
@@ -4814,7 +4814,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:Zone;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Zone;1"
+      "OutputDtmi": "dtmi:org:w3id:rec:Zone;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ZoneAirDeltaPressureSensor;1",
@@ -4846,7 +4846,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ZoneAirTemperatureSetpoint;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Zone_Air_Temperature_Setpoint;1"
+      "OutputDtmi": "dtmi:mapped:core:Target_Zone_Air_Temperature_Setpoint;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:ZoneDamper;1",
@@ -4874,7 +4874,7 @@
     },
     {
       "InputDtmi": "dtmi:com:willowinc:airport:AirportTerminal;1",
-      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Building;1"
+      "OutputDtmi": "dtmi:org:w3id:rec:Building;1"
     },
     {
       "InputDtmi": "dtmi:com:willowinc:airport:FlightInformationDisplay;1",

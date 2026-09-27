@@ -8,9 +8,9 @@ import xml.etree.ElementTree as ET
 from pdb import set_trace
 
 
-def get_nuget_package(name: str, version: str):
+def get_nuget_package(name: str, version: str, file_name: str = None):
     with NugetPackage(name) as package:
-        ontology = package.get_content(version)
+        ontology = package.get_content(version, file_name)
     return ontology
 
 def get_package_version(package_name):
@@ -33,7 +33,7 @@ def get_dtdl_interfaces(ontology_content: Dict):
 
 def main():
     mapped_version = get_package_version('Mapped.Ontologies.Core.Dtdl')
-    mapped_ontology = get_nuget_package('Mapped.Ontologies.Core.Dtdl', mapped_version)
+    mapped_ontology = get_nuget_package('Mapped.Ontologies.Core.Dtdl', mapped_version, 'mapped_dtdl.json')
     willow_version = get_package_version('WillowInc.Ontology.DTDLv3')
     willow_ontology = get_nuget_package('WillowInc.Ontology.DTDLv3', willow_version)
 

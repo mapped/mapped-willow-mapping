@@ -178,7 +178,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
 
             var ontologyMappingManager = new OntologyMappingManager(resourceLoader);
             var modelParser = new ModelParser();
-            var inputDtmi = LoadDtdl(new[] { "mapped_dtdl.json" });
+            var inputDtmi = LoadDtdl(new[] { "mapped_dtdl_strict.json" });
 
             try
             {

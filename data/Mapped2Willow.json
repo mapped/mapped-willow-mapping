@@ -987,7 +987,7 @@
       "OutputDtmi": "dtmi:com:willowinc:TemperatureSensor;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Furniture;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Furniture;1",
       "OutputDtmi": "dtmi:com:willowinc:Furniture;1"
     },
     {
@@ -1847,7 +1847,7 @@
       "OutputDtmi": "dtmi:com:willowinc:RefrigerationEquipment;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Refrigeration_System;1",
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Refrigeration_System;1",
       "OutputDtmi": "dtmi:com:willowinc:HVACRefrigerantSystem;1"
     },
     {
@@ -2647,11 +2647,11 @@
       "OutputDtmi": "dtmi:com:willowinc:AngleSensor;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Atrium;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Atrium;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Auditorium;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Auditorium;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -2735,7 +2735,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Building;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Building;1",
       "OutputDtmi": "dtmi:com:willowinc:Building;1"
     },
     {
@@ -3059,7 +3059,7 @@
       "OutputDtmi": "dtmi:com:willowinc:ConductivitySensor;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Conference_Room;1",
+      "InputDtmi": "dtmi:org:w3id:rec:ConferenceRoom;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -3507,7 +3507,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Elevator;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Elevator_Shaft;1",
+      "InputDtmi": "dtmi:org:w3id:rec:ElevatorShaft;1",
       "OutputDtmi": "dtmi:com:willowinc:ElevatorShaft;1"
     },
     {
@@ -3687,7 +3687,7 @@
       "OutputDtmi": "dtmi:com:willowinc:EnthalpySetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Entrance;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Entrance;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -3703,7 +3703,7 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Exercise_Room;1",
+      "InputDtmi": "dtmi:org:w3id:rec:ExerciseRoom;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -3975,7 +3975,7 @@
       "OutputDtmi": "dtmi:com:willowinc:HVACValve;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:HVAC_Zone;1",
+      "InputDtmi": "dtmi:org:w3id:rec:HVACZone;1",
       "OutputDtmi": "dtmi:com:willowinc:HVACZone;1"
     },
     {
@@ -3983,7 +3983,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Hallway;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Hallway;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -4311,7 +4311,7 @@
       "OutputDtmi": "dtmi:com:willowinc:AirDiffuser;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Laboratory;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Laboratory;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -4403,7 +4403,7 @@
       "OutputDtmi": "dtmi:com:willowinc:WaterTemperatureSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Library;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Library;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -4463,7 +4463,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Lobby;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Lobby;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -4479,7 +4479,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Parameter;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Lounge;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Lounge;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -4571,7 +4571,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Mail_Room;1",
+      "InputDtmi": "dtmi:org:w3id:rec:MailRoom;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -4955,10 +4955,6 @@
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirTemperatureSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Zone_Air_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ZoneAirTemperatureSetpoint;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Off_Command;1",
       "OutputDtmi": "dtmi:com:willowinc:OffActuator;1"
     },
@@ -4967,7 +4963,7 @@
       "OutputDtmi": "dtmi:com:willowinc:OffState;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Office;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Office;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -5187,7 +5183,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Level;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Parking_Space;1",
+      "InputDtmi": "dtmi:org:w3id:rec:ParkingSpace;1",
       "OutputDtmi": "dtmi:com:willowinc:ParkingSpot;1"
     },
     {
@@ -5223,7 +5219,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Capability;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Portfolio;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Portfolio;1",
       "OutputDtmi": "dtmi:com:willowinc:Portfolio;1"
     },
     {
@@ -5355,10 +5351,6 @@
       "OutputDtmi": "dtmi:com:willowinc:HVACHotWaterSystem;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Radioactivity_Concentration_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
-    },
-    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Radon_Concentration_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
     },
@@ -5379,11 +5371,11 @@
       "OutputDtmi": "dtmi:com:willowinc:ReactiveElectricalPowerSensor;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Reception;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Reception;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Region;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Region;1",
       "OutputDtmi": "dtmi:com:willowinc:Region;1"
     },
     {
@@ -5427,7 +5419,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Retail_Room;1",
+      "InputDtmi": "dtmi:org:w3id:rec:RetailRoom;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -5519,7 +5511,7 @@
       "OutputDtmi": "dtmi:com:willowinc:RooftopUnit;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Room;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Room;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -5603,7 +5595,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Site;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Site;1",
       "OutputDtmi": "dtmi:com:willowinc:Land;1"
     },
     {
@@ -5635,7 +5627,7 @@
       "OutputDtmi": "dtmi:com:willowinc:SolarZenithAngleSensor;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Space;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Space;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -5959,7 +5951,7 @@
       "OutputDtmi": "dtmi:com:willowinc:TVOCAirQualitySensor;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Team_Room;1",
+      "InputDtmi": "dtmi:org:w3id:rec:TeamRoom;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
@@ -6061,10 +6053,6 @@
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Torque_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:TorqueSensor;1"
-    },
-    {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Trace_Heat_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Transfer_Fan;1",
@@ -6335,15 +6323,15 @@
       "OutputDtmi": "dtmi:com:willowinc:WindSpeedSensor;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Wing;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Wing;1",
       "OutputDtmi": "dtmi:com:willowinc:ArchitecturalBuildingComponent;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Workshop;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Workshop;1",
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
-      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Zone;1",
+      "InputDtmi": "dtmi:org:w3id:rec:Zone;1",
       "OutputDtmi": "dtmi:com:willowinc:Zone;1"
     },
     {
