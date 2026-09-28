@@ -143,6 +143,10 @@
       "OutputDtmi": "dtmi:com:willowinc:VAVAirflowControlValve;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Air_Velocity_Pressure_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirVelocityPressureSensor;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Aircraft_Docked_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:airport:AircraftDockState;1"
     },
@@ -165,6 +169,14 @@
     {
       "InputDtmi": "dtmi:mapped:core:Airport_Gate;1",
       "OutputDtmi": "dtmi:com:willowinc:airport:AirportGate;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Pressure_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirPressureSensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Air_Pressure_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:AirPressureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Airport_Terminal;1",
@@ -297,6 +309,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Battery_Charger;1",
       "OutputDtmi": "dtmi:com:willowinc:VehicleEquipment;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Battery_Level_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:BatteryLevelState;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Battery_Status;1",
@@ -559,6 +575,10 @@
       "OutputDtmi": "dtmi:com:willowinc:OnOffState;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Cooling_Zone_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:CoolingZoneAirTemperatureSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Correlated_Color_Temperature_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:Sensor;1"
     },
@@ -745,6 +765,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Effective_Occupied_Mode_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:ModeState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Effective_Target_Zone_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:TargetZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Electric_Cart_Mover;1",
@@ -1129,6 +1153,10 @@
     {
       "InputDtmi": "dtmi:mapped:core:Heating_Thermal_Energy_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:ThermalEnergySensor;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Heating_Zone_Air_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:HeatingZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:High_Frequency_Alarm;1",
