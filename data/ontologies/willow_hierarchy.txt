@@ -1,0 +1,1154 @@
+WILLOW ONTOLOGY CLASS HIERARCHY
+==================================================
+
+
+Asset (dtmi:com:willowinc:Asset;1)
+Total descendants: 948
+----------------------------------------
+- Architectural Asset
+  - Barrier Asset
+    - Access Panel
+    - Door
+      - Overhead Door
+      - Revolving Door
+        - Automatic Revolving Door
+      - Sliding Door
+        - Automatic Sliding Door
+    - Partition
+    - Turnstile
+    - Window
+  - Barrier Asset Hardware
+    - Door Hardware
+      - Automatic Door Opener
+    - Window Hardware
+  - Bath Accessory
+    - Shower Partition
+    - Towel Storage
+      - Towel Bar
+      - Towel Rack
+      - Towel Ring
+  - Fish Tank
+  - Hand Sanitizer Dispenser
+  - Hand Soap Dispenser
+  - Key Storage Cabinet
+  - Mirror
+    - Lighted Mirror
+  - Restroom Accessory
+    - Hand Dryer
+    - Paper Towel Dispenser
+    - Shower Partition
+    - Toilet Partition
+    - Toilet Seat Cover Dispenser
+    - Urinal Partition
+  - Security Safe
+  - Toilet Accessory
+    - Toilet Paper Dispenser
+    - Toilet Partition
+    - Toilet Seat Cover Dispenser
+    - Urinal Partition
+- Distribution Asset
+  - Cable
+    - Electrical Cable
+    - Telecommunication Cable
+      - Coaxial Cable
+      - Fiber Optic Cable
+        - Multimode Fiber Optic Cable
+        - Singlemode Fiber Optic Cable
+      - Telecommunication Patch Cord
+        - Coaxial Patch Cord
+        - Fiber Optic Patch Cord
+        - Multimode Fiber Optic Patch Cord
+        - Singlemode Fiber Optic Patch Cord
+        - Twisted Pair Patch Cord
+      - Twisted Pair Cable
+  - Distribution Connector
+    - HVAC Duct Fitting
+    - Handhole
+    - Manhole
+    - Pipe Fitting
+      - Pipe Fitting Adapter
+      - Pipe Fitting Cap
+      - Pipe Fitting Coupling
+      - Pipe Fitting Cross
+      - Pipe Fitting Elbow
+      - Pipe Fitting Flange
+      - Pipe Fitting Plug
+        - Drain Cleanout
+      - Pipe Fitting Tee
+      - Pipe Fitting Trap
+      - Pipe Fitting Wye
+    - Storm Sewer Inlet
+      - Curb Inlet
+        - Combination Grate-Curb Inlet
+      - Drop Curb Inlet
+      - Drop Grate Inlet
+      - Grate Inlet
+        - Combination Grate-Curb Inlet
+    - Storm Sewer Outlet
+      - Headwall
+    - Telecommunication Cable Connector
+      - Coaxial Cable Connector
+      - Fiber Optic Cable Adapter
+        - Multimode Fiber Optic Cable Adapter
+        - Singlemode Fiber Optic Cable Adapter
+      - Fiber Optic Cable Connector
+        - Multimode Fiber Optic Cable Connector
+        - Singlemode Fiber Optic Cable Connector
+      - Twisted Pair Cable Connector
+        - RJ45 Jack
+        - RJ45 Plug
+  - Distribution Raceway
+    - Cable Tray
+    - Conduit
+  - Distribution Storage
+    - Water Storage Basin
+      - Catch Basin
+      - Cistern
+  - HVAC Duct
+    - HVAC Oval Duct
+    - HVAC Rectangular Duct
+    - HVAC Round Duct
+  - Pipe
+- Equipment
+  - Airport Equipment
+    - Aircraft Boarding Equipment
+      - Aircraft Boarding Chair
+      - Passenger Boarding Bridge
+      - Passenger Boarding Lift
+      - Passenger Boarding Ramp
+    - Aircraft Electrical Equipment
+      - Aircraft Ground Power Unit
+    - Aircraft HVAC Equipment
+      - Aircraft Preconditioned Air Unit
+    - Airfield Signage Equipment
+      - Boundary Sign
+        - ILS Critical Area / POFZ Boundary Sign
+        - RSA/OFZ and Runway Approach/Departure Boundary Sign
+      - Destination Sign
+        - Inbound Destination Sign
+        - Outbound Destination Sign
+      - Direction Sign
+        - Runway Exit Sign
+        - Taxiway Direction Sign
+      - Information Sign
+        - VOR Receiver Checkpoint Sign
+      - Location Sign
+        - Runway Location Sign
+        - Taxiway Location Sign
+      - Mandatory Instruction Sign
+        - Holding Position Sign
+          - ILS Critical Area / POFZ Holding Position Sign
+          - Military Landing Zone Holding Position Sign
+          - Runway Approach/Departure Holding Position Sign
+          - Runway Intersection Holding Position Sign
+        - No Entry Sign
+      - Runway Distance Remaining Sign
+      - Runway One-Half Distance Remaining Sign
+      - Taxiway Ending Marker Sign
+      - Vehicle Roadway Sign
+    - Airport ICT Equipment
+      - Airport Audio Visual Equipment
+        - Airport Display
+          - Display
+    - Baggage Handling Equipment
+      - Baggage Conveyor
+        - Baggage Claim Carousel
+        - Passenger Check-In Baggage Conveyor
+      - Baggage Scale
+      - Baggage Screening Equipment
+    - Lighting Equipment
+      - Approach Light Fixture
+        - Omni-Directional Approach Light (ODAL) Fixture
+        - Precision Approach Path Indicator (PAPI) Light Fixture
+        - Runway End Identifier Light (REIL) Fixture
+      - Obstruction Light Fixture
+      - Rotating Beacon
+      - Runway Light Fixture
+        - Runway Centerline Light Fixture
+        - Runway Edge Light Fixture
+        - Runway Touchdown Light Fixture
+      - Taxiway Light Fixture
+        - Runway Guard Light Fixture
+          - Combination Runway Stop Bar - Runway Guard Light Fixture
+        - Runway Stop Bar Light Fixture
+          - Combination Runway Stop Bar - Runway Guard Light Fixture
+        - Taxiway Centerline Light Fixture
+        - Taxiway Edge Light Fixture
+    - Wind Cone
+  - Cleaning Equipment
+    - Floor Buffer
+    - Floor Burnisher
+    - Floor Scrubber
+    - Vacuum
+      - Combination Cleaner Vacuum
+  - Conveyance Equipment
+    - Baggage Conveyor
+      - Baggage Claim Carousel
+      - Passenger Check-In Baggage Conveyor
+    - Elevating Platform Lift
+      - Scissor Lift
+      - Telescoping Platform Lift
+    - Elevator
+    - Elevator Machine
+    - Escalator
+    - Moving Walkway
+    - Vehicle Service Lift
+  - Electrical Equipment
+    - Aircraft Electrical Equipment
+      - Aircraft Ground Power Unit
+    - Electrical Distribution Equipment
+      - Busway
+      - Disconnect Switch
+      - Electric Vehicle Charging Station
+      - Electrical Panelboard
+        - Electrical Panelboard MCB
+        - Electrical Panelboard MLO
+      - Electrical Wiring Device
+        - Electrical Receptacle
+        - Electrical Switch
+      - Motor Control Center
+      - Motor Controller
+        - Motor Starter
+          - Across-the-Line Motor Starter
+          - Reduced Voltage Motor Starter
+          - Reversing Motor Starter
+        - Variable Frequency Drive
+      - Switchboard
+      - Switchgear
+        - Low-voltage Switchgear
+        - Medium-voltage Switchgear
+      - Transfer Switch
+        - Automatic Transfer Switch
+        - Maintenance Bypass Switch
+      - Transformer
+    - Electrical Generation & Storage Equipment
+      - Battery Equipment
+        - Battery Cabinet
+        - Battery Charger
+        - Battery Rack
+        - Battery System
+      - Generator
+        - Cogenerator
+      - Inverter
+        - Solar Inverter
+      - PV Panel
+      - UPS
+      - Voltage Regulator
+  - Fire Protection Equipment
+    - Fire Alarm Equipment
+      - Fire Alarm Control Panel
+      - Fire Alarm Initiating Device
+        - Fire Alarm Flow Switch
+        - Fire Alarm Pressure Switch
+        - Fire Alarm Pull Station
+        - Fire Detector
+          - Carbon Monoxide Detector
+            - Smoke and Carbon Monoxide Detector
+          - Heat Detector
+          - Smoke Detector
+            - Duct Smoke Detector
+            - Smoke and Carbon Monoxide Detector
+      - Fire Alarm Notification Appliance
+        - Fire Alarm Bell
+        - Fire Alarm Chime
+          - Fire Alarm Chime Strobe
+        - Fire Alarm Horn
+          - Fire Alarm Horn Strobe
+        - Fire Alarm Speaker
+          - Fire Alarm Speaker Strobe
+        - Fire Alarm Strobe
+          - Fire Alarm Chime Strobe
+          - Fire Alarm Horn Strobe
+          - Fire Alarm Speaker Strobe
+    - Fire Suppression Equipment
+      - Clean Agent Equipment
+        - Clean Agent Cabinet
+        - Clean Agent Tank
+      - Fire Extinguisher
+      - Fire Hydrant
+      - Fire Suppression Tank
+      - Sprinkler Equipment
+        - Fire Pump
+        - Fire Sprinkler Head
+        - Fire Sprinkler Riser Manifold
+        - Heat Tracing (Sprinkler)
+        - Jockey Pump
+        - Pre-Action Equipment
+          - Pre-Action Cabinet
+          - Pre-Action Tank
+        - Sprinkler Tank
+        - Sprinkler Valve
+          - Backflow Preventer (Sprinkler)
+          - Balancing Valve (Sprinkler)
+          - Check Valve (Sprinkler)
+          - Globe Valve (Sprinkler)
+          - Pressure Reducing Station (Sprinkler)
+          - Pressure-reducing Valve (Sprinkler)
+          - Shut-off Valve (Sprinkler)
+          - Solenoid Valve (Sprinkler)
+  - Fitness Equipment
+    - Cardio Fitness Equipment
+      - Stationary Bicycle
+      - Treadmill
+    - Strength Fitness Equipment
+  - Foodservice Equipment
+    - Beverage Equipment
+    - Cooking Equipment
+      - Cooktop
+      - Fryer
+      - Oven
+        - Combi Oven
+        - Microwave Oven
+          - Convection Microwave Oven
+        - Rotisserie Oven
+    - Dishwashing Equipment
+      - Dishwasher
+      - Garbage Disposal
+    - Food Display Equipment
+      - Food Display Case
+        - Dry Food Display Case
+        - Hot Food Display Case
+        - Refrigerated Food Display Case
+          - Low-Temperature Refrigerated Food Display Case
+          - Medium-Temperature Refrigerated Food Display Case
+    - Food Preparation Equipment
+      - Blender
+      - Bread Slicer
+      - Food Packaging Equipment
+        - Food Packaging Vacuum Sealer
+      - Food Preparation Work Table
+      - Food Processor
+      - Meat Slicer
+      - Mixer
+      - Salad Dryer
+    - Food Storage Equipment
+      - Food Storage Rack
+      - Food Storage Refrigeration Equipment
+        - Blast Chiller
+        - Freezer
+        - Ice Machine
+        - Refrigerator
+        - Walk-In Refrigeration Equipment
+          - Walk-In Cooler
+            - Walk-In Combination Cooler / Freezer
+          - Walk-In Freezer
+            - Walk-In Combination Cooler / Freezer
+    - Food Transport Equipment
+      - Foodservice Cart
+        - Beverage Service Cart
+        - Condiment Cart
+        - Dish Cleanup Cart
+        - Dish Storage Cart
+      - Foodservice Dolly
+    - Food Warming Equipment
+  - General-purpose Equipment
+    - Coil
+      - Cooling Coil
+      - Economizer Coil
+      - Heating Coil
+        - Preheat Coil
+        - Reheat Coil
+    - Compressor
+      - HVAC Compressor
+      - Refrigeration Compressor
+        - Low-Temperature Refrigeration Compressor
+        - Medium-Temperature Refrigeration Compressor
+    - Condenser
+      - Air-Cooled Condenser
+        - Air-Cooled Refrigeration Condenser
+      - Refrigeration Condenser
+        - Air-Cooled Refrigeration Condenser
+        - Water-Cooled Refrigeration Condenser
+      - Water-Cooled Condenser
+        - Water-Cooled Refrigeration Condenser
+    - Energy Recovery Device
+    - Evaporator
+    - Fan
+      - HVAC Fan
+        - Air Curtain
+        - Booster Fan
+        - Ceiling Fan
+        - Exhaust Fan
+        - Outside Air Fan
+        - Pressurization Fan
+          - Elevator Pressurization Fan
+          - Stair Pressurization Fan
+        - Relief Fan
+        - Return Fan
+        - Supply Fan
+          - Cold Deck Supply Fan
+          - Hot Deck Supply Fan
+        - Transfer Fan
+    - Heat Tracing
+      - Heat Tracing (HVAC)
+      - Heat Tracing (Plumbing)
+      - Heat Tracing (Sprinkler)
+    - Manifold
+      - Fire Sprinkler Riser Manifold
+      - HVAC Manifold
+        - Radiant Heating Manifold
+      - Plumbing Manifold
+    - Pump
+      - Fire Pump
+      - HVAC Pump
+        - Condensate Pump
+          - Steam Condensate Pump
+        - Hydronic Pump
+          - Chilled Water Pump
+          - Condenser Water Pump
+          - Heating Hot Water Pump
+          - Hydronic Circulating Pump
+      - Jockey Pump
+      - Plumbing Pump
+        - Domestic Water Pump
+          - Domestic Hot Water Circulating Pump
+          - Domestic Water Booster Pump
+        - Ejector Pump
+        - Irrigation Pump
+        - Sump Pump
+    - Tank
+      - Fish Tank
+      - HVAC Tank
+      - Plumbing Tank
+        - Dilution Tank
+        - Expansion Tank
+        - Plumbing Storage Tank
+      - Refrigeration Tank
+        - Refrigeration Liquid Refrigerant Receiver
+        - Refrigeration Suction Line Accumulator
+      - Sprinkler Tank
+    - Valve
+      - Bypass Valve
+      - HVAC Valve
+        - Backflow Preventer (HVAC)
+        - Balancing Valve (HVAC)
+        - Check Valve (HVAC)
+        - Chilled Water Valve
+        - Condenser Water Valve
+        - Globe Valve (HVAC)
+        - Heating Hot Water Valve
+          - Preheat Hot Water Valve
+          - Reheat Hot Water Valve
+        - Pressure Reducing Station (HVAC)
+        - Pressure Reducing Valve (HVAC)
+        - Refrigerant Valve
+          - Refrigerant Metering Device
+            - Electronic Expansion Valve
+            - Thermal Expansion Valve
+          - Reversing Valve
+        - Shut-off Valve (HVAC)
+        - Solenoid Valve (HVAC)
+        - Steam Valve
+      - Isolation Valve
+        - Shut-Off Valve (Plumbing)
+        - Shut-off Valve (HVAC)
+      - Plumbing Valve
+        - Backflow Preventer (Plumbing)
+        - Balancing Valve (Plumbing)
+        - Check Valve (Plumbing)
+        - Globe Valve (Plumbing)
+        - Pressure Reducing Station (Plumbing)
+        - Pressure Reducing Valve (Plumbing)
+        - Shut-Off Valve (Plumbing)
+        - Solenoid Valve (Plumbing)
+      - Sprinkler Valve
+        - Backflow Preventer (Sprinkler)
+        - Balancing Valve (Sprinkler)
+        - Check Valve (Sprinkler)
+        - Globe Valve (Sprinkler)
+        - Pressure Reducing Station (Sprinkler)
+        - Pressure-reducing Valve (Sprinkler)
+        - Shut-off Valve (Sprinkler)
+        - Solenoid Valve (Sprinkler)
+  - HVAC Equipment
+    - Air Filter
+      - Final Filter
+      - Mixed Air Filter
+      - Outside Air Filter
+      - Pre-Filter
+      - Return Air Filter
+    - Air Handling Unit
+      - Computer Room Air Conditioning (CRAC) Unit
+      - Computer Room Air Handling (CRAH) Unit
+      - Dedicated Outdoor Air System
+        - EnergyRecoveryVentilator
+      - Makeup Air Unit
+      - Rooftop Unit
+        - Heat Pump Rooftop Unit
+    - Air Handling Unit Section
+      - Air Handling Unit Discharge Section
+        - Cold Deck Air Handling Unit Discharge Section
+        - Hot Deck Air Handling Unit Discharge Section
+        - Neutral Deck Air Handling Unit Discharge Section
+      - Air Handling Unit Exhaust Section
+      - Air Handling Unit Fan Section
+      - Air Handling Unit Return Section
+      - Air Handling Unit Section
+    - Air Inlets and Outlets
+      - Air Diffuser
+        - Return Air Diffuser
+        - Supply Air Diffuser
+      - Air Grille
+        - Return Air Grille
+        - Supply Air Grille
+      - Air Register
+        - Return Air Register
+        - Supply Air Register
+    - Air Treatment (HVAC)
+      - Dehumidifier
+        - Desiccant Dehumidifier
+      - Humidifier
+    - Aircraft HVAC Equipment
+      - Aircraft Preconditioned Air Unit
+    - Chiller
+      - Absorption Chiller
+      - Air-Cooled Chiller
+      - Heat Pump Chiller
+        - Air-Cooled Heat Pump Chiller
+        - Water-Cooled Heat Pump Chiller
+      - Heat Recovery Chiller
+        - Air-Cooled Heat Recovery Chiller
+        - Water-Cooled Heat Recovery Chiller
+      - Water-Cooled Chiller
+    - Condensing Unit
+      - Ground Source Condensing Unit
+        - Ground Source Heat Pump Condensing Unit
+      - Heat Pump Condensing Unit
+        - Ground Source Heat Pump Condensing Unit
+        - VRF Heat Pump Outdoor Unit
+          - VRF Water Source Heat Pump Outdoor Unit
+        - Water Source Heat Pump Condensing Unit
+      - Heat Recovery Condensing Unit
+        - VRF Heat Recovery Outdoor Unit
+          - VRF Water Source Heat Recovery Outdoor Unit
+        - Water Source Heat Recovery Condensing Unit
+      - VRF Outdoor Unit
+        - VRF Heat Pump Outdoor Unit
+          - VRF Water Source Heat Pump Outdoor Unit
+        - VRF Heat Recovery Outdoor Unit
+          - VRF Water Source Heat Recovery Outdoor Unit
+      - Water Source Condensing Unit
+        - VRF Water Source Heat Pump Outdoor Unit
+        - VRF Water Source Heat Recovery Outdoor Unit
+        - Water Source Heat Pump Condensing Unit
+        - Water Source Heat Recovery Condensing Unit
+    - Cooling Tower
+      - Adiabatic Cooler
+      - Dry Cooler
+        - Hybrid Cooling Tower
+      - Evaporative Cooling Tower
+        - Direct Evaporative Cooling Tower
+        - Hybrid Cooling Tower
+        - Indirect Evaporative Cooling Tower
+    - Duct Heater
+      - Electric Duct Heater
+      - Hot Water Duct Heater
+      - Steam Duct Heater
+    - Duct Silencer
+    - HVAC Compressor
+    - HVAC Damper
+      - Backdraft Damper
+        - Relief Damper
+          - Barometric Relief Damper
+      - Bypass Damper
+        - Energy Recovery Device Discharge Air Bypass Damper
+        - Energy Recovery Device Return Air Bypass Damper
+      - Economizer Damper
+        - Preconditioned Economizer Damper
+      - Exhaust Damper
+      - Face and Bypass Damper
+      - Fire Damper
+        - Fire/Smoke Damper
+      - Inlet Damper
+        - Cold Deck Inlet Damper
+        - Hot Deck Inlet Damper
+        - Neutral Deck Inlet Damper
+      - Min Outside Air Damper
+        - Preconditioned Min Outside Air Damper
+      - Mixed Damper
+      - Outside Air Damper
+        - Preconditioned Outside Air Damper
+      - Return Damper
+      - Smoke Damper
+        - Fire/Smoke Damper
+      - Zone Damper
+    - HVAC Fan
+      - Air Curtain
+      - Booster Fan
+      - Ceiling Fan
+      - Exhaust Fan
+      - Outside Air Fan
+      - Pressurization Fan
+        - Elevator Pressurization Fan
+        - Stair Pressurization Fan
+      - Relief Fan
+      - Return Fan
+      - Supply Fan
+        - Cold Deck Supply Fan
+        - Hot Deck Supply Fan
+      - Transfer Fan
+    - HVAC Manifold
+      - Radiant Heating Manifold
+    - HVAC Probe Heater
+    - HVAC Pump
+      - Condensate Pump
+        - Steam Condensate Pump
+      - Hydronic Pump
+        - Chilled Water Pump
+        - Condenser Water Pump
+        - Heating Hot Water Pump
+        - Hydronic Circulating Pump
+    - HVAC Tank
+    - HVAC Valve
+      - Backflow Preventer (HVAC)
+      - Balancing Valve (HVAC)
+      - Check Valve (HVAC)
+      - Chilled Water Valve
+      - Condenser Water Valve
+      - Globe Valve (HVAC)
+      - Heating Hot Water Valve
+        - Preheat Hot Water Valve
+        - Reheat Hot Water Valve
+      - Pressure Reducing Station (HVAC)
+      - Pressure Reducing Valve (HVAC)
+      - Refrigerant Valve
+        - Refrigerant Metering Device
+          - Electronic Expansion Valve
+          - Thermal Expansion Valve
+        - Reversing Valve
+      - Shut-off Valve (HVAC)
+      - Solenoid Valve (HVAC)
+      - Steam Valve
+    - Heat Exchanger
+      - Plate Heat Exchanger
+        - Brazed Plate Heat Exchanger
+        - Plate-and-frame Heat Exchanger
+        - Welded Plate Heat Exchanger
+      - Shell-and-tube Heat Exchanger
+    - Heat Tracing (HVAC)
+    - Hydronic Air Separator
+    - Packaged Air Conditioner
+      - Packaged Heat Pump
+        - Air-Source Packaged Heat Pump
+        - Ground-Source Packaged Heat Pump
+        - Water-Source Packaged Heat Pump
+      - Portable Air Conditioner
+      - Rooftop Unit
+        - Heat Pump Rooftop Unit
+      - Wall Air Conditioner
+        - Packaged Terminal Air Conditioner (PTAC)
+      - Water-Source Packaged Air Conditioner
+      - Window Air Conditioner
+    - Radiant Heater
+      - Electric Radiant Heater
+        - Electric Baseboard Heater
+      - Hydronic Radiant Heater
+        - Hydronic Baseboard Heater
+    - Steam Trap
+    - Terminal Unit
+      - CAV Box
+        - CAV Box with Reheat
+      - Chilled Beam
+        - Active Chilled Beam
+        - Passive Chilled Beam
+      - Fan Coil Unit
+        - Fan Coil Unit with Reheat
+        - Horizontal Fan Coil Unit
+          - Horizontal Fan Coil Unit with Reheat
+        - VRF Indoor Unit
+        - Vertical Fan Coil Unit
+          - Vertical Fan Coil Unit with Reheat
+          - Vertical Stack Fan Coil Unit
+            - Vertical Stack Fan Coil Unit with Reheat
+      - VAV Airflow Control Valve
+        - Exhaust VAV Airflow Control Valve
+          - Fume Exhaust VAV Airflow Control Valve
+          - General Exhaust VAV Airflow Control Valve
+        - Return VAV Airflow Control Valve
+        - Supply VAV Airflow Control Valve
+          - Supply VAV Airflow Control Valve with Reheat
+      - VAV Box
+        - Dual Duct VAV Box
+        - Fan Powered Box
+          - Fan Powered Box with Reheat
+        - VAV Box with Reheat
+    - Unit Heater
+      - Electric Unit Heater
+      - Hot Water Unit Heater
+      - Steam Unit Heater
+    - Ventilation Hood
+      - Fume Hood
+        - Benchtop Fume Hood
+        - Snorkel Exhaust Fume Hood
+        - Walk-In Fume Hood
+    - Water Treatment (HVAC)
+      - Water Filtration (HVAC)
+  - ICT Equipment
+    - Airport ICT Equipment
+      - Airport Audio Visual Equipment
+        - Airport Display
+          - Display
+    - Audio Visual Equipment
+      - Airport Audio Visual Equipment
+        - Airport Display
+          - Display
+      - Audio Amplifier
+      - Audio Digital Signal Processor (DSP)
+    - Controller
+      - BACnet Controller
+      - Modbus Controller
+    - Data Network Equipment
+      - Ethernet Router
+      - Ethernet Switch
+      - Ethernet Switch Port
+      - Gateway
+      - Network Security Equipment
+      - Wireless Access Point
+    - ICT Hardware
+      - Computer Monitor
+        - All-In-One Desktop Computer
+      - Desktop Computer
+        - All-In-One Desktop Computer
+      - Laptop Computer
+      - Server
+    - IT Rack
+    - Sensor Equipment
+      - Daylight Sensor Equipment
+      - Gas Detector
+      - Indoor Air Quality Sensor Equipment
+      - Leak Detector
+      - Occupancy Sensor Equipment
+      - People Count Sensor Equipment
+      - Thermostat
+      - Vibration Sensor Equipment
+      - Water Quality Sensor
+      - Weather Station
+    - Structured Cabling Equipment
+      - Copper Cabling Equipment
+        - Copper Cabling Patch Panel
+      - Fiber Optic Cabling Equipment
+        - Fiber Optic Cabling Patch Panel
+      - Patch Panel
+        - Copper Cabling Patch Panel
+        - Fiber Optic Cabling Patch Panel
+  - Laundry Equipment
+    - Dryer
+      - Combination Washer Dryer
+      - Stacked Laundry Center
+    - Washer
+      - Combination Washer Dryer
+      - Stacked Laundry Center
+  - Lighting Equipment
+    - Lighting Controller
+    - Lighting Equipment
+      - Approach Light Fixture
+        - Omni-Directional Approach Light (ODAL) Fixture
+        - Precision Approach Path Indicator (PAPI) Light Fixture
+        - Runway End Identifier Light (REIL) Fixture
+      - Obstruction Light Fixture
+      - Rotating Beacon
+      - Runway Light Fixture
+        - Runway Centerline Light Fixture
+        - Runway Edge Light Fixture
+        - Runway Touchdown Light Fixture
+      - Taxiway Light Fixture
+        - Runway Guard Light Fixture
+          - Combination Runway Stop Bar - Runway Guard Light Fixture
+        - Runway Stop Bar Light Fixture
+          - Combination Runway Stop Bar - Runway Guard Light Fixture
+        - Taxiway Centerline Light Fixture
+        - Taxiway Edge Light Fixture
+    - Luminaire
+      - Indoor Luminaire
+      - Outdoor Luminaire
+        - Bollard Luminaire
+        - Light Pole
+    - Safety Lighting
+      - Emergency Light
+      - Emergency Lighting Power Inverter
+      - Exit Sign
+  - Material Handling Equipment
+    - Forklift
+    - Positioning Equipment
+    - Shopping Cart Mover
+    - Storage Equipment
+    - Transport Equipment
+      - Cart
+        - Foodservice Cart
+          - Beverage Service Cart
+          - Condiment Cart
+          - Dish Cleanup Cart
+          - Dish Storage Cart
+      - Dolly
+        - Foodservice Dolly
+      - Food Transport Equipment
+        - Foodservice Cart
+          - Beverage Service Cart
+          - Condiment Cart
+          - Dish Cleanup Cart
+          - Dish Storage Cart
+        - Foodservice Dolly
+      - Hand Truck
+      - Pallet Jack
+      - Pallet Stacker
+    - Unit Load Formation Equipment
+      - Pallet
+  - Meter Equipment
+    - Electrical Meter
+    - Gas Meter
+    - Thermal Meter
+      - Chilled Water Meter
+      - Hot Water Meter
+      - Steam Meter
+    - Water Meter
+  - Plumbing Equipment
+    - Air Admittance Valve
+    - Boiler
+      - Condensing Boiler
+      - Non-Condensing Boiler
+    - Chemical Dilution Drainage Equipment
+      - Dilution Tank
+      - Dilution Trap
+    - Compressed Air Equipment
+      - Air Compressor
+      - Air Compressor Dryer
+      - Air Compressor Filter
+      - Air Receiver Tank
+    - Drain
+      - Floor Drain
+      - Roof Drain
+    - Fats, Oils, and Grease Disposal
+      - Grease Interceptor
+      - Grease Trap
+    - Heat Tracing (Plumbing)
+    - Plumbing Fixture
+      - Bathtub
+      - Drinking Water Fixture
+        - Drinking Fountain
+        - Drinking Fountain Remote Water Chiller
+        - Drinking Water Bottle Filling Station
+      - Emergency Plumbing Fixture
+        - Emergency Eye Wash Station
+          - Emergency Eye Wash / Shower
+        - Emergency Shower
+          - Emergency Eye Wash / Shower
+      - Faucet
+        - Hose Bibb
+        - Shower Head
+      - Flushometer-Valve
+      - Shower
+      - Sink
+      - Toilet
+        - Toilet with Flushometer
+        - Toilet with Tank
+      - Urinal
+        - Urinal - Waterless
+        - Urinal with Flushometer
+    - Plumbing Manifold
+    - Plumbing Pump
+      - Domestic Water Pump
+        - Domestic Hot Water Circulating Pump
+        - Domestic Water Booster Pump
+      - Ejector Pump
+      - Irrigation Pump
+      - Sump Pump
+    - Plumbing Tank
+      - Dilution Tank
+      - Expansion Tank
+      - Plumbing Storage Tank
+    - Plumbing Valve
+      - Backflow Preventer (Plumbing)
+      - Balancing Valve (Plumbing)
+      - Check Valve (Plumbing)
+      - Globe Valve (Plumbing)
+      - Pressure Reducing Station (Plumbing)
+      - Pressure Reducing Valve (Plumbing)
+      - Shut-Off Valve (Plumbing)
+      - Solenoid Valve (Plumbing)
+    - Vent Pipe Filter
+    - Water Heater
+      - Tank Water Heater
+        - Electric Tank Water Heater
+        - Gas Tank Water Heater
+      - Tankless Water Heater
+        - Electric Tankless Water Heater
+        - Gas Tankless Water Heater
+    - Water Treatment (Plumbing)
+      - Water Filtration (Plumbing)
+      - Water Softener
+  - Refrigeration Equipment
+    - Packaged Refrigeration Unit
+    - Refrigeration Compressor
+      - Low-Temperature Refrigeration Compressor
+      - Medium-Temperature Refrigeration Compressor
+    - Refrigeration Compressor Rack
+      - Low-Temperature Refrigeration Compressor Rack
+      - Medium-Temperature Refrigeration Compressor Rack
+    - Refrigeration Condenser
+      - Air-Cooled Refrigeration Condenser
+      - Water-Cooled Refrigeration Condenser
+    - Refrigeration Evaporator Unit
+    - Refrigeration Heat Exchanger
+      - Refrigeration Desuperheater
+      - Refrigeration Subcooler
+    - Refrigeration Tank
+      - Refrigeration Liquid Refrigerant Receiver
+      - Refrigeration Suction Line Accumulator
+  - Retail Equipment
+    - Paint Retail Equipment
+      - Paint Color Identifier
+      - Paint Dispenser
+      - Paint Shaker
+    - Payment Equipment
+      - Payment Terminal
+      - Point-Of-Sale Register
+    - Retail Scale
+    - Shopping Cart Mover
+  - Safety Equipment
+    - Emergency Preparedness Equipment
+      - Building Emergency Supply Kit
+  - Security Equipment
+    - Access Control Equipment
+      - Access Control Panel
+      - Access Keypad
+        - Access Reader with Keypad
+      - Access Reader
+        - Access Reader with Keypad
+      - Duress Alarm Button
+      - Intercom Entry
+      - Request to Exit Device
+    - Intrusion Detection Equipment
+    - Video Surveillance Equipment
+      - Network Video Recorder
+      - Video Surveillance Camera
+  - Swimming Pool Equipment
+  - Vehicle Equipment
+    - Loading Dock Equipment
+      - Loading Dock Leveler
+        - Edge of Dock Loading Dock Leveler
+        - Pit Loading Dock Leveler
+        - Vertical Loading Dock Leveler
+          - Rail Loading Dock Leveler
+    - Parking Equipment
+      - Parking Payment Equipment
+      - Parking Ticket Dispenser
+    - Traffic Equipment
+      - Pedestrian Signal
+      - Traffic Signal
+    - Vehicle Access Control Equipment
+      - Vehicle Bollard
+      - Vehicle Gate Barrier
+      - Vehicle Wedge Barrier
+    - Vehicle Service Lift
+  - Waste Handling Equipment
+    - Waste Baler
+    - Waste Compactor
+- Furniture
+  - Bed
+  - Chair
+  - Table
+  - Workstation
+- Vehicle
+  - Airport Vehicle
+    - Aircraft
+  - Forklift
+  - Motorized Shopping Cart
+
+Collection (dtmi:com:willowinc:Collection;1)
+Total descendants: 137
+----------------------------------------
+- Asset Collection
+  - Architectural Asset Collection
+  - Distribution Asset Collection
+    - Distribution Raceway Collection
+      - Duct Bank
+  - Equipment Collection
+    - Equipment Group
+      - Conveyance Equipment Group
+      - Electrical Equipment Group
+        - PV Array
+      - Fire Protection Equipment Group
+        - Pump Group (Sprinkler)
+      - General-purpose Equipment Group
+        - Pump Group
+          - Pump Group (HVAC)
+          - Pump Group (Plumbing)
+          - Pump Group (Sprinkler)
+      - HVAC Equipment Group
+        - Air Handling Unit Group
+        - Chilled Beam Group
+        - Chiller Group
+        - Cooling Tower Group
+        - Fan Group (HVAC)
+          - Exhaust Fan Group
+          - Return Fan Group
+          - Supply Fan Group
+        - HVAC Plant
+          - Cooling Plant
+            - Chilled Water Plant
+            - Condenser Water Plant
+          - Heating Plant
+            - Hot Water Plant
+            - Steam Plant
+        - Heat Exchanger Group
+        - Pump Group (HVAC)
+      - ICT Equipment Group
+      - Lighting Equipment Group
+      - Meter Equipment Group
+      - Plumbing Equipment Group
+        - Boiler Group
+        - Pump Group (Plumbing)
+      - Refrigeration Equipment Group
+        - Refrigeration Circuit
+        - Refrigeration Compressor Group
+      - Security Equipment Group
+    - System
+      - Airport System
+        - Airfield Lighting System
+          - Approach Lighting System
+            - Medium Intensity Approach Lighting System (MALS)
+            - Omni-Directional Approach Lighting System (ODALS)
+          - Land and Hold Short Lighting System
+          - Taxiway Clearance Bar
+        - Baggage Handling System
+          - Arrival Baggage Handling System
+          - Departure Baggage Handling System
+      - Conveyance System
+        - Pneumatic Tube System
+      - Electrical System
+        - AC Electrical System
+        - DC Electrical System
+        - Electrical Circuit
+          - Electrical Circuit 1-Pole
+          - Electrical Circuit 2-Pole
+          - Electrical Circuit 3-Pole
+      - Fire Protection System
+        - Fire Alarm System
+        - Fire Suppression System
+          - Clean Agent System
+          - Sprinkler System
+            - Pre-Action Sprinkler System
+      - HVAC System
+        - HVAC Air System
+          - HVAC Conditioned Air System
+            - HVAC Outside Air System
+            - HVAC Return Air System
+            - HVAC Supply Air System
+          - HVAC Exhaust Air System
+            - HVAC Grease Exhaust Air System
+          - HVAC Transfer Air System
+        - HVAC Refrigerant System
+          - VRF System
+        - HVAC Steam System
+        - HVAC Water System
+          - HVAC Chilled Water System
+          - HVAC Condenser Water System
+          - HVAC Hot Water System
+          - HVAC Humidification System
+      - ICT System
+        - Controls System
+          - BACnet Network System
+          - Building Management System (BMS)
+          - Modbus Network System
+          - OPC DA Network System
+          - OPC UA Network System
+        - Ethernet Network System
+        - WiFi Network System
+      - Lighting System
+        - Airfield Lighting System
+          - Approach Lighting System
+            - Medium Intensity Approach Lighting System (MALS)
+            - Omni-Directional Approach Lighting System (ODALS)
+          - Land and Hold Short Lighting System
+          - Taxiway Clearance Bar
+      - Plumbing System
+        - Drainage System
+          - Storm Drainage System
+          - Waste Vent Drainage System
+        - Fuel Oil System
+        - Gas System
+          - Compressed Air System
+          - Natural Gas System
+          - Propane System
+          - Steam System
+        - Plumbing Water System
+          - Domestic Water System
+            - Domestic Cold Water System
+            - Domestic Hot Water System
+              - Domestic Hot Water Recirculation System
+            - Domestic Non-Potable Water System
+          - Irrigation System
+          - Water Feature System
+      - Security System
+        - Access Control System
+        - Intrusion Detection System
+        - Video Surveillance System
+  - Furniture Collection
+- Document Collection
+- Portfolio
+- Space Collection
+  - Building Operations Area
+    - Back of House Area
+    - Building Common Area
+    - Floor Common Area
+    - Front of House Area
+  - Parking Spot Collection
+  - Tenant Unit
+
+Space (dtmi:com:willowinc:Space;1)
+Total descendants: 54
+----------------------------------------
+- Airport Space
+  - Aircraft Parking Spot
+  - Aircraft Stand
+  - Airfield
+  - Airport Terminal
+  - Apron
+  - Gate
+  - Runway
+  - Taxiway
+- Aisle
+  - Retail Store Aisle
+  - Seating Aisle
+- Aisle Section
+  - Endcap
+- Bay
+- Building
+  - Airport Terminal
+- Building Outdoor Area
+  - Balcony
+  - Building Terrace
+    - Roof Terrace
+  - Roof Area
+    - Roof Terrace
+- Land
+  - Airport
+    - Air Base
+    - Heliport
+    - Seaplane Base
+- Level
+  - Basement Level
+  - Mezzanine Level
+  - Roof Level
+- Outdoor Area
+  - Landscaped Area
+- Parking Spot
+  - Aircraft Parking Spot
+- Region
+  - Grid Region
+- Room
+- Sub-Building
+  - Building Podium
+  - Building Tower
+  - Building Wing
+- Substructure
+- Workspace
+- Zone
+  - HVAC Zone
+    - HVAC Pressurization Zone
+      - HVAC Negative Pressurization Zone
+      - HVAC Positive Pressurization Zone
+  - Illuminance Zone
+  - Lighting Zone
+  - Occupancy Zone
+  - Retail Store Zone

@@ -1,0 +1,132 @@
+WILLOW COLLECTION HIERARCHY WITH MAPPINGS
+============================================================
+
+Collection -> Collection
+  Asset Collection -> [UNMAPPED]
+    Architectural Asset Collection -> [UNMAPPED]
+    Distribution Asset Collection -> [UNMAPPED]
+      Distribution Raceway Collection -> [UNMAPPED]
+        Duct Bank -> [UNMAPPED]
+    Equipment Collection -> [UNMAPPED]
+      Equipment Group -> [UNMAPPED]
+        Conveyance Equipment Group -> [UNMAPPED]
+        Electrical Equipment Group -> Collection
+          PV Array -> Photovoltaic_Array
+        Fire Protection Equipment Group -> [UNMAPPED]
+          Pump Group (Sprinkler) -> [UNMAPPED]
+        General-purpose Equipment Group -> [UNMAPPED]
+          Pump Group -> [UNMAPPED]
+            Pump Group (HVAC) -> Collection
+            Pump Group (Plumbing) -> Pump_Skid
+        HVAC Equipment Group -> Collection
+          Air Handling Unit Group -> [UNMAPPED]
+          Chilled Beam Group -> [UNMAPPED]
+          Chiller Group -> Collection
+          Cooling Tower Group -> Collection
+          Fan Group (HVAC) -> [UNMAPPED]
+            Exhaust Fan Group -> [UNMAPPED]
+            Return Fan Group -> [UNMAPPED]
+            Supply Fan Group -> [UNMAPPED]
+          HVAC Plant -> [UNMAPPED]
+            Cooling Plant -> [UNMAPPED]
+              Chilled Water Plant -> Chiller_Plant
+              Condenser Water Plant -> [UNMAPPED]
+            Heating Plant -> [UNMAPPED]
+              Hot Water Plant -> [UNMAPPED]
+              Steam Plant -> [UNMAPPED]
+          Heat Exchanger Group -> Heat_Exchanger_Group
+        ICT Equipment Group -> [UNMAPPED]
+        Lighting Equipment Group -> [UNMAPPED]
+        Meter Equipment Group -> [UNMAPPED]
+        Plumbing Equipment Group -> Collection
+          Boiler Group -> Boiler_Group
+        Refrigeration Equipment Group -> [UNMAPPED]
+          Refrigeration Circuit -> Refrigeration_System
+          Refrigeration Compressor Group -> Collection
+        Security Equipment Group -> [UNMAPPED]
+      System -> System
+        Airport System -> [UNMAPPED]
+          Airfield Lighting System -> [UNMAPPED]
+            Approach Lighting System -> [UNMAPPED]
+              Medium Intensity Approach Lighting System (MALS) -> [UNMAPPED]
+              Omni-Directional Approach Lighting System (ODALS) -> [UNMAPPED]
+            Land and Hold Short Lighting System -> [UNMAPPED]
+            Taxiway Clearance Bar -> [UNMAPPED]
+          Baggage Handling System -> [UNMAPPED]
+            Arrival Baggage Handling System -> [UNMAPPED]
+            Departure Baggage Handling System -> [UNMAPPED]
+        Conveyance System -> [UNMAPPED]
+          Pneumatic Tube System -> [UNMAPPED]
+        Electrical System -> Electrical_System
+          AC Electrical System -> Alternating_Current_Electrical_System
+          DC Electrical System -> Electrical_System
+          Electrical Circuit -> [UNMAPPED]
+            Electrical Circuit 1-Pole -> [UNMAPPED]
+            Electrical Circuit 2-Pole -> [UNMAPPED]
+            Electrical Circuit 3-Pole -> [UNMAPPED]
+        Fire Protection System -> Fire_Safety_System
+          Fire Alarm System -> Fire_Safety_System
+          Fire Suppression System -> [UNMAPPED]
+            Clean Agent System -> [UNMAPPED]
+            Sprinkler System -> Sprinkler_System
+              Pre-Action Sprinkler System -> [UNMAPPED]
+        HVAC System -> Heating_Ventilation_Air_Conditioning_System
+          HVAC Air System -> Air_System
+            HVAC Conditioned Air System -> Air_System
+              HVAC Outside Air System -> Air_System
+              HVAC Return Air System -> Air_System
+              HVAC Supply Air System -> Supply_Air_System
+            HVAC Exhaust Air System -> Exhaust_Air_System
+              HVAC Grease Exhaust Air System -> Air_System
+            HVAC Transfer Air System -> Air_System
+          HVAC Refrigerant System -> Refrigeration_System
+            VRF System -> [UNMAPPED]
+          HVAC Steam System -> [UNMAPPED]
+          HVAC Water System -> Water_System
+            HVAC Chilled Water System -> Chilled_Water_System
+            HVAC Condenser Water System -> Condenser_Water_System
+            HVAC Hot Water System -> Hot_Water_System
+            HVAC Humidification System -> [UNMAPPED]
+        ICT System -> System
+          Controls System -> [UNMAPPED]
+            BACnet Network System -> [UNMAPPED]
+            Building Management System (BMS) -> [UNMAPPED]
+            Modbus Network System -> [UNMAPPED]
+            OPC DA Network System -> [UNMAPPED]
+            OPC UA Network System -> [UNMAPPED]
+          Ethernet Network System -> [UNMAPPED]
+          WiFi Network System -> [UNMAPPED]
+        Lighting System -> Lighting_System
+        Plumbing System -> Plumbing_System
+          Drainage System -> [UNMAPPED]
+            Storm Drainage System -> [UNMAPPED]
+            Waste Vent Drainage System -> [UNMAPPED]
+          Fuel Oil System -> Plumbing_System
+          Gas System -> Gas_System
+            Compressed Air System -> [UNMAPPED]
+            Natural Gas System -> Gas_System
+            Propane System -> Gas_System
+            Steam System -> Steam_System
+          Plumbing Water System -> Water_System
+            Domestic Water System -> Domestic_Water_Loop
+              Domestic Cold Water System -> Domestic_Cold_Water_System
+              Domestic Hot Water System -> Domestic_Hot_Water_System
+                Domestic Hot Water Recirculation System -> [UNMAPPED]
+              Domestic Non-Potable Water System -> [UNMAPPED]
+            Irrigation System -> [UNMAPPED]
+            Water Feature System -> [UNMAPPED]
+        Security System -> Security_System
+          Access Control System -> Access_Control_System
+          Intrusion Detection System -> [UNMAPPED]
+          Video Surveillance System -> [UNMAPPED]
+    Furniture Collection -> [UNMAPPED]
+  Document Collection -> Collection
+  Portfolio -> Portfolio
+  Space Collection -> [UNMAPPED]
+    Building Operations Area -> [UNMAPPED]
+      Back of House Area -> [UNMAPPED]
+      Building Common Area -> Collection
+      Floor Common Area -> [UNMAPPED]
+      Front of House Area -> [UNMAPPED]
+    Parking Spot Collection -> [UNMAPPED]
+    Tenant Unit -> Premises

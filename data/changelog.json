@@ -1,0 +1,702 @@
+[
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:DeltaCondenserWaterFlowSensor;1",
+    "mid": "dtmi:org:brickschema:schema:Brick:Sensor;1",
+    "end": "dtmi:com:willowinc:Sensor;1",
+    "timestamp": "2026-05-08T23:38:06+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Valve;1",
+    "old_target": "dtmi:com:willowinc:Valve;1",
+    "new_target": "dtmi:com:willowinc:CondenserWaterValve;1",
+    "timestamp": "2026-05-08T23:38:59+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:FanRunLevelSetpoint;1",
+    "mid": "dtmi:org:brickschema:schema:Brick:Setpoint;1",
+    "end": "dtmi:com:willowinc:Setpoint;1",
+    "timestamp": "2026-05-08T23:45:08+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:HotFoodDisplayCase;1",
+    "old_target": "dtmi:mapped:core:Thing;1",
+    "new_target": "dtmi:mapped:core:Heated_Display_Case;1",
+    "timestamp": "2026-05-08T23:45:47+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:EmergencyEyeWashShower;1",
+    "old_target": "dtmi:mapped:core:Thing;1",
+    "new_target": "dtmi:org:brickschema:schema:Brick:Emergency_Wash_Station;1",
+    "timestamp": "2026-05-12T22:51:07+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Emergency_Wash_Station;1",
+    "old_target": "dtmi:com:willowinc:EmergencyEyeWashStation;1",
+    "new_target": "dtmi:com:willowinc:EmergencyEyeWashShower;1",
+    "timestamp": "2026-05-12T22:51:30+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:FireAlarmHornStrobe;1",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "timestamp": "2026-05-12T22:51:44+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:FireAlarmSpeakerStrobe;1",
+    "old_target": "dtmi:mapped:core:Thing;1",
+    "new_target": "dtmi:mapped:core:Speaker;1",
+    "timestamp": "2026-05-12T22:51:58+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:FireAlarmSpeakerStrobe;1",
+    "mid": "dtmi:mapped:core:Speaker;1",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "timestamp": "2026-05-12T22:52:09+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:PhaseBExportReactiveElectricalEnergySensor;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Sensor;1",
+    "new_target": "dtmi:org:brickschema:schema:Brick:Reactive_Energy_Sensor;1",
+    "timestamp": "2026-05-12T22:52:19+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Reactive_Energy_Sensor;1",
+    "old_target": "dtmi:com:willowinc:ReactiveElectricalEnergySensor;1",
+    "new_target": "dtmi:com:willowinc:ReactiveElectricalEnergySensor;1",
+    "timestamp": "2026-05-12T22:52:29+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Reactive_Energy_Sensor;1",
+    "old_target": "dtmi:com:willowinc:ReactiveElectricalEnergySensor;1",
+    "new_target": "dtmi:com:willowinc:ReactiveElectricalEnergySensor;1",
+    "timestamp": "2026-05-12T22:52:39+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:PreActionCabinet;1",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "timestamp": "2026-05-12T22:52:54+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:TotalActiveElectricalPowerDemandSensor;1",
+    "mid": "dtmi:org:brickschema:schema:Brick:Demand_Sensor;1",
+    "end": "dtmi:com:willowinc:Sensor;1",
+    "timestamp": "2026-05-12T22:53:14+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:TotalReactiveElectricalPowerDemandSensor;1",
+    "mid": "dtmi:org:brickschema:schema:Brick:Demand_Sensor;1",
+    "end": "dtmi:com:willowinc:Sensor;1",
+    "timestamp": "2026-05-12T22:53:22+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:AverageCurrentDemandSensor;1",
+    "mid": "dtmi:org:brickschema:schema:Brick:Demand_Sensor;1",
+    "end": "dtmi:com:willowinc:Sensor;1",
+    "timestamp": "2026-05-12T22:53:33+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:BatteryCharger;1",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "timestamp": "2026-05-12T22:53:40+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:BatterySystem;1",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "timestamp": "2026-05-12T22:53:52+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:ChillerGroup;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Collection;1",
+    "new_target": "dtmi:mapped:core:Chiller_Group;1",
+    "timestamp": "2026-05-12T22:53:56+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:mapped:core:Chiller_Group;1",
+    "old_target": "dtmi:com:willowinc:ChillerGroup;1",
+    "new_target": "dtmi:com:willowinc:ChillerGroup;1",
+    "timestamp": "2026-05-12T22:54:02+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:DisableSetpoint;1",
+    "mid": "dtmi:org:brickschema:schema:Brick:Setpoint;1",
+    "end": "dtmi:com:willowinc:Setpoint;1",
+    "timestamp": "2026-05-12T22:55:18+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:EnableSetpoint;1",
+    "mid": "dtmi:org:brickschema:schema:Brick:Setpoint;1",
+    "end": "dtmi:com:willowinc:Setpoint;1",
+    "timestamp": "2026-05-12T22:55:23+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:FireAlarmStrobe;1",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "timestamp": "2026-05-12T22:55:32+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:HVACCoolingTowerGroup;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Collection;1",
+    "new_target": "dtmi:mapped:core:Cooling_Tower_Group;1",
+    "timestamp": "2026-05-12T22:55:37+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:mapped:core:Cooling_Tower_Group;1",
+    "old_target": "dtmi:com:willowinc:HVACCoolingTowerGroup;1",
+    "new_target": "dtmi:com:willowinc:HVACCoolingTowerGroup;1",
+    "timestamp": "2026-05-12T22:55:43+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:HVACPumpGroup;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Collection;1",
+    "new_target": "dtmi:mapped:core:Pump_Skid;1",
+    "timestamp": "2026-05-12T22:55:59+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:mapped:core:Pump_Skid;1",
+    "old_target": "dtmi:com:willowinc:PumpGroup;1",
+    "new_target": "dtmi:com:willowinc:HVACPumpGroup;1",
+    "timestamp": "2026-05-12T22:56:12+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:PhaseACurrentDemandSensor;1",
+    "mid": "dtmi:org:brickschema:schema:Brick:Demand_Sensor;1",
+    "end": "dtmi:com:willowinc:Sensor;1",
+    "timestamp": "2026-05-12T22:56:18+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:PhaseCCurrentDemandSensor;1",
+    "mid": "dtmi:org:brickschema:schema:Brick:Demand_Sensor;1",
+    "end": "dtmi:com:willowinc:Sensor;1",
+    "timestamp": "2026-05-12T22:56:20+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:RefrigerationCompressorGroup;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Collection;1",
+    "new_target": "dtmi:mapped:core:Compressor_Group;1",
+    "timestamp": "2026-05-12T22:56:27+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:mapped:core:Compressor_Group;1",
+    "old_target": null,
+    "new_target": "dtmi:com:willowinc:RefrigerationCompressorGroup;1",
+    "timestamp": "2026-05-12T22:56:37+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:RunLevelSetpoint;1",
+    "mid": "dtmi:org:brickschema:schema:Brick:Setpoint;1",
+    "end": "dtmi:com:willowinc:Setpoint;1",
+    "timestamp": "2026-05-12T22:57:10+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:org:brickschema:schema:Brick:Domestic_Hot_Water_Valve;1",
+    "mid": "dtmi:com:willowinc:Valve;1",
+    "end": "dtmi:org:brickschema:schema:Brick:Valve;1",
+    "timestamp": "2026-05-12T22:57:27+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Preheat_Hot_Water_Valve;1",
+    "old_target": "dtmi:com:willowinc:Valve;1",
+    "new_target": "dtmi:com:willowinc:PreheatHotWaterValve;1",
+    "timestamp": "2026-05-12T22:57:32+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:mapped:core:Fire_Accordion_Door;1",
+    "mid": "dtmi:com:willowinc:Door;1",
+    "end": "dtmi:mapped:core:Door;1",
+    "timestamp": "2026-05-12T22:57:46+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:mapped:core:Stairwell_Pressurization_Fan;1",
+    "old_target": "dtmi:com:willowinc:StairPressurizationFan;1",
+    "new_target": "dtmi:com:willowinc:StairPressurizationFan;1",
+    "timestamp": "2026-05-12T22:57:50+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:StairPressurizationFan;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Fan;1",
+    "new_target": "dtmi:mapped:core:Stairwell_Pressurization_Fan;1",
+    "timestamp": "2026-05-12T22:57:55+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Valve;1",
+    "old_target": "dtmi:com:willowinc:Valve;1",
+    "new_target": "dtmi:com:willowinc:ChilledWaterValve;1",
+    "timestamp": "2026-05-12T22:58:02+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:ChilledWaterValve;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Valve;1",
+    "new_target": "dtmi:org:brickschema:schema:Brick:Chilled_Water_Valve;1",
+    "timestamp": "2026-05-12T22:58:06+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Condensing_Natural_Gas_Boiler;1",
+    "old_target": "dtmi:com:willowinc:Boiler;1",
+    "new_target": "dtmi:com:willowinc:CondensingBoiler;1",
+    "timestamp": "2026-05-12T22:58:18+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:org:brickschema:schema:Brick:Economizer;1",
+    "mid": "dtmi:com:willowinc:Equipment;1",
+    "end": "dtmi:mapped:core:Device;1",
+    "timestamp": "2026-05-12T22:58:32+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Hot_Water_Valve;1",
+    "old_target": "dtmi:com:willowinc:Valve;1",
+    "new_target": "dtmi:com:willowinc:HeatingHotWaterValve;1",
+    "timestamp": "2026-05-12T22:58:37+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:HeatingHotWaterValve;1",
+    "old_target": null,
+    "new_target": "dtmi:org:brickschema:schema:Brick:Heating_Valve;1",
+    "timestamp": "2026-05-12T22:58:51+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:org:brickschema:schema:Brick:Makeup_Water_Valve;1",
+    "mid": "dtmi:com:willowinc:Valve;1",
+    "end": "dtmi:org:brickschema:schema:Brick:Valve;1",
+    "timestamp": "2026-05-12T22:58:55+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Noncondensing_Natural_Gas_Boiler;1",
+    "old_target": "dtmi:com:willowinc:Boiler;1",
+    "new_target": "dtmi:com:willowinc:NonCondensingBoiler;1",
+    "timestamp": "2026-05-12T22:59:04+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Return_Heating_Valve;1",
+    "old_target": "dtmi:com:willowinc:Valve;1",
+    "new_target": "dtmi:com:willowinc:HeatingHotWaterValve;1",
+    "timestamp": "2026-05-12T22:59:15+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:HeatingHotWaterValve;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Heating_Valve;1",
+    "new_target": "dtmi:org:brickschema:schema:Brick:Heating_Valve;1",
+    "timestamp": "2026-05-12T22:59:29+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:org:brickschema:schema:Brick:Safety_Shower;1",
+    "mid": "dtmi:com:willowinc:SafetyEquipment;1",
+    "end": "dtmi:org:brickschema:schema:Brick:Safety_Equipment;1",
+    "timestamp": "2026-05-12T22:59:46+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:org:brickschema:schema:Brick:Thermostatic_Mixing_Valve;1",
+    "mid": "dtmi:com:willowinc:Valve;1",
+    "end": "dtmi:org:brickschema:schema:Brick:Valve;1",
+    "timestamp": "2026-05-12T22:59:48+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:mapped:core:Accordion_Door;1",
+    "mid": "dtmi:com:willowinc:Door;1",
+    "end": "dtmi:mapped:core:Door;1",
+    "timestamp": "2026-05-12T22:59:49+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:mapped:core:BACnet_Device;1",
+    "old_target": "dtmi:com:willowinc:Equipment;1",
+    "new_target": "dtmi:com:willowinc:BACnetController;1",
+    "timestamp": "2026-05-12T23:00:08+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:mapped:core:Battery_Charger;1",
+    "mid": "dtmi:com:willowinc:VehicleEquipment;1",
+    "end": "dtmi:mapped:core:Automotive_Equipment;1",
+    "timestamp": "2026-05-12T23:00:17+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:mapped:core:Accessibility_Equipment;1",
+    "mid": "dtmi:com:willowinc:Equipment;1",
+    "end": "dtmi:mapped:core:Device;1",
+    "timestamp": "2026-05-12T23:00:52+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:mapped:core:Commercial_Rack_Washer;1",
+    "mid": "dtmi:com:willowinc:Dishwasher;1",
+    "end": "dtmi:mapped:core:Dishwasher;1",
+    "timestamp": "2026-05-12T23:00:59+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:DuctHeater;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Space_Heater;1",
+    "new_target": "dtmi:mapped:core:Duct_Heater;1",
+    "timestamp": "2026-05-12T23:01:10+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:mapped:core:Medical_Equipment;1",
+    "mid": "dtmi:com:willowinc:Equipment;1",
+    "end": "dtmi:mapped:core:Device;1",
+    "timestamp": "2026-05-12T23:01:19+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:mapped:core:Natural_Gas_Seismic_Valve;1",
+    "mid": "dtmi:com:willowinc:HVACShutOffValve;1",
+    "end": "dtmi:org:brickschema:schema:Brick:Isolation_Valve;1",
+    "timestamp": "2026-05-12T23:01:26+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:mapped:core:Spectrometer;1",
+    "mid": "dtmi:com:willowinc:Equipment;1",
+    "end": "dtmi:mapped:core:Device;1",
+    "timestamp": "2026-05-12T23:01:35+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:mapped:core:Stock_Picker;1",
+    "mid": "dtmi:com:willowinc:Forklift;1",
+    "end": "dtmi:mapped:core:Forklift;1",
+    "timestamp": "2026-05-12T23:01:45+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:UnitHeater;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Space_Heater;1",
+    "new_target": "dtmi:mapped:core:Unit_Heater;1",
+    "timestamp": "2026-05-12T23:01:52+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:mapped:core:Vehicle;1",
+    "mid": "dtmi:com:willowinc:VehicleEquipment;1",
+    "end": "dtmi:mapped:core:Automotive_Equipment;1",
+    "timestamp": "2026-05-12T23:02:00+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:mapped:core:Waterside_Economizer;1",
+    "mid": "dtmi:com:willowinc:EconomizerCoil;1",
+    "end": "dtmi:org:brickschema:schema:Brick:Coil;1",
+    "timestamp": "2026-05-12T23:02:19+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:mapped:core:Work_Assist_Vehicle;1",
+    "mid": "dtmi:com:willowinc:VehicleEquipment;1",
+    "end": "dtmi:mapped:core:Automotive_Equipment;1",
+    "timestamp": "2026-05-12T23:02:26+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Condenser_Heat_Exchanger;1",
+    "old_target": "dtmi:com:willowinc:Condenser;1",
+    "new_target": "dtmi:com:willowinc:HeatExchanger;1",
+    "timestamp": "2026-05-12T23:02:42+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:HeatExchanger;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Heat_Exchanger;1",
+    "new_target": "dtmi:org:brickschema:schema:Brick:Heat_Exchanger;1",
+    "timestamp": "2026-05-12T23:02:46+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:mapped:core:Wheel_Chair_Lift;1",
+    "mid": "dtmi:com:willowinc:Equipment;1",
+    "end": "dtmi:mapped:core:Device;1",
+    "timestamp": "2026-05-12T23:02:52+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Condenser_Water_Bypass_Valve;1",
+    "old_target": "dtmi:com:willowinc:Valve;1",
+    "new_target": "dtmi:com:willowinc:BypassValve;1",
+    "timestamp": "2026-05-12T23:03:06+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:BypassValve;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Bypass_Valve;1",
+    "new_target": "dtmi:org:brickschema:schema:Brick:Bypass_Valve;1",
+    "timestamp": "2026-05-12T23:03:15+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:BypassValve;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Bypass_Valve;1",
+    "new_target": "dtmi:org:brickschema:schema:Brick:Bypass_Valve;1",
+    "timestamp": "2026-05-12T23:03:25+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Differential_Pressure_Bypass_Valve;1",
+    "old_target": "dtmi:com:willowinc:Valve;1",
+    "new_target": "dtmi:com:willowinc:BypassValve;1",
+    "timestamp": "2026-05-12T23:04:05+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:BypassValve;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Bypass_Valve;1",
+    "new_target": "dtmi:org:brickschema:schema:Brick:Bypass_Valve;1",
+    "timestamp": "2026-05-12T23:04:18+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:VAVBoxReheat;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:RVAV;1",
+    "new_target": "dtmi:org:brickschema:schema:Brick:Variable_Air_Volume_Box_With_Reheat;1",
+    "timestamp": "2026-05-12T23:04:41+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:org:brickschema:schema:Brick:Space_Heater;1",
+    "mid": "dtmi:com:willowinc:UnitHeater;1",
+    "end": "dtmi:mapped:core:Unit_Heater;1",
+    "timestamp": "2026-05-12T23:04:56+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:org:brickschema:schema:Brick:Heat_Wheel_VFD;1",
+    "mid": "dtmi:com:willowinc:VariableFrequencyDrive;1",
+    "end": "dtmi:org:brickschema:schema:Brick:Variable_Frequency_Drive;1",
+    "timestamp": "2026-05-12T23:05:10+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:org:brickschema:schema:Brick:Heat_Wheel;1",
+    "mid": "dtmi:com:willowinc:EnergyRecoveryDevice;1",
+    "end": "dtmi:mapped:core:Energy_Recovery_Unit;1",
+    "timestamp": "2026-05-12T23:05:37+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:org:brickschema:schema:Brick:Pump_VFD;1",
+    "mid": "dtmi:com:willowinc:VariableFrequencyDrive;1",
+    "end": "dtmi:org:brickschema:schema:Brick:Variable_Frequency_Drive;1",
+    "timestamp": "2026-05-12T23:05:45+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Steam_Valve;1",
+    "old_target": "dtmi:com:willowinc:Valve;1",
+    "new_target": "dtmi:com:willowinc:SteamValve;1",
+    "timestamp": "2026-05-12T23:06:04+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:ReliefDamper;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Damper;1",
+    "new_target": "dtmi:org:brickschema:schema:Brick:Relief_Damper;1",
+    "timestamp": "2026-05-12T23:06:14+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:mapped:core:Access_Card_Pin_Reader;1",
+    "old_target": null,
+    "new_target": "dtmi:com:willowinc:AccessReader;1",
+    "timestamp": "2026-05-12T23:07:06+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:mapped:core:Air_Source_Heat_Pump;1",
+    "old_target": null,
+    "new_target": "dtmi:com:willowinc:AirSourcePackagedHeatPump;1",
+    "timestamp": "2026-05-12T23:07:14+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:AbsenceSensor;1",
+    "old_target": null,
+    "new_target": "dtmi:org:brickschema:schema:Brick:Sensor;1",
+    "timestamp": "2026-05-12T23:09:37+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Sensor;1",
+    "old_target": "dtmi:com:willowinc:Sensor;1",
+    "new_target": "dtmi:com:willowinc:Sensor;1",
+    "timestamp": "2026-05-12T23:09:42+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:FireHydrant;1",
+    "old_target": "dtmi:mapped:core:Thing;1",
+    "new_target": "dtmi:mapped:core:Fire_Hydrant;1",
+    "timestamp": "2026-05-12T23:09:56+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:mapped:core:Fire_Hydrant;1",
+    "old_target": null,
+    "new_target": "dtmi:com:willowinc:FireHydrant;1",
+    "timestamp": "2026-05-12T23:10:00+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:LowTemperatureRefrigerationCompressorRack;1",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "timestamp": "2026-05-12T23:10:21+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:MediumTemperatureRefrigerationCompressorRack;1",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "timestamp": "2026-05-12T23:10:28+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:PointOfSaleRegister;1",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "timestamp": "2026-05-12T23:10:35+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:WaterSoftener;1",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "timestamp": "2026-05-12T23:10:57+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:BarometricReliefDamper;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Damper;1",
+    "new_target": "dtmi:org:brickschema:schema:Brick:Relief_Damper;1",
+    "timestamp": "2026-05-12T23:11:03+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:org:brickschema:schema:Brick:Relief_Damper;1",
+    "old_target": "dtmi:com:willowinc:ReliefDamper;1",
+    "new_target": "dtmi:com:willowinc:ReliefDamper;1",
+    "timestamp": "2026-05-12T23:11:06+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:BeverageEquipment;1",
+    "old_target": "dtmi:mapped:core:Thing;1",
+    "new_target": "dtmi:mapped:core:Culinary_Equipment;1",
+    "timestamp": "2026-05-12T23:11:54+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:mapped:core:Culinary_Equipment;1",
+    "old_target": "dtmi:com:willowinc:FoodserviceEquipment;1",
+    "new_target": "dtmi:com:willowinc:FoodserviceEquipment;1",
+    "timestamp": "2026-05-12T23:12:06+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:FoodDisplayEquipment;1",
+    "old_target": "dtmi:mapped:core:Thing;1",
+    "new_target": "dtmi:mapped:core:Culinary_Equipment;1",
+    "timestamp": "2026-05-12T23:12:21+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:GasTankWaterHeater;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Water_Heater;1",
+    "new_target": "dtmi:mapped:core:Gas_Water_Heater;1",
+    "timestamp": "2026-05-12T23:12:46+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:mapped:core:Gas_Water_Heater;1",
+    "old_target": null,
+    "new_target": "dtmi:com:willowinc:GasTankWaterHeater;1",
+    "timestamp": "2026-05-12T23:12:57+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:FireSmokeDamper;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Damper;1",
+    "new_target": "dtmi:mapped:core:Fire_Smoke_Damper;1",
+    "timestamp": "2026-05-12T23:13:10+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:mapped:core:Fire_Smoke_Damper;1",
+    "old_target": null,
+    "new_target": "dtmi:com:willowinc:FireSmokeDamper;1",
+    "timestamp": "2026-05-12T23:13:14+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:ElectricTanklessWaterHeater;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Water_Heater;1",
+    "new_target": "dtmi:mapped:core:Tankless_Water_Heater;1",
+    "timestamp": "2026-05-12T23:13:29+00:00"
+  },
+  {
+    "action": "mapping_changed",
+    "source": "dtmi:com:willowinc:HydronicCirculatingPump;1",
+    "old_target": "dtmi:org:brickschema:schema:Brick:Pump;1",
+    "new_target": "dtmi:mapped:core:Circulating_Pump;1",
+    "timestamp": "2026-05-12T23:14:00+00:00"
+  },
+  {
+    "action": "gap_flagged",
+    "start": "dtmi:com:willowinc:HVACPressureReducingValve;1",
+    "mid": "dtmi:org:brickschema:schema:Brick:Valve;1",
+    "end": "dtmi:com:willowinc:Valve;1",
+    "timestamp": "2026-05-12T23:17:12+00:00"
+  }
+]

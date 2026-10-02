@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mapping Workbench</title>
+<script src="https://unpkg.com/cytoscape@3.30.4/dist/cytoscape.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, -apple-system, sans-serif; background: #0f1117; color: #e0e0e0; height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+
+  /* ── Header ── */
+  header { display: flex; align-items: center; gap: 12px; padding: 0 20px; height: 48px; background: #1a1d27; border-bottom: 1px solid #2a2d3a; flex-shrink: 0; }
+  header h1 { font-size: 15px; font-weight: 600; color: #f0f0f0; white-space: nowrap; }
+  header .spacer { flex: 1; }
+
+  /* ── Nav bar ── */
+  .nav-bar { display: flex; align-items: center; padding: 0 20px; height: 40px; background: #13151f; border-bottom: 1px solid #2a2d3a; flex-shrink: 0; gap: 0; }
+  .nav-tabs { display: flex; height: 100%; }
+  .nav-tab { height: 100%; padding: 0 16px; background: none; border: none; border-bottom: 2px solid transparent; color: #888; font-size: 13px; cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; border-radius: 0; }
+  .nav-tab:hover { color: #ccc; background: none; }
+  .nav-tab.active { border-bottom-color: #3b82f6; color: #e0e0e0; }
+  .nav-count { font-size: 11px; padding: 1px 6px; border-radius: 10px; background: #2a2d3a; color: #666; }
+  .nav-tab.active .nav-count { background: #1e3a5f; color: #3b82f6; }
+  .nav-spacer { flex: 1; }
+  .stats-pills { display: flex; gap: 14px; font-size: 12px; color: #555; }
+  .stats-pills span { display: flex; align-items: center; gap: 4px; }
+  .stats-pills b { color: #888; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+  .dot.mapped { background: #3b82f6; }
+  .dot.willow { background: #22c55e; }
+  .dot.external { background: #6b7280; }
+
+  /* ── Buttons ── */
+  button { padding: 6px 14px; border: 1px solid #3a3d4a; border-radius: 6px; background: #1a1d27; color: #e0e0e0; font-size: 13px; cursor: pointer; white-space: nowrap; }
+  button:hover { background: #252838; }
+  button.primary { background: #2563eb; border-color: #2563eb; color: #fff; }
+  button.primary:hover { background: #1d4ed8; }
+  button.ghost { background: none; border: none; color: #666; padding: 4px 8px; border-radius: 4px; }
+  button.ghost:hover { color: #e0e0e0; background: #2a2d3a; }
+
+  /* ── App body ── */
+  .app-body { flex: 1; display: flex; overflow: hidden; transition: margin-right 0.25s ease; }
+  .app-body.drawer-open { margin-right: 520px; }
+
+  /* ── Views ── */
+  .view { flex: 1; display: none; flex-direction: column; overflow: hidden; }
+  .view.active { display: flex; }
+
+  /* ── Graph view ── */
+  .view-toolbar { padding: 10px 20px; background: #13151f; border-bottom: 1px solid #2a2d3a; display: flex; align-items: center; gap: 10px; flex-shrink: 0; position: relative; }
+  #cy { flex: 1; background: #0b0d14; }
+
+  /* ── Inputs ── */
+  .search-input, .filter-input { padding: 6px 10px; background: #0f1117; border: 1px solid #3a3d4a; border-radius: 6px; color: #e0e0e0; font-size: 13px; outline: none; }
+  .search-input:focus, .filter-input:focus { border-color: #5b8def; }
+  .search-input { flex: 1; max-width: 400px; }
+  .filter-input { width: 200px; }
+
+  /* Search dropdown */
+  .search-dropdown { position: absolute; top: calc(100% + 2px); left: 20px; width: 400px; background: #1a1d27; border: 1px solid #3a3d4a; border-radius: 8px; max-height: 320px; overflow-y: auto; z-index: 50; box-shadow: 0 8px 24px rgba(0,0,0,0.5); }
+  .search-dropdown.hidden { display: none; }
+  .search-dropdown-item { padding: 8px 12px; cursor: pointer; font-size: 13px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #1f2233; }
+  .search-dropdown-item:last-child { border-bottom: none; }
+  .search-dropdown-item:hover { background: #252838; }
+
+  /* ── List views (Gaps / Unmapped) ── */
+  .list-toolbar { padding: 10px 20px; background: #13151f; border-bottom: 1px solid #2a2d3a; display: flex; align-items: center; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+  .list-body { flex: 1; overflow-y: auto; }
+
+  /* Class filter combo */
+  .filter-combo { position: relative; }
+  .filter-combo-dropdown { position: absolute; top: calc(100% + 4px); left: 0; width: 320px; background: #1a1d27; border: 1px solid #3a3d4a; border-radius: 8px; max-height: 220px; overflow-y: auto; z-index: 20; box-shadow: 0 8px 24px rgba(0,0,0,0.5); list-style: none; }
+  .filter-combo-dropdown.hidden { display: none; }
+  .filter-combo-dropdown li { padding: 7px 12px; cursor: pointer; font-size: 12px; border-bottom: 1px solid #1a1c27; }
+  .filter-combo-dropdown li:last-child { border-bottom: none; }
+  .filter-combo-dropdown li:hover { background: #252838; }
+
+  .filter-chip { display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px 3px 10px; background: #1e3a5f; border: 1px solid #3b82f6; border-radius: 12px; font-size: 11px; color: #60a5fa; }
+  .filter-chip button { background: none; border: none; padding: 0; color: #60a5fa; font-size: 14px; cursor: pointer; line-height: 1; opacity: 0.7; }
+  .filter-chip button:hover { opacity: 1; background: none; }
+
+  /* Gap / unmapped table */
+  .data-table { width: 100%; border-collapse: collapse; }
+  .data-table th { padding: 8px 20px; text-align: left; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #444; border-bottom: 1px solid #1f2233; background: #0d0f18; position: sticky; top: 0; z-index: 5; }
+  .data-table td { padding: 10px 20px; font-size: 13px; border-bottom: 1px solid #161824; vertical-align: middle; }
+  .data-table tbody tr { cursor: pointer; }
+  .data-table tbody tr:hover td { background: #14172066; }
+  .data-table tbody tr.selected td { background: #1a2640; }
+  .chain-node { color: #b0bcd8; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 260px; }
+  .dist-badge { display: inline-block; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; background: #1e293b; color: #64748b; min-width: 36px; text-align: center; }
+  .dist-badge.low { background: #1e3a5f; color: #60a5fa; }
+  .dist-badge.med { background: #3a2d1a; color: #f59e0b; }
+  .dist-badge.high { background: #3a1a1a; color: #f87171; }
+  .empty-state { padding: 60px 20px; text-align: center; color: #333; font-size: 14px; }
+
+  /* Ontology badge */
+  .ont-badge { font-size: 10px; padding: 2px 6px; border-radius: 3px; font-weight: 600; text-transform: uppercase; flex-shrink: 0; }
+  .ont-badge.mapped { background: #1e3a5f; color: #3b82f6; }
+  .ont-badge.willow { background: #14532d; color: #22c55e; }
+  .ont-badge.external { background: #374151; color: #9ca3af; }
+
+  /* Ontology segmented control */
+  .ont-seg { display: inline-flex; border: 1px solid #2a2d3a; border-radius: 7px; overflow: hidden; flex-shrink: 0; }
+  .ont-seg button { border: none; border-radius: 0; padding: 5px 16px; font-size: 12px; font-weight: 600; background: transparent; color: #555; cursor: pointer; }
+  .ont-seg button:hover { background: #1f2235; color: #aaa; }
+  .ont-seg button.active-mapped { background: #1e3a5f; color: #3b82f6; }
+  .ont-seg button.active-willow { background: #14532d; color: #22c55e; }
+
+  /* ── Drawer ── */
+  .drawer { position: fixed; top: 0; right: 0; width: 520px; height: 100vh; background: #1a1d27; border-left: 1px solid #2a2d3a; display: flex; flex-direction: column; transform: translateX(100%); transition: transform 0.25s ease; z-index: 40; }
+  .drawer.open { transform: translateX(0); }
+  .drawer-header { display: flex; align-items: center; padding: 0 16px; height: 48px; border-bottom: 1px solid #2a2d3a; gap: 12px; flex-shrink: 0; background: #1f2235; }
+  .drawer-title { font-size: 13px; font-weight: 600; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #c8d0e8; }
+  .drawer-body { flex: 1; overflow-y: auto; }
+
+  /* Node detail */
+  .node-detail { padding: 20px; font-size: 13px; }
+  .detail-section { margin-bottom: 18px; }
+  .detail-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: #444; margin-bottom: 5px; }
+  .detail-value { color: #c8d0e8; }
+  .detail-value.mono { font-size: 11px; color: #666; font-family: monospace; word-break: break-all; }
+  .edge-list { list-style: none; }
+  .edge-list li { padding: 4px 0; cursor: pointer; color: #93c5fd; font-size: 12px; display: flex; align-items: center; gap: 6px; }
+  .edge-list li:hover { text-decoration: underline; }
+  .edge-type { font-size: 10px; padding: 1px 5px; border-radius: 3px; flex-shrink: 0; }
+  .edge-type.subClassOf { background: #3a2d1a; color: #f59e0b; }
+  .edge-type.mapsTo { background: #1a2d3a; color: #38bdf8; }
+
+  /* Gap detail */
+  .gap-detail-actions { padding: 10px 16px; border-bottom: 1px solid #2a2d3a; display: flex; align-items: center; gap: 8px; background: #161825; flex-shrink: 0; }
+  .gap-detail-actions .dist-label { margin-left: auto; font-size: 12px; color: #444; }
+  .gap-detail-content { padding: 20px; }
+
+  /* Columns */
+  .columns-wrapper { position: relative; width: 100%; margin-bottom: 24px; }
+  .cross-edge-svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 5; }
+  .columns-container { display: flex; align-items: flex-start; min-height: 80px; }
+  .column { flex: 1; min-width: 0; }
+  .column-header { text-align: center; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 5px 8px; margin-bottom: 6px; border-radius: 5px; }
+  .column-header.left-header { background: rgba(59,130,246,0.1); color: #3b82f6; }
+  .column-header.right-header { background: rgba(34,197,94,0.1); color: #22c55e; }
+  .column-node { padding: 7px 10px; margin-bottom: 2px; border-radius: 6px; border: 1.5px solid #2a2d3a; background: #13151f; font-size: 12px; text-align: center; }
+  .column-node .node-name { font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .subclass-arrow { text-align: center; color: #333; font-size: 14px; padding: 0; user-select: none; }
+  .middle-lane { width: 60px; flex-shrink: 0; }
+
+  /* Remap */
+  .remap-section { }
+  .remap-heading { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #444; margin-bottom: 8px; }
+  .remap-search { width: 100%; padding: 7px 10px; background: #0f1117; border: 1px solid #3a3d4a; border-radius: 6px; color: #e0e0e0; font-size: 13px; outline: none; margin-bottom: 8px; }
+  .remap-search:focus { border-color: #5b8def; }
+  .remap-list-label { font-size: 10px; color: #333; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .remap-results { list-style: none; max-height: 240px; overflow-y: auto; }
+  .remap-results li { padding: 7px 10px; border: 1.5px solid #2a2d3a; border-radius: 6px; font-size: 12px; cursor: pointer; display: flex; align-items: center; gap: 8px; margin-bottom: 3px; }
+  .remap-results li:hover { border-color: #5b8def; background: #1a2035; }
+  .remap-results li.selected { border-color: #3b82f6; background: #1e3a5f; }
+  .remap-results .no-results { color: #333; cursor: default; border-color: transparent; }
+  .remap-results .no-results:hover { background: none; border-color: transparent; }
+  .apply-btn { width: 100%; margin-top: 10px; padding: 8px; background: #2563eb; border-color: #2563eb; color: #fff; font-size: 13px; font-weight: 600; border-radius: 6px; cursor: pointer; }
+  .apply-btn:hover { background: #1d4ed8; }
+  .apply-btn:disabled { background: #1a1d27; border-color: #2a2d3a; color: #444; cursor: default; }
+
+  /* Modal */
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.65); display: flex; align-items: center; justify-content: center; z-index: 100; }
+  .modal-overlay.hidden { display: none; }
+  .modal { background: #1a1d27; border: 1px solid #2a2d3a; border-radius: 10px; padding: 24px; width: 440px; }
+  .modal h2 { font-size: 15px; font-weight: 600; margin-bottom: 16px; }
+  .modal label { display: block; font-size: 12px; margin-bottom: 4px; color: #888; }
+  .modal select, .modal input[type=file] { width: 100%; padding: 7px 10px; background: #0f1117; border: 1px solid #3a3d4a; border-radius: 6px; color: #e0e0e0; font-size: 13px; margin-bottom: 14px; }
+  .modal .actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px; }
+
+  .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid #333; border-top-color: #3b82f6; border-radius: 50%; animation: spin 0.6s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mapping Workbench</h1>
+  <div class="spacer"></div>
+  <button onclick="openUploadModal()">Upload</button>
+  <button class="primary" onclick="runDiagnosis()">Diagnose</button>
+</header>
+
+<div class="nav-bar">
+  <div class="nav-tabs">
+    <button class="nav-tab active" data-view="graph" onclick="switchView('graph')">Graph</button>
+    <button class="nav-tab" data-view="gaps" onclick="switchView('gaps')">
+      Gaps <span class="nav-count" id="navCountGaps">–</span>
+    </button>
+    <button class="nav-tab" data-view="unmapped" onclick="switchView('unmapped')">
+      Unmapped <span class="nav-count" id="navCountUnmapped">–</span>
+    </button>
+  </div>
+  <div class="nav-spacer"></div>
+  <div class="stats-pills">
+    <span><span class="dot mapped"></span><b id="statMapped">–</b> mapped</span>
+    <span><span class="dot willow"></span><b id="statWillow">–</b> willow</span>
+    <span><span class="dot external"></span><b id="statExternal">–</b> ext</span>
+    <span style="color:#2a2d3a">|</span>
+    <span><b id="statSubclass">–</b> subClassOf</span>
+    <span><b id="statMapsTo">–</b> mapsTo</span>
+  </div>
+</div>
+
+<div class="app-body" id="appBody">
+
+  <!-- Graph view -->
+  <div class="view active" id="view-graph">
+    <div class="view-toolbar">
+      <input class="search-input" id="searchInput" type="text" placeholder="Search nodes by name or ID…" autocomplete="off" />
+      <div class="search-dropdown hidden" id="searchDropdown"></div>
+    </div>
+    <div id="cy"></div>
+  </div>
+
+  <!-- Gaps view -->
+  <div class="view" id="view-gaps">
+    <div class="list-toolbar">
+      <div class="ont-seg">
+        <button id="gapSegMapped" class="active-mapped" onclick="setGapOnt('mapped')">Mapped</button>
+        <button id="gapSegWillow" onclick="setGapOnt('willow')">Willow</button>
+      </div>
+      <input class="filter-input" id="gapFilterInput" type="text" placeholder="Search gaps…" oninput="renderFilteredGaps()" />
+      <div class="filter-combo">
+        <input class="filter-input" id="classFilterInput" type="text" placeholder="Filter by class…" autocomplete="off" />
+        <ul class="filter-combo-dropdown hidden" id="classFilterDropdown"></ul>
+      </div>
+      <span id="classFilterChip" style="display:none;"></span>
+    </div>
+    <div class="list-body">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th style="width:56px;">Dist</th>
+            <th>Start</th>
+            <th>Mid</th>
+            <th>End</th>
+          </tr>
+        </thead>
+        <tbody id="gapTableBody">
+          <tr><td colspan="4" class="empty-state">Click "Diagnose" to find roundtrip gaps</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Unmapped view -->
+  <div class="view" id="view-unmapped">
+    <div class="list-toolbar">
+      <div class="ont-seg">
+        <button id="unmappedSegMapped" class="active-mapped" onclick="setUnmappedOnt('mapped')">Mapped</button>
+        <button id="unmappedSegWillow" onclick="setUnmappedOnt('willow')">Willow</button>
+      </div>
+      <input class="filter-input" id="unmappedFilterInput" type="text" placeholder="Search unmapped…" oninput="filterUnmapped()" />
+    </div>
+    <div class="list-body">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Class</th>
+          </tr>
+        </thead>
+        <tbody id="unmappedTableBody">
+          <tr><td class="empty-state">Click "Diagnose" to find unmapped classes</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- Drawer -->
+<div class="drawer" id="drawer">
+  <div class="drawer-header">
+    <span class="drawer-title" id="drawerTitle">Detail</span>
+    <button class="ghost" onclick="closeDrawer()" title="Close (Esc)">✕</button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+</div>
+
+<!-- Upload modal -->
+<div class="modal-overlay hidden" id="uploadModal">
+  <div class="modal">
+    <h2>Upload File</h2>
+    <label>Type</label>
+    <select id="uploadType">
+      <option value="ontology:mapped">Ontology: Mapped</option>
+      <option value="ontology:willow">Ontology: Willow</option>
+      <option value="mapping:mapped2willow">Mapping: Mapped &rarr; Willow</option>
+      <option value="mapping:willow2mapped">Mapping: Willow &rarr; Mapped</option>
+    </select>
+    <label>File (.json / .jsonld)</label>
+    <input type="file" id="uploadFile" accept=".json,.jsonld" />
+    <div class="actions">
+      <button onclick="closeUploadModal()">Cancel</button>
+      <button class="primary" onclick="doUpload()">Upload</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const cy = cytoscape({
+  container: document.getElementById('cy'), elements: [],
+  style: [
+    { selector: 'node', style: { 'label': 'data(label)', 'font-size': '10px', 'color': '#ccc', 'text-valign': 'bottom', 'text-margin-y': 4, 'width': 16, 'height': 16, 'background-color': '#6b7280', 'border-width': 1, 'border-color': '#444' } },
+    { selector: 'node[ontology="mapped"]', style: { 'background-color': '#3b82f6' } },
+    { selector: 'node[ontology="willow"]', style: { 'background-color': '#22c55e' } },
+    { selector: 'node[ontology="external"]', style: { 'background-color': '#6b7280' } },
+    { selector: 'node.focused', style: { 'border-width': 3, 'border-color': '#facc15', 'width': 24, 'height': 24 } },
+    { selector: 'edge', style: { 'width': 1.5, 'line-color': '#f59e0b', 'target-arrow-color': '#f59e0b', 'target-arrow-shape': 'triangle', 'arrow-scale': 0.7, 'curve-style': 'bezier', 'opacity': 0.6 } },
+    { selector: 'edge[type="mapsTo"]', style: { 'line-color': '#38bdf8', 'target-arrow-color': '#38bdf8', 'line-style': 'dashed' } },
+  ],
+  layout: { name: 'preset' }, minZoom: 0.05, maxZoom: 5, wheelSensitivity: 0.3,
+});
+
+let allGaps = [], graphData = null, selectedGapKey = null, totalDistance = 0, ignoredGaps = new Set();
+let classFilterIds = null;
+let currentGap = null, actionTargetId = null, remapSourceId = null, currentSuggest = null;
+let allUnmapped = [];
+let gapOntFilter = 'mapped', unmappedOntFilter = 'mapped';
+
+function nodeOntology(id) {
+  if (id.startsWith('dtmi:com:willowinc:')) return 'willow';
+  return 'mapped';
+}
+
+function setGapOnt(ont) {
+  gapOntFilter = ont;
+  document.getElementById('gapSegMapped').className = ont === 'mapped' ? 'active-mapped' : '';
+  document.getElementById('gapSegWillow').className = ont === 'willow' ? 'active-willow' : '';
+  closeDrawer();
+  renderFilteredGaps();
+}
+
+function setUnmappedOnt(ont) {
+  unmappedOntFilter = ont;
+  document.getElementById('unmappedSegMapped').className = ont === 'mapped' ? 'active-mapped' : '';
+  document.getElementById('unmappedSegWillow').className = ont === 'willow' ? 'active-willow' : '';
+  closeDrawer();
+  filterUnmapped();
+}
+
+async function init() { graphData = await (await fetch('/api/graph')).json(); updateStats(graphData.stats); }
+init();
+
+function updateStats(s) {
+  document.getElementById('statSubclass').textContent = s.subClassOf.toLocaleString();
+  document.getElementById('statMapsTo').textContent = s.mapsTo.toLocaleString();
+  let m=0,w=0,e=0;
+  for (const n of graphData.nodes) { if(n.ontology==='mapped')m++; else if(n.ontology==='willow')w++; else e++; }
+  document.getElementById('statMapped').textContent = m.toLocaleString();
+  document.getElementById('statWillow').textContent = w.toLocaleString();
+  document.getElementById('statExternal').textContent = e.toLocaleString();
+}
+
+function shortId(id) {
+  const name = id.split(':').pop().replace(/;.*$/, '');
+  if (id.startsWith('dtmi:com:willowinc:')) return 'willow:' + name;
+  if (id.startsWith('dtmi:mapped:core:')) return 'mapped:' + name;
+  if (id.includes(':brickschema:')) return 'brick:' + name;
+  return name;
+}
+function tokenizeId(id) {
+  const name = id.split(':').pop().replace(/;.*$/, '');
+  const words = [];
+  for (const p of name.split('_')) words.push(...p.replace(/([a-z])([A-Z])/g, '$1 $2').split(' '));
+  return words.filter(w => w).map(w => w.toLowerCase()).join(' ');
+}
+
+// ── View switching ──
+function switchView(name) {
+  document.querySelectorAll('.nav-tab').forEach(b => b.classList.toggle('active', b.dataset.view === name));
+  document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id === 'view-' + name));
+}
+
+// ── Drawer ──
+function openDrawer() {
+  document.getElementById('drawer').classList.add('open');
+  document.getElementById('appBody').classList.add('drawer-open');
+}
+function closeDrawer() {
+  document.getElementById('drawer').classList.remove('open');
+  document.getElementById('appBody').classList.remove('drawer-open');
+  selectedGapKey = null;
+  document.querySelectorAll('.data-table tr.selected').forEach(r => r.classList.remove('selected'));
+}
+
+// ── Search (graph view) ──
+let searchTimeout = null;
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  clearTimeout(searchTimeout);
+  const q = e.target.value.trim();
+  const dd = document.getElementById('searchDropdown');
+  if (!q) { dd.classList.add('hidden'); return; }
+  searchTimeout = setTimeout(() => doSearch(q), 200);
+});
+document.getElementById('searchInput').addEventListener('blur', () => {
+  setTimeout(() => document.getElementById('searchDropdown').classList.add('hidden'), 200);
+});
+
+async function doSearch(q) {
+  const results = await (await fetch(`/api/search?q=${encodeURIComponent(q)}`)).json();
+  const dd = document.getElementById('searchDropdown');
+  if (!results.length) {
+    dd.innerHTML = '<div style="padding:10px 14px;color:#444;font-size:13px;">No results</div>';
+    dd.classList.remove('hidden');
+    return;
+  }
+  dd.innerHTML = results.slice(0, 12).map(r => `
+    <div class="search-dropdown-item" onclick="focusNode('${r.id}')">
+      <span class="ont-badge ${r.ontology}">${r.ontology}</span>
+      <span>${r.display_name || shortId(r.id)}</span>
+    </div>`).join('');
+  dd.classList.remove('hidden');
+}
+
+// ── Focus node (graph view) ──
+async function focusNode(nodeId) {
+  document.getElementById('searchDropdown').classList.add('hidden');
+  switchView('graph');
+  const data = await (await fetch(`/api/neighborhood/${encodeURIComponent(nodeId)}`)).json();
+  cy.elements().remove();
+  for (const n of data.nodes) cy.add({ group: 'nodes', data: { id: n.id, label: n.display_name || shortId(n.id), ontology: n.ontology } });
+  for (const e of data.edges) cy.add({ group: 'edges', data: { source: e.source, target: e.target, type: e.type } });
+  cy.getElementById(nodeId)?.addClass('focused');
+  cy.layout({ name: 'concentric', concentric: (n) => n.id() === nodeId ? 10 : 1, levelWidth: () => 1, minNodeSpacing: 40, animate: false }).run();
+  cy.fit(undefined, 40);
+  showNodeDetail(nodeId, data);
+}
+
+function showNodeDetail(nodeId, data) {
+  const node = data.nodes.find(n => n.id === nodeId);
+  if (!node) return;
+  const inc = data.edges.filter(e => e.target === nodeId);
+  const out = data.edges.filter(e => e.source === nodeId);
+  const mkLi = (e, nid) => {
+    const o = data.nodes.find(n => n.id === nid);
+    return `<li onclick="focusNode('${nid}')"><span class="edge-type ${e.type}">${e.type}</span>${o ? (o.display_name || shortId(o.id)) : shortId(nid)}</li>`;
+  };
+  document.getElementById('drawerTitle').textContent = node.display_name || shortId(node.id);
+  document.getElementById('drawerBody').innerHTML = `
+    <div class="node-detail">
+      <div class="detail-section">
+        <div class="detail-label">Name</div>
+        <div class="detail-value">${node.display_name || '(none)'}</div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">ID</div>
+        <div class="detail-value mono">${node.id}</div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Ontology</div>
+        <div class="detail-value"><span class="ont-badge ${node.ontology}">${node.ontology}</span></div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Incoming (${inc.length})</div>
+        <ul class="edge-list">${inc.map(e => mkLi(e, e.source)).join('') || '<li style="color:#333">none</li>'}</ul>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">Outgoing (${out.length})</div>
+        <ul class="edge-list">${out.map(e => mkLi(e, e.target)).join('') || '<li style="color:#333">none</li>'}</ul>
+      </div>
+    </div>`;
+  openDrawer();
+}
+
+cy.on('tap', 'node', async (evt) => { await focusNode(evt.target.id()); });
+
+// ── Upload ──
+function openUploadModal() { document.getElementById('uploadModal').classList.remove('hidden'); }
+function closeUploadModal() { document.getElementById('uploadModal').classList.add('hidden'); }
+async function doUpload() {
+  const [kind, key] = document.getElementById('uploadType').value.split(':');
+  const fi = document.getElementById('uploadFile');
+  if (!fi.files.length) return alert('Select a file');
+  const fd = new FormData(); fd.append('file', fi.files[0]);
+  if (kind === 'ontology') fd.append('ontology', key); else fd.append('direction', key);
+  const res = await (await fetch(kind === 'ontology' ? '/api/upload/ontology' : '/api/upload/mapping', { method: 'POST', body: fd })).json();
+  if (res.error) { alert(res.error); return; }
+  closeUploadModal();
+  graphData = await (await fetch('/api/graph')).json();
+  updateStats(graphData.stats);
+  cy.elements().remove();
+}
+
+// ── Diagnosis ──
+async function runDiagnosis() {
+  switchView('gaps');
+  document.getElementById('gapTableBody').innerHTML = '<tr><td colspan="4" class="empty-state"><span class="spinner"></span> Analyzing&hellip;</td></tr>';
+  const data = await (await fetch('/api/diagnose')).json();
+  allGaps = data.gaps; totalDistance = data.total_distance; allUnmapped = data.unmapped || [];
+  document.getElementById('navCountGaps').textContent = allGaps.length.toLocaleString();
+  document.getElementById('navCountUnmapped').textContent = allUnmapped.length.toLocaleString();
+  renderFilteredGaps();
+  filterUnmapped();
+}
+
+function gapKey(g) { return g.start + '|' + g.mid + '|' + g.end; }
+
+function gapSearchScore(g, terms) {
+  const positions = [tokenizeId(g.start), tokenizeId(g.mid), tokenizeId(g.end)];
+  const all = positions.join(' ');
+  if (!terms.every(t => all.includes(t))) return -1;
+  let score = 0, posIdx = 0;
+  for (const t of terms) { while (posIdx < 3 && !positions[posIdx].includes(t)) posIdx++; if (posIdx < 3) { score += 3 - posIdx; posIdx++; } }
+  score += 10 / all.split(' ').length;
+  return score;
+}
+
+function filterVisibleGaps() {
+  const q = (document.getElementById('gapFilterInput')?.value || '').toLowerCase().trim();
+  const terms = q ? q.split(/\s+/) : [];
+  let visible = allGaps.filter(g => !ignoredGaps.has(gapKey(g)));
+  visible = visible.filter(g => (g.start_ontology || nodeOntology(g.start)) === gapOntFilter);
+  if (classFilterIds) visible = visible.filter(g => classFilterIds.has(g.start));
+  if (terms.length) {
+    const scored = [];
+    for (const g of visible) { const s = gapSearchScore(g, terms); if (s >= 0) scored.push([s, g]); }
+    scored.sort((a, b) => b[0] - a[0]);
+    visible = scored.map(x => x[1]);
+  }
+  return visible;
+}
+
+function distClass(d) {
+  if (d === null) return '';
+  if (d <= 1) return 'low';
+  if (d <= 3) return 'med';
+  return 'high';
+}
+
+function renderFilteredGaps() {
+  const visible = filterVisibleGaps();
+  if (!visible.length) {
+    document.getElementById('gapTableBody').innerHTML = '<tr><td colspan="4" class="empty-state">No gaps found</td></tr>';
+    return;
+  }
+  document.getElementById('gapTableBody').innerHTML = visible.slice(0, 500).map(g => {
+    const sel = gapKey(g) === selectedGapKey ? ' selected' : '';
+    const dc = distClass(g.distance);
+    return `<tr class="${sel}" data-gapkey="${gapKey(g)}" onclick='selectGap(${JSON.stringify(g)})'>
+      <td><span class="dist-badge ${dc}">${g.distance !== null ? '+' + g.distance : '?'}</span></td>
+      <td><span class="chain-node">${shortId(g.start)}</span></td>
+      <td><span class="chain-node">${shortId(g.mid)}</span></td>
+      <td><span class="chain-node">${shortId(g.end)}</span></td>
+    </tr>`;
+  }).join('') + (visible.length > 500 ? `<tr><td colspan="4" style="padding:10px 20px;color:#333;text-align:center;font-size:12px;">Showing 500 of ${visible.length}</td></tr>` : '');
+}
+
+function filterUnmapped() {
+  const q = (document.getElementById('unmappedFilterInput')?.value || '').toLowerCase().trim();
+  const terms = q ? q.split(/\s+/) : [];
+  let visible = allUnmapped.filter(u => u.ontology === unmappedOntFilter);
+  if (classFilterIds) visible = visible.filter(u => classFilterIds.has(u.id));
+  if (terms.length) {
+    visible = visible.filter(u => {
+      const hay = tokenizeId(u.id) + ' ' + (u.display_name || '').toLowerCase();
+      return terms.every(t => hay.includes(t));
+    });
+  }
+  const tb = document.getElementById('unmappedTableBody');
+  if (!visible.length) {
+    tb.innerHTML = '<tr><td class="empty-state">No unmapped classes</td></tr>';
+    return;
+  }
+  tb.innerHTML = visible.slice(0, 500).map(u => `
+    <tr onclick="selectUnmapped('${u.id}', '${u.ontology}')">
+      <td>${u.display_name || shortId(u.id)}</td>
+    </tr>`).join('') +
+    (visible.length > 500 ? `<tr><td style="padding:10px 20px;color:#333;text-align:center;font-size:12px;">Showing 500 of ${visible.length}</td></tr>` : '');
+}
+
+// ── Class filter ──
+let classFilterTimeout = null;
+document.getElementById('classFilterInput').addEventListener('input', (e) => {
+  clearTimeout(classFilterTimeout);
+  const q = e.target.value.trim();
+  const ul = document.getElementById('classFilterDropdown');
+  if (!q) { ul.classList.add('hidden'); return; }
+  classFilterTimeout = setTimeout(async () => {
+    const results = await (await fetch(`/api/search?q=${encodeURIComponent(q)}`)).json();
+    if (!results.length) {
+      ul.innerHTML = '<li style="color:#444;padding:8px 12px;">No matches</li>';
+      ul.classList.remove('hidden');
+      return;
+    }
+    ul.innerHTML = results.slice(0, 15).map(r => `<li onclick="applyClassFilter('${r.id}')">${shortId(r.id)}</li>`).join('');
+    ul.classList.remove('hidden');
+  }, 200);
+});
+document.getElementById('classFilterInput').addEventListener('blur', () => {
+  setTimeout(() => document.getElementById('classFilterDropdown').classList.add('hidden'), 200);
+});
+
+async function applyClassFilter(nodeId) {
+  document.getElementById('classFilterDropdown').classList.add('hidden');
+  document.getElementById('classFilterInput').value = shortId(nodeId);
+  const descendants = await (await fetch(`/api/descendants/${encodeURIComponent(nodeId)}`)).json();
+  classFilterIds = new Set(descendants);
+  document.getElementById('classFilterChip').innerHTML =
+    `<span class="filter-chip">${shortId(nodeId)}<button onclick="clearClassFilter()" title="Clear">&#x2715;</button></span>`;
+  document.getElementById('classFilterChip').style.display = '';
+  renderFilteredGaps();
+  filterUnmapped();
+}
+
+function clearClassFilter() {
+  classFilterIds = null;
+  document.getElementById('classFilterInput').value = '';
+  document.getElementById('classFilterChip').style.display = 'none';
+  renderFilteredGaps();
+  filterUnmapped();
+}
+
+// ── Select gap → drawer ──
+async function selectGap(gap) {
+  currentGap = gap; actionTargetId = null;
+  selectedGapKey = gapKey(gap);
+  document.querySelectorAll('.data-table tr').forEach(r => r.classList.toggle('selected', r.dataset.gapkey === selectedGapKey));
+  const [detail, suggest] = await Promise.all([
+    (await fetch(`/api/gap-detail?start=${encodeURIComponent(gap.start)}&mid=${encodeURIComponent(gap.mid)}&end=${encodeURIComponent(gap.end)}`)).json(),
+    (await fetch(`/api/suggest-mappings/${encodeURIComponent(gap.start)}`)).json(),
+  ]);
+  renderGapDetail(detail, gap, suggest);
+}
+
+function renderGapDetail(detail, gap, suggest) {
+  remapSourceId = gap.start;
+  currentSuggest = suggest;
+  const leftOnt = detail.left[0]?.ontology || '?';
+  const rightOnt = detail.right[0]?.ontology || '?';
+  const leftLabel = leftOnt === 'mapped' ? 'Mapped' : leftOnt === 'willow' ? 'Willow' : leftOnt;
+  const rightLabel = rightOnt === 'mapped' ? 'Mapped' : rightOnt === 'willow' ? 'Willow' : rightOnt;
+
+  const nodeHtml = (n, column) => {
+    const clickable = (column === 'left' && n.id === gap.start) || (column === 'right' && n.id === gap.mid);
+    const onclick = clickable ? `onclick="switchRemapSource('${n.id}')"` : '';
+    const sel = n.id === remapSourceId ? 'border-color:#3b82f6;' : '';
+    const cursor = clickable ? 'cursor:pointer;' : '';
+    return `<div class="column-node" data-node-id="${n.id}" ${onclick} style="${cursor}${sel}"><div class="node-name">${shortId(n.id)}</div></div>`;
+  };
+  const leftNodes = [...detail.left].reverse(), rightNodes = [...detail.right].reverse();
+  let leftHtml = '', rightHtml = '';
+  for (let i = 0; i < leftNodes.length; i++) { leftHtml += nodeHtml(leftNodes[i], 'left'); if (i < leftNodes.length - 1) leftHtml += '<div class="subclass-arrow">&uarr;</div>'; }
+  for (let i = 0; i < rightNodes.length; i++) { rightHtml += nodeHtml(rightNodes[i], 'right'); if (i < rightNodes.length - 1) rightHtml += '<div class="subclass-arrow">&uarr;</div>'; }
+
+  document.getElementById('drawerTitle').textContent = `${shortId(gap.start)} \u2192 ${shortId(gap.mid)} \u2192 ${shortId(gap.end)}`;
+  document.getElementById('drawerBody').innerHTML = `
+    <div class="gap-detail-actions">
+      <button onclick="gapFlag()">Flag</button>
+      <button onclick="gapIgnore()">Ignore</button>
+      <span class="dist-label">distance +${gap.distance ?? '?'}</span>
+    </div>
+    <div class="gap-detail-content">
+      <div class="columns-wrapper" id="columnsWrapper">
+        <svg class="cross-edge-svg" id="crossEdgeSvg"></svg>
+        <div class="columns-container">
+          <div class="column" id="leftColumn"><div class="column-header left-header">${leftLabel}</div>${leftHtml}<div id="leftRemapTarget"></div></div>
+          <div class="middle-lane"></div>
+          <div class="column" id="rightColumn"><div class="column-header right-header">${rightLabel}</div>${rightHtml}<div id="rightRemapTarget"></div></div>
+        </div>
+      </div>
+      <div id="remapContainer"></div>
+    </div>`;
+  openDrawer();
+  renderRemapSection();
+  requestAnimationFrame(() => requestAnimationFrame(() => drawCrossEdges(detail)));
+}
+
+async function switchRemapSource(nodeId) {
+  if (nodeId === remapSourceId) return;
+  remapSourceId = nodeId; actionTargetId = null;
+  currentSuggest = await (await fetch(`/api/suggest-mappings/${encodeURIComponent(nodeId)}`)).json();
+  document.querySelectorAll('.column-node').forEach(el => {
+    el.style.borderColor = el.dataset.nodeId === nodeId ? '#3b82f6' : '';
+  });
+  renderRemapSection();
+}
+
+function renderRemapSection() {
+  const suggest = currentSuggest;
+  const sourceOnt = (remapSourceId || '').startsWith('dtmi:com:willowinc:') ? 'willow' : 'mapped';
+  const targetOnt = sourceOnt === 'willow' ? 'mapped' : 'willow';
+
+  const sugItems = suggest?.suggestions?.length
+    ? suggest.suggestions.slice(0, 5).map(s =>
+        `<li onclick="gapSelectTarget('${s.id}', this)">${shortId(s.id)}</li>`).join('')
+    : '<li class="no-results">No suggestions</li>';
+
+  document.getElementById('remapContainer').innerHTML = `
+    <div class="remap-section">
+      <div class="remap-heading">Remap ${shortId(remapSourceId)} &rarr; ?</div>
+      <input type="text" class="remap-search" id="gapSearchInput" placeholder="Search ${targetOnt} classes&hellip;" data-target-ont="${targetOnt}" />
+      <div class="remap-list-label" id="remapListLabel">Suggestions</div>
+      <ul class="remap-results" id="gapResultsList">${sugItems}</ul>
+      <button class="apply-btn" id="applyMappingBtn" disabled onclick="doApply()">Apply mapping</button>
+    </div>`;
+  document.getElementById('gapSearchInput').addEventListener('input', gapOnSearchInput);
+}
+
+function drawCrossEdges(detail) {
+  const svg = document.getElementById('crossEdgeSvg'), wrapper = document.getElementById('columnsWrapper');
+  if (!svg || !wrapper) return;
+  const wr = wrapper.getBoundingClientRect();
+  svg.setAttribute('width', wr.width); svg.setAttribute('height', wr.height);
+  svg.style.width = wr.width + 'px'; svg.style.height = wr.height + 'px';
+  const leftIds = new Set(detail.left.map(n => n.id)), pos = {};
+  document.querySelectorAll('.column-node[data-node-id]').forEach(el => {
+    const nid = el.dataset.nodeId, r = el.getBoundingClientRect();
+    const isLeft = leftIds.has(nid) && el.closest('#leftColumn');
+    pos[nid + (isLeft ? ':L' : ':R')] = { x: isLeft ? (r.right - wr.left) : (r.left - wr.left), y: r.top + r.height/2 - wr.top };
+  });
+  let c = `<defs>
+    <marker id="ah" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#38bdf8"/></marker>
+    <marker id="ah-rev" markerWidth="8" markerHeight="6" refX="1" refY="3" orient="auto"><polygon points="8 0,0 3,8 6" fill="#38bdf8"/></marker>
+  </defs>`;
+  for (const ce of detail.cross_edges) {
+    const sk = ce.direction === 'left_to_right' ? ce.source+':L' : ce.source+':R';
+    const dk = ce.direction === 'left_to_right' ? ce.target+':R' : ce.target+':L';
+    const s = pos[sk], d = pos[dk]; if (!s || !d) continue;
+    const mx = (s.x + d.x) / 2;
+    const markers = ce.bidirectional ? 'marker-start="url(#ah-rev)" marker-end="url(#ah)"' : 'marker-end="url(#ah)"';
+    c += `<path d="M ${s.x} ${s.y} C ${mx} ${s.y}, ${mx} ${d.y}, ${d.x} ${d.y}" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7" ${markers}/>`;
+  }
+  svg.innerHTML = c;
+}
+
+// ── Select unmapped → drawer ──
+async function selectUnmapped(nodeId, ontology) {
+  currentGap = { start: nodeId, mid: null, end: null, start_ontology: ontology, distance: null };
+  remapSourceId = nodeId; actionTargetId = null;
+  currentSuggest = await (await fetch(`/api/suggest-mappings/${encodeURIComponent(nodeId)}`)).json();
+  const detail = await (await fetch(`/api/gap-detail?start=${encodeURIComponent(nodeId)}&mid=${encodeURIComponent(nodeId)}&end=${encodeURIComponent(nodeId)}`)).json();
+  const leftNodes = [...detail.left].reverse();
+  const ontLabel = ontology === 'mapped' ? 'Mapped' : ontology === 'willow' ? 'Willow' : ontology;
+  const targetOnt = ontology === 'willow' ? 'mapped' : 'willow';
+
+  let leftHtml = '';
+  for (let i = 0; i < leftNodes.length; i++) {
+    leftHtml += `<div class="column-node" data-node-id="${leftNodes[i].id}"><div class="node-name">${shortId(leftNodes[i].id)}</div></div>`;
+    if (i < leftNodes.length - 1) leftHtml += '<div class="subclass-arrow">&uarr;</div>';
+  }
+
+  const sugItems = currentSuggest?.suggestions?.length
+    ? currentSuggest.suggestions.slice(0, 5).map(s => `<li onclick="gapSelectTarget('${s.id}', this)">${shortId(s.id)}</li>`).join('')
+    : '<li class="no-results">No suggestions</li>';
+
+  document.getElementById('drawerTitle').textContent = `${shortId(nodeId)} \u2192 ?`;
+  document.getElementById('drawerBody').innerHTML = `
+    <div class="gap-detail-content">
+      <div class="columns-wrapper">
+        <div class="columns-container">
+          <div class="column"><div class="column-header left-header">${ontLabel}</div>${leftHtml}</div>
+          <div class="middle-lane"></div>
+          <div class="column"><div class="column-header right-header">${targetOnt}</div></div>
+        </div>
+      </div>
+      <div class="remap-section" id="remapContainer">
+        <div class="remap-heading">Remap ${shortId(nodeId)} &rarr; ?</div>
+        <input type="text" class="remap-search" id="gapSearchInput" placeholder="Search ${targetOnt} classes&hellip;" data-target-ont="${targetOnt}" />
+        <div class="remap-list-label" id="remapListLabel">Suggestions</div>
+        <ul class="remap-results" id="gapResultsList">${sugItems}</ul>
+        <button class="apply-btn" id="applyMappingBtn" disabled onclick="doApply()">Apply mapping</button>
+      </div>
+    </div>`;
+  openDrawer();
+  document.getElementById('gapSearchInput').addEventListener('input', gapOnSearchInput);
+}
+
+// ── Gap search / select ──
+let gapSearchTimeout = null;
+function gapOnSearchInput(e) {
+  clearTimeout(gapSearchTimeout);
+  const q = e.target.value.trim();
+  const ul = document.getElementById('gapResultsList');
+  const label = document.getElementById('remapListLabel');
+  if (!q) {
+    if (label) label.textContent = 'Suggestions';
+    const sugItems = currentSuggest?.suggestions?.length
+      ? currentSuggest.suggestions.slice(0, 5).map(s => `<li onclick="gapSelectTarget('${s.id}', this)">${shortId(s.id)}</li>`).join('')
+      : '<li class="no-results">No suggestions</li>';
+    ul.innerHTML = sugItems;
+    return;
+  }
+  gapSearchTimeout = setTimeout(async () => {
+    if (label) label.textContent = 'Results';
+    const results = await (await fetch(`/api/search?q=${encodeURIComponent(q)}&ontology=${encodeURIComponent(e.target.dataset.targetOnt)}`)).json();
+    if (!results.length) { ul.innerHTML = '<li class="no-results">No matches</li>'; return; }
+    ul.innerHTML = results.map(r => `<li onclick="gapSelectTarget('${r.id}', this)">${shortId(r.id)}</li>`).join('');
+  }, 200);
+}
+
+function gapSelectTarget(nodeId, el) {
+  actionTargetId = nodeId;
+  document.querySelectorAll('.remap-results li').forEach(e => e.classList.remove('selected'));
+  if (el) el.classList.add('selected');
+  const btn = document.getElementById('applyMappingBtn');
+  if (btn) btn.disabled = false;
+}
+
+async function doApply() {
+  if (!actionTargetId || !remapSourceId) return;
+  if (!currentGap?.mid) await gapApplyUnmapped();
+  else await gapApply();
+}
+
+async function gapApplyUnmapped() {
+  const source = remapSourceId, newTarget = actionTargetId;
+  const res = await (await fetch('/api/mapping', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
+  if (res.error) {
+    if (!confirm(`Constraint violation:\n${res.error}\n\nAdd ${shortId(source)} \u2194 ${shortId(newTarget)} as an exception?`)) return;
+    await (await fetch('/api/add-exception', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
+    const retry = await (await fetch('/api/mapping', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
+    if (retry.error) { alert(retry.error); return; }
+  }
+  await refreshAfterMapping();
+  const ont = source.startsWith('dtmi:com:willowinc:') ? 'willow' : 'mapped';
+  await selectGap({ start: source, mid: newTarget, end: newTarget, start_ontology: ont, distance: 0 });
+}
+
+async function gapApply() {
+  const source = remapSourceId, newTarget = actionTargetId;
+  const res = await (await fetch('/api/mapping', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
+  if (res.error) {
+    if (!confirm(`Constraint violation:\n${res.error}\n\nAdd ${shortId(source)} \u2194 ${shortId(newTarget)} as an exception?`)) return;
+    await (await fetch('/api/add-exception', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
+    const retry = await (await fetch('/api/mapping', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source, target: newTarget }) })).json();
+    if (retry.error) { alert(retry.error); return; }
+  }
+  await refreshAfterMapping();
+  const updatedGap = { ...currentGap };
+  if (source === currentGap.start) updatedGap.mid = newTarget;
+  await selectGap(updatedGap);
+}
+
+async function refreshAfterMapping() {
+  const [gResp, dResp] = await Promise.all([fetch('/api/graph'), fetch('/api/diagnose')]);
+  graphData = await gResp.json(); updateStats(graphData.stats);
+  const d = await dResp.json(); allGaps = d.gaps; totalDistance = d.total_distance; allUnmapped = d.unmapped || [];
+  document.getElementById('navCountGaps').textContent = allGaps.length.toLocaleString();
+  document.getElementById('navCountUnmapped').textContent = allUnmapped.length.toLocaleString();
+  renderFilteredGaps(); filterUnmapped();
+}
+
+async function gapFlag() {
+  if (!currentGap) return;
+  await fetch('/api/flag-gap', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ start: currentGap.start, mid: currentGap.mid, end: currentGap.end }) });
+  const d = await (await fetch('/api/diagnose')).json();
+  allGaps = d.gaps; totalDistance = d.total_distance; allUnmapped = d.unmapped || [];
+  document.getElementById('navCountGaps').textContent = allGaps.length.toLocaleString();
+  document.getElementById('navCountUnmapped').textContent = allUnmapped.length.toLocaleString();
+  closeDrawer(); renderFilteredGaps();
+}
+
+function gapIgnore() {
+  if (!currentGap) return;
+  ignoredGaps.add(gapKey(currentGap));
+  closeDrawer(); renderFilteredGaps();
+}
+
+// ── Keyboard ──
+document.addEventListener('keydown', (e) => {
+  if (e.key === '/' && document.activeElement.tagName !== 'INPUT') { e.preventDefault(); document.getElementById('searchInput').focus(); switchView('graph'); }
+  if (e.key === 'Escape') closeDrawer();
+});
+</script>
+</body>
+</html>

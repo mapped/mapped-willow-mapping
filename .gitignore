@@ -363,3 +363,4 @@ MigrationBackup/
 /Ontologies.Mappings/src/Mappings/v1/Mapped/
 /Ontologies.Mappings/src/Mappings/v1/Willow/
 reversed_mappings.json
+/data/ontologies/

@@ -1,0 +1,346 @@
+[
+  {
+    "start": "dtmi:com:willowinc:DeltaCondenserWaterFlowSensor;1",
+    "start_display": "Delta Condenser Water Flow Sensor",
+    "mid": "dtmi:org:brickschema:schema:Brick:Sensor;1",
+    "mid_display": "Sensor",
+    "end": "dtmi:com:willowinc:Sensor;1",
+    "end_display": "Sensor"
+  },
+  {
+    "start": "dtmi:com:willowinc:FanRunLevelSetpoint;1",
+    "start_display": "Fan Run Level Setpoint",
+    "mid": "dtmi:org:brickschema:schema:Brick:Setpoint;1",
+    "mid_display": "Setpoint",
+    "end": "dtmi:com:willowinc:Setpoint;1",
+    "end_display": "Setpoint"
+  },
+  {
+    "start": "dtmi:com:willowinc:FireAlarmHornStrobe;1",
+    "start_display": "Fire Alarm Horn Strobe",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "mid_display": "Thing",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "end_display": "Asset"
+  },
+  {
+    "start": "dtmi:com:willowinc:FireAlarmSpeakerStrobe;1",
+    "start_display": "Fire Alarm Speaker Strobe",
+    "mid": "dtmi:mapped:core:Speaker;1",
+    "mid_display": "Speaker",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "end_display": "Asset"
+  },
+  {
+    "start": "dtmi:com:willowinc:PreActionCabinet;1",
+    "start_display": "Pre-Action Cabinet",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "mid_display": "Thing",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "end_display": "Asset"
+  },
+  {
+    "start": "dtmi:com:willowinc:TotalActiveElectricalPowerDemandSensor;1",
+    "start_display": "Total Active Electrical Power Demand Sensor",
+    "mid": "dtmi:org:brickschema:schema:Brick:Demand_Sensor;1",
+    "mid_display": "Demand_Sensor",
+    "end": "dtmi:com:willowinc:Sensor;1",
+    "end_display": "Sensor"
+  },
+  {
+    "start": "dtmi:com:willowinc:TotalReactiveElectricalPowerDemandSensor;1",
+    "start_display": "Total Reactive Electrical Power Demand Sensor",
+    "mid": "dtmi:org:brickschema:schema:Brick:Demand_Sensor;1",
+    "mid_display": "Demand_Sensor",
+    "end": "dtmi:com:willowinc:Sensor;1",
+    "end_display": "Sensor"
+  },
+  {
+    "start": "dtmi:com:willowinc:AverageCurrentDemandSensor;1",
+    "start_display": "Average Current Demand Sensor",
+    "mid": "dtmi:org:brickschema:schema:Brick:Demand_Sensor;1",
+    "mid_display": "Demand_Sensor",
+    "end": "dtmi:com:willowinc:Sensor;1",
+    "end_display": "Sensor"
+  },
+  {
+    "start": "dtmi:com:willowinc:BatteryCharger;1",
+    "start_display": "Battery Charger",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "mid_display": "Thing",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "end_display": "Asset"
+  },
+  {
+    "start": "dtmi:com:willowinc:BatterySystem;1",
+    "start_display": "Battery System",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "mid_display": "Thing",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "end_display": "Asset"
+  },
+  {
+    "start": "dtmi:com:willowinc:DisableSetpoint;1",
+    "start_display": "Disable Setpoint",
+    "mid": "dtmi:org:brickschema:schema:Brick:Setpoint;1",
+    "mid_display": "Setpoint",
+    "end": "dtmi:com:willowinc:Setpoint;1",
+    "end_display": "Setpoint"
+  },
+  {
+    "start": "dtmi:com:willowinc:EnableSetpoint;1",
+    "start_display": "Enable Setpoint",
+    "mid": "dtmi:org:brickschema:schema:Brick:Setpoint;1",
+    "mid_display": "Setpoint",
+    "end": "dtmi:com:willowinc:Setpoint;1",
+    "end_display": "Setpoint"
+  },
+  {
+    "start": "dtmi:com:willowinc:FireAlarmStrobe;1",
+    "start_display": "Fire Alarm Strobe",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "mid_display": "Thing",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "end_display": "Asset"
+  },
+  {
+    "start": "dtmi:com:willowinc:PhaseACurrentDemandSensor;1",
+    "start_display": "Phase A Current Demand Sensor",
+    "mid": "dtmi:org:brickschema:schema:Brick:Demand_Sensor;1",
+    "mid_display": "Demand_Sensor",
+    "end": "dtmi:com:willowinc:Sensor;1",
+    "end_display": "Sensor"
+  },
+  {
+    "start": "dtmi:com:willowinc:PhaseCCurrentDemandSensor;1",
+    "start_display": "Phase C Current Demand Sensor",
+    "mid": "dtmi:org:brickschema:schema:Brick:Demand_Sensor;1",
+    "mid_display": "Demand_Sensor",
+    "end": "dtmi:com:willowinc:Sensor;1",
+    "end_display": "Sensor"
+  },
+  {
+    "start": "dtmi:com:willowinc:RunLevelSetpoint;1",
+    "start_display": "Run Level Setpoint",
+    "mid": "dtmi:org:brickschema:schema:Brick:Setpoint;1",
+    "mid_display": "Setpoint",
+    "end": "dtmi:com:willowinc:Setpoint;1",
+    "end_display": "Setpoint"
+  },
+  {
+    "start": "dtmi:org:brickschema:schema:Brick:Domestic_Hot_Water_Valve;1",
+    "start_display": "Domestic_Hot_Water_Valve",
+    "mid": "dtmi:com:willowinc:Valve;1",
+    "mid_display": "Valve",
+    "end": "dtmi:org:brickschema:schema:Brick:Valve;1",
+    "end_display": "Valve"
+  },
+  {
+    "start": "dtmi:mapped:core:Fire_Accordion_Door;1",
+    "start_display": "Fire_Accordion_Door",
+    "mid": "dtmi:com:willowinc:Door;1",
+    "mid_display": "Door",
+    "end": "dtmi:mapped:core:Door;1",
+    "end_display": "Door"
+  },
+  {
+    "start": "dtmi:org:brickschema:schema:Brick:Economizer;1",
+    "start_display": "Economizer",
+    "mid": "dtmi:com:willowinc:Equipment;1",
+    "mid_display": "Equipment",
+    "end": "dtmi:mapped:core:Device;1",
+    "end_display": "Device"
+  },
+  {
+    "start": "dtmi:org:brickschema:schema:Brick:Makeup_Water_Valve;1",
+    "start_display": "Makeup_Water_Valve",
+    "mid": "dtmi:com:willowinc:Valve;1",
+    "mid_display": "Valve",
+    "end": "dtmi:org:brickschema:schema:Brick:Valve;1",
+    "end_display": "Valve"
+  },
+  {
+    "start": "dtmi:org:brickschema:schema:Brick:Safety_Shower;1",
+    "start_display": "Safety_Shower",
+    "mid": "dtmi:com:willowinc:SafetyEquipment;1",
+    "mid_display": "Safety Equipment",
+    "end": "dtmi:org:brickschema:schema:Brick:Safety_Equipment;1",
+    "end_display": "Safety_Equipment"
+  },
+  {
+    "start": "dtmi:org:brickschema:schema:Brick:Thermostatic_Mixing_Valve;1",
+    "start_display": "Thermostatic_Mixing_Valve",
+    "mid": "dtmi:com:willowinc:Valve;1",
+    "mid_display": "Valve",
+    "end": "dtmi:org:brickschema:schema:Brick:Valve;1",
+    "end_display": "Valve"
+  },
+  {
+    "start": "dtmi:mapped:core:Accordion_Door;1",
+    "start_display": "Accordion_Door",
+    "mid": "dtmi:com:willowinc:Door;1",
+    "mid_display": "Door",
+    "end": "dtmi:mapped:core:Door;1",
+    "end_display": "Door"
+  },
+  {
+    "start": "dtmi:mapped:core:Battery_Charger;1",
+    "start_display": "Battery_Charger",
+    "mid": "dtmi:com:willowinc:VehicleEquipment;1",
+    "mid_display": "Vehicle Equipment",
+    "end": "dtmi:mapped:core:Automotive_Equipment;1",
+    "end_display": "Automotive_Equipment"
+  },
+  {
+    "start": "dtmi:mapped:core:Accessibility_Equipment;1",
+    "start_display": "Accessibility_Equipment",
+    "mid": "dtmi:com:willowinc:Equipment;1",
+    "mid_display": "Equipment",
+    "end": "dtmi:mapped:core:Device;1",
+    "end_display": "Device"
+  },
+  {
+    "start": "dtmi:mapped:core:Commercial_Rack_Washer;1",
+    "start_display": "Commercial_Rack_Washer",
+    "mid": "dtmi:com:willowinc:Dishwasher;1",
+    "mid_display": "Dishwasher",
+    "end": "dtmi:mapped:core:Dishwasher;1",
+    "end_display": "Dishwasher"
+  },
+  {
+    "start": "dtmi:mapped:core:Medical_Equipment;1",
+    "start_display": "Medical_Equipment",
+    "mid": "dtmi:com:willowinc:Equipment;1",
+    "mid_display": "Equipment",
+    "end": "dtmi:mapped:core:Device;1",
+    "end_display": "Device"
+  },
+  {
+    "start": "dtmi:mapped:core:Natural_Gas_Seismic_Valve;1",
+    "start_display": "Natural_Gas_Seismic_Valve",
+    "mid": "dtmi:com:willowinc:HVACShutOffValve;1",
+    "mid_display": "Shut-off Valve (HVAC)",
+    "end": "dtmi:org:brickschema:schema:Brick:Isolation_Valve;1",
+    "end_display": "Isolation_Valve"
+  },
+  {
+    "start": "dtmi:mapped:core:Spectrometer;1",
+    "start_display": "Spectrometer",
+    "mid": "dtmi:com:willowinc:Equipment;1",
+    "mid_display": "Equipment",
+    "end": "dtmi:mapped:core:Device;1",
+    "end_display": "Device"
+  },
+  {
+    "start": "dtmi:mapped:core:Stock_Picker;1",
+    "start_display": "Stock_Picker",
+    "mid": "dtmi:com:willowinc:Forklift;1",
+    "mid_display": "Forklift",
+    "end": "dtmi:mapped:core:Forklift;1",
+    "end_display": "Forklift"
+  },
+  {
+    "start": "dtmi:mapped:core:Vehicle;1",
+    "start_display": "Vehicle",
+    "mid": "dtmi:com:willowinc:VehicleEquipment;1",
+    "mid_display": "Vehicle Equipment",
+    "end": "dtmi:mapped:core:Automotive_Equipment;1",
+    "end_display": "Automotive_Equipment"
+  },
+  {
+    "start": "dtmi:mapped:core:Waterside_Economizer;1",
+    "start_display": "Waterside_Economizer",
+    "mid": "dtmi:com:willowinc:EconomizerCoil;1",
+    "mid_display": "Economizer Coil",
+    "end": "dtmi:org:brickschema:schema:Brick:Coil;1",
+    "end_display": "Coil"
+  },
+  {
+    "start": "dtmi:mapped:core:Work_Assist_Vehicle;1",
+    "start_display": "Work_Assist_Vehicle",
+    "mid": "dtmi:com:willowinc:VehicleEquipment;1",
+    "mid_display": "Vehicle Equipment",
+    "end": "dtmi:mapped:core:Automotive_Equipment;1",
+    "end_display": "Automotive_Equipment"
+  },
+  {
+    "start": "dtmi:mapped:core:Wheel_Chair_Lift;1",
+    "start_display": "Wheel_Chair_Lift",
+    "mid": "dtmi:com:willowinc:Equipment;1",
+    "mid_display": "Equipment",
+    "end": "dtmi:mapped:core:Device;1",
+    "end_display": "Device"
+  },
+  {
+    "start": "dtmi:org:brickschema:schema:Brick:Space_Heater;1",
+    "start_display": "Space_Heater",
+    "mid": "dtmi:com:willowinc:UnitHeater;1",
+    "mid_display": "Unit Heater",
+    "end": "dtmi:mapped:core:Unit_Heater;1",
+    "end_display": "Unit_Heater"
+  },
+  {
+    "start": "dtmi:org:brickschema:schema:Brick:Heat_Wheel_VFD;1",
+    "start_display": "Heat_Wheel_VFD",
+    "mid": "dtmi:com:willowinc:VariableFrequencyDrive;1",
+    "mid_display": "Variable Frequency Drive",
+    "end": "dtmi:org:brickschema:schema:Brick:Variable_Frequency_Drive;1",
+    "end_display": "Variable_Frequency_Drive"
+  },
+  {
+    "start": "dtmi:org:brickschema:schema:Brick:Heat_Wheel;1",
+    "start_display": "Heat_Wheel",
+    "mid": "dtmi:com:willowinc:EnergyRecoveryDevice;1",
+    "mid_display": "Energy Recovery Device",
+    "end": "dtmi:mapped:core:Energy_Recovery_Unit;1",
+    "end_display": "Energy_Recovery_Unit"
+  },
+  {
+    "start": "dtmi:org:brickschema:schema:Brick:Pump_VFD;1",
+    "start_display": "Pump_VFD",
+    "mid": "dtmi:com:willowinc:VariableFrequencyDrive;1",
+    "mid_display": "Variable Frequency Drive",
+    "end": "dtmi:org:brickschema:schema:Brick:Variable_Frequency_Drive;1",
+    "end_display": "Variable_Frequency_Drive"
+  },
+  {
+    "start": "dtmi:com:willowinc:LowTemperatureRefrigerationCompressorRack;1",
+    "start_display": "Low-Temperature Refrigeration Compressor Rack",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "mid_display": "Thing",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "end_display": "Asset"
+  },
+  {
+    "start": "dtmi:com:willowinc:MediumTemperatureRefrigerationCompressorRack;1",
+    "start_display": "Medium-Temperature Refrigeration Compressor Rack",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "mid_display": "Thing",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "end_display": "Asset"
+  },
+  {
+    "start": "dtmi:com:willowinc:PointOfSaleRegister;1",
+    "start_display": "Point-Of-Sale Register",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "mid_display": "Thing",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "end_display": "Asset"
+  },
+  {
+    "start": "dtmi:com:willowinc:WaterSoftener;1",
+    "start_display": "Water Softener",
+    "mid": "dtmi:mapped:core:Thing;1",
+    "mid_display": "Thing",
+    "end": "dtmi:com:willowinc:Asset;1",
+    "end_display": "Asset"
+  },
+  {
+    "start": "dtmi:com:willowinc:HVACPressureReducingValve;1",
+    "start_display": "Pressure Reducing Valve (HVAC)",
+    "mid": "dtmi:org:brickschema:schema:Brick:Valve;1",
+    "mid_display": "Valve",
+    "end": "dtmi:com:willowinc:Valve;1",
+    "end_display": "Valve"
+  }
+]

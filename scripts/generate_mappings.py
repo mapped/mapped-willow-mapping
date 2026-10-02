@@ -8,9 +8,9 @@ import xml.etree.ElementTree as ET
 from pdb import set_trace
 
 
-def get_nuget_package(name: str, version: str):
+def get_nuget_package(name: str, version: str, file_name: str = None):
     with NugetPackage(name) as package:
-        ontology = package.get_content(version)
+        ontology = package.get_content(version, file_name)
     return ontology
 
 def get_package_version(package_name):
@@ -33,7 +33,7 @@ def get_dtdl_interfaces(ontology_content: Dict):
 
 def main():
     mapped_version = get_package_version('Mapped.Ontologies.Core.Dtdl')
-    mapped_ontology = get_nuget_package('Mapped.Ontologies.Core.Dtdl', mapped_version)
+    mapped_ontology = get_nuget_package('Mapped.Ontologies.Core.Dtdl', mapped_version, 'mapped_dtdl.json')
     willow_version = get_package_version('WillowInc.Ontology.DTDLv3')
     willow_ontology = get_nuget_package('WillowInc.Ontology.DTDLv3', willow_version)
 
@@ -87,6 +87,7 @@ def main():
         "dtmi:mapped:core:Pump_Skid;1": ["dtmi:com:willowinc:PumpGroup;1", "dtmi:com:willowinc:PlumbingPumpGroup;1"],
         "dtmi:com:willowinc:PumpGroup;1": ["dtmi:mapped:core:Pump_Skid;1"],
         "dtmi:com:willowinc:PlumbingPumpGroup;1": ["dtmi:mapped:core:Pump_Skid;1"],
+        "dtmi:com:willowinc:HVACPumpGroup;1": ["dtmi:mapped:core:Pump_Skid;1"],
 
         "dtmi:mapped:core:Air_Change_Rate_Sensor;1": ["dtmi:com:willowinc:AirChangesPerHour;1"],
         "dtmi:com:willowinc:AirChangesPerHour;1": ["dtmi:mapped:core:Air_Change_Rate_Sensor;1"],
@@ -103,9 +104,22 @@ def main():
     engine_building.initialize_graph()
     valid, invalid_mappings = engine_building.validate()
     if not valid:
-        formatted_mappings = pprint.pformat(invalid_mappings, indent=2)
-        error_message = f"Invalid manual mappings found:\n{formatted_mappings}"
-        raise Exception(error_message)
+        for key, value in invalid_mappings.items():
+            message = value['message']
+            target = value['target']
+            source_parents = value['parents']['source']
+            target_parents = value['parents']['target']
+
+            print(
+                f"Warning for manual mapping {key}\n"
+                f"\t{message}\n"
+                f"\tTarget: {target}\n"
+                "\tSource Hierarchy:\n\t" +
+                "\n\t".join(f"\t- {parent}" for parent in source_parents) +
+                "\n\tTarget Hierarchy:\n\t" +
+                "\n\t".join(f"\t- {parent}" for parent in target_parents) +
+                f"\n"
+            )
     
     _, inferable_nodes, uninferable_nodes = engine_building.classify_nodes() 
     engine_building.find_optimal_mappings(inferable_nodes)
