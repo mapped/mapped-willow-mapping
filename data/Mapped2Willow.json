@@ -207,7 +207,7 @@
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Apparent_Electrical_Energy_Sensor;1",
+      "InputDtmi": "dtmi:mapped:core:Apparent_Electric_Energy_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:ApparentElectricalEnergySensor;1"
     },
     {
