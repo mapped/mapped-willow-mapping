@@ -479,7 +479,7 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Condenser;1",
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser;1",
       "OutputDtmi": "dtmi:com:willowinc:Condenser;1"
     },
     {
@@ -1559,7 +1559,7 @@
       "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingZoneAirTemperatureSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Occupied_Zone_Air_Temperature_Setpoint;1",
+      "InputDtmi": "dtmi:mapped:core:Occupied_Zone_Air_Temperaure_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:OccupiedTargetZoneAirTemperatureSetpoint;1"
     },
     {
