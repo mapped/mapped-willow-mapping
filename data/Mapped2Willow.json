@@ -480,7 +480,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser;1",
-      "OutputDtmi": "dtmi:com:willowinc:Condenser;1"
+      "OutputDtmi": "dtmi:com:willowinc:CondensingUnit;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Condenser_Water_Differential_Pressure_Sensor;1",
