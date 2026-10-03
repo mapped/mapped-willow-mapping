@@ -480,7 +480,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser;1",
-      "OutputDtmi": "dtmi:com:willowinc:Condenser;1"
+      "OutputDtmi": "dtmi:com:willowinc:CondensingUnit;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Condenser_Water_Differential_Pressure_Sensor;1",
@@ -1559,7 +1559,7 @@
       "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingZoneAirTemperatureSetpoint;1"
     },
     {
-      "InputDtmi": "dtmi:mapped:core:Occupied_Zone_Air_Temperaure_Setpoint;1",
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Zone_Air_Temperature_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:OccupiedTargetZoneAirTemperatureSetpoint;1"
     },
     {
