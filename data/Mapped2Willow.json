@@ -207,6 +207,10 @@
       "OutputDtmi": "dtmi:com:willowinc:Room;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Apparent_Electric_Energy_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:ApparentElectricalEnergySensor;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Apparent_Energy_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:ApparentElectricalEnergySensor;1"
     },
@@ -475,6 +479,10 @@
       "OutputDtmi": "dtmi:com:willowinc:State;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Condenser;1",
+      "OutputDtmi": "dtmi:com:willowinc:Condenser;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Condenser_Water_Differential_Pressure_Sensor;1",
       "OutputDtmi": "dtmi:com:willowinc:CondenserWaterDeltaPressureSensor;1"
     },
@@ -635,8 +643,16 @@
       "OutputDtmi": "dtmi:com:willowinc:DefrostTerminationTemperatureSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Dehumidification_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:DehumidifierOnActuator;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Dehumidification_Status;1",
       "OutputDtmi": "dtmi:com:willowinc:State;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Dehumidify_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:DehumidifierOnActuator;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Device;1",
@@ -1543,6 +1559,10 @@
       "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingZoneAirTemperatureSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:mapped:core:Occupied_Zone_Air_Temperaure_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedTargetZoneAirTemperatureSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:mapped:core:Offset;1",
       "OutputDtmi": "dtmi:com:willowinc:Offset;1"
     },
@@ -2185,6 +2205,18 @@
     {
       "InputDtmi": "dtmi:mapped:core:Supply_Fan_Array;1",
       "OutputDtmi": "dtmi:com:willowinc:SupplyFanGroup;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Supply_Fan_Speed_Command;1",
+      "OutputDtmi": "dtmi:com:willowinc:DischargeFanRunLevelActuator;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Supply_Fan_Speed_Status;1",
+      "OutputDtmi": "dtmi:com:willowinc:DischargeFanRunLevelState;1"
+    },
+    {
+      "InputDtmi": "dtmi:mapped:core:Supply_Water_Temperature_Sensor;1",
+      "OutputDtmi": "dtmi:com:willowinc:LeavingWaterTemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:mapped:core:Switchboard;1",
@@ -3712,7 +3744,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Water_Temperature_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:WaterTemperatureSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:EnteringWaterTemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Entering_Water_Temperature_Setpoint;1",
@@ -4436,7 +4468,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Sensor;1",
-      "OutputDtmi": "dtmi:com:willowinc:WaterTemperatureSensor;1"
+      "OutputDtmi": "dtmi:com:willowinc:LeavingWaterTemperatureSensor;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Leaving_Water_Temperature_Setpoint;1",
@@ -4947,8 +4979,12 @@
       "OutputDtmi": "dtmi:com:willowinc:OccupiedState;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Air_Temperature_Cooling_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Air_Temperature_Heating_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingZoneAirTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Air_Temperature_Setpoint;1",
@@ -4963,12 +4999,20 @@
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureDeadbandSetpoint;1"
     },
     {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Cooling_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedCoolingSetpoint;1"
+    },
+    {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Heating_Supply_Air_Flow_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:DischargeAirFlowSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Heating_Temperature_Deadband_Setpoint;1",
       "OutputDtmi": "dtmi:com:willowinc:AirTemperatureDeadbandSetpoint;1"
+    },
+    {
+      "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Heating_Temperature_Setpoint;1",
+      "OutputDtmi": "dtmi:com:willowinc:OccupiedHeatingSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Occupied_Humidity_Setpoint;1",
@@ -6168,7 +6212,7 @@
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Unoccupied_Zone_Air_Temperature_Setpoint;1",
-      "OutputDtmi": "dtmi:com:willowinc:ZoneAirTemperatureSetpoint;1"
+      "OutputDtmi": "dtmi:com:willowinc:UnoccupiedTargetZoneAirTemperatureSetpoint;1"
     },
     {
       "InputDtmi": "dtmi:org:brickschema:schema:Brick:Usage_Sensor;1",
