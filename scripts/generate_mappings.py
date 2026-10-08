@@ -45,26 +45,26 @@ def main():
 
     root_mappings = {
         # Mapped
-        "dtmi:org:brickschema:schema:Brick:Collection;1": ["dtmi:com:willowinc:Collection;1"],
-        "dtmi:org:brickschema:schema:Brick:Point;1": ["dtmi:com:willowinc:Capability;1"],
-        "dtmi:org:brickschema:schema:Brick:Alarm;1": ["dtmi:com:willowinc:State;1"],
-        "dtmi:org:brickschema:schema:Brick:Command;1": ["dtmi:com:willowinc:Actuator;1"],
-        "dtmi:org:brickschema:schema:Brick:Status;1": ["dtmi:com:willowinc:State;1", "dtmi:com:willowinc:Sensor;1"],
-        "dtmi:org:brickschema:schema:Brick:Sensor;1": ["dtmi:com:willowinc:Sensor;1", "dtmi:com:willowinc:State;1"],
-        "dtmi:org:brickschema:schema:Brick:Setpoint;1": ["dtmi:com:willowinc:Setpoint;1", "dtmi:com:willowinc:Parameter;1"],
+        "dtmi:mapped:core:Collection;1": ["dtmi:com:willowinc:Collection;1"],
+        "dtmi:mapped:core:Point;1": ["dtmi:com:willowinc:Capability;1"],
+        "dtmi:mapped:core:Alarm;1": ["dtmi:com:willowinc:State;1"],
+        "dtmi:mapped:core:Command;1": ["dtmi:com:willowinc:Actuator;1"],
+        "dtmi:mapped:core:Status;1": ["dtmi:com:willowinc:State;1", "dtmi:com:willowinc:Sensor;1"],
+        "dtmi:mapped:core:Sensor;1": ["dtmi:com:willowinc:Sensor;1", "dtmi:com:willowinc:State;1"],
+        "dtmi:mapped:core:Setpoint;1": ["dtmi:com:willowinc:Setpoint;1", "dtmi:com:willowinc:Parameter;1"],
         "dtmi:org:brickschema:schema:Brick:Location;1": ["dtmi:com:willowinc:Space;1"],
-        "dtmi:org:brickschema:schema:Brick:Parameter;1": ["dtmi:com:willowinc:Parameter;1"],
+        "dtmi:mapped:core:Parameter;1": ["dtmi:com:willowinc:Parameter;1"],
         "dtmi:mapped:core:Thing;1": ["dtmi:com:willowinc:Asset;1"],
 
         # Willow
-        "dtmi:com:willowinc:Collection;1": ["dtmi:org:brickschema:schema:Brick:Collection;1"],
-        "dtmi:com:willowinc:Capability;1": ["dtmi:org:brickschema:schema:Brick:Point;1"],
-        "dtmi:com:willowinc:Actuator;1": ["dtmi:org:brickschema:schema:Brick:Command;1"],
-        "dtmi:com:willowinc:Sensor;1": ["dtmi:org:brickschema:schema:Brick:Sensor;1", "dtmi:org:brickschema:schema:Brick:Status;1"],
-        "dtmi:com:willowinc:State;1": ["dtmi:org:brickschema:schema:Brick:Status;1", "dtmi:org:brickschema:schema:Brick:Sensor;1", "dtmi:org:brickschema:schema:Brick:Alarm;1"],
-        "dtmi:com:willowinc:Setpoint;1": ["dtmi:org:brickschema:schema:Brick:Setpoint;1"],
+        "dtmi:com:willowinc:Collection;1": ["dtmi:mapped:core:Collection;1"],
+        "dtmi:com:willowinc:Capability;1": ["dtmi:mapped:core:Point;1"],
+        "dtmi:com:willowinc:Actuator;1": ["dtmi:mapped:core:Command;1"],
+        "dtmi:com:willowinc:Sensor;1": ["dtmi:mapped:core:Sensor;1", "dtmi:mapped:core:Status;1"],
+        "dtmi:com:willowinc:State;1": ["dtmi:mapped:core:Status;1", "dtmi:mapped:core:Sensor;1", "dtmi:mapped:core:Alarm;1"],
+        "dtmi:com:willowinc:Setpoint;1": ["dtmi:mapped:core:Setpoint;1"],
         "dtmi:com:willowinc:Space;1": ["dtmi:org:brickschema:schema:Brick:Location;1"],
-        "dtmi:com:willowinc:Parameter;1": ["dtmi:org:brickschema:schema:Brick:Parameter;1", "dtmi:org:brickschema:schema:Brick:Setpoint;1"],
+        "dtmi:com:willowinc:Parameter;1": ["dtmi:mapped:core:Parameter;1", "dtmi:mapped:core:Setpoint;1"],
         "dtmi:com:willowinc:Asset;1": ["dtmi:mapped:core:Thing;1"],
 
         # Exceptions 
