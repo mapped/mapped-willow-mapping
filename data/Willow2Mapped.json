@@ -2465,6 +2465,10 @@
       "OutputDtmi": "dtmi:mapped:core:Lighting_Equipment;1"
     },
     {
+      "InputDtmi": "dtmi:com:willowinc:LightingEquipmentGroup;1",
+      "OutputDtmi": "dtmi:org:brickschema:schema:Brick:Collection;1"
+    },
+    {
       "InputDtmi": "dtmi:com:willowinc:LightingSystem;1",
       "OutputDtmi": "dtmi:mapped:core:Lighting_System;1"
     },
