@@ -6,7 +6,7 @@ authors = ["Connor Cantrell <connor@mapped.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.11.5,<4.0"
 ontology-mapper = {version = "^0.5.0", source = "fury"}
 
 [[tool.poetry.source]]
