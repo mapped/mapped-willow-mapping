@@ -98,7 +98,7 @@ namespace Mapped.Ontologies.Mappings.OntologyMapper.Mapped.Test
         }
 
         [Theory]
-        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", true, "dtmi:org:brickschema:schema:Brick:Ablutions_Room;1", LoaderType.Http, "dtmi:com:willowinc:Room;1")]
+        [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", true, "dtmi:mapped:core:Ablutions_Room;1", LoaderType.Http, "dtmi:com:willowinc:Room;1")]
         [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", true, "dtmi:org:brickschema:schema:Brick:Ablutions;1", LoaderType.Http, "dtmi:com:willowinc:Ablutions;1")]
         [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", false, "dtmi:org:fakeschema:schema:Brick:Ablutions;1", LoaderType.Http, null)]
         [InlineData("https://mapped.com/ontologies/mapping/Mapped2Willow/latest.json", true, "dtmi:org:brickschema:schema:Brick:CO2_Alarm_Setpoint;1", LoaderType.Http, "dtmi:com:willowinc:CO2_Alarm_Setpoint;1")]
